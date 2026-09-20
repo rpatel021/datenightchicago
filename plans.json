@@ -12,14 +12,16 @@
       "url": "https://www.cafebabareeba.com/",
       "reserve": "OpenTable — book ~5:00–5:15 PM for 2; request courtyard/dining-room table (not bar)",
       "order_this": "Share: gambas al ajillo + patatas bravas + one paella for two; one pitcher sangria or Spanish beer",
-      "price": "$$ (~$55–75 food/drink for two)"
+      "price": "$$ (~$55–75 food/drink for two)",
+      "image": null
     },
     "then": {
       "event_id": "io-20260921-magic-mondays",
       "name": "Magic Mondays (John Sturk / Malarkey Comedy)",
       "start": "7:00 PM",
       "url": "https://www.choosechicago.com/event/magic-mondays-2/2026-09-21/",
-      "cost": "$20"
+      "cost": "$20",
+      "image": null
     },
     "backup": {
       "type": "same-corridor alt night",
@@ -45,14 +47,16 @@
       "url": "https://hopleafbar.com/",
       "reserve": "Limited Tock (exploretock.com/hopleaf); most tables walk-in—arrive ~5:00 PM, ask for booth/dining room (21+)",
       "order_this": "Mussels & frites to share + one Belgian beer each (or cider if not beer people)",
-      "price": "$$ (~$45–65 for two)"
+      "price": "$$ (~$45–65 for two)",
+      "image": null
     },
     "then": {
       "event_id": "magic_lounge-20260923-spellbinder",
       "name": "One Night Only: Walter King Jr. ‘The Spellbinder’",
       "start": "7:00 PM",
       "url": "https://www.chicagomagiclounge.com/ono",
-      "cost": "$44 Main Floor / $50 Front Row (+$4.99 fee)"
+      "cost": "$44 Main Floor / $50 Front Row (+$4.99 fee)",
+      "image": null
     },
     "backup": {
       "type": "same-night same-corridor",
@@ -62,7 +66,9 @@
     },
     "transit": "Walk ~5 min Clark St Hopleaf (5148 N Clark) → Chicago Magic Lounge (5050 N Clark). Red Line Berwyn/Argyle nearby.",
     "dont": "Don’t skip ticket purchase—ONO sells. Don’t sit bar-only at Hopleaf if you need to talk (booths/dining room). Budget will exceed $120. Backup Blind Wolf is verify=true (seating/lineup).",
-    "verify_flags": ["backup_blind_wolf_verify_true"],
+    "verify_flags": [
+      "backup_blind_wolf_verify_true"
+    ],
     "status": "draft"
   },
   {
@@ -78,14 +84,16 @@
       "url": "https://www.orsosrestaurant.com/",
       "reserve": "OpenTable — 5:00–5:15 PM for 2; request booth if available (1401 N Wells)",
       "order_this": "Share an appetizer + two pasta entrees (Tue half-price apps if you shift nights; Thu full menu). One house red carafe.",
-      "price": "$$ (~$50–70 for two if pasta-focused)"
+      "price": "$$ (~$50–70 for two if pasta-focused)",
+      "image": null
     },
     "then": {
       "event_id": "zanies-20260924-cliff-cash",
       "name": "Cliff Cash",
       "start": "7:00 PM",
       "url": "https://chicago.zanies.com/calendar/category/series/2026-cliff-cash/zanies-comedy-club-chicago/chicago-illinois/",
-      "cost": "from ~$43 (21+)"
+      "cost": "from ~$43 (21+)",
+      "image": null
     },
     "backup": {
       "type": "same-corridor later night",
@@ -111,14 +119,16 @@
       "url": "https://www.lulacafe.com/",
       "reserve": "Dinner reservations via Lula site / phone (773) 489-9554 — book ~6:00 PM Fri; brunch is walk-in only (skip for timed show)",
       "order_this": "Seasonal tasting of whatever’s on the dinner specials board + one pasta/veg main to share or two lighter plates; keep drinks to one each",
-      "price": "$$ (~$60–85 for two)"
+      "price": "$$ (~$60–85 for two)",
+      "image": null
     },
     "then": {
       "event_id": "lincoln_lodge-20260925-showcase",
       "name": "The Lincoln Lodge Showcase",
       "start": "8:00 PM",
       "url": "https://www.choosechicago.com/event/the-lincoln-lodge/2026-09-25/",
-      "cost": "$13"
+      "cost": "$13",
+      "image": null
     },
     "backup": {
       "type": "same-corridor movie",
@@ -144,14 +154,16 @@
       "url": "https://www.twinanchorsribs.com/",
       "reserve": "No reservations — walk-in only; arrive by ~4:45–5:00 PM Fri for booth before 6:30 show (waits spike later)",
       "order_this": "Half slab baby-backs to share + one order zesty sauce on the side; two beers or soft drinks",
-      "price": "$$ (~$45–65 for two if sharing slab)"
+      "price": "$$ (~$45–65 for two if sharing slab)",
+      "image": null
     },
     "then": {
       "event_id": "second_city-20260925-live-sketch",
       "name": "Live Sketch Comedy (Mainstage 114th Revue)",
       "start": "6:30 PM",
       "url": "https://www.secondcity.com/shows/chicago/live-sketch-comedy-chi",
-      "cost": "from $45"
+      "cost": "from $45",
+      "image": null
     },
     "backup": {
       "type": "same-corridor dinner swap + later comedy",
@@ -177,14 +189,16 @@
       "url": "https://www.monamigabi.com/chicago/",
       "reserve": "OpenTable — 5:15–5:30 PM Sat for 2 (2300 N Lincoln Park West); ask for booth/banquette if available",
       "order_this": "Steak frites for one + mussels or salad for the other (or share steak frites + one appetizer); one glass wine each",
-      "price": "$$–$$$ (~$70–95 for two)"
+      "price": "$$–$$$ (~$70–95 for two)",
+      "image": null
     },
     "then": {
       "event_id": "io-20260926-best-of-io",
       "name": "The Best of iO",
       "start": "7:30 PM",
       "url": "https://www.choosechicago.com/event/the-best-of-io/2026-09-26/",
-      "cost": "$22"
+      "cost": "$22",
+      "image": null
     },
     "backup": {
       "type": "same-corridor quieter jazz/blues caution",

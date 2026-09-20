@@ -4,35 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DateNight Chicago</title>
-  <meta name="description" content="One corridor. Eat → Then → Backup → Transit → Don’t." />
+  <meta name="description" content="One corridor. Eat → Then → Backup → Transit → Don’t. Scroll by date." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="top">
-    <p class="eyebrow">Chicago</p>
-    <h1>DateNight</h1>
-    <p class="tag">One corridor. Eat → Then → Backup → Transit → Don’t.</p>
+  <header class="topbar">
+    <div class="brand">
+      <span class="wordmark">DateNight</span>
+      <span class="chip">Chicago</span>
+    </div>
+    <p class="legend" aria-hidden="true">Eat → Then → Backup → Transit → Don’t</p>
+    <a class="cta" id="cta-tonight" href="#chapters">See tonight’s plan</a>
   </header>
 
-  <main>
-    <section class="cal-wrap" aria-label="Date picker">
-      <div class="cal-head">
-        <button type="button" id="prev-month" aria-label="Previous month">‹</button>
-        <h2 id="month-label"></h2>
-        <button type="button" id="next-month" aria-label="Next month">›</button>
-      </div>
-      <div class="dow" aria-hidden="true">
-        <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
-      </div>
-      <div id="calendar" class="calendar" role="grid"></div>
-      <p class="hint">Dots mark nights with a plan. Tap a date.</p>
-    </section>
+  <nav class="rail" id="date-rail" aria-label="Jump to a night"></nav>
 
-    <section id="plans" class="plans" aria-live="polite"></section>
-  </main>
+  <main id="chapters" class="chapters" tabindex="-1"></main>
 
   <footer class="foot">
-    <p>Living plans — update <code>plans.json</code>, redeploy.</p>
+    <p>Living plans — update <code>plans.json</code>, redeploy. Optional <code>eat.image</code> / <code>then.image</code>.</p>
   </footer>
   <script src="app.js"></script>
 </body>

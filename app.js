@@ -1,134 +1,171 @@
-const state = { plans: [], year: 2026, month: 8, selected: null }; // month 0-index: Sep=8
+const TZ = "America/Chicago";
 
 const el = {
-  cal: document.getElementById("calendar"),
-  label: document.getElementById("month-label"),
-  plans: document.getElementById("plans"),
-  prev: document.getElementById("prev-month"),
-  next: document.getElementById("next-month"),
+  chapters: document.getElementById("chapters"),
+  rail: document.getElementById("date-rail"),
+  cta: document.getElementById("cta-tonight"),
 };
 
-const fmtLong = new Intl.DateTimeFormat("en-US", {
-  weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "America/Chicago",
-});
-
-function nightsWithPlans() {
-  return new Set(state.plans.map((p) => p.for_night));
+function esc(s) {
+  return String(s ?? "").replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])
+  );
 }
 
-function plansFor(iso) {
-  return state.plans.filter((p) => p.for_night === iso);
+function dateParts(iso) {
+  const d = new Date(`${iso}T12:00:00`);
+  const opts = { timeZone: TZ };
+  return {
+    weekday: new Intl.DateTimeFormat("en-US", { ...opts, weekday: "short" }).format(d),
+    month: new Intl.DateTimeFormat("en-US", { ...opts, month: "short" }).format(d),
+    day: new Intl.DateTimeFormat("en-US", { ...opts, day: "numeric" }).format(d),
+  };
 }
 
-function isoFrom(y, m, d) {
-  return `${y}-${String(m + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+function tonightIso() {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: TZ,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
 }
 
-function renderCalendar() {
-  const { year, month } = state;
-  el.label.textContent = new Date(year, month, 1).toLocaleString("en-US", { month: "long", year: "numeric" });
-  const firstDow = new Date(year, month, 1).getDay();
-  const daysInMonth = new Date(year, month + 1, 0).getDate();
-  const marked = nightsWithPlans();
-  el.cal.innerHTML = "";
-
-  for (let i = 0; i < firstDow; i++) {
-    const b = document.createElement("button");
-    b.type = "button";
-    b.className = "day muted";
-    b.disabled = true;
-    b.textContent = "";
-    el.cal.appendChild(b);
-  }
-  for (let d = 1; d <= daysInMonth; d++) {
-    const iso = isoFrom(year, month, d);
-    const b = document.createElement("button");
-    b.type = "button";
-    b.className = "day" + (marked.has(iso) ? " has" : "") + (state.selected === iso ? " selected" : "");
-    b.textContent = String(d);
-    b.setAttribute("aria-label", iso);
-    b.addEventListener("click", () => {
-      state.selected = iso;
-      renderCalendar();
-      renderPlans();
-    });
-    el.cal.appendChild(b);
-  }
+function pickFocus(plans) {
+  const t = tonightIso();
+  return plans.find((p) => p.for_night === t) || plans[0];
 }
 
-function linkify(name, url) {
-  if (!url) return escapeHtml(name || "");
-  return `<a href="${escapeAttr(url)}" target="_blank" rel="noopener">${escapeHtml(name || url)}</a>`;
-}
-
-function escapeHtml(s) {
-  return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-}
-function escapeAttr(s) {
-  return escapeHtml(s).replace(/`/g, "");
-}
-
-function renderPlan(p) {
-  const eat = p.eat || {};
-  const then = p.then || {};
-  const backup = p.backup || {};
-  const flags = (p.verify_flags || []).length
-    ? `<p class="verify">VERIFY: ${escapeHtml(p.verify_flags.join(", "))}</p>`
+function panel(kind, place) {
+  const name = place?.name || kind;
+  const initial = (name.trim()[0] || "?").toUpperCase();
+  const img = place?.image
+    ? `<img class="media" src="${esc(place.image)}" alt="" loading="lazy" decoding="async" />`
     : "";
-  return `<article class="card">
-    <h3>${escapeHtml(p.corridor)} · ${escapeHtml(p.slot || "")}</h3>
-    <p class="meta">${escapeHtml(p.vibe || "")}<br/>Budget: ${escapeHtml(p.budget || "")}</p>
-    <div class="block"><p class="label">Eat</p><p>${linkify(eat.name, eat.url)}${eat.neighborhood ? " · " + escapeHtml(eat.neighborhood) : ""}<br/>${escapeHtml(eat.reserve || "")}<br/><em>Order:</em> ${escapeHtml(eat.order_this || "")}</p></div>
-    <div class="block"><p class="label">Then</p><p>${linkify(then.name, then.url)}${then.start ? " · " + escapeHtml(then.start) : ""}${then.cost ? " · " + escapeHtml(then.cost) : ""}</p></div>
-    <div class="block"><p class="label">Backup</p><p>${linkify(backup.name, backup.url)}${backup.note ? "<br/>" + escapeHtml(backup.note) : ""}</p></div>
-    <div class="block"><p class="label">Transit</p><p>${escapeHtml(p.transit || "")}</p></div>
-    <div class="block"><p class="label">Don’t</p><p>${escapeHtml(p.dont || "")}</p></div>
-    ${flags}
-  </article>`;
+  return `<div class="panel ${kind}">
+    <span class="initial" aria-hidden="true">${esc(initial)}</span>
+    ${img}
+    <div class="shade"></div>
+  </div>`;
 }
 
-function renderPlans() {
-  if (!state.selected) {
-    el.plans.innerHTML = `<div class="empty">Pick a dotted night to see the plan.</div>`;
-    return;
-  }
-  const list = plansFor(state.selected);
-  if (!list.length) {
-    const nice = fmtLong.format(new Date(state.selected + "T12:00:00"));
-    el.plans.innerHTML = `<div class="empty">No plan for ${escapeHtml(nice)} yet. We’ll add more on updates.</div>`;
-    return;
-  }
-  const nice = fmtLong.format(new Date(state.selected + "T12:00:00"));
-  el.plans.innerHTML = `<p class="meta" style="margin:0 0 .5rem">${escapeHtml(nice)} · ${list.length} plan${list.length > 1 ? "s" : ""}</p>` +
-    list.map(renderPlan).join("");
+function renderChapter(plan, index) {
+  const { weekday, month, day } = dateParts(plan.for_night);
+  const eat = plan.eat || {};
+  const then = plan.then || {};
+  const backup = plan.backup || {};
+
+  const reserve = eat.url
+    ? `<a href="${esc(eat.url)}" target="_blank" rel="noopener">Reserve · ${esc(eat.name)}</a>`
+    : "";
+  const tickets = then.url
+    ? `<a href="${esc(then.url)}" target="_blank" rel="noopener">Tickets · ${esc(then.name)}</a>`
+    : "";
+  const backupLink = backup.url
+    ? `<a href="${esc(backup.url)}" target="_blank" rel="noopener">${esc(backup.name)}</a>`
+    : esc(backup.name || "");
+
+  const section = document.createElement("section");
+  section.className = "chapter";
+  section.id = `night-${plan.for_night}-${index}`;
+  section.dataset.night = plan.for_night;
+  section.setAttribute(
+    "aria-label",
+    `${weekday} ${month} ${day} — ${plan.corridor || "Chicago"}`
+  );
+
+  section.innerHTML = `
+    ${panel("eat", eat)}
+    ${panel("then", then)}
+    <div class="copy">
+      <div class="date-block">
+        <span class="date-chip">${esc(plan.corridor || "Chicago")} · ${esc(plan.slot || "")}</span>
+        <h2 class="date-big">${esc(weekday)} · ${esc(month)} ${esc(day)}</h2>
+        <p class="vibe">${esc(plan.vibe || "")}</p>
+      </div>
+      <div class="strip">
+        <span class="pair">${esc(eat.name)} → ${esc(then.name)}</span>
+        <span class="meta">${esc(then.start || "")}${then.cost ? " · " + esc(then.cost) : ""}</span>
+        <span class="budget">${esc(plan.budget || "")}</span>
+      </div>
+      <div class="links">${reserve}${tickets}</div>
+      <div class="details">
+        <strong>Eat</strong>${esc(eat.reserve || "")}${eat.order_this ? " · Order: " + esc(eat.order_this) : ""}
+        <strong>Backup</strong>${backupLink}${backup.note ? " — " + esc(backup.note) : ""}
+        <strong>Transit</strong>${esc(plan.transit || "")}
+        <strong>Don’t</strong>${esc(plan.dont || "")}
+      </div>
+    </div>
+  `;
+  return section;
 }
 
-el.prev.addEventListener("click", () => {
-  state.month -= 1;
-  if (state.month < 0) { state.month = 11; state.year -= 1; }
-  renderCalendar();
-});
-el.next.addEventListener("click", () => {
-  state.month += 1;
-  if (state.month > 11) { state.month = 0; state.year += 1; }
-  renderCalendar();
-});
+function buildRail(plans, nodes) {
+  el.rail.innerHTML = "";
+  plans.forEach((p, i) => {
+    const { weekday, day } = dateParts(p.for_night);
+    const b = document.createElement("button");
+    b.type = "button";
+    b.title = `${weekday} ${day}`;
+    b.setAttribute("aria-label", `Jump to ${weekday} ${day}`);
+    b.addEventListener("click", () => {
+      nodes[i]?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    el.rail.appendChild(b);
+  });
+}
 
-fetch("plans.json")
-  .then((r) => r.json())
-  .then((plans) => {
-    state.plans = plans;
-    // land on first plan month
-    const first = [...nightsWithPlans()].sort()[0];
-    if (first) {
-      const [y, m] = first.split("-").map(Number);
-      state.year = y;
-      state.month = m - 1;
-      state.selected = first;
-    }
-    renderCalendar();
-    renderPlans();
+function watchActive(chapters) {
+  const buttons = [...el.rail.querySelectorAll("button")];
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!(entry.isIntersecting && entry.intersectionRatio >= 0.5)) continue;
+        const node = entry.target;
+        chapters.forEach((c) => c.classList.remove("is-active"));
+        node.classList.add("is-active");
+        const idx = chapters.indexOf(node);
+        buttons.forEach((b, i) => {
+          if (i === idx) b.setAttribute("aria-current", "true");
+          else b.removeAttribute("aria-current");
+        });
+      }
+    },
+    { root: el.chapters, threshold: [0.5, 0.6] }
+  );
+  chapters.forEach((c) => io.observe(c));
+}
+
+fetch("./plans.json")
+  .then((r) => {
+    if (!r.ok) throw new Error(String(r.status));
+    return r.json();
   })
-  .catch(() => {
-    el.plans.innerHTML = `<div class="empty">Couldn’t load plans.json</div>`;
+  .then((plans) => {
+    plans = [...plans].sort((a, b) =>
+      String(a.for_night).localeCompare(String(b.for_night))
+    );
+    el.chapters.innerHTML = "";
+    const nodes = plans.map((p, i) => {
+      const node = renderChapter(p, i);
+      el.chapters.appendChild(node);
+      return node;
+    });
+    buildRail(plans, nodes);
+    watchActive(nodes);
+    if (nodes[0]) nodes[0].classList.add("is-active");
+
+    const focus = pickFocus(plans);
+    const focusIdx = Math.max(0, plans.indexOf(focus));
+    if (el.cta) {
+      el.cta.addEventListener("click", (e) => {
+        e.preventDefault();
+        nodes[focusIdx]?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+  })
+  .catch((err) => {
+    console.error(err);
+    el.chapters.innerHTML =
+      '<section class="chapter" style="display:grid;place-items:center"><p>Couldn’t load plans.json</p></section>';
   });

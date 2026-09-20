@@ -1,17 +1,15 @@
 # DateNight Chicago
 
-Lean calendar site: click a night → Eat → Then → Backup → Transit → Don’t.
+Cinematic scroll-by-date landing: one full viewport per night (Eat → Then → Backup → Transit → Don’t).
+
+Live: https://datenightchicago.app
 
 ## Update plans (token-lean)
 
-1. Edit `plans.json` (add/change nights).
-2. Commit and push to `main`, or redeploy the static folder to Vercel.
-3. No CMS. No Sheets.
+1. Edit `plans.json`.
+2. Optional photos: set `eat.image` and `then.image` to absolute image URLs. Until then, gradient + venue initial placeholders render.
+3. Push to `main` (Vercel redeploys).
 
 ## Local
 
-Open `index.html` via any static server, e.g. `python3 -m http.server 8080`.
-
-## Deploy
-
-Static files → Vercel project. Custom domain: `datenightchicago.app`.
+`python3 -m http.server 8080` from this folder.
