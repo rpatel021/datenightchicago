@@ -1,11 +1,13 @@
-# DateNight Chicago
+# Night Out Chicago
 
-Evergreen-style date night site: pick a night from the blush calendar row, restaurant photo fills the hero, scroll for dishes + the event.
+Live: **https://nightoutchicago.com**
 
-Live: https://datenightchicago.app
+Also: datenightchicago.app redirects here.
 
-## Update
-1. Edit `plans.json` (`eat.image`, `eat.dishes[]`, `then.image`).
-2. Push to `main` — Vercel redeploys.
+Pick a night, then who you’re with (Couple / Family / Friends). One corridor plan: Eat → Then → Backup → Transit → Don’t.
 
-Palette: cream `#FDFCF4`, ink `#0A0A0A`, sun `#FFCC33`, mint `#E8F5E9`, blush `#FFE5E5`, paper `#FFFFFF`.
+## Update content
+Edit `plans.json` on `main`. Each night has `parties.couple` / `parties.family` / `parties.friends`.
+
+## Palette
+Cream `#FDFCF4` · Ink `#0A0A0A` · Sun `#FFCC33` · Mint `#E8F5E9` · Blush `#FFE5E5` · Paper `#FFFFFF`
