@@ -1,1 +1,39 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DateNight Chicago</title>
+  <meta name="description" content="One corridor. Eat → Then → Backup → Transit → Don’t." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <p class="eyebrow">Chicago</p>
+    <h1>DateNight</h1>
+    <p class="tag">One corridor. Eat → Then → Backup → Transit → Don’t.</p>
+  </header>
+
+  <main>
+    <section class="cal-wrap" aria-label="Date picker">
+      <div class="cal-head">
+        <button type="button" id="prev-month" aria-label="Previous month">‹</button>
+        <h2 id="month-label"></h2>
+        <button type="button" id="next-month" aria-label="Next month">›</button>
+      </div>
+      <div class="dow" aria-hidden="true">
+        <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+      </div>
+      <div id="calendar" class="calendar" role="grid"></div>
+      <p class="hint">Dots mark nights with a plan. Tap a date.</p>
+    </section>
+
+    <section id="plans" class="plans" aria-live="polite"></section>
+  </main>
+
+  <footer class="foot">
+    <p>Living plans — update <code>plans.json</code>, redeploy.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

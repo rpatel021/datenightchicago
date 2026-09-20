@@ -1,0 +1,72 @@
+:root {
+  --bg: #1a1214;
+  --card: #261c20;
+  --ink: #f6ebe4;
+  --muted: #c4a99a;
+  --accent: #e8a07a;
+  --line: #3d2d32;
+  --ok: #9dcfb0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  background: radial-gradient(1200px 600px at 20% -10%, #3a2428 0%, var(--bg) 55%);
+  color: var(--ink);
+  min-height: 100vh;
+  line-height: 1.45;
+}
+.top { padding: 2rem 1.25rem 0.5rem; max-width: 42rem; margin: 0 auto; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; color: var(--accent); margin: 0 0 0.35rem; font-family: system-ui, sans-serif; }
+h1 { margin: 0; font-weight: 600; font-size: 2.4rem; letter-spacing: -0.02em; }
+.tag { color: var(--muted); margin: 0.4rem 0 0; }
+main { max-width: 42rem; margin: 0 auto; padding: 1rem 1.25rem 3rem; }
+.cal-wrap {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1rem 1rem 1.25rem;
+}
+.cal-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.cal-head h2 { margin: 0; font-size: 1.1rem; font-weight: 600; }
+.cal-head button {
+  background: transparent; border: 1px solid var(--line); color: var(--ink);
+  width: 2.25rem; height: 2.25rem; border-radius: 999px; cursor: pointer; font-size: 1.25rem;
+}
+.cal-head button:hover { border-color: var(--accent); color: var(--accent); }
+.dow, .calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.25rem; }
+.dow { margin-top: 1rem; font-family: system-ui, sans-serif; font-size: 0.68rem; color: var(--muted); text-align: center; text-transform: uppercase; letter-spacing: 0.06em; }
+.calendar { margin-top: 0.35rem; }
+.day {
+  aspect-ratio: 1; border: 0; border-radius: 0.65rem; background: transparent; color: var(--ink);
+  cursor: pointer; font: inherit; position: relative; display: grid; place-items: center;
+}
+.day.muted { color: #6d565c; }
+.day.has { font-weight: 600; }
+.day.has::after {
+  content: ""; width: 0.35rem; height: 0.35rem; border-radius: 50%; background: var(--accent);
+  position: absolute; bottom: 0.35rem;
+}
+.day.selected { background: var(--accent); color: #1a1214; }
+.day.selected::after { background: #1a1214; }
+.day:not(.muted):hover { background: #35262b; }
+.hint { margin: 0.85rem 0 0; font-size: 0.85rem; color: var(--muted); font-family: system-ui, sans-serif; }
+.plans { margin-top: 1.25rem; display: grid; gap: 1rem; }
+.empty {
+  background: var(--card); border: 1px dashed var(--line); border-radius: 1rem; padding: 1.25rem; color: var(--muted);
+}
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 1rem; padding: 1.15rem 1.2rem 1.3rem;
+}
+.card h3 { margin: 0 0 0.25rem; font-size: 1.2rem; }
+.meta { font-family: system-ui, sans-serif; font-size: 0.8rem; color: var(--muted); margin: 0 0 0.85rem; }
+.block { margin-top: 0.85rem; }
+.block .label {
+  font-family: system-ui, sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 0.2rem;
+}
+.block p { margin: 0; }
+.block a { color: var(--ok); }
+.verify { margin-top: 0.85rem; font-size: 0.85rem; color: #f0c27a; font-family: system-ui, sans-serif; }
+.foot { text-align: center; padding: 0 1rem 2rem; color: var(--muted); font-size: 0.8rem; font-family: system-ui, sans-serif; }
+.foot code { color: var(--accent); }
