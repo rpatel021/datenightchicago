@@ -168,10 +168,12 @@ function render() {
   `;
 }
 
-fetch("./plans.json")
-  .then((r) => r.json())
-  .then((data) => {
-    plans = [...data].sort((a, b) => String(a.for_night).localeCompare(String(b.for_night)));
+Promise.all([
+  fetch("./plans.json").then((r) => r.json()),
+  fetch("./plans-weekend.json").then((r) => r.json()).catch(() => []),
+])
+  .then(([a, b]) => {
+    plans = [...a, ...b].sort((a, b) => String(a.for_night).localeCompare(String(b.for_night)));
     buildTrack();
     wireParty();
     const t = tonightIso();
