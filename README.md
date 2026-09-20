@@ -1,15 +1,11 @@
 # DateNight Chicago
 
-Cinematic scroll-by-date landing: one full viewport per night (Eat → Then → Backup → Transit → Don’t).
+Evergreen-style date night site: pick a night from the blush calendar row, restaurant photo fills the hero, scroll for dishes + the event.
 
 Live: https://datenightchicago.app
 
-## Update plans (token-lean)
+## Update
+1. Edit `plans.json` (`eat.image`, `eat.dishes[]`, `then.image`).
+2. Push to `main` — Vercel redeploys.
 
-1. Edit `plans.json`.
-2. Optional photos: set `eat.image` and `then.image` to absolute image URLs. Until then, gradient + venue initial placeholders render.
-3. Push to `main` (Vercel redeploys).
-
-## Local
-
-`python3 -m http.server 8080` from this folder.
+Palette: cream `#FDFCF4`, ink `#0A0A0A`, sun `#FFCC33`, mint `#E8F5E9`, blush `#FFE5E5`, paper `#FFFFFF`.

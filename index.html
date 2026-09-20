@@ -4,25 +4,32 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DateNight Chicago</title>
-  <meta name="description" content="One corridor. Eat → Then → Backup → Transit → Don’t. Scroll by date." />
+  <meta name="description" content="One corridor. Eat → Then → Backup → Transit → Don’t." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar">
+  <div class="desk" aria-hidden="true"></div>
+
+  <header class="top">
     <div class="brand">
       <span class="wordmark">DateNight</span>
-      <span class="chip">Chicago</span>
+      <span class="chip sun">Chicago</span>
     </div>
-    <p class="legend" aria-hidden="true">Eat → Then → Backup → Transit → Don’t</p>
-    <a class="cta" id="cta-tonight" href="#chapters">See tonight’s plan</a>
+    <p class="promise">Eat → Then → Backup → Transit → Don’t</p>
   </header>
 
-  <nav class="rail" id="date-rail" aria-label="Jump to a night"></nav>
+  <section class="calendar-bar" aria-label="Pick a night">
+    <div class="cal-label">Nights</div>
+    <div class="cal-track" id="cal-track" role="tablist"></div>
+    <div class="cal-slider" aria-hidden="true">
+      <input id="cal-range" type="range" min="0" max="5" value="0" step="1" />
+    </div>
+  </section>
 
-  <main id="chapters" class="chapters" tabindex="-1"></main>
+  <main id="stage"></main>
 
   <footer class="foot">
-    <p>Living plans — update <code>plans.json</code>, redeploy. Optional <code>eat.image</code> / <code>then.image</code>.</p>
+    <p>Living plans · <code>plans.json</code></p>
   </footer>
   <script src="app.js"></script>
 </body>
