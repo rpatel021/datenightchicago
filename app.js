@@ -15,9 +15,14 @@ let index = 0;
 let party = "couple";
 
 function esc(s) {
-  return String(s ?? "").replace(/[&<>"']/g, (c) =>
-    ({ "&": "&", "<": "<", ">": ">", '"': """, "'": "&#39;" }[c])
-  );
+  const amp = String.fromCharCode(38);
+  return String(s ?? "").replace(/[&<>"']/g, (c) => ({
+    "&": amp + "amp;",
+    "<": amp + "lt;",
+    ">": amp + "gt;",
+    '"': amp + "quot;",
+    "'": amp + "#39;"
+  }[c]));
 }
 
 function dateParts(iso) {
