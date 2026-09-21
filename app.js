@@ -8,11 +8,14 @@ const el = {
   partyTrack: document.getElementById("party-track"),
   partyRange: document.getElementById("party-range"),
   stage: document.getElementById("stage"),
+  refresh: document.getElementById("refresh-plan"),
 };
 
-let plans = [];
+let nights = [];
+let catalog = [];
 let index = 0;
 let party = "couple";
+let spin = {};
 
 function esc(s) {
   const amp = String.fromCharCode(38);
@@ -41,19 +44,33 @@ function tonightIso() {
   }).format(new Date());
 }
 
+function key() {
+  return `${nights[index] || ""}:${party}`;
+}
+
+function variantsFor(iso, who) {
+  const sameNight = catalog.filter((p) => p.for_night === iso && p.parties && p.parties[who]);
+  if (sameNight.length > 1) return sameNight;
+  const pool = catalog.filter((p) => p.parties && p.parties[who]);
+  return pool.length ? pool : sameNight;
+}
+
 function activePlan() {
-  const night = plans[index];
-  if (!night) return null;
-  if (night.parties && night.parties[party]) {
-    return { ...night, ...night.parties[party], party };
-  }
-  return { ...night, party: "couple" };
+  const iso = nights[index];
+  if (!iso) return null;
+  const list = variantsFor(iso, party);
+  if (!list.length) return null;
+  const k = key();
+  const i = ((spin[k] || 0) % list.length + list.length) % list.length;
+  const src = list[i];
+  const slice = src.parties[party];
+  return { ...src, ...slice, for_night: iso, party };
 }
 
 function buildTrack() {
   el.track.innerHTML = "";
-  plans.forEach((p, i) => {
-    const { weekday, month, day } = dateParts(p.for_night);
+  nights.forEach((iso, i) => {
+    const { weekday, month, day } = dateParts(iso);
     const b = document.createElement("button");
     b.type = "button";
     b.setAttribute("role", "tab");
@@ -61,7 +78,7 @@ function buildTrack() {
     b.addEventListener("click", () => selectNight(i, true));
     el.track.appendChild(b);
   });
-  el.range.max = String(Math.max(0, plans.length - 1));
+  el.range.max = String(Math.max(0, nights.length - 1));
   el.range.oninput = () => selectNight(Number(el.range.value), false);
 }
 
@@ -72,10 +89,11 @@ function wireParty() {
   el.partyRange.oninput = () => {
     selectParty(PARTIES[Number(el.partyRange.value)] || "couple", false);
   };
+  if (el.refresh) el.refresh.addEventListener("click", refreshPlan);
 }
 
 function selectNight(i, syncRange) {
-  index = Math.max(0, Math.min(plans.length - 1, i));
+  index = Math.max(0, Math.min(nights.length - 1, i));
   [...el.track.children].forEach((b, n) => {
     b.setAttribute("aria-selected", n === index ? "true" : "false");
   });
@@ -89,6 +107,15 @@ function selectParty(p, syncRange) {
     b.setAttribute("aria-selected", b.dataset.party === party ? "true" : "false");
   });
   if (syncRange) el.partyRange.value = String(PARTIES.indexOf(party));
+  render();
+}
+
+function refreshPlan() {
+  const iso = nights[index];
+  const list = variantsFor(iso, party);
+  if (list.length < 2) return;
+  const k = key();
+  spin[k] = (spin[k] || 0) + 1;
   render();
 }
 
@@ -115,6 +142,11 @@ function render() {
   const then = p.then || {};
   const backup = p.backup || {};
   const partyLabel = PARTY_LABEL[party] || party;
+  const list = variantsFor(p.for_night, party);
+  if (el.refresh) {
+    el.refresh.disabled = list.length < 2;
+    el.refresh.textContent = list.length < 2 ? "No other plan" : "Refresh plan";
+  }
 
   el.stage.innerHTML = `
     <section class="hero" aria-label="Eat">
@@ -135,7 +167,7 @@ function render() {
 
     <section class="section" id="then">
       <h2>Then</h2>
-      <p class="hint">${esc(partyLabel)} plan — the night’s show</p>
+      <p class="hint">${esc(partyLabel)} plan — same night, another corridor if you refresh</p>
       <div class="event-hero">
         ${then.image ? `<img src="${esc(then.image)}" alt="${esc(then.name || "Event")}" loading="lazy" />` : ""}
         <div class="shade"></div>
@@ -178,11 +210,12 @@ Promise.all([
   fetch("./plans-weekend.json").then((r) => r.json()).catch(() => []),
 ])
   .then(([a, b]) => {
-    plans = [...a, ...b].sort((a, b) => String(a.for_night).localeCompare(String(b.for_night)));
+    catalog = [...a, ...b];
+    nights = [...new Set(catalog.map((p) => p.for_night))].sort();
     buildTrack();
     wireParty();
     const t = tonightIso();
-    let start = plans.findIndex((p) => p.for_night >= t);
+    let start = nights.findIndex((iso) => iso >= t);
     if (start < 0) start = 0;
     selectParty("couple", true);
     selectNight(start, true);
