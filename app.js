@@ -1,12 +1,20 @@
 (function () {
-  const stage = document.getElementById("stage");
-  const nightRow = document.getElementById("night-row");
+  const proof = document.getElementById("proof");
+  const catRow = document.getElementById("cat-row");
   const partyRow = document.getElementById("party-row");
+  const nightRow = document.getElementById("night-row");
+  const nightBlock = document.getElementById("night-block");
+  const reelEl = document.getElementById("reel");
+  const corridorEl = document.getElementById("corridor");
 
+  let neighborhoods = [];
+  let categories = [];
   let plans = [];
-  let scout = null;
-  let nightKey = null;
+  let scoutedCount = 0;
+  let category = "all";
   let party = "couple";
+  let nightKey = null;
+  let mode = "reel";
 
   const PARTY_LABEL = { couple: "Couple", family: "Family", friends: "Friends" };
 
@@ -19,6 +27,7 @@
   }
 
   function nightLabel(iso) {
+    if (!iso) return "";
     return new Date(iso + "T12:00:00").toLocaleDateString("en-US", {
       weekday: "short",
       month: "short",
@@ -26,233 +35,277 @@
     });
   }
 
-  function shortWeekday(iso) {
+  function shortNight(iso) {
+    if (!iso) return "";
     return new Date(iso + "T12:00:00").toLocaleDateString("en-US", { weekday: "short" });
+  }
+
+  function partyFits(n) {
+    const fits = (n.party_fits || []).map((x) => String(x).toLowerCase());
+    if (!fits.length) return true;
+    return fits.includes(party);
+  }
+
+  function matchesCategory(n) {
+    if (category === "all") return true;
+    if (n.category === category) return true;
+    return (n.category_ids || []).includes(category);
+  }
+
+  function visibleNeighborhoods() {
+    return neighborhoods.filter((n) => matchesCategory(n) && partyFits(n));
+  }
+
+  function planForNight(iso) {
+    return plans.find((p) => p.for_night === iso) || null;
+  }
+
+  function defaultNight() {
+    const today = new Date().toISOString().slice(0, 10);
+    const upcoming = plans.find((p) => p.for_night >= today);
+    return (upcoming || plans[0] || {}).for_night || null;
   }
 
   function pickCorridor(plan) {
     const parties = plan.parties || {};
     const block = parties[party] || parties.couple || plan;
     return {
-      eat: block.eat || plan.eat,
-      then: block.then || plan.then,
-      backup: block.backup || plan.backup,
-      transit: block.transit || plan.transit,
-      dont: block.dont || plan.dont,
+      eat: block.eat || plan.eat || {},
+      then: block.then || plan.then || {},
+      backup: block.backup || plan.backup || {},
+      transit: block.transit || plan.transit || "",
+      dont: block.dont || plan.dont || "",
       corridor: plan.corridor || "",
+      for_night: plan.for_night,
     };
   }
 
-  function defaultNight() {
-    const todayIso = new Date().toISOString().slice(0, 10);
-    const upcoming = plans.find((p) => p.for_night >= todayIso);
-    return (upcoming || plans[0] || {}).for_night || null;
+  function observeIn() {
+    const nodes = document.querySelectorAll(".slide, .corridor-step, .dish-bleed");
+    if (!("IntersectionObserver" in window)) {
+      nodes.forEach((n) => n.classList.add("is-in"));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.classList.add("is-in");
+        });
+      },
+      { threshold: 0.28 }
+    );
+    nodes.forEach((n) => io.observe(n));
   }
 
-  function renderPills() {
-    nightRow.innerHTML = plans
-      .map((p) => {
-        const selected = p.for_night === nightKey;
-        return `<button type="button" role="tab" data-night="${esc(p.for_night)}" aria-selected="${selected}">${esc(shortWeekday(p.for_night))}</button>`;
+  function renderCats() {
+    catRow.innerHTML = categories
+      .map((c) => {
+        const selected = c.id === category;
+        return `<button type="button" role="tab" data-cat="${esc(c.id)}" aria-selected="${selected}">${esc(c.label)}</button>`;
       })
       .join("");
+  }
+
+  function renderParty() {
     [...partyRow.querySelectorAll("button")].forEach((btn) => {
       btn.setAttribute("aria-selected", btn.dataset.party === party ? "true" : "false");
     });
   }
 
-  function observeChapters() {
-    const chapters = stage.querySelectorAll(".chapter");
-    if (!("IntersectionObserver" in window)) {
-      chapters.forEach((c) => c.classList.add("is-in"));
+  function renderNights() {
+    if (!plans.length) {
+      nightBlock.hidden = true;
       return;
     }
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("is-in");
-        });
-      },
-      { threshold: 0.35 }
-    );
-    chapters.forEach((c) => io.observe(c));
-  }
-
-  function dishCards(eat) {
-    const dishes = (eat && eat.dishes) || [];
-    if (!dishes.length) return "";
-    return `
-      <section class="panel">
-        <h3>Order like a local</h3>
-        <p class="hint">Plates worth fighting over. Start here.</p>
-        <div class="dishes">
-          ${dishes
-            .slice(0, 3)
-            .map(
-              (d) => `
-            <figure class="dish">
-              <img src="${esc(d.image || eat.image || "")}" alt="${esc(d.name || "Dish")}" loading="lazy" />
-              <figcaption>${esc(d.name || "House favorite")}</figcaption>
-            </figure>`
-            )
-            .join("")}
-        </div>
-      </section>`;
-  }
-
-  function scoutTeaser() {
-    if (!scout) return { strip: "", more: "" };
-    const highlights = (scout.highlights || []).slice(0, 6);
-    const count = scout.scouted_count || scout.scouted_count || highlights.length;
-    const cats = (scout.categories || []).slice(0, 4);
-    const strip = `
-      <div class="scout-strip" aria-label="This week's scout">
-        <span><strong>${esc(count)}</strong> nights scouted</span>
-        ${cats.map((c) => `<span>${esc(c)}</span>`).join("")}
-      </div>`;
-    if (!highlights.length) return { strip, more: "" };
-    const cards = highlights
-      .map((e) => {
-        const href = e.official_url || e.official_url || e.official_url || e.url || "#";
-        return `
-        <a class="event-card" href="${esc(href)}" target="_blank" rel="noopener">
-          <div class="when">${esc(e.date || "")}${e.start ? " · " + esc(e.start) : ""}</div>
-          <div class="name">${esc(e.name)}</div>
-          <p class="where">${esc(e.neighborhood || e.venue || "Chicago")}${e.cost ? " · " + esc(e.cost) : ""}</p>
-        </a>`;
+    nightBlock.hidden = false;
+    nightRow.innerHTML = plans
+      .map((p) => {
+        const selected = p.for_night === nightKey;
+        return `<button type="button" role="tab" data-night="${esc(p.for_night)}" aria-selected="${selected}">${esc(shortNight(p.for_night))}</button>`;
       })
       .join("");
-    const more = `
-      <section class="more-nights">
-        <h3>Also on the boards this week</h3>
-        <p class="hint">We already scouted comedy, jazz, museums, magic, and weird one-offs. Your corridor picks one that fits.</p>
-        <div class="event-grid">${cards}</div>
-      </section>`;
-    return { strip, more };
   }
 
-  function backupHtml(backup) {
-    if (!backup) return "Have a second table nearby.";
-    if (typeof backup === "string") return esc(backup);
-    const label = backup.name || "Alt plan";
-    const note = backup.note ? ` — ${backup.note}` : "";
-    if (backup.url) {
-      return `<a href="${esc(backup.url)}" target="_blank" rel="noopener">${esc(label)}</a>${esc(note)}`;
-    }
-    return esc(label + note);
-  }
-
-  function render() {
-    const plan = plans.find((p) => p.for_night === nightKey) || plans[0];
-    if (!plan) {
-      stage.innerHTML = `<div class="empty"><h1>No plans loaded yet.</h1></div>`;
+  function renderReel() {
+    mode = "reel";
+    corridorEl.hidden = true;
+    corridorEl.innerHTML = "";
+    const list = visibleNeighborhoods();
+    if (!list.length) {
+      reelEl.innerHTML = `<div class="empty"><h2>Nothing in that mix tonight.</h2><p>Flip vibe or who you’re with.</p></div>`;
       return;
     }
+    reelEl.innerHTML = list
+      .map((n) => {
+        const hasCorridor = !!(n.for_night && planForNight(n.for_night));
+        const hookMeta = [n.hook.venue, n.hook.date, n.hook.cost].filter(Boolean).join(" · ");
+        return `
+        <section class="slide" data-hood="${esc(n.id)}">
+          <div class="media" style="background-image:url('${esc(n.image)}')"></div>
+          <div class="shade"></div>
+          <div class="copy">
+            <span class="cat-pill">${esc(n.category_label)}</span>
+            <span class="count-pill">${esc(n.count)} on the boards</span>
+            <h2>${esc(n.neighborhood)}</h2>
+            <p class="hook">${esc(n.hook.name)}</p>
+            <p class="meta">${esc(hookMeta)}</p>
+            <div class="actions">
+              ${
+                hasCorridor
+                  ? `<button type="button" class="btn flame" data-open-night="${esc(n.for_night)}">Make it a night · ${esc(shortNight(n.for_night))}</button>`
+                  : `<button type="button" class="btn" data-open-night="${esc(defaultNight() || "")}">Browse nights</button>`
+              }
+              ${
+                n.hook.url
+                  ? `<a class="btn ghost" href="${esc(n.hook.url)}" target="_blank" rel="noopener">Event details</a>`
+                  : ""
+              }
+            </div>
+          </div>
+        </section>`;
+      })
+      .join("");
+    observeIn();
+  }
 
+  function renderCorridor(iso) {
+    const plan = planForNight(iso);
+    if (!plan) {
+      corridorEl.hidden = false;
+      corridorEl.innerHTML = `<div class="empty"><h2>No corridor for that night yet.</h2></div>`;
+      return;
+    }
+    mode = "corridor";
+    nightKey = iso;
+    renderNights();
+    renderParty();
     const c = pickCorridor(plan);
     const eat = c.eat || {};
     const then = c.then || {};
+    const dishes = eat.dishes || [];
     const partyLabel = PARTY_LABEL[party] || "Couple";
-    const nightText = nightLabel(plan.for_night);
-    const where = c.corridor || eat.neighborhood || "Chicago";
-    const { strip, more } = scoutTeaser();
+    const dont = typeof c.dont === "string" ? c.dont : (c.dont && c.dont.note) || "";
+    const transit = typeof c.transit === "string" ? c.transit : (c.transit && c.transit.note) || "";
+    const backup = c.backup || {};
 
-    stage.innerHTML = `
-      <section class="splash">
-        <div class="splash-copy">
-          <p class="eyebrow">${esc(nightText)} · ${esc(partyLabel)} · ${esc(where)}</p>
-          <h1>Eat something.<br />Then do something.</h1>
-          <p class="lede">A Chicago night out — dinner, then a reason to stay out.</p>
-          ${strip}
-        </div>
-      </section>
+    const dishHtml = dishes
+      .slice(0, 2)
+      .map(
+        (d) => `
+        <section class="dish-bleed">
+          <div class="media" style="background-image:url('${esc(d.image || eat.image || "")}')"></div>
+          <div class="shade"></div>
+          <div class="copy">
+            <p class="eyebrow">Order this</p>
+            <h2>${esc(d.name || "House favorite")}</h2>
+          </div>
+        </section>`
+      )
+      .join("");
 
-      <section class="chapter" data-step="eat">
-        <img class="chapter-media" src="${esc(eat.image || "")}" alt="${esc(eat.name || "Dinner")}" />
-        <div class="chapter-shade"></div>
-        <div class="chapter-copy">
-          <div class="kicker">Eat <span class="party-pill">${esc(partyLabel)}</span></div>
+    corridorEl.hidden = false;
+    corridorEl.innerHTML = `
+      <div class="back-reel"><button type="button" class="btn ghost" id="back-to-reel">← Neighborhoods</button></div>
+      <section class="corridor-step">
+        <div class="media" style="background-image:url('${esc(eat.image || "")}')"></div>
+        <div class="shade"></div>
+        <div class="copy">
+          <p class="eyebrow">Eat · ${esc(nightLabel(iso))}</p>
+          <span class="party-pill">${esc(partyLabel)}</span>
           <h2>${esc(eat.name || "Dinner")}</h2>
-          <p class="meta">${esc(where)}${eat.cuisine ? " · " + esc(eat.cuisine) : ""}</p>
+          <p class="meta">${esc(c.corridor || "Chicago")}</p>
           <p class="note">${esc(eat.why || eat.note || "Start the night at the table.")}</p>
           <div class="actions">
-            ${eat.url ? `<a class="btn primary" href="${esc(eat.url)}" target="_blank" rel="noopener">Reserve / menu</a>` : ""}
-            <a class="btn ghost" href="#then">Then what?</a>
+            ${eat.url ? `<a class="btn" href="${esc(eat.url)}" target="_blank" rel="noopener">Reserve / menu</a>` : ""}
+            <a class="btn ghost" href="#then-step">Then what?</a>
           </div>
         </div>
       </section>
-
-      ${dishCards(eat)}
-
-      <section class="chapter" id="then" data-step="then">
-        <img class="chapter-media" src="${esc(then.image || eat.image || "")}" alt="${esc(then.name || "Then")}" />
-        <div class="chapter-shade"></div>
-        <div class="chapter-copy">
-          <div class="kicker">Then</div>
+      ${dishHtml}
+      <section class="corridor-step" id="then-step">
+        <div class="media" style="background-image:url('${esc(then.image || eat.image || "")}')"></div>
+        <div class="shade"></div>
+        <div class="copy">
+          <p class="eyebrow">Then</p>
           <h2>${esc(then.name || "Something to do")}</h2>
-          <p class="meta">${esc(then.neighborhood || then.venue || where)}${then.start ? " · " + esc(then.start) : ""}${then.cost ? " · " + esc(then.cost) : ""}</p>
+          <p class="meta">${[then.start, then.cost].filter(Boolean).map(esc).join(" · ")}</p>
           <p class="note">${esc(then.why || then.note || "Walk over, stay out, make it a night.")}</p>
           <div class="actions">
-            ${then.url ? `<a class="btn primary" href="${esc(then.url)}" target="_blank" rel="noopener">Tickets / details</a>` : ""}
+            ${then.url ? `<a class="btn flame" href="${esc(then.url)}" target="_blank" rel="noopener">Tickets / details</a>` : ""}
+            ${
+              backup.url
+                ? `<a class="btn ghost" href="${esc(backup.url)}" target="_blank" rel="noopener">Backup · ${esc(backup.name || "Plan B")}</a>`
+                : ""
+            }
           </div>
+          ${dont ? `<p class="dont-line">Don’t: ${esc(dont)}</p>` : ""}
+          ${transit ? `<p class="transit-line">${esc(transit)}</p>` : ""}
         </div>
       </section>
-
-      <section class="panel">
-        <h3>Backup · Transit · Don’t</h3>
-        <p class="hint">Plan B stays in the same neighborhood. Don’t lose the night.</p>
-        <div class="trio">
-          <article>
-            <div class="tag">Backup</div>
-            <p>${backupHtml(c.backup)}</p>
-          </article>
-          <article>
-            <div class="tag">Transit</div>
-            <p>${esc(typeof c.transit === "string" ? c.transit : (c.transit && c.transit.note) || "Walk or short rideshare — keep it close.")}</p>
-          </article>
-          <article class="dont">
-            <div class="tag">Don’t</div>
-            <p>${esc(typeof c.dont === "string" ? c.dont : (c.dont && c.dont.note) || "Don’t stretch the night across the city.")}</p>
-          </article>
-        </div>
-      </section>
-
-      ${more}
     `;
-
-    renderPills();
-    observeChapters();
+    corridorEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    observeIn();
+    const back = document.getElementById("back-to-reel");
+    if (back) {
+      back.addEventListener("click", () => {
+        corridorEl.hidden = true;
+        corridorEl.innerHTML = "";
+        mode = "reel";
+        document.getElementById("reel").scrollIntoView({ behavior: "smooth" });
+      });
+    }
   }
 
-  nightRow.addEventListener("click", (e) => {
-    const btn = e.target.closest("button[data-night]");
+  catRow.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-cat]");
     if (!btn) return;
-    nightKey = btn.dataset.night;
-    render();
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    category = btn.dataset.cat;
+    renderCats();
+    renderReel();
   });
 
   partyRow.addEventListener("click", (e) => {
     const btn = e.target.closest("button[data-party]");
     if (!btn) return;
     party = btn.dataset.party;
-    render();
+    renderParty();
+    if (mode === "corridor" && nightKey) renderCorridor(nightKey);
+    else renderReel();
+  });
+
+  nightRow.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-night]");
+    if (!btn) return;
+    renderCorridor(btn.dataset.night);
+  });
+
+  reelEl.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-open-night]");
+    if (!btn) return;
+    const iso = btn.dataset.openNight;
+    if (iso) renderCorridor(iso);
   });
 
   Promise.all([
+    fetch("neighborhoods.json").then((r) => r.json()),
     fetch("plans.json").then((r) => r.json()),
-    fetch("scout-teaser.json")
-      .then((r) => (r.ok ? r.json() : null))
-      .catch(() => null),
   ])
-    .then(([data, teaser]) => {
-      plans = Array.isArray(data) ? data : data.plans || [];
-      scout = teaser;
+    .then(([hoods, planData]) => {
+      neighborhoods = hoods.neighborhoods || [];
+      categories = hoods.categories || [];
+      scoutedCount = hoods.scouted_count || 0;
+      plans = Array.isArray(planData) ? planData : planData.plans || [];
       nightKey = defaultNight();
-      render();
+      proof.textContent = `${scoutedCount} nights checked`;
+      renderCats();
+      renderParty();
+      renderNights();
+      renderReel();
+      document.getElementById("open")?.classList.add("is-in");
     })
     .catch((err) => {
       console.error(err);
-      stage.innerHTML = `<div class="empty"><h1>Couldn’t load plans.</h1><p>Try a refresh.</p></div>`;
+      proof.textContent = "Couldn’t load the boards";
+      reelEl.innerHTML = `<div class="empty"><h2>Couldn’t load Chicago.</h2><p>Try a refresh.</p></div>`;
     });
 })();

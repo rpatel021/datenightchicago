@@ -1,0 +1,339 @@
+{
+  "scouted_count": 105,
+  "categories": [
+    {
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "id": "comedy",
+      "label": "Comedy"
+    },
+    {
+      "id": "jazz_blues",
+      "label": "Jazz & blues"
+    },
+    {
+      "id": "theater",
+      "label": "Theater"
+    },
+    {
+      "id": "museum",
+      "label": "Museum"
+    },
+    {
+      "id": "magic",
+      "label": "Magic"
+    },
+    {
+      "id": "festival",
+      "label": "Festival"
+    }
+  ],
+  "neighborhoods": [
+    {
+      "id": "loop",
+      "neighborhood": "Loop",
+      "image": "https://images.unsplash.com/photo-1494522855154-9297ac14b55f?auto=format&fit=crop&w=1800&q=80",
+      "count": 25,
+      "category": "museum",
+      "category_label": "Museum",
+      "category_ids": [
+        "museum",
+        "theater",
+        "magic",
+        "live_music",
+        "festival"
+      ],
+      "party_fits": [
+        "couple",
+        "family",
+        "friends"
+      ],
+      "for_night": null,
+      "nights": [],
+      "hook": {
+        "name": "Tangible Sound: Arrival to a Higher Ground",
+        "date": "2026-09-22",
+        "cost": "Free",
+        "url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/",
+        "venue": "Chicago Cultural Center",
+        "category": "museum"
+      }
+    },
+    {
+      "id": "old-town",
+      "neighborhood": "Old Town",
+      "image": "https://images.unsplash.com/photo-1477959858617-67f85b6b1ce5?auto=format&fit=crop&w=1800&q=80",
+      "count": 14,
+      "category": "comedy",
+      "category_label": "Comedy",
+      "category_ids": [
+        "comedy"
+      ],
+      "party_fits": [
+        "couple",
+        "family",
+        "friends"
+      ],
+      "for_night": "2026-09-24",
+      "nights": [
+        "2026-09-24",
+        "2026-09-25"
+      ],
+      "hook": {
+        "name": "Pandemonium, Please Hold",
+        "date": "2026-09-22",
+        "cost": "from ~$40-$85",
+        "url": "https://www.choosechicago.com/event/pandemonium-please-hold/2026-09-22/",
+        "venue": "The Second City",
+        "category": "comedy"
+      }
+    },
+    {
+      "id": "streeterville",
+      "neighborhood": "Streeterville",
+      "image": "https://images.unsplash.com/photo-1524169358667-20487720820e?auto=format&fit=crop&w=1800&q=80",
+      "count": 9,
+      "category": "theater",
+      "category_label": "Theater",
+      "category_ids": [
+        "theater",
+        "museum",
+        "community",
+        "other",
+        "comedy"
+      ],
+      "party_fits": [
+        "couple",
+        "family",
+        "friends"
+      ],
+      "for_night": null,
+      "nights": [],
+      "hook": {
+        "name": "KOWALSKI",
+        "date": "2026-09-22",
+        "cost": "Ticketed",
+        "url": "https://lookingglasstheatre.org/plays/kowalski/",
+        "venue": "Lookingglass Theatre",
+        "category": "theater"
+      }
+    },
+    {
+      "id": "uptown",
+      "neighborhood": "Uptown",
+      "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1800&q=80",
+      "count": 8,
+      "category": "jazz_blues",
+      "category_label": "Jazz & blues",
+      "category_ids": [
+        "jazz_blues"
+      ],
+      "party_fits": [
+        "couple",
+        "friends"
+      ],
+      "for_night": "2026-09-23",
+      "nights": [
+        "2026-09-23"
+      ],
+      "hook": {
+        "name": "Chicago Cellar Boys at Green Mill",
+        "date": "2026-09-22",
+        "cost": "$10 cover",
+        "url": "https://greenmilljazz.com/events/8pm-midnight-chicago-cellar-boys-2026-09-22/",
+        "venue": "Green Mill Jazz Club",
+        "category": "jazz_blues"
+      }
+    },
+    {
+      "id": "lincoln-park",
+      "neighborhood": "Lincoln Park",
+      "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1800&q=80",
+      "count": 8,
+      "category": "theater",
+      "category_label": "Theater",
+      "category_ids": [
+        "theater"
+      ],
+      "party_fits": [
+        "couple",
+        "friends"
+      ],
+      "for_night": "2026-09-21",
+      "nights": [
+        "2026-09-21",
+        "2026-09-26"
+      ],
+      "hook": {
+        "name": "Topdog/Underdog",
+        "date": "2026-09-22",
+        "cost": "Ticketed",
+        "url": "https://www.steppenwolf.org/whats-on/2026-2027/topdog-underdog",
+        "venue": "Steppenwolf Theatre Downstairs",
+        "category": "theater"
+      }
+    },
+    {
+      "id": "south-loop",
+      "neighborhood": "South Loop",
+      "image": "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1800&q=80",
+      "count": 6,
+      "category": "jazz_blues",
+      "category_label": "Jazz & blues",
+      "category_ids": [
+        "jazz_blues"
+      ],
+      "party_fits": [
+        "couple",
+        "friends"
+      ],
+      "for_night": null,
+      "nights": [],
+      "hook": {
+        "name": "Chris O'Leary at Buddy Guy's Legends",
+        "date": "2026-09-22",
+        "cost": "Ticketed",
+        "url": "https://buddyguy.com/events/",
+        "venue": "Buddy Guy's Legends",
+        "category": "jazz_blues"
+      }
+    },
+    {
+      "id": "hyde-park",
+      "neighborhood": "Hyde Park",
+      "image": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=80",
+      "count": 6,
+      "category": "festival",
+      "category_label": "Festival",
+      "category_ids": [
+        "festival"
+      ],
+      "party_fits": [
+        "couple",
+        "family",
+        "friends"
+      ],
+      "for_night": null,
+      "nights": [],
+      "hook": {
+        "name": "HPJF: Bethany Pickens Soulful Coalition",
+        "date": "2026-09-26",
+        "cost": "Free ($10 donation)",
+        "url": "https://hydeparkjazzfestival.org/pickensstage",
+        "venue": "Hyde Park Jazz Festival",
+        "category": "festival"
+      }
+    },
+    {
+      "id": "logan-square",
+      "neighborhood": "Logan Square",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80",
+      "count": 7,
+      "category": "comedy",
+      "category_label": "Comedy",
+      "category_ids": [
+        "jazz_blues",
+        "comedy",
+        "screening"
+      ],
+      "party_fits": [
+        "couple",
+        "family",
+        "friends"
+      ],
+      "for_night": "2026-09-22",
+      "nights": [
+        "2026-09-22"
+      ],
+      "hook": {
+        "name": "Comic Court at Lincoln Lodge",
+        "date": "2026-09-22",
+        "cost": "$8",
+        "url": "https://www.choosechicago.com/event/comic-court-chicagos-1-comedy-court-show/2026-09-22/",
+        "venue": "The Lincoln Lodge",
+        "category": "comedy"
+      }
+    },
+    {
+      "id": "near-north",
+      "neighborhood": "Near North",
+      "image": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1800&q=80",
+      "count": 5,
+      "category": "comedy",
+      "category_label": "Comedy",
+      "category_ids": [
+        "comedy"
+      ],
+      "party_fits": [
+        "couple",
+        "friends"
+      ],
+      "for_night": null,
+      "nights": [],
+      "hook": {
+        "name": "The Fizz Show",
+        "date": "2026-09-23",
+        "cost": "$15",
+        "url": "https://www.choosechicago.com/event/the-fizz-show-2/2026-09-23/",
+        "venue": "iO Theater",
+        "category": "comedy"
+      }
+    },
+    {
+      "id": "pilsen",
+      "neighborhood": "Pilsen",
+      "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=80",
+      "count": 3,
+      "category": "other",
+      "category_label": "Odd one-offs",
+      "category_ids": [
+        "other",
+        "live_music",
+        "community"
+      ],
+      "party_fits": [
+        "couple",
+        "family",
+        "friends"
+      ],
+      "for_night": null,
+      "nights": [],
+      "hook": {
+        "name": "Jacques Ze Whipper: Circus Kid",
+        "date": "2026-09-22",
+        "cost": "Ticketed (17+)",
+        "url": "https://thaliahallchicago.com/",
+        "venue": "Thalia Hall",
+        "category": "other"
+      }
+    },
+    {
+      "id": "lakeview",
+      "neighborhood": "Lakeview",
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=80",
+      "count": 3,
+      "category": "comedy",
+      "category_label": "Comedy",
+      "category_ids": [
+        "comedy",
+        "screening"
+      ],
+      "party_fits": [
+        "couple",
+        "friends"
+      ],
+      "for_night": null,
+      "nights": [],
+      "hook": {
+        "name": "Tuesday Night Stand Up at Laugh Factory Chicago",
+        "date": "2026-09-22",
+        "cost": "TBA",
+        "url": "https://laughfactorychicago.standuptix.com/calendar/2026-09",
+        "venue": "Laugh Factory Chicago",
+        "category": "comedy"
+      }
+    }
+  ]
+}
