@@ -1,0 +1,91 @@
+{
+  "scouted_count": 105,
+  "categories": [
+    "Jazz & blues",
+    "Comedy",
+    "Odd one-offs",
+    "Theater"
+  ],
+  "highlights": [
+    {
+      "name": "Chicago Cellar Boys at Green Mill",
+      "date": "2026-09-22",
+      "start": null,
+      "neighborhood": "Uptown",
+      "venue": "Green Mill Jazz Club",
+      "cost": "$10 cover",
+      "official_url": "https://greenmilljazz.com/events/8pm-midnight-chicago-cellar-boys-2026-09-22/",
+      "category": "jazz_blues"
+    },
+    {
+      "name": "Chicago Underground Comedy",
+      "date": "2026-09-22",
+      "start": null,
+      "neighborhood": "Roscoe Village",
+      "venue": "Beat Kitchen",
+      "cost": "TBA",
+      "official_url": "https://do312.com/events/2026/9/22",
+      "category": "comedy"
+    },
+    {
+      "name": "Chris O'Leary at Buddy Guy's Legends",
+      "date": "2026-09-22",
+      "start": null,
+      "neighborhood": "South Loop",
+      "venue": "Buddy Guy's Legends",
+      "cost": "Ticketed",
+      "official_url": "https://buddyguy.com/events/",
+      "category": "jazz_blues"
+    },
+    {
+      "name": "Comic Court at Lincoln Lodge",
+      "date": "2026-09-22",
+      "start": null,
+      "neighborhood": "Logan Square",
+      "venue": "The Lincoln Lodge",
+      "cost": "$8",
+      "official_url": "https://www.choosechicago.com/event/comic-court-chicagos-1-comedy-court-show/2026-09-22/",
+      "category": "comedy"
+    },
+    {
+      "name": "Dave Herrero / Pete Galanis at Rosa's Lounge",
+      "date": "2026-09-22",
+      "start": null,
+      "neighborhood": "Logan Square / Hermosa",
+      "venue": "Rosa's Lounge",
+      "cost": "Cover TBA",
+      "official_url": "https://www.rosaslounge.com/calendar",
+      "category": "jazz_blues"
+    },
+    {
+      "name": "Ilana Glazer Live!",
+      "date": "2026-09-22",
+      "start": null,
+      "neighborhood": "Loop",
+      "venue": "The Chicago Theatre",
+      "cost": "Ticketed",
+      "official_url": "https://www.msg.com/events-tickets/ilana-glazer-the-chicago-theatre-september-2026/070064CFBC609889",
+      "category": "comedy"
+    },
+    {
+      "name": "Jacques Ze Whipper: Circus Kid",
+      "date": "2026-09-22",
+      "start": null,
+      "neighborhood": "Pilsen",
+      "venue": "Thalia Hall",
+      "cost": "Ticketed (17+)",
+      "official_url": "https://thaliahallchicago.com/",
+      "category": "other"
+    },
+    {
+      "name": "KOWALSKI",
+      "date": "2026-09-22",
+      "start": null,
+      "neighborhood": "Streeterville",
+      "venue": "Lookingglass Theatre",
+      "cost": "Ticketed",
+      "official_url": "https://lookingglasstheatre.org/plays/kowalski/",
+      "category": "theater"
+    }
+  ]
+}
