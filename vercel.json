@@ -4,19 +4,34 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "datenightchicago.app" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "datenightchicago.app"
+        }
+      ],
       "destination": "https://nightoutchicago.com/:path*",
       "statusCode": 308
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.datenightchicago.app" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.datenightchicago.app"
+        }
+      ],
       "destination": "https://nightoutchicago.com/:path*",
       "statusCode": 308
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.nightoutchicago.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.nightoutchicago.com"
+        }
+      ],
       "destination": "https://nightoutchicago.com/:path*",
       "statusCode": 308
     }

@@ -1,317 +1,258 @@
-const TZ = "America/Chicago";
-const PARTIES = ["couple", "family", "friends"];
-const PARTY_LABEL = { couple: "Couple", family: "Family", friends: "Friends" };
+(function () {
+  const stage = document.getElementById("stage");
+  const nightRow = document.getElementById("night-row");
+  const partyRow = document.getElementById("party-row");
 
-const el = {
-  track: document.getElementById("cal-track"),
-  range: document.getElementById("cal-range"),
-  partyTrack: document.getElementById("party-track"),
-  partyRange: document.getElementById("party-range"),
-  stage: document.getElementById("stage"),
-  refresh: document.getElementById("refresh-plan"),
-};
+  let plans = [];
+  let scout = null;
+  let nightKey = null;
+  let party = "couple";
 
-let nights = [];
-let catalog = [];
-let index = 0;
-let party = "couple";
-let eatIdx = {};
-let thenIdx = {};
+  const PARTY_LABEL = { couple: "Couple", family: "Family", friends: "Friends" };
 
-function esc(s) {
-  const amp = String.fromCharCode(38);
-  return String(s ?? "").replace(/[&<>"']/g, (c) => ({
-    "&": amp + "amp;",
-    "<": amp + "lt;",
-    ">": amp + "gt;",
-    '"': amp + "quot;",
-    "'": amp + "#39;"
-  }[c]));
-}
-
-function dateParts(iso) {
-  const d = new Date(`${iso}T12:00:00`);
-  const o = { timeZone: TZ };
-  return {
-    weekday: new Intl.DateTimeFormat("en-US", { ...o, weekday: "short" }).format(d),
-    month: new Intl.DateTimeFormat("en-US", { ...o, month: "short" }).format(d),
-    day: new Intl.DateTimeFormat("en-US", { ...o, day: "numeric" }).format(d),
-  };
-}
-
-function tonightIso() {
-  return new Intl.DateTimeFormat("en-CA", {
-    timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit",
-  }).format(new Date());
-}
-
-function key() {
-  return `${nights[index] || ""}:${party}`;
-}
-
-function wrap(i, n) {
-  if (!n) return 0;
-  return ((i % n) + n) % n;
-}
-
-function variantsFor(iso, who) {
-  const sameNight = catalog.filter((p) => p.for_night === iso && p.parties && p.parties[who]);
-  const pool = catalog.filter((p) => p.parties && p.parties[who]);
-  return sameNight.length > 1 ? sameNight : (pool.length ? pool : sameNight);
-}
-
-function uniqueDeck(iso, who, field) {
-  const seen = new Set();
-  const out = [];
-  variantsFor(iso, who).forEach((p) => {
-    const slice = p.parties[who] || {};
-    const item = slice[field];
-    const name = item && item.name;
-    if (!name || seen.has(name)) return;
-    seen.add(name);
-    out.push({
-      ...item,
-      corridor: p.corridor,
-      vibe: slice.vibe || p.vibe || "",
-      budget: slice.budget || p.budget || "",
-      transit: slice.transit || p.transit || "",
-      dont: slice.dont || p.dont || "",
-      backup: slice.backup || p.backup || {},
-    });
-  });
-  return out;
-}
-
-function currentDecks() {
-  const iso = nights[index];
-  return {
-    iso,
-    eats: uniqueDeck(iso, party, "eat"),
-    thens: uniqueDeck(iso, party, "then"),
-  };
-}
-
-function pick(list, map) {
-  if (!list.length) return null;
-  return list[wrap(map[key()] || 0, list.length)];
-}
-
-function buildTrack() {
-  el.track.innerHTML = "";
-  nights.forEach((iso, i) => {
-    const { weekday, month, day } = dateParts(iso);
-    const b = document.createElement("button");
-    b.type = "button";
-    b.setAttribute("role", "tab");
-    b.textContent = `${weekday} ${month} ${day}`;
-    b.addEventListener("click", () => selectNight(i, true));
-    el.track.appendChild(b);
-  });
-  el.range.max = String(Math.max(0, nights.length - 1));
-  el.range.oninput = () => selectNight(Number(el.range.value), false);
-}
-
-function wireParty() {
-  el.partyTrack.querySelectorAll("button").forEach((b) => {
-    b.addEventListener("click", () => selectParty(b.dataset.party, true));
-  });
-  el.partyRange.oninput = () => {
-    selectParty(PARTIES[Number(el.partyRange.value)] || "couple", false);
-  };
-  if (el.refresh) el.refresh.addEventListener("click", refreshPlan);
-}
-
-function selectNight(i, syncRange) {
-  index = Math.max(0, Math.min(nights.length - 1, i));
-  [...el.track.children].forEach((b, n) => {
-    b.setAttribute("aria-selected", n === index ? "true" : "false");
-  });
-  if (syncRange) el.range.value = String(index);
-  render();
-}
-
-function selectParty(p, syncRange) {
-  party = PARTIES.includes(p) ? p : "couple";
-  el.partyTrack.querySelectorAll("button").forEach((b) => {
-    b.setAttribute("aria-selected", b.dataset.party === party ? "true" : "false");
-  });
-  if (syncRange) el.partyRange.value = String(PARTIES.indexOf(party));
-  render();
-}
-
-function refreshPlan() {
-  const { eats, thens } = currentDecks();
-  const k = key();
-  if (eats.length > 1) eatIdx[k] = wrap((eatIdx[k] || 0) + 1, eats.length);
-  if (thens.length > 1) thenIdx[k] = wrap((thenIdx[k] || 0) + 1, thens.length);
-  render();
-}
-
-function shiftDeck(kind, dir) {
-  const { eats, thens } = currentDecks();
-  const k = key();
-  if (kind === "eat" && eats.length > 1) eatIdx[k] = wrap((eatIdx[k] || 0) + dir, eats.length);
-  if (kind === "then" && thens.length > 1) thenIdx[k] = wrap((thenIdx[k] || 0) + dir, thens.length);
-  render();
-}
-
-function dishesHtml(eat) {
-  const dishes = Array.isArray(eat?.dishes) ? eat.dishes.slice(0, 3) : [];
-  if (!dishes.length) return "";
-  return `<section class="section fade-in">
-    <h2>Order this</h2>
-    <p class="hint">Plates that travel with the restaurant you picked</p>
-    <div class="dishes">${dishes.map((d) => `
-      <figure class="dish">
-        ${d.image ? `<img src="${esc(d.image)}" alt="${esc(d.name || "")}" loading="lazy" />` : ""}
-        <figcaption>${esc(d.name || "")}</figcaption>
-      </figure>`).join("")}
-    </div>
-  </section>`;
-}
-
-function cardHtml(item, slot, kind) {
-  const cls = slot === 0 ? "is-center" : slot < 0 ? "is-left" : "is-right";
-  const title = item.name || "";
-  const sub = kind === "eat"
-    ? (item.corridor || "")
-    : [item.start, item.cost].filter(Boolean).join(" · ");
-  return `<article class="flow-card ${cls}" data-kind="${kind}" data-slot="${slot}">
-    ${item.image ? `<img src="${esc(item.image)}" alt="${esc(title)}" />` : "<div class=\"flow-ph\"></div>"}
-    <div class="flow-shade"></div>
-    <div class="flow-copy">
-      <span>${esc(kind === "eat" ? "Eat" : "Then")}</span>
-      <strong>${esc(title)}</strong>
-      <em>${esc(sub)}</em>
-    </div>
-  </article>`;
-}
-
-function flowHtml(kind, list, current) {
-  if (!list.length) return "";
-  const i = wrap(current, list.length);
-  const left = list[wrap(i - 1, list.length)];
-  const mid = list[i];
-  const right = list[wrap(i + 1, list.length)];
-  const cards = list.length === 1
-    ? cardHtml(mid, 0, kind)
-    : cardHtml(left, -1, kind) + cardHtml(mid, 0, kind) + cardHtml(right, 1, kind);
-  return `<div class="flow" data-flow="${kind}">
-    <button type="button" class="flow-nav prev" data-kind="${kind}" data-dir="-1" aria-label="Previous">‹</button>
-    <div class="flow-stage">${cards}</div>
-    <button type="button" class="flow-nav next" data-kind="${kind}" data-dir="1" aria-label="Next">›</button>
-  </div>`;
-}
-
-function wireFlows() {
-  el.stage.querySelectorAll(".flow-nav").forEach((b) => {
-    b.addEventListener("click", () => shiftDeck(b.dataset.kind, Number(b.dataset.dir)));
-  });
-  el.stage.querySelectorAll(".flow-card").forEach((card) => {
-    card.addEventListener("click", () => {
-      const slot = Number(card.dataset.slot);
-      if (slot) shiftDeck(card.dataset.kind, slot);
-    });
-  });
-  el.stage.querySelectorAll(".flow-stage").forEach((stage) => {
-    let x0 = null;
-    stage.addEventListener("pointerdown", (e) => { x0 = e.clientX; });
-    stage.addEventListener("pointerup", (e) => {
-      if (x0 == null) return;
-      const dx = e.clientX - x0;
-      x0 = null;
-      if (Math.abs(dx) < 40) return;
-      const kind = stage.parentElement.dataset.flow;
-      shiftDeck(kind, dx < 0 ? 1 : -1);
-    });
-  });
-}
-
-function render() {
-  const { iso, eats, thens } = currentDecks();
-  if (!iso) return;
-  const { weekday, month, day } = dateParts(iso);
-  const k = key();
-  const eat = pick(eats, eatIdx) || {};
-  const then = pick(thens, thenIdx) || {};
-  const backup = eat.backup || {};
-  const partyLabel = PARTY_LABEL[party] || party;
-  if (el.refresh) {
-    el.refresh.disabled = eats.length + thens.length < 3;
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   }
 
-  el.stage.innerHTML = `
-    <section class="deck-block fade-in" aria-label="Eat">
-      <div class="deck-head">
-        <div>
-          <div class="kicker">Eat · ${esc(eat.corridor || "Chicago")} <span class="party-pill">${esc(partyLabel)}</span></div>
-          <h1>${esc(weekday)} · ${esc(month)} ${esc(day)}</h1>
-          <p class="lede ink">Swipe the restaurant. Night and party stay locked.</p>
+  function nightLabel(iso) {
+    return new Date(iso + "T12:00:00").toLocaleDateString("en-US", {
+      weekday: "short",
+      month: "short",
+      day: "numeric",
+    });
+  }
+
+  function shortWeekday(iso) {
+    return new Date(iso + "T12:00:00").toLocaleDateString("en-US", { weekday: "short" });
+  }
+
+  function pickCorridor(plan) {
+    const parties = plan.parties || {};
+    const block = parties[party] || parties.couple || plan;
+    return {
+      eat: block.eat || plan.eat,
+      then: block.then || plan.then,
+      backup: block.backup || plan.backup,
+      transit: block.transit || plan.transit,
+      dont: block.dont || plan.dont,
+      corridor: plan.corridor || "",
+    };
+  }
+
+  function defaultNight() {
+    const todayIso = new Date().toISOString().slice(0, 10);
+    const upcoming = plans.find((p) => p.for_night >= todayIso);
+    return (upcoming || plans[0] || {}).for_night || null;
+  }
+
+  function renderPills() {
+    nightRow.innerHTML = plans
+      .map((p) => {
+        const selected = p.for_night === nightKey;
+        return `<button type="button" role="tab" data-night="${esc(p.for_night)}" aria-selected="${selected}">${esc(shortWeekday(p.for_night))}</button>`;
+      })
+      .join("");
+    [...partyRow.querySelectorAll("button")].forEach((btn) => {
+      btn.setAttribute("aria-selected", btn.dataset.party === party ? "true" : "false");
+    });
+  }
+
+  function observeChapters() {
+    const chapters = stage.querySelectorAll(".chapter");
+    if (!("IntersectionObserver" in window)) {
+      chapters.forEach((c) => c.classList.add("is-in"));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("is-in");
+        });
+      },
+      { threshold: 0.35 }
+    );
+    chapters.forEach((c) => io.observe(c));
+  }
+
+  function dishCards(eat) {
+    const dishes = (eat && eat.dishes) || [];
+    if (!dishes.length) return "";
+    return `
+      <section class="panel">
+        <h3>Order like a local</h3>
+        <p class="hint">Plates worth fighting over. Start here.</p>
+        <div class="dishes">
+          ${dishes
+            .slice(0, 3)
+            .map(
+              (d) => `
+            <figure class="dish">
+              <img src="${esc(d.image || eat.image || "")}" alt="${esc(d.name || "Dish")}" loading="lazy" />
+              <figcaption>${esc(d.name || "House favorite")}</figcaption>
+            </figure>`
+            )
+            .join("")}
         </div>
-      </div>
-      ${flowHtml("eat", eats, eatIdx[k] || 0)}
-      <div class="hero-actions tight">
-        ${eat.url ? `<a class="btn primary" href="${esc(eat.url)}" target="_blank" rel="noopener">Restaurant site</a>` : ""}
-        <a class="btn ghost dark" href="#then">See the event ↓</a>
-      </div>
-    </section>
+      </section>`;
+  }
 
-    ${dishesHtml(eat)}
+  function scoutTeaser() {
+    if (!scout) return { strip: "", more: "" };
+    const highlights = (scout.highlights || []).slice(0, 6);
+    const count = scout.scouted_count || scout.scouted_count || highlights.length;
+    const cats = (scout.categories || []).slice(0, 4);
+    const strip = `
+      <div class="scout-strip" aria-label="This week's scout">
+        <span><strong>${esc(count)}</strong> nights scouted</span>
+        ${cats.map((c) => `<span>${esc(c)}</span>`).join("")}
+      </div>`;
+    if (!highlights.length) return { strip, more: "" };
+    const cards = highlights
+      .map((e) => {
+        const href = e.official_url || e.official_url || e.official_url || e.url || "#";
+        return `
+        <a class="event-card" href="${esc(href)}" target="_blank" rel="noopener">
+          <div class="when">${esc(e.date || "")}${e.start ? " · " + esc(e.start) : ""}</div>
+          <div class="name">${esc(e.name)}</div>
+          <p class="where">${esc(e.neighborhood || e.venue || "Chicago")}${e.cost ? " · " + esc(e.cost) : ""}</p>
+        </a>`;
+      })
+      .join("");
+    const more = `
+      <section class="more-nights">
+        <h3>Also on the boards this week</h3>
+        <p class="hint">We already scouted comedy, jazz, museums, magic, and weird one-offs. Your corridor picks one that fits.</p>
+        <div class="event-grid">${cards}</div>
+      </section>`;
+    return { strip, more };
+  }
 
-    <section class="deck-block fade-in" id="then">
-      <div class="deck-head">
-        <div>
-          <h2>Then</h2>
-          <p class="hint">Same night. Same ${esc(partyLabel).toLowerCase()} brief. Different show if you swipe.</p>
+  function backupHtml(backup) {
+    if (!backup) return "Have a second table nearby.";
+    if (typeof backup === "string") return esc(backup);
+    const label = backup.name || "Alt plan";
+    const note = backup.note ? ` — ${backup.note}` : "";
+    if (backup.url) {
+      return `<a href="${esc(backup.url)}" target="_blank" rel="noopener">${esc(label)}</a>${esc(note)}`;
+    }
+    return esc(label + note);
+  }
+
+  function render() {
+    const plan = plans.find((p) => p.for_night === nightKey) || plans[0];
+    if (!plan) {
+      stage.innerHTML = `<div class="empty"><h1>No plans loaded yet.</h1></div>`;
+      return;
+    }
+
+    const c = pickCorridor(plan);
+    const eat = c.eat || {};
+    const then = c.then || {};
+    const partyLabel = PARTY_LABEL[party] || "Couple";
+    const nightText = nightLabel(plan.for_night);
+    const where = c.corridor || eat.neighborhood || "Chicago";
+    const { strip, more } = scoutTeaser();
+
+    stage.innerHTML = `
+      <section class="splash">
+        <div class="splash-copy">
+          <p class="eyebrow">${esc(nightText)} · ${esc(partyLabel)} · ${esc(where)}</p>
+          <h1>Eat something.<br />Then do something.</h1>
+          <p class="lede">A Chicago night out — dinner, then a reason to stay out.</p>
+          ${strip}
         </div>
-      </div>
-      ${flowHtml("then", thens, thenIdx[k] || 0)}
-      <div class="event-meta">
-        <div><span class="label">When</span><span>${esc(weekday)} ${esc(month)} ${esc(day)} · ${esc(then.start || "")}</span></div>
-        <div><span class="label">Tickets</span><span>${then.url ? `<a href="${esc(then.url)}" target="_blank" rel="noopener">Get tickets</a>` : "—"}${then.cost ? " · " + esc(then.cost) : ""}</span></div>
-        <div><span class="label">Budget</span><span>${esc(eat.budget || then.budget || "")}</span></div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section fade-in">
-      <h2>Backup · Transit · Don’t</h2>
-      <div class="corridor">
-        <article>
-          <div class="tag">Backup</div>
-          <p>${backup.url ? `<a href="${esc(backup.url)}" target="_blank" rel="noopener">${esc(backup.name || "")}</a>` : esc(backup.name || "")}${backup.note ? " — " + esc(backup.note) : ""}</p>
-        </article>
-        <article>
-          <div class="tag">Transit</div>
-          <p>${esc(eat.transit || "")}</p>
-        </article>
-      </div>
-      <div class="corridor dont" style="margin-top:0.65rem">
-        <article>
-          <div class="tag">Don’t</div>
-          <p>${esc(eat.dont || "")}</p>
-        </article>
-      </div>
-    </section>
-  `;
-  wireFlows();
-}
+      <section class="chapter" data-step="eat">
+        <img class="chapter-media" src="${esc(eat.image || "")}" alt="${esc(eat.name || "Dinner")}" />
+        <div class="chapter-shade"></div>
+        <div class="chapter-copy">
+          <div class="kicker">Eat <span class="party-pill">${esc(partyLabel)}</span></div>
+          <h2>${esc(eat.name || "Dinner")}</h2>
+          <p class="meta">${esc(where)}${eat.cuisine ? " · " + esc(eat.cuisine) : ""}</p>
+          <p class="note">${esc(eat.why || eat.note || "Start the night at the table.")}</p>
+          <div class="actions">
+            ${eat.url ? `<a class="btn primary" href="${esc(eat.url)}" target="_blank" rel="noopener">Reserve / menu</a>` : ""}
+            <a class="btn ghost" href="#then">Then what?</a>
+          </div>
+        </div>
+      </section>
 
-Promise.all([
-  fetch("./plans.json").then((r) => r.json()),
-  fetch("./plans-weekend.json").then((r) => r.json()).catch(() => []),
-])
-  .then(([a, b]) => {
-    catalog = [...a, ...b];
-    nights = [...new Set(catalog.map((p) => p.for_night))].sort();
-    buildTrack();
-    wireParty();
-    const t = tonightIso();
-    let start = nights.findIndex((iso) => iso >= t);
-    if (start < 0) start = 0;
-    selectParty("couple", true);
-    selectNight(start, true);
-  })
-  .catch((err) => {
-    console.error(err);
-    el.stage.innerHTML = `<section class="section"><p>Couldn’t load plans.json</p></section>`;
+      ${dishCards(eat)}
+
+      <section class="chapter" id="then" data-step="then">
+        <img class="chapter-media" src="${esc(then.image || eat.image || "")}" alt="${esc(then.name || "Then")}" />
+        <div class="chapter-shade"></div>
+        <div class="chapter-copy">
+          <div class="kicker">Then</div>
+          <h2>${esc(then.name || "Something to do")}</h2>
+          <p class="meta">${esc(then.neighborhood || then.venue || where)}${then.start ? " · " + esc(then.start) : ""}${then.cost ? " · " + esc(then.cost) : ""}</p>
+          <p class="note">${esc(then.why || then.note || "Walk over, stay out, make it a night.")}</p>
+          <div class="actions">
+            ${then.url ? `<a class="btn primary" href="${esc(then.url)}" target="_blank" rel="noopener">Tickets / details</a>` : ""}
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>Backup · Transit · Don’t</h3>
+        <p class="hint">Plan B stays in the same neighborhood. Don’t lose the night.</p>
+        <div class="trio">
+          <article>
+            <div class="tag">Backup</div>
+            <p>${backupHtml(c.backup)}</p>
+          </article>
+          <article>
+            <div class="tag">Transit</div>
+            <p>${esc(typeof c.transit === "string" ? c.transit : (c.transit && c.transit.note) || "Walk or short rideshare — keep it close.")}</p>
+          </article>
+          <article class="dont">
+            <div class="tag">Don’t</div>
+            <p>${esc(typeof c.dont === "string" ? c.dont : (c.dont && c.dont.note) || "Don’t stretch the night across the city.")}</p>
+          </article>
+        </div>
+      </section>
+
+      ${more}
+    `;
+
+    renderPills();
+    observeChapters();
+  }
+
+  nightRow.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-night]");
+    if (!btn) return;
+    nightKey = btn.dataset.night;
+    render();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  partyRow.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-party]");
+    if (!btn) return;
+    party = btn.dataset.party;
+    render();
+  });
+
+  Promise.all([
+    fetch("plans.json").then((r) => r.json()),
+    fetch("scout-teaser.json")
+      .then((r) => (r.ok ? r.json() : null))
+      .catch(() => null),
+  ])
+    .then(([data, teaser]) => {
+      plans = Array.isArray(data) ? data : data.plans || [];
+      scout = teaser;
+      nightKey = defaultNight();
+      render();
+    })
+    .catch((err) => {
+      console.error(err);
+      stage.innerHTML = `<div class="empty"><h1>Couldn’t load plans.</h1><p>Try a refresh.</p></div>`;
+    });
+})();
