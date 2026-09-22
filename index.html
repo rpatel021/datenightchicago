@@ -1,1 +1,50 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Night Out Chicago — Eat → Then</title>
+  <meta name="description" content="Pick a night and who you’re with. We build the corridor: dinner, then something worth getting dressed for." />
+  <meta name="theme-color" content="#FDFCF4" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="wordmark">Night Out</span>
+      <span class="chip">Chicago</span>
+    </div>
+    <p class="tagline">Eat → Then · Make it a night</p>
+  </header>
+
+  <nav class="picker" aria-label="Choose night and company">
+    <div class="picker-block">
+      <span class="picker-label">Night</span>
+      <div class="pill-row" id="night-row" role="tablist"></div>
+    </div>
+    <div class="picker-block">
+      <span class="picker-label">With</span>
+      <div class="pill-row" id="party-row" role="tablist">
+        <button type="button" role="tab" data-party="couple" aria-selected="true">Couple</button>
+        <button type="button" role="tab" data-party="family" aria-selected="false">Family</button>
+        <button type="button" role="tab" data-party="friends" aria-selected="false">Friends</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="stage" aria-live="polite">
+    <section class="splash">
+      <div class="splash-copy">
+        <p class="eyebrow">Loading your week…</p>
+        <h1>Eat something.<br />Then do something.</h1>
+        <p class="lede">A Chicago night out, already mapped.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <p>Living corridors · nightoutchicago.com</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
