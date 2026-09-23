@@ -29,7 +29,13 @@
         "backup": {
           "name": "Green Mill: Joel Paterson & Friends",
           "url": "https://greenmilljazz.com/events/joel-paterson-friends-2-2026-09-21/",
-          "note": "Mon 8pm $10 \u2014 21+ / late. Couple or friends backup only; not family."
+          "note": "Mon 8pm $10 \u2014 21+ / late. Couple or friends backup only; not family.",
+          "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+          "images": [
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg"
+          ]
         },
         "transit": "Ride/Uber ~10\u201315 min Halsted \u2192 iO (1501 N Kingsbury). Or #8 Halsted + short walk west.",
         "dont": "Don\u2019t cut dinner late\u2014seated by 5:15 for 7pm call. Don\u2019t default to River North after. Green Mill ba"
@@ -60,7 +66,11 @@
         "backup": {
           "name": "Magic Mondays at iO ($20, recommends 12+)",
           "url": "https://www.choosechicago.com/event/magic-mondays-2/2026-09-21/",
-          "note": "Skip Green Mill (21+/late). Prefer dessert walk in LP if museum closed early."
+          "note": "Skip Green Mill (21+/late). Prefer dessert walk in LP if museum closed early.",
+          "image": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80",
+          "images": [
+            "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80"
+          ]
         },
         "transit": "Early dinner in LP, then CTA/Uber downtown to Cultural Center (78 E Washington) for Tangible Sound before close.",
         "dont": "Don\u2019t use Green Mill as family backup. Don\u2019t book Magic Mondays for under-12. Confirm Cultural Cente"
@@ -91,7 +101,13 @@
         "backup": {
           "name": "Green Mill: Joel Paterson & Friends",
           "url": "https://greenmilljazz.com/events/joel-paterson-friends-2-2026-09-21/",
-          "note": "Mon 8pm $10 \u2014 21+ / late. Couple or friends backup only; not family."
+          "note": "Mon 8pm $10 \u2014 21+ / late. Couple or friends backup only; not family.",
+          "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+          "images": [
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg"
+          ]
         },
         "transit": "Same LP \u2192 iO corridor as couple; Street/SpotHero near Kingsbury.",
         "dont": "Don\u2019t arrive late for Armando. Green Mill after is optional 21+ jazz \u2014 not required."
@@ -157,7 +173,11 @@
         "backup": {
           "name": "Logan Theatre",
           "url": "https://www.logan-theatre.com",
-          "note": "If Lodge sold or 9pm is too late: catch a screen at Logan Theatre."
+          "note": "If Lodge sold or 9pm is too late: catch a screen at Logan Theatre.",
+          "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80",
+          "images": [
+            "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80"
+          ]
         },
         "transit": "Walk/short ride Kedzie Blvd Lula \u2192 Lincoln Lodge. Blue Line Logan Square.",
         "dont": "Don\u2019t try Lula brunch as pre-show (walk-in waits). Comic Court is 9pm \u2014 leave buffer."
@@ -188,7 +208,11 @@
         "backup": {
           "name": "Dessert / ice cream walk in Logan Square",
           "url": "https://www.lulacafe.com/",
-          "note": "Do NOT use Comic Court 9pm as family Then. Confirm movie rating day-of."
+          "note": "Do NOT use Comic Court 9pm as family Then. Confirm movie rating day-of.",
+          "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80",
+          "images": [
+            "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80"
+          ]
         },
         "transit": "Stay in Logan Square \u2014 Lula then short walk/ride to Logan Theatre (2541 N Kedzie).",
         "dont": "Never book Comic Court as family primary (late / standup vibe). Confirm showtimes day-of."
@@ -285,7 +309,11 @@
         "backup": {
           "name": "Blind Wolf Comedy (DEN Hotel Lakeview)",
           "url": "https://www.denhotelchicago.com/blindwolf",
-          "note": "If Magic Lounge sold: Blind Wolf free/tip speakeasy \u2014 VERIFY seating day-of."
+          "note": "If Magic Lounge sold: Blind Wolf free/tip speakeasy \u2014 VERIFY seating day-of.",
+          "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1400&q=80",
+          "images": [
+            "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1400&q=80"
+          ]
         },
         "transit": "Walk ~5 min Clark St Hopleaf (5148 N Clark) \u2192 Chicago Magic Lounge (5050 N Clark).",
         "dont": "Don\u2019t skip ONO tickets\u2014they sell. Hopleaf is 21+ dining. Budget exceeds $120."
@@ -316,7 +344,13 @@
         "backup": {
           "name": "Lucy Darling at Studebaker (7:30 PM) \u2014 VERIFY age-appropriate",
           "url": "https://www.choosechicago.com/event/lucy-darling-chicago-il-simply-darling-tour/2026-09-23/",
-          "note": "Character/comedy-magic tour \u2014 check age guidance before booking kids. Do not use Hopleaf (21+)."
+          "note": "Character/comedy-magic tour \u2014 check age guidance before booking kids. Do not use Hopleaf (21+).",
+          "image": "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
+          "images": [
+            "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
+            "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3.png",
+            "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-32x32.png"
+          ]
         },
         "transit": "Early Anteprima on Clark, then CTA/Uber to Cultural Center for Tangible Sound before close \u2014 or stay north for Lucy Darl",
         "dont": "Hopleaf is 21+ \u2014 do not use for family Eat. Confirm museum hours. Lucy Darling age guidance uncertai"
@@ -347,7 +381,13 @@
         "backup": {
           "name": "Lucy Darling at Studebaker 7:30 PM",
           "url": "https://www.choosechicago.com/event/lucy-darling-chicago-il-simply-darling-tour/2026-09-23/",
-          "note": "Pivot if Blind Wolf line/verify fails. Magic Lounge Spellbinder also works if splurging."
+          "note": "Pivot if Blind Wolf line/verify fails. Magic Lounge Spellbinder also works if splurging.",
+          "image": "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
+          "images": [
+            "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
+            "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3.png",
+            "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-32x32.png"
+          ]
         },
         "transit": "Hopleaf \u2192 short ride to DEN Hotel Lakeview for Blind Wolf; or further to Studebaker for Lucy Darling.",
         "dont": "Blind Wolf seating is verify=true. Don\u2019t sit bar-only at Hopleaf if the group needs to talk."
@@ -413,7 +453,11 @@
         "backup": {
           "name": "Second City: Pandemonium Please Hold",
           "url": "https://www.choosechicago.com/event/pandemonium-please-hold/2026-09-23/",
-          "note": "Weeknight sketch alt if Zanies sold or you want earlier; confirm exact Thu/Fri showtimes."
+          "note": "Weeknight sketch alt if Zanies sold or you want earlier; confirm exact Thu/Fri showtimes.",
+          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
+          "images": [
+            "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
+          ]
         },
         "transit": "Walk ~5\u20138 min Wells St Orso\u2019s \u2192 Zanies (1548 N Wells).",
         "dont": "Don\u2019t book the 9:15pm set if you want talk after. 21+ at Zanies."
@@ -475,7 +519,11 @@
         "backup": {
           "name": "Second City: Pandemonium Please Hold",
           "url": "https://www.choosechicago.com/event/pandemonium-please-hold/2026-09-23/",
-          "note": "Weeknight sketch alt if Zanies sold or you want earlier; confirm exact Thu/Fri showtimes."
+          "note": "Weeknight sketch alt if Zanies sold or you want earlier; confirm exact Thu/Fri showtimes.",
+          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
+          "images": [
+            "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
+          ]
         },
         "transit": "Walk Orso\u2019s \u2192 Zanies. Easy no-car corridor.",
         "dont": "Don\u2019t wander to River North clubs after. Prefer 7pm set over 9:15."
@@ -541,7 +589,14 @@
         "backup": {
           "name": "Cliff Cash at Zanies Fri 7pm (or later set)",
           "url": "https://chicago.zanies.com/calendar/category/series/2026-cliff-cash/zanies-comedy-club-chicago/chicago-illinois/",
-          "note": "If Twin Anchors wait blows 6:30 call: Orso\u2019s OpenTable then Zanies \u2014 or later Second City if available."
+          "note": "If Twin Anchors wait blows 6:30 call: Orso\u2019s OpenTable then Zanies \u2014 or later Second City if available.",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31250271/b6d77546-9cfa-4372-a7d2-9e6e6e6e6e6e",
+          "images": [
+            "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31250271/b6d77546-9cfa-4372-a7d2-9e6e6e6e6e6e",
+            "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31250271/b6d77546-9cfa-4372-a7d2-97bdbcd5b9e4.png",
+            "https://cloudinary-assets.dostuffmedia.com/res/dostuff-media/image/upload/featuredlink-photo-62940/1784866117.jpg",
+            "https://dostuff-assets.s3.amazonaws.com/property_asset/69740/tiktok.png"
+          ]
         },
         "transit": "Walk Sedgwick Twin Anchors \u2192 Second City (1616 N Wells). Leave 20+ min buffer.",
         "dont": "Don\u2019t arrive Twin Anchors at 5:45 Fri expecting a booth. Budget over $120."
@@ -669,7 +724,11 @@
         "backup": {
           "name": "Other iO rooms / rain-check Magic Mondays",
           "url": "https://ioimprov.com",
-          "note": "If Best of iO sold: check same-night iO rooms. Avoid Kingston Mines as date backup."
+          "note": "If Best of iO sold: check same-night iO rooms. Avoid Kingston Mines as date backup.",
+          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
+          "images": [
+            "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
+          ]
         },
         "transit": "Short Uber Lincoln Park West \u2192 iO Kingsbury (~10\u201315 min).",
         "dont": "Don\u2019t linger past ~6:45 at Mon Ami Gabi for 7:30 call. Talk before/after\u2014improv needs quiet during."
@@ -731,7 +790,11 @@
         "backup": {
           "name": "Harold\u2019s After Dark at iO 11pm $10",
           "url": "https://ioimprov.com",
-          "note": "Late \u2014 friends only. Earlier Best of iO is the safer primary."
+          "note": "Late \u2014 friends only. Earlier Best of iO is the safer primary.",
+          "image": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80",
+          "images": [
+            "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80"
+          ]
         },
         "transit": "Gabi \u2192 Uber to iO. Stay for Harold\u2019s After Dark only if energy is there.",
         "dont": "Harold\u2019s After Dark is 11pm \u2014 friends only, not a first date or family plan."

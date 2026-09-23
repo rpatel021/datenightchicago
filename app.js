@@ -403,7 +403,9 @@
     if (Array.isArray(item.dishes)) {
       item.dishes.forEach((d) => push(d && d.image));
     }
-    push(hoodImageFor(item.neighborhood));
+    // Hood stock only when the item has no photos of its own — otherwise
+    // every place in the same neighborhood shares a trailing slide.
+    if (!imgs.length) push(hoodImageFor(item.neighborhood));
     return imgs;
   }
 
@@ -429,10 +431,12 @@
       price_band: r.price_band || "",
       notes: r.notes || "",
       image: r.image || "",
+      images: Array.isArray(r.images) ? r.images.slice() : [],
+      photos: Array.isArray(r.photos) ? r.photos.slice() : [],
       url: r.reserve_url || r.official_url || "",
       reserve_url: r.reserve_url || "",
       official_url: r.official_url || "",
-      dishes: r.dishes || [],
+      dishes: Array.isArray(r.dishes) ? r.dishes.slice() : [],
       _vibe: vibeLabelForRestaurant(r),
       _time: primaryTimeLabel(times),
       _timeBuckets: times,
@@ -453,6 +457,8 @@
       cost: ev.cost || "",
       notes: ev.notes || ev.date_friendly || "",
       image: ev.image || "",
+      images: Array.isArray(ev.images) ? ev.images.slice() : [],
+      photos: Array.isArray(ev.photos) ? ev.photos.slice() : [],
       url: ev.official_url || "",
       date: ev.date || "",
       date_friendly: ev.date_friendly || "",
@@ -477,6 +483,8 @@
       cost: t.cost || "",
       notes: t.why || t.note || "",
       image: t.image || "",
+      images: Array.isArray(t.images) ? t.images.slice() : [],
+      photos: Array.isArray(t.photos) ? t.photos.slice() : [],
       url: t.url || "",
       date: plan.for_night || "",
       fromPlan: true,
@@ -500,6 +508,9 @@
       neighborhood: (plan && plan.corridor) || b.neighborhood || "",
       notes: b.note || b.why || "If the first plan’s packed — here’s plan B.",
       image: b.image || "",
+      images: Array.isArray(b.images) ? b.images.slice() : [],
+      photos: Array.isArray(b.photos) ? b.photos.slice() : [],
+      dishes: Array.isArray(b.dishes) ? b.dishes.slice() : [],
       url: b.url || "",
       venue: b.venue || "",
       start_time: b.start || "",

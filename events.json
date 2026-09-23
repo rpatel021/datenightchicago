@@ -4,7 +4,7 @@
     "neighborhood": "Uptown",
     "cost": "$10 cover",
     "official_url": "https://greenmilljazz.com/events/8pm-midnight-chicago-cellar-boys-2026-09-22/",
-    "date_friendly": "yes — iconic jazz club (21+/late evenings)",
+    "date_friendly": "yes \u2014 iconic jazz club (21+/late evenings)",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Paper Machete is satirical talk (free aft).",
@@ -17,14 +17,21 @@
     "venue": "Green Mill Jazz Club",
     "category": "jazz_blues",
     "source_id": "green_mill",
-    "source_name": "Green Mill"
+    "source_name": "Green Mill",
+    "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+    "images": [
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/2MarcSmithGMl.jpeg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Roscoe Village",
     "cost": "TBA",
     "official_url": "https://do312.com/events/2026/9/22",
-    "date_friendly": "maybe — indie club comedy",
+    "date_friendly": "maybe \u2014 indie club comedy",
     "party_fit": "friends,couple",
     "status": "scheduled",
     "notes": "Confirm time day-of. | also via do312",
@@ -37,14 +44,19 @@
     "venue": "Beat Kitchen",
     "category": "comedy",
     "source_id": "do312",
-    "source_name": "Do312"
+    "source_name": "Do312",
+    "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1400&q=80",
+      "https://beatkitchen.com/wp-content/uploads/2026/02/beat-kitchen-limited-edition-posters-600x600.png"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "South Loop",
     "cost": "Ticketed",
     "official_url": "https://buddyguy.com/events/",
-    "date_friendly": "yes — classic blues club date",
+    "date_friendly": "yes \u2014 classic blues club date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Typically 21+.",
@@ -57,14 +69,21 @@
     "venue": "Buddy Guy's Legends",
     "category": "jazz_blues",
     "source_id": "buddy_guys",
-    "source_name": "Buddy Guy's Legends"
+    "source_name": "Buddy Guy's Legends",
+    "image": "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-1024x316.jpg",
+    "images": [
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-1024x316.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/07/Skyline-No-Blue-scaled.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-300x93.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-768x237.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Logan Square",
     "cost": "$8",
     "official_url": "https://www.choosechicago.com/event/comic-court-chicagos-1-comedy-court-show/2026-09-22/",
-    "date_friendly": "yes — intimate late indie comedy court, cheap date",
+    "date_friendly": "yes \u2014 intimate late indie comedy court, cheap date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "From plans.json couple/friends Then.",
@@ -77,14 +96,18 @@
     "venue": "The Lincoln Lodge",
     "category": "comedy",
     "source_id": "existing_plans",
-    "source_name": "Night Out Chicago live plans"
+    "source_name": "Night Out Chicago live plans",
+    "image": "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "11:00 PM",
     "neighborhood": "Logan Square / Hermosa",
     "cost": "Cover TBA",
     "official_url": "https://www.rosaslounge.com/calendar",
-    "date_friendly": "yes — intimate West Side blues",
+    "date_friendly": "yes \u2014 intimate West Side blues",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Closed Sun/Mon.",
@@ -97,14 +120,18 @@
     "venue": "Rosa's Lounge",
     "category": "jazz_blues",
     "source_id": "rosas_lounge",
-    "source_name": "Rosa's Lounge"
+    "source_name": "Rosa's Lounge",
+    "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "Ticketed",
     "official_url": "https://www.msg.com/events-tickets/ilana-glazer-the-chicago-theatre-september-2026/070064CFBC609889",
-    "date_friendly": "yes — big-room standup date",
+    "date_friendly": "yes \u2014 big-room standup date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "also via ticketmaster",
@@ -117,14 +144,18 @@
     "venue": "The Chicago Theatre",
     "category": "comedy",
     "source_id": "do312",
-    "source_name": "Do312"
+    "source_name": "Do312",
+    "image": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Pilsen",
     "cost": "Ticketed (17+)",
     "official_url": "https://thaliahallchicago.com/",
-    "date_friendly": "yes — circus/variety unusual date",
+    "date_friendly": "yes \u2014 circus/variety unusual date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Listed Do312 Sep 22.",
@@ -137,14 +168,21 @@
     "venue": "Thalia Hall",
     "category": "other",
     "source_id": "do312",
-    "source_name": "Do312"
+    "source_name": "Do312",
+    "image": "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/1584543927895-2OG0BE6LOF74FM48JC3P/TGPilsen-2.JPG",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/1584543927895-2OG0BE6LOF74FM48JC3P/TGPilsen-2.JPG",
+      "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/1584543935075-7TL2AYXY8JLZYWAONHJ0/TGPilsen-3.JPG",
+      "https://static1.squarespace.com/static/5b088cce620b85511ff9c68d/t/5e13b9e17ec0a61af3041a50/1578351076278/TH_box_black-Cream.jpg?format=1500w",
+      "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/822ee80f-0d48-464a-99cd-72ccb21d86f7/MSP_Banner-Website.png"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Streeterville",
     "cost": "Ticketed",
     "official_url": "https://lookingglasstheatre.org/plays/kowalski/",
-    "date_friendly": "yes — Galecki Williams/Brando play",
+    "date_friendly": "yes \u2014 Galecki Williams/Brando play",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Sep 15-Oct 25. ~90 min. Confirm showtimes.",
@@ -157,14 +195,21 @@
     "venue": "Lookingglass Theatre",
     "category": "theater",
     "source_id": "lookingglass",
-    "source_name": "Lookingglass Theatre"
+    "source_name": "Lookingglass Theatre",
+    "image": "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A0628-2-scaled.jpeg",
+    "images": [
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A0628-2-scaled.jpeg",
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1490-2-scaled.jpeg",
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1589-2-scaled.jpeg",
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1829-2-scaled.jpeg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Logan Square",
     "cost": "Ticket prices vary",
     "official_url": "https://www.logan-theatre.com",
-    "date_friendly": "yes — neighborhood cinema; confirm rating day-of",
+    "date_friendly": "yes \u2014 neighborhood cinema; confirm rating day-of",
     "party_fit": "family,all",
     "status": "scheduled",
     "notes": "Family Then from plans.",
@@ -177,14 +222,18 @@
     "venue": "Logan Theatre",
     "category": "screening",
     "source_id": "existing_plans",
-    "source_name": "Night Out Chicago live plans"
+    "source_name": "Night Out Chicago live plans",
+    "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "9:00 PM",
     "neighborhood": "",
     "cost": "Ticketed",
     "official_url": "https://www.eventbrite.com/e/mannie-juvies-still-400-show-live-with-lil-rel-7pm-show-time-tickets-1999538544613",
-    "date_friendly": "maybe — confirm venue vibe",
+    "date_friendly": "maybe \u2014 confirm venue vibe",
     "party_fit": "friends,couple",
     "status": "scheduled",
     "notes": "Doors 6pm.",
@@ -197,14 +246,19 @@
     "venue": "Chicago (Eventbrite)",
     "category": "comedy",
     "source_id": "eventbrite",
-    "source_name": "Eventbrite"
+    "source_name": "Eventbrite",
+    "image": "https://www.eventbrite.com/e/_next/image?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1192526975%252F10601658741%252F1%252Foriginal.20260902-224720%3Fcrop%3Dfocalpoint%26fit%3Dcrop%26w%3D940%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26fp-x%3D0.869%26fp-y%3D0.435%26s%3D9f032065e381d6c0cdb90ed97649f3c0&w=940&q=75",
+    "images": [
+      "https://www.eventbrite.com/e/_next/image?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1192526975%252F10601658741%252F1%252Foriginal.20260902-224720%3Fcrop%3Dfocalpoint%26fit%3Dcrop%26w%3D940%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26fp-x%3D0.869%26fp-y%3D0.435%26s%3D9f032065e381d6c0cdb90ed97649f3c0&w=940&q=75",
+      "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F35408889%2F10601658741%2F2%2Foriginal.jpeg?w=512\\u0026auto=format%2Ccompress\\u0026q=75\\u0026sharp=10\\u0026s=55fbe9dea2bdd785c2f5a9b163cab661"
+    ]
   },
   {
     "end_time": "7:00 PM",
     "neighborhood": "Streeterville",
     "cost": "Museum admission / check",
     "official_url": "https://mcachicago.org/whats-on/events/melanie-mclain-peripersonal-2026-09-22/",
-    "date_friendly": "yes — evening museum program",
+    "date_friendly": "yes \u2014 evening museum program",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "",
@@ -217,14 +271,21 @@
     "venue": "MCA Chicago",
     "category": "museum",
     "source_id": "mca_chicago",
-    "source_name": "MCA Chicago"
+    "source_name": "MCA Chicago",
+    "image": "https://mcachicago.org/wp-content/uploads/2026/06/homepage-video-frame.webp",
+    "images": [
+      "https://mcachicago.org/wp-content/uploads/2026/06/homepage-video-frame.webp",
+      "https://mcachicago.org/wp-content/uploads/2024/08/mca.webp",
+      "https://mcachicago.org/wp-content/uploads/2024/08/mca-900x799.webp",
+      "https://mcachicago.org/wp-content/uploads/2024/08/mca-400x400.webp"
+    ]
   },
   {
     "end_time": "9:30 PM",
     "neighborhood": "Old Town",
     "cost": "from ~$40-$85",
     "official_url": "https://www.choosechicago.com/event/pandemonium-please-hold/2026-09-22/",
-    "date_friendly": "yes — Second City Mainstage",
+    "date_friendly": "yes \u2014 Second City Mainstage",
     "party_fit": "couple,friends,family",
     "status": "scheduled",
     "notes": "Recurring Tue/Wed/Thu.",
@@ -237,14 +298,18 @@
     "venue": "The Second City",
     "category": "comedy",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://images.unsplash.com/photo-1598387993441-a364f854c3e1?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1598387993441-a364f854c3e1?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Old Town",
     "cost": "Ticketed",
     "official_url": "https://us.tickets.secondcity.com/event/pandemonium-please-hold-zmbut5",
-    "date_friendly": "yes — sketch date classic",
+    "date_friendly": "yes \u2014 sketch date classic",
     "party_fit": "couple,friends,family",
     "status": "scheduled",
     "notes": "",
@@ -257,14 +322,18 @@
     "venue": "The Second City",
     "category": "comedy",
     "source_id": "do312",
-    "source_name": "Do312"
+    "source_name": "Do312",
+    "image": "https://images.unsplash.com/photo-1598387993441-a364f854c3e1?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1598387993441-a364f854c3e1?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Lakeview",
     "cost": "Festival tickets",
     "official_url": "https://www.choosechicago.com/event/series/reeling-the-chicago-lgbtq-international-film-festival/",
-    "date_friendly": "yes — indie queer cinema date",
+    "date_friendly": "yes \u2014 indie queer cinema date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Sep 17-27. Eventive schedule JS-blocked.",
@@ -277,14 +346,18 @@
     "venue": "Landmark Century Centre Cinema",
     "category": "screening",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "2:00 PM",
     "neighborhood": "Streeterville",
     "cost": "Free market",
     "official_url": "https://mcachicago.org/whats-on/events/soar-farmers-market-2026-2026-09-22/",
-    "date_friendly": "maybe — daytime market not classic night out",
+    "date_friendly": "maybe \u2014 daytime market not classic night out",
     "party_fit": "family,all",
     "status": "scheduled",
     "notes": "",
@@ -297,14 +370,21 @@
     "venue": "MCA Chicago",
     "category": "community",
     "source_id": "mca_chicago",
-    "source_name": "MCA Chicago"
+    "source_name": "MCA Chicago",
+    "image": "https://mcachicago.org/wp-content/uploads/2026/06/homepage-video-frame.webp",
+    "images": [
+      "https://mcachicago.org/wp-content/uploads/2026/06/homepage-video-frame.webp",
+      "https://mcachicago.org/wp-content/uploads/2024/08/mca.webp",
+      "https://mcachicago.org/wp-content/uploads/2024/08/mca-900x799.webp",
+      "https://mcachicago.org/wp-content/uploads/2024/08/mca-400x400.webp"
+    ]
   },
   {
     "end_time": "8:30 PM",
     "neighborhood": "Streeterville",
     "cost": "TBA",
     "official_url": "https://www.choosechicago.com/events/",
-    "date_friendly": "yes — views + paint date",
+    "date_friendly": "yes \u2014 views + paint date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Artist Jaz Rodriguez. | also via choose_chicago",
@@ -317,14 +397,21 @@
     "venue": "360 CHICAGO",
     "category": "other",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-1800x1200.jpg",
+    "images": [
+      "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-1800x1200.jpg",
+      "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-900x600.jpg",
+      "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-768x512.jpg",
+      "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-1536x1024.jpg"
+    ]
   },
   {
     "end_time": "5:00 PM",
     "neighborhood": "Loop",
     "cost": "Free",
     "official_url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/",
-    "date_friendly": "yes — free sensory jazz exhibition",
+    "date_friendly": "yes \u2014 free sensory jazz exhibition",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "Through Sep 27.",
@@ -337,14 +424,21 @@
     "venue": "Chicago Cultural Center",
     "category": "museum",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1400&q=80",
+      "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound.jpg",
+      "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound-900x400.jpg",
+      "https://cdn.choosechicago.com/uploads/2019/07/bean-night.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "Ticketed",
     "official_url": "https://www.goodmantheatre.org/show/the-attic/",
-    "date_friendly": "yes — circus-theatre wow; ages 8+",
+    "date_friendly": "yes \u2014 circus-theatre wow; ages 8+",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "Sep 5-Oct 4. 2h10.",
@@ -357,14 +451,21 @@
     "venue": "Goodman Theatre Albert",
     "category": "theater",
     "source_id": "goodman",
-    "source_name": "Goodman Theatre"
+    "source_name": "Goodman Theatre",
+    "image": "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Marquee_Image_Hero.webp",
+    "images": [
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Marquee_Image_Hero.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85-768x512.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85-992x661.webp"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "Ticketed",
     "official_url": "https://www.choosechicago.com/event/the-goodman-premieres-the-7-fingers-the-attic-things-ive-seen-while-lying-on-my-back/2026-09-22/",
-    "date_friendly": "yes — circus-theatre wow; ages 8+",
+    "date_friendly": "yes \u2014 circus-theatre wow; ages 8+",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "Sep 5-Oct 4.",
@@ -377,14 +478,21 @@
     "venue": "Goodman Theatre Albert",
     "category": "theater",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Marquee_Image_Hero.webp",
+    "images": [
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Marquee_Image_Hero.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85-768x512.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85-992x661.webp"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "River North",
     "cost": "Ticketed",
     "official_url": "https://www.choosechicago.com/event/theater-of-the-mind/2026-09-22/",
-    "date_friendly": "yes — David Byrne immersive unique date",
+    "date_friendly": "yes \u2014 David Byrne immersive unique date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Multiple sessions/day.",
@@ -397,14 +505,21 @@
     "venue": "Reid Murdoch Building",
     "category": "theater",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://cdn.choosechicago.com/uploads/2026/04/2526_TOTM_1500x1000.jpg",
+    "images": [
+      "https://cdn.choosechicago.com/uploads/2026/04/2526_TOTM_1500x1000.jpg",
+      "https://cdn.choosechicago.com/uploads/2026/04/2526_TOTM_1500x1000-900x600.jpg",
+      "https://cdn.choosechicago.com/uploads/2026/04/2526_TOTM_1500x1000-768x512.jpg",
+      "https://cdn.choosechicago.com/uploads/2026/04/2526_TOTM_1500x1000-600x400.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "",
     "cost": "Free",
     "official_url": "https://www.timeout.com/chicago/things-to-do/best-free-things-to-do-this-month",
-    "date_friendly": "maybe — guide not single event",
+    "date_friendly": "maybe \u2014 guide not single event",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "Weekly this-week page lagged Sep 7-13. ART on THE MART, Gallagher Way noted. | also via timeout_chicago",
@@ -417,14 +532,21 @@
     "venue": "Citywide",
     "category": "community",
     "source_id": "timeout_chicago",
-    "source_name": "Time Out Chicago"
+    "source_name": "Time Out Chicago",
+    "image": "https://media.timeout.com/images/106443163/image.jpg",
+    "images": [
+      "https://media.timeout.com/images/106443163/image.jpg",
+      "https://media.timeout.com/images/106407500/170/170/image.jpg",
+      "https://media.timeout.com/images/106443163/750/562/image.jpg",
+      "https://media.timeout.com/images/106443163/380/285/image.webp"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Lincoln Park",
     "cost": "Ticketed",
     "official_url": "https://www.steppenwolf.org/whats-on/2026-2027/topdog-underdog",
-    "date_friendly": "yes — Parks/Leon drama date",
+    "date_friendly": "yes \u2014 Parks/Leon drama date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "~2h25 with intermission. Confirm matinees. | also via do312",
@@ -437,14 +559,21 @@
     "venue": "Steppenwolf Theatre Downstairs",
     "category": "theater",
     "source_id": "steppenwolf",
-    "source_name": "Steppenwolf Theatre"
+    "source_name": "Steppenwolf Theatre",
+    "image": "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1400&q=80",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1440&h=810&auto=compress%2Cformat&fit=min&dm=1785862675&s=68d1867b6a2384150ea7aa893b45637a",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1220&h=686&auto=compress%2Cformat&fit=min&dm=1785862675&s=6656d42ceaa44667cbcfbe7ea69c0012",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=980&h=552&auto=compress%2Cformat&fit=min&dm=1785862675&s=5e6c032eec5ea42c83db2993ae09a549"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Lakeview",
     "cost": "TBA",
     "official_url": "https://laughfactorychicago.standuptix.com/calendar/2026-09",
-    "date_friendly": "yes — club standup",
+    "date_friendly": "yes \u2014 club standup",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Calendar page empty shell (blocked_js); VenuNite confirms Tue 7:30.",
@@ -457,14 +586,18 @@
     "venue": "Laugh Factory Chicago",
     "category": "comedy",
     "source_id": "laugh_factory",
-    "source_name": "Laugh Factory Chicago"
+    "source_name": "Laugh Factory Chicago",
+    "image": "https://images.unsplash.com/photo-1516280440612-480576351185?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1516280440612-480576351185?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "8:30 PM",
     "neighborhood": "Wicker Park",
     "cost": "$32.50",
     "official_url": "https://www.choosechicago.com/event/unveiling-at-the-chopin-theatre/",
-    "date_friendly": "yes — short Havel one-act + mingle",
+    "date_friendly": "yes \u2014 short Havel one-act + mingle",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Partial nudity noted.",
@@ -477,14 +610,21 @@
     "venue": "Chopin Theatre",
     "category": "theater",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://cdn.choosechicago.com/uploads/2026/09/Screenshot-2026-09-17-195131.png",
+    "images": [
+      "https://cdn.choosechicago.com/uploads/2026/09/Screenshot-2026-09-17-195131.png",
+      "https://cdn.choosechicago.com/uploads/2026/09/Screenshot-2026-09-17-195131-900x281.png",
+      "https://cdn.choosechicago.com/uploads/2026/09/Screenshot-2026-09-17-195131-768x240.png",
+      "https://cdn.choosechicago.com/uploads/2026/09/Screenshot-2026-09-17-195131-1536x479.png"
+    ]
   },
   {
     "end_time": "10:00 PM",
     "neighborhood": "Streeterville",
     "cost": "Ticketed (17+)",
     "official_url": "https://www.eventbrite.com/e/tuesday-september-22-whats-funny-comedy-festival-tickets-1996757867533",
-    "date_friendly": "yes — festival showcase date",
+    "date_friendly": "yes \u2014 festival showcase date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Doors 7pm. 2-item min.",
@@ -497,14 +637,18 @@
     "venue": "The Comedy Bar Main Stage",
     "category": "comedy",
     "source_id": "eventbrite",
-    "source_name": "Eventbrite"
+    "source_name": "Eventbrite",
+    "image": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "12:00 AM",
     "neighborhood": "Uptown",
     "cost": "$10 cover",
     "official_url": "https://greenmilljazz.com/events/8pm-midnight-alfonso-ponticelli-2026-09-23/",
-    "date_friendly": "yes — iconic jazz club (21+/late evenings)",
+    "date_friendly": "yes \u2014 iconic jazz club (21+/late evenings)",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Paper Machete is satirical talk (free aft). | also via do312",
@@ -517,14 +661,21 @@
     "venue": "Green Mill Jazz Club",
     "category": "jazz_blues",
     "source_id": "green_mill",
-    "source_name": "Green Mill"
+    "source_name": "Green Mill",
+    "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+    "images": [
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/2MarcSmithGMl.jpeg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Lakeview",
     "cost": "Often free / tip",
     "official_url": "https://www.denhotelchicago.com/blindwolf",
-    "date_friendly": "maybe — speakeasy standup; verify seating",
+    "date_friendly": "maybe \u2014 speakeasy standup; verify seating",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Verify via @blindwolfcomedy.",
@@ -537,14 +688,18 @@
     "venue": "Blind Wolf Speakeasy / DEN Hotel",
     "category": "comedy",
     "source_id": "existing_plans",
-    "source_name": "Night Out Chicago live plans"
+    "source_name": "Night Out Chicago live plans",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "South Loop",
     "cost": "$16.99",
     "official_url": "https://buddyguy.com/events/",
-    "date_friendly": "yes — classic blues club date",
+    "date_friendly": "yes \u2014 classic blues club date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Typically 21+.",
@@ -557,14 +712,21 @@
     "venue": "Buddy Guy's Legends",
     "category": "jazz_blues",
     "source_id": "buddy_guys",
-    "source_name": "Buddy Guy's Legends"
+    "source_name": "Buddy Guy's Legends",
+    "image": "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-1024x316.jpg",
+    "images": [
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-1024x316.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/07/Skyline-No-Blue-scaled.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-300x93.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-768x237.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Uptown",
     "cost": "Ticketed",
     "official_url": "https://do312.com/events/2026/9/23",
-    "date_friendly": "yes — jazz/funk guitar date",
+    "date_friendly": "yes \u2014 jazz/funk guitar date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "also via do312",
@@ -577,14 +739,21 @@
     "venue": "Garcia's Chicago",
     "category": "jazz_blues",
     "source_id": "do312",
-    "source_name": "Do312"
+    "source_name": "Do312",
+    "image": "https://cloudinary-assets.dostuffmedia.com/res/dostuff-media/image/upload/featuredlink-photo-62940/1784866117.jpg",
+    "images": [
+      "https://cloudinary-assets.dostuffmedia.com/res/dostuff-media/image/upload/featuredlink-photo-62940/1784866117.jpg",
+      "https://dostuff-assets.s3.amazonaws.com/property_asset/69740/tiktok.png",
+      "https://dostuff-assets.s3.amazonaws.com/property_asset/77296/do312-twitter.png",
+      "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/479714/cc1e8cb1-60e0-4804-a775-9949271a2d6d.png"
+    ]
   },
   {
     "end_time": "9:00 PM",
     "neighborhood": "Loop",
     "cost": "Premium ticketed",
     "official_url": "https://www.chicagogourmet.org/page/globalstagedinner",
-    "date_friendly": "yes — elevated dinner+show (budget)",
+    "date_friendly": "yes \u2014 elevated dinner+show (budget)",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "",
@@ -597,14 +766,21 @@
     "venue": "Pritzker Pavilion Stage",
     "category": "festival",
     "source_id": "chicago_magazine",
-    "source_name": "Chicago Magazine / Chicago Gourmet"
+    "source_name": "Chicago Magazine / Chicago Gourmet",
+    "image": "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/2de08402-ed9c-4b14-b3ff-cf0feffd4fdf/Header+Text+-+Web+Pages+%2811%29.png",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/2de08402-ed9c-4b14-b3ff-cf0feffd4fdf/Header+Text+-+Web+Pages+%2811%29.png",
+      "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/2de08402-ed9c-4b14-b3ff-cf0feffd4fdf/Header+Text+-+Web+Pages+%2811%29.png?format=500w",
+      "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/2de08402-ed9c-4b14-b3ff-cf0feffd4fdf/Header+Text+-+Web+Pages+%2811%29.png?format=750w",
+      "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/2de08402-ed9c-4b14-b3ff-cf0feffd4fdf/Header+Text+-+Web+Pages+%2811%29.png?format=1000w"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Wicker Park",
     "cost": "Ticketed (2-item min)",
     "official_url": "https://thedentheatre.com/performances/2026/9/23/dana-goldberg-outrageous-the-den-theatre-comedy-club-chicago",
-    "date_friendly": "yes — headliner at Den",
+    "date_friendly": "yes \u2014 headliner at Den",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "",
@@ -617,14 +793,18 @@
     "venue": "The Den Theatre",
     "category": "comedy",
     "source_id": "eventbrite",
-    "source_name": "Eventbrite / Den Theatre"
+    "source_name": "Eventbrite / Den Theatre",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "9:30 PM",
     "neighborhood": "Loop",
     "cost": "TBA",
     "official_url": "https://www.choosechicago.com/event/lucy-darling-chicago-il-simply-darling-tour/2026-09-23/",
-    "date_friendly": "yes — character comedy-magic",
+    "date_friendly": "yes \u2014 character comedy-magic",
     "party_fit": "couple,friends,family",
     "status": "scheduled",
     "notes": "Also Fri/Sat 5:30 Sun 4:00. | also via choose_chicago",
@@ -637,14 +817,21 @@
     "venue": "Studebaker Theater",
     "category": "magic",
     "source_id": "existing_plans",
-    "source_name": "Night Out Chicago live plans"
+    "source_name": "Night Out Chicago live plans",
+    "image": "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
+    "images": [
+      "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
+      "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3.png",
+      "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-32x32.png",
+      "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-192x192.png"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Old Town",
     "cost": "from ~$46.95",
     "official_url": "https://www.choosechicago.com/event/pandemonium-please-hold/2026-09-23/",
-    "date_friendly": "yes — Mainstage sketch",
+    "date_friendly": "yes \u2014 Mainstage sketch",
     "party_fit": "couple,friends,family",
     "status": "scheduled",
     "notes": "114th Mainstage Revue.",
@@ -657,14 +844,19 @@
     "venue": "The Second City Mainstage",
     "category": "comedy",
     "source_id": "second_city",
-    "source_name": "The Second City"
+    "source_name": "The Second City",
+    "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "5:00 PM",
     "neighborhood": "Loop",
     "cost": "Free",
     "official_url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/2026-09-23/",
-    "date_friendly": "yes — free immersive jazz art; family daytime",
+    "date_friendly": "yes \u2014 free immersive jazz art; family daytime",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "Through Sep 27.",
@@ -677,14 +869,21 @@
     "venue": "Chicago Cultural Center",
     "category": "museum",
     "source_id": "existing_plans",
-    "source_name": "Night Out Chicago live plans"
+    "source_name": "Night Out Chicago live plans",
+    "image": "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1400&q=80",
+      "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound.jpg",
+      "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound-900x400.jpg",
+      "https://cdn.choosechicago.com/uploads/2019/07/bean-night.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Near North",
     "cost": "$15",
     "official_url": "https://www.choosechicago.com/event/the-fizz-show-2/2026-09-23/",
-    "date_friendly": "maybe — late carbonated improv",
+    "date_friendly": "maybe \u2014 late carbonated improv",
     "party_fit": "friends,couple",
     "status": "scheduled",
     "notes": "also via choose_chicago",
@@ -697,14 +896,18 @@
     "venue": "iO Theater",
     "category": "comedy",
     "source_id": "io_theater",
-    "source_name": "iO Theater"
+    "source_name": "iO Theater",
+    "image": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Lincoln Park",
     "cost": "$25-$65 approx",
     "official_url": "https://victorygardens.org/",
-    "date_friendly": "yes — provocative new play",
+    "date_friendly": "yes \u2014 provocative new play",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Sep 13-Oct 4. Reader calendar JS-limited.",
@@ -717,14 +920,21 @@
     "venue": "Victory Gardens Biograph",
     "category": "theater",
     "source_id": "chicago_reader",
-    "source_name": "Chicago Reader / Theatre in Chicago"
+    "source_name": "Chicago Reader / Theatre in Chicago",
+    "image": "https://victorygardens.org/wp-content/uploads/2023/03/big-bg-film.png",
+    "images": [
+      "https://victorygardens.org/wp-content/uploads/2023/03/big-bg-film.png",
+      "https://victorygardens.org/wp-content/uploads/2023/02/background-documentary-home1.jpg",
+      "https://victorygardens.org/wp-content/uploads/2023/03/bg-ticket-decoration.png",
+      "https://victorygardens.org/wp-content/uploads/2023/02/background-people-feedback-home-1.png"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Lincoln Park",
     "cost": "Ticketed",
     "official_url": "https://www.steppenwolf.org/whats-on/2026-2027/topdog-underdog",
-    "date_friendly": "yes — Parks/Leon drama date",
+    "date_friendly": "yes \u2014 Parks/Leon drama date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "~2h25 with intermission. Confirm matinees.",
@@ -737,14 +947,21 @@
     "venue": "Steppenwolf Theatre Downstairs",
     "category": "theater",
     "source_id": "steppenwolf",
-    "source_name": "Steppenwolf Theatre"
+    "source_name": "Steppenwolf Theatre",
+    "image": "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1400&q=80",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1440&h=810&auto=compress%2Cformat&fit=min&dm=1785862675&s=68d1867b6a2384150ea7aa893b45637a",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1220&h=686&auto=compress%2Cformat&fit=min&dm=1785862675&s=6656d42ceaa44667cbcfbe7ea69c0012",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=980&h=552&auto=compress%2Cformat&fit=min&dm=1785862675&s=5e6c032eec5ea42c83db2993ae09a549"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Andersonville",
     "cost": "$44 Main / $50 Front Row (+fee)",
     "official_url": "https://www.chicagomagiclounge.com/ono",
-    "date_friendly": "yes — intimate cabaret magic; strong date",
+    "date_friendly": "yes \u2014 intimate cabaret magic; strong date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "ONO Wed 7pm. 21+; 16+ with guardian.",
@@ -757,14 +974,18 @@
     "venue": "Chicago Magic Lounge",
     "category": "magic",
     "source_id": "existing_plans",
-    "source_name": "Night Out Chicago live plans"
+    "source_name": "Night Out Chicago live plans",
+    "image": "https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "11:00 PM",
     "neighborhood": "Logan Square / Hermosa",
     "cost": "Cover TBA",
     "official_url": "https://www.rosaslounge.com/calendar",
-    "date_friendly": "yes — intimate West Side blues",
+    "date_friendly": "yes \u2014 intimate West Side blues",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Closed Sun/Mon.",
@@ -777,14 +998,18 @@
     "venue": "Rosa's Lounge",
     "category": "jazz_blues",
     "source_id": "rosas_lounge",
-    "source_name": "Rosa's Lounge"
+    "source_name": "Rosa's Lounge",
+    "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Various",
     "cost": "Festival pricing",
     "official_url": "https://www.choosechicago.com/event/the-37th-annual-rhinoceros-theater-festival-returns-september-20-october-26-at-four-chicago-venues/2026-09-24/",
-    "date_friendly": "yes — indie experimental theater",
+    "date_friendly": "yes \u2014 indie experimental theater",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Sep 20-Oct 26.",
@@ -797,14 +1022,21 @@
     "venue": "Multiple venues",
     "category": "festival",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://cdn.choosechicago.com/uploads/2026/09/FullMoonVaudeville_2025RhinoFest.jpeg",
+    "images": [
+      "https://cdn.choosechicago.com/uploads/2026/09/FullMoonVaudeville_2025RhinoFest.jpeg",
+      "https://cdn.choosechicago.com/uploads/2026/09/FullMoonVaudeville_2025RhinoFest-1800x1251.jpeg",
+      "https://cdn.choosechicago.com/uploads/2026/09/FullMoonVaudeville_2025RhinoFest-900x625.jpeg",
+      "https://cdn.choosechicago.com/uploads/2026/09/FullMoonVaudeville_2025RhinoFest-768x534.jpeg"
+    ]
   },
   {
     "end_time": "7:15 PM",
     "neighborhood": "Uptown",
     "cost": "Cover TBA",
     "official_url": "https://greenmilljazz.com/calendar/",
-    "date_friendly": "yes — iconic jazz club (21+/late evenings)",
+    "date_friendly": "yes \u2014 iconic jazz club (21+/late evenings)",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Paper Machete is satirical talk (free aft). | also via green_mill",
@@ -817,14 +1049,21 @@
     "venue": "Green Mill Jazz Club",
     "category": "jazz_blues",
     "source_id": "green_mill",
-    "source_name": "Green Mill"
+    "source_name": "Green Mill",
+    "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+    "images": [
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/2MarcSmithGMl.jpeg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Near North",
     "cost": "TBA",
     "official_url": "https://do312.com/events/2026/9/24",
-    "date_friendly": "maybe — late Thu improv",
+    "date_friendly": "maybe \u2014 late Thu improv",
     "party_fit": "friends,couple",
     "status": "scheduled",
     "notes": "also via do312 | also via do312",
@@ -837,14 +1076,18 @@
     "venue": "iO Theater",
     "category": "comedy",
     "source_id": "do312",
-    "source_name": "Do312"
+    "source_name": "Do312",
+    "image": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Old Town",
     "cost": "$43.75, 21+",
     "official_url": "https://do312.com/events/2026/9/24/cliff-cash-special-event-tickets",
-    "date_friendly": "yes — headliner standup",
+    "date_friendly": "yes \u2014 headliner standup",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "",
@@ -857,14 +1100,18 @@
     "venue": "Zanies Comedy Club",
     "category": "comedy",
     "source_id": "do312",
-    "source_name": "Do312"
+    "source_name": "Do312",
+    "image": "https://chicago.zanies.com/wp-content/uploads/2025/06/Summer-Laugh-Pass-WEB-BANNER.jpg",
+    "images": [
+      "https://chicago.zanies.com/wp-content/uploads/2025/06/Summer-Laugh-Pass-WEB-BANNER.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Old Town",
     "cost": "from ~$43 (21+)",
     "official_url": "https://chicago.zanies.com/calendar/category/series/2026-cliff-cash/zanies-comedy-club-chicago/chicago-illinois/",
-    "date_friendly": "yes — classic club headliner",
+    "date_friendly": "yes \u2014 classic club headliner",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Also Fri/Sat 7pm and 9:15pm.",
@@ -877,14 +1124,18 @@
     "venue": "Zanies Comedy Club Chicago",
     "category": "comedy",
     "source_id": "existing_plans",
-    "source_name": "Night Out Chicago live plans"
+    "source_name": "Night Out Chicago live plans",
+    "image": "https://chicago.zanies.com/wp-content/uploads/2025/06/Summer-Laugh-Pass-WEB-BANNER.jpg",
+    "images": [
+      "https://chicago.zanies.com/wp-content/uploads/2025/06/Summer-Laugh-Pass-WEB-BANNER.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Old Town",
     "cost": "$43, 21+",
     "official_url": "https://chicago.zanies.com/",
-    "date_friendly": "yes — Thu headliner",
+    "date_friendly": "yes \u2014 Thu headliner",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "",
@@ -897,14 +1148,18 @@
     "venue": "Zanies Comedy Club Chicago",
     "category": "comedy",
     "source_id": "zanies",
-    "source_name": "Zanies Chicago"
+    "source_name": "Zanies Chicago",
+    "image": "https://chicago.zanies.com/wp-content/uploads/2025/06/Summer-Laugh-Pass-WEB-BANNER.jpg",
+    "images": [
+      "https://chicago.zanies.com/wp-content/uploads/2025/06/Summer-Laugh-Pass-WEB-BANNER.jpg"
+    ]
   },
   {
     "end_time": "7:00 PM",
     "neighborhood": "Loop",
     "cost": "Registration required",
     "official_url": "https://www.artic.edu/events/6542/conversation-lee-miller-fearless",
-    "date_friendly": "yes — curator talk + exhibition evening",
+    "date_friendly": "yes \u2014 curator talk + exhibition evening",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Antony Penrose + Matthew Witkovsky.",
@@ -917,14 +1172,18 @@
     "venue": "Art Institute of Chicago Fullerton Hall",
     "category": "museum",
     "source_id": "art_institute",
-    "source_name": "Art Institute of Chicago"
+    "source_name": "Art Institute of Chicago",
+    "image": "https://images.unsplash.com/photo-1491156855053-9cdff72c7f85?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1491156855053-9cdff72c7f85?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "11:00 PM",
     "neighborhood": "Logan Square / Hermosa",
     "cost": "Cover TBA",
     "official_url": "https://www.rosaslounge.com/calendar",
-    "date_friendly": "yes — intimate West Side blues",
+    "date_friendly": "yes \u2014 intimate West Side blues",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Closed Sun/Mon.",
@@ -937,14 +1196,18 @@
     "venue": "Rosa's Lounge",
     "category": "jazz_blues",
     "source_id": "rosas_lounge",
-    "source_name": "Rosa's Lounge"
+    "source_name": "Rosa's Lounge",
+    "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "South Loop",
     "cost": "$16.99",
     "official_url": "https://buddyguy.com/events/",
-    "date_friendly": "yes — classic blues club date",
+    "date_friendly": "yes \u2014 classic blues club date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Typically 21+.",
@@ -957,14 +1220,21 @@
     "venue": "Buddy Guy's Legends",
     "category": "jazz_blues",
     "source_id": "buddy_guys",
-    "source_name": "Buddy Guy's Legends"
+    "source_name": "Buddy Guy's Legends",
+    "image": "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-1024x316.jpg",
+    "images": [
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-1024x316.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/07/Skyline-No-Blue-scaled.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-300x93.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-768x237.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Old Town",
     "cost": "from ~$45",
     "official_url": "https://www.choosechicago.com/event/pandemonium-please-hold/2026-09-23/",
-    "date_friendly": "yes — sketch/improv classic",
+    "date_friendly": "yes \u2014 sketch/improv classic",
     "party_fit": "couple,friends,family",
     "status": "scheduled",
     "notes": "",
@@ -977,14 +1247,19 @@
     "venue": "The Second City Mainstage",
     "category": "comedy",
     "source_id": "existing_plans",
-    "source_name": "Night Out Chicago live plans"
+    "source_name": "Night Out Chicago live plans",
+    "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "5:00 PM",
     "neighborhood": "Loop",
     "cost": "Free",
     "official_url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/2026-09-24/",
-    "date_friendly": "yes — free daytime exhibit",
+    "date_friendly": "yes \u2014 free daytime exhibit",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "Through Sep 27.",
@@ -997,14 +1272,21 @@
     "venue": "Chicago Cultural Center",
     "category": "museum",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1400&q=80",
+      "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound.jpg",
+      "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound-900x400.jpg",
+      "https://cdn.choosechicago.com/uploads/2019/07/bean-night.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Lincoln Park",
     "cost": "Ticketed",
     "official_url": "https://www.steppenwolf.org/whats-on/2026-2027/topdog-underdog",
-    "date_friendly": "yes — Parks/Leon drama date",
+    "date_friendly": "yes \u2014 Parks/Leon drama date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "~2h25 with intermission. Confirm matinees.",
@@ -1017,14 +1299,21 @@
     "venue": "Steppenwolf Theatre Downstairs",
     "category": "theater",
     "source_id": "steppenwolf",
-    "source_name": "Steppenwolf Theatre"
+    "source_name": "Steppenwolf Theatre",
+    "image": "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1400&q=80",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1440&h=810&auto=compress%2Cformat&fit=min&dm=1785862675&s=68d1867b6a2384150ea7aa893b45637a",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1220&h=686&auto=compress%2Cformat&fit=min&dm=1785862675&s=6656d42ceaa44667cbcfbe7ea69c0012",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=980&h=552&auto=compress%2Cformat&fit=min&dm=1785862675&s=5e6c032eec5ea42c83db2993ae09a549"
+    ]
   },
   {
     "end_time": "7:15 PM",
     "neighborhood": "Uptown",
     "cost": "Cover TBA",
     "official_url": "https://greenmilljazz.com/calendar/",
-    "date_friendly": "yes — iconic jazz club (21+/late evenings)",
+    "date_friendly": "yes \u2014 iconic jazz club (21+/late evenings)",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Paper Machete is satirical talk (free aft). | also via green_mill",
@@ -1037,14 +1326,21 @@
     "venue": "Green Mill Jazz Club",
     "category": "jazz_blues",
     "source_id": "green_mill",
-    "source_name": "Green Mill"
+    "source_name": "Green Mill",
+    "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+    "images": [
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/2MarcSmithGMl.jpeg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Old Town",
     "cost": "$43, 21+",
     "official_url": "https://chicago.zanies.com/",
-    "date_friendly": "yes — Fri early headliner",
+    "date_friendly": "yes \u2014 Fri early headliner",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Doors 6pm. | also via zanies",
@@ -1057,14 +1353,18 @@
     "venue": "Zanies Comedy Club Chicago",
     "category": "comedy",
     "source_id": "zanies",
-    "source_name": "Zanies Chicago"
+    "source_name": "Zanies Chicago",
+    "image": "https://chicago.zanies.com/wp-content/uploads/2025/06/Summer-Laugh-Pass-WEB-BANNER.jpg",
+    "images": [
+      "https://chicago.zanies.com/wp-content/uploads/2025/06/Summer-Laugh-Pass-WEB-BANNER.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Streeterville",
     "cost": "Ticketed",
     "official_url": "https://lookingglasstheatre.org/plays/kowalski/",
-    "date_friendly": "yes — Galecki Williams/Brando play",
+    "date_friendly": "yes \u2014 Galecki Williams/Brando play",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Sep 15-Oct 25. ~90 min. Confirm showtimes.",
@@ -1077,14 +1377,21 @@
     "venue": "Lookingglass Theatre",
     "category": "theater",
     "source_id": "lookingglass",
-    "source_name": "Lookingglass Theatre"
+    "source_name": "Lookingglass Theatre",
+    "image": "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A0628-2-scaled.jpeg",
+    "images": [
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A0628-2-scaled.jpeg",
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1490-2-scaled.jpeg",
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1589-2-scaled.jpeg",
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1829-2-scaled.jpeg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "South Loop",
     "cost": "$27.30",
     "official_url": "https://buddyguy.com/events/",
-    "date_friendly": "yes — classic blues club date",
+    "date_friendly": "yes \u2014 classic blues club date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Typically 21+.",
@@ -1097,14 +1404,21 @@
     "venue": "Buddy Guy's Legends",
     "category": "jazz_blues",
     "source_id": "buddy_guys",
-    "source_name": "Buddy Guy's Legends"
+    "source_name": "Buddy Guy's Legends",
+    "image": "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-1024x316.jpg",
+    "images": [
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-1024x316.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/07/Skyline-No-Blue-scaled.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-300x93.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-768x237.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "TBA",
     "official_url": "https://www.choosechicago.com/event/lucy-darling-chicago-il-simply-darling-tour/2026-09-23/",
-    "date_friendly": "yes — earlier weekend magic-comedy",
+    "date_friendly": "yes \u2014 earlier weekend magic-comedy",
     "party_fit": "couple,friends,family",
     "status": "scheduled",
     "notes": "",
@@ -1117,14 +1431,21 @@
     "venue": "Studebaker Theater",
     "category": "magic",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
+    "images": [
+      "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
+      "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3.png",
+      "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-32x32.png",
+      "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-192x192.png"
+    ]
   },
   {
     "end_time": "11:00 PM",
     "neighborhood": "Logan Square / Hermosa",
     "cost": "Cover TBA",
     "official_url": "https://www.rosaslounge.com/calendar",
-    "date_friendly": "yes — intimate West Side blues",
+    "date_friendly": "yes \u2014 intimate West Side blues",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Closed Sun/Mon.",
@@ -1137,14 +1458,18 @@
     "venue": "Rosa's Lounge",
     "category": "jazz_blues",
     "source_id": "rosas_lounge",
-    "source_name": "Rosa's Lounge"
+    "source_name": "Rosa's Lounge",
+    "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Pilsen",
     "cost": "Ticketed",
     "official_url": "https://do312.com/events/2026/9/25",
-    "date_friendly": "yes — anniversary tour club show",
+    "date_friendly": "yes \u2014 anniversary tour club show",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "",
@@ -1157,14 +1482,21 @@
     "venue": "Thalia Hall",
     "category": "live_music",
     "source_id": "do312",
-    "source_name": "Do312"
+    "source_name": "Do312",
+    "image": "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/1584543927895-2OG0BE6LOF74FM48JC3P/TGPilsen-2.JPG",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/1584543927895-2OG0BE6LOF74FM48JC3P/TGPilsen-2.JPG",
+      "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/1584543935075-7TL2AYXY8JLZYWAONHJ0/TGPilsen-3.JPG",
+      "https://static1.squarespace.com/static/5b088cce620b85511ff9c68d/t/5e13b9e17ec0a61af3041a50/1578351076278/TH_box_black-Cream.jpg?format=1500w",
+      "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/822ee80f-0d48-464a-99cd-72ccb21d86f7/MSP_Banner-Website.png"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Old Town",
     "cost": "from ~$45",
     "official_url": "https://www.choosechicago.com/event/pandemonium-please-hold-2/2026-09-25/",
-    "date_friendly": "yes — early Fri Mainstage",
+    "date_friendly": "yes \u2014 early Fri Mainstage",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "also via choose_chicago",
@@ -1177,14 +1509,19 @@
     "venue": "The Second City Mainstage",
     "category": "comedy",
     "source_id": "existing_plans",
-    "source_name": "Night Out Chicago live plans"
+    "source_name": "Night Out Chicago live plans",
+    "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "5:00 PM",
     "neighborhood": "Loop",
     "cost": "Free",
     "official_url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/2026-09-25/",
-    "date_friendly": "yes — free daytime exhibit",
+    "date_friendly": "yes \u2014 free daytime exhibit",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "Through Sep 27.",
@@ -1197,14 +1534,21 @@
     "venue": "Chicago Cultural Center",
     "category": "museum",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1400&q=80",
+      "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound.jpg",
+      "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound-900x400.jpg",
+      "https://cdn.choosechicago.com/uploads/2019/07/bean-night.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "$40 w/ code SIGN",
     "official_url": "https://www.goodmantheatre.org/show/the-attic/",
-    "date_friendly": "yes — accessible Fri evening",
+    "date_friendly": "yes \u2014 accessible Fri evening",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "",
@@ -1217,14 +1561,21 @@
     "venue": "Goodman Theatre Albert",
     "category": "theater",
     "source_id": "goodman",
-    "source_name": "Goodman Theatre"
+    "source_name": "Goodman Theatre",
+    "image": "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Marquee_Image_Hero.webp",
+    "images": [
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Marquee_Image_Hero.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85-768x512.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85-992x661.webp"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Lincoln Park",
     "cost": "Ticketed",
     "official_url": "https://www.steppenwolf.org/whats-on/2026-2027/topdog-underdog",
-    "date_friendly": "yes — Parks/Leon drama date",
+    "date_friendly": "yes \u2014 Parks/Leon drama date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "~2h25 with intermission. Confirm matinees.",
@@ -1237,14 +1588,21 @@
     "venue": "Steppenwolf Theatre Downstairs",
     "category": "theater",
     "source_id": "steppenwolf",
-    "source_name": "Steppenwolf Theatre"
+    "source_name": "Steppenwolf Theatre",
+    "image": "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1400&q=80",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1440&h=810&auto=compress%2Cformat&fit=min&dm=1785862675&s=68d1867b6a2384150ea7aa893b45637a",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1220&h=686&auto=compress%2Cformat&fit=min&dm=1785862675&s=6656d42ceaa44667cbcfbe7ea69c0012",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=980&h=552&auto=compress%2Cformat&fit=min&dm=1785862675&s=5e6c032eec5ea42c83db2993ae09a549"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Near North",
     "cost": "$22",
     "official_url": "https://www.crowdwork.com/e/best-of-io-improv?date=2026-09-26T19%3A30%3A00",
-    "date_friendly": "yes — Saturday Best Of",
+    "date_friendly": "yes \u2014 Saturday Best Of",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "",
@@ -1257,14 +1615,18 @@
     "venue": "iO Theater",
     "category": "comedy",
     "source_id": "io_theater",
-    "source_name": "iO Theater"
+    "source_name": "iO Theater",
+    "image": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "South Loop",
     "cost": "$27.30",
     "official_url": "https://buddyguy.com/events/",
-    "date_friendly": "yes — classic blues club date",
+    "date_friendly": "yes \u2014 classic blues club date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Typically 21+.",
@@ -1277,14 +1639,21 @@
     "venue": "Buddy Guy's Legends",
     "category": "jazz_blues",
     "source_id": "buddy_guys",
-    "source_name": "Buddy Guy's Legends"
+    "source_name": "Buddy Guy's Legends",
+    "image": "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-1024x316.jpg",
+    "images": [
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-1024x316.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/07/Skyline-No-Blue-scaled.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-300x93.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-768x237.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "Festival tickets",
     "official_url": "https://www.chicagogourmet.org/page/events",
-    "date_friendly": "yes — food fest date splurge",
+    "date_friendly": "yes \u2014 food fest date splurge",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Sep 23-27 rooftop sessions.",
@@ -1297,14 +1666,21 @@
     "venue": "Harris Theater / Millennium Park area",
     "category": "festival",
     "source_id": "chicago_magazine",
-    "source_name": "Chicago Magazine / Chicago Gourmet"
+    "source_name": "Chicago Magazine / Chicago Gourmet",
+    "image": "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/cb4423af-c61f-47c1-8fae-2cbffb75e99a/2025-09-14_Chicago-Gourmet_Gourmet-Tailgate_Event_1653.jpg",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/cb4423af-c61f-47c1-8fae-2cbffb75e99a/2025-09-14_Chicago-Gourmet_Gourmet-Tailgate_Event_1653.jpg",
+      "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/cb4423af-c61f-47c1-8fae-2cbffb75e99a/2025-09-14_Chicago-Gourmet_Gourmet-Tailgate_Event_1653.jpg?format=500w",
+      "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/cb4423af-c61f-47c1-8fae-2cbffb75e99a/2025-09-14_Chicago-Gourmet_Gourmet-Tailgate_Event_1653.jpg?format=750w",
+      "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/cb4423af-c61f-47c1-8fae-2cbffb75e99a/2025-09-14_Chicago-Gourmet_Gourmet-Tailgate_Event_1653.jpg?format=1000w"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Pilsen",
     "cost": "TBA",
     "official_url": "https://www.choosechicago.com/events/",
-    "date_friendly": "yes — daytime cultural outing",
+    "date_friendly": "yes \u2014 daytime cultural outing",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "Confirm day-of listing.",
@@ -1317,14 +1693,21 @@
     "venue": "National Museum of Mexican Art / Pilsen",
     "category": "community",
     "source_id": "block_club",
-    "source_name": "Block Club Chicago"
+    "source_name": "Block Club Chicago",
+    "image": "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-1800x1200.jpg",
+    "images": [
+      "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-1800x1200.jpg",
+      "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-900x600.jpg",
+      "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-768x512.jpg",
+      "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-1536x1024.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Old Town",
     "cost": "$43, 21+",
     "official_url": "https://do312.com/events/2026/9/26/cliff-cash-special-event-tickets",
-    "date_friendly": "yes — Sat early set",
+    "date_friendly": "yes \u2014 Sat early set",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "",
@@ -1337,14 +1720,18 @@
     "venue": "Zanies Comedy Club Chicago",
     "category": "comedy",
     "source_id": "zanies",
-    "source_name": "Zanies Chicago"
+    "source_name": "Zanies Chicago",
+    "image": "https://chicago.zanies.com/wp-content/uploads/2025/06/Summer-Laugh-Pass-WEB-BANNER.jpg",
+    "images": [
+      "https://chicago.zanies.com/wp-content/uploads/2025/06/Summer-Laugh-Pass-WEB-BANNER.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Old Town",
     "cost": "$43, 21+",
     "official_url": "https://chicago.zanies.com/",
-    "date_friendly": "maybe — late Sat",
+    "date_friendly": "maybe \u2014 late Sat",
     "party_fit": "friends,couple",
     "status": "scheduled",
     "notes": "",
@@ -1357,14 +1744,18 @@
     "venue": "Zanies Comedy Club Chicago",
     "category": "comedy",
     "source_id": "zanies",
-    "source_name": "Zanies Chicago"
+    "source_name": "Zanies Chicago",
+    "image": "https://chicago.zanies.com/wp-content/uploads/2025/06/Summer-Laugh-Pass-WEB-BANNER.jpg",
+    "images": [
+      "https://chicago.zanies.com/wp-content/uploads/2025/06/Summer-Laugh-Pass-WEB-BANNER.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "Ticketed",
     "official_url": "https://www.goodmantheatre.org/2026-2027-season/",
-    "date_friendly": "yes — new Owen work opening window",
+    "date_friendly": "yes \u2014 new Owen work opening window",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Sep 26-Nov 1 Owen; confirm first preview time.",
@@ -1377,14 +1768,21 @@
     "venue": "Goodman Theatre Owen",
     "category": "theater",
     "source_id": "goodman",
-    "source_name": "Goodman Theatre"
+    "source_name": "Goodman Theatre",
+    "image": "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Marquee_Image_Hero.webp",
+    "images": [
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Marquee_Image_Hero.webp",
+      "https://www.goodmantheatre.org/wp-content/plugins/wp-rocket/assets/img/youtube.png",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2627_Attic_Hero-1500x1000-1-500x334.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2627_Attic_Hero-1500x1000-1-768x512.webp"
+    ]
   },
   {
     "end_time": "3:30 PM",
     "neighborhood": "Hyde Park",
     "cost": "Free ($10 donation)",
     "official_url": "https://hydeparkjazzfestival.org/pickensstage",
-    "date_friendly": "yes — free outdoor/chapel jazz",
+    "date_friendly": "yes \u2014 free outdoor/chapel jazz",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "20th anniversary Sep 26-27. | also via choose_chicago | also via choose_chicago",
@@ -1397,14 +1795,19 @@
     "venue": "Hyde Park Jazz Festival",
     "category": "festival",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago / HPJF"
+    "source_name": "Choose Chicago / HPJF",
+    "image": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=1400&q=80",
+      "https://static1.squarespace.com/static/5518e7b9e4b0c99d03da9599/t/66b397f3121f5f3b764c583b/1723045875317/Screenshot+2024-06-14+at+11.26.43+AM.png?format=1500w"
+    ]
   },
   {
     "end_time": "11:00 PM",
     "neighborhood": "Hyde Park",
     "cost": "Free ($10 donation)",
     "official_url": "https://www.hydeparkjazzfestival.org/program",
-    "date_friendly": "yes — free outdoor/chapel jazz",
+    "date_friendly": "yes \u2014 free outdoor/chapel jazz",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "20th anniversary Sep 26-27.",
@@ -1417,14 +1820,19 @@
     "venue": "Hyde Park Jazz Festival",
     "category": "festival",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago / HPJF"
+    "source_name": "Choose Chicago / HPJF",
+    "image": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=1400&q=80",
+      "https://static1.squarespace.com/static/5518e7b9e4b0c99d03da9599/t/66b397f3121f5f3b764c583b/1723045875317/Screenshot+2024-06-14+at+11.26.43+AM.png?format=1500w"
+    ]
   },
   {
     "end_time": "2:30 PM",
     "neighborhood": "Hyde Park",
     "cost": "Free ($10 donation)",
     "official_url": "https://hydeparkjazzfestival.org/wagner-stage",
-    "date_friendly": "yes — free outdoor/chapel jazz",
+    "date_friendly": "yes \u2014 free outdoor/chapel jazz",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "20th anniversary Sep 26-27. | also via choose_chicago | also via choose_chicago | also via choose_chicago",
@@ -1437,14 +1845,19 @@
     "venue": "Hyde Park Jazz Festival",
     "category": "festival",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago / HPJF"
+    "source_name": "Choose Chicago / HPJF",
+    "image": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=1400&q=80",
+      "https://static1.squarespace.com/static/5518e7b9e4b0c99d03da9599/t/66b397f3121f5f3b764c583b/1723045875317/Screenshot+2024-06-14+at+11.26.43+AM.png?format=1500w"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Wrigleyville",
     "cost": "Ticketed (21+)",
     "official_url": "https://5mag.net/event/horse-meat-disco-at-smartbar-september-26-2026/",
-    "date_friendly": "maybe — dance club friends night",
+    "date_friendly": "maybe \u2014 dance club friends night",
     "party_fit": "friends",
     "status": "scheduled",
     "notes": "RA-adjacent Chicago listing.",
@@ -1457,14 +1870,21 @@
     "venue": "Smartbar",
     "category": "live_music",
     "source_id": "resident_advisor",
-    "source_name": "Resident Advisor / Smartbar"
+    "source_name": "Resident Advisor / Smartbar",
+    "image": "https://smartbarchicago.com/wp-content/uploads/2024/03/20230225_SMARTBAR-2023-INTERIORS_SS0483W.jpg",
+    "images": [
+      "https://smartbarchicago.com/wp-content/uploads/2024/03/20230225_SMARTBAR-2023-INTERIORS_SS0483W.jpg",
+      "https://smartbarchicago.com/wp-content/uploads/2024/03/20230225_SMARTBAR-2023-INTERIORS_SS0483WEB-1024x683.jpg",
+      "https://smartbarchicago.com/wp-content/uploads/2024/03/20230225_SMARTBAR-2023-INTERIORS_SS0483WEB.jpg",
+      "https://smartbarchicago.com/wp-content/uploads/2026/08/Flowers_Portrait.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Hyde Park",
     "cost": "Free ($10 donation)",
     "official_url": "https://www.hydeparkjazzfestival.org/",
-    "date_friendly": "yes — free jazz; family afternoon",
+    "date_friendly": "yes \u2014 free jazz; family afternoon",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "Sep 26-27 20th anniversary.",
@@ -1477,14 +1897,18 @@
     "venue": "Hyde Park venues / Midway",
     "category": "festival",
     "source_id": "existing_plans",
-    "source_name": "Night Out Chicago live plans"
+    "source_name": "Night Out Chicago live plans",
+    "image": "https://static1.squarespace.com/static/5518e7b9e4b0c99d03da9599/t/66b397f3121f5f3b764c583b/1723045875317/Screenshot+2024-06-14+at+11.26.43+AM.png?format=1500w",
+    "images": [
+      "https://static1.squarespace.com/static/5518e7b9e4b0c99d03da9599/t/66b397f3121f5f3b764c583b/1723045875317/Screenshot+2024-06-14+at+11.26.43+AM.png?format=1500w"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Streeterville",
     "cost": "Ticketed",
     "official_url": "https://lookingglasstheatre.org/plays/kowalski/",
-    "date_friendly": "yes — Galecki Williams/Brando play",
+    "date_friendly": "yes \u2014 Galecki Williams/Brando play",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Sep 15-Oct 25. ~90 min. Confirm showtimes.",
@@ -1497,14 +1921,21 @@
     "venue": "Lookingglass Theatre",
     "category": "theater",
     "source_id": "lookingglass",
-    "source_name": "Lookingglass Theatre"
+    "source_name": "Lookingglass Theatre",
+    "image": "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A0628-2-scaled.jpeg",
+    "images": [
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A0628-2-scaled.jpeg",
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1490-2-scaled.jpeg",
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1589-2-scaled.jpeg",
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1829-2-scaled.jpeg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "TBA",
     "official_url": "https://www.choosechicago.com/event/lucy-darling-chicago-il-simply-darling-tour/2026-09-23/",
-    "date_friendly": "yes — earlier weekend magic-comedy",
+    "date_friendly": "yes \u2014 earlier weekend magic-comedy",
     "party_fit": "couple,friends,family",
     "status": "scheduled",
     "notes": "",
@@ -1517,14 +1948,21 @@
     "venue": "Studebaker Theater",
     "category": "magic",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
+    "images": [
+      "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
+      "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3.png",
+      "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-32x32.png",
+      "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-192x192.png"
+    ]
   },
   {
     "end_time": "3:00 PM",
     "neighborhood": "Streeterville",
     "cost": "Museum admission / check",
     "official_url": "https://mcachicago.org/whats-on/events/melanie-mclain-peripersonal-2026-09-22/",
-    "date_friendly": "yes — weekend museum program",
+    "date_friendly": "yes \u2014 weekend museum program",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "",
@@ -1537,14 +1975,21 @@
     "venue": "MCA Chicago",
     "category": "museum",
     "source_id": "mca_chicago",
-    "source_name": "MCA Chicago"
+    "source_name": "MCA Chicago",
+    "image": "https://mcachicago.org/wp-content/uploads/2026/06/homepage-video-frame.webp",
+    "images": [
+      "https://mcachicago.org/wp-content/uploads/2026/06/homepage-video-frame.webp",
+      "https://mcachicago.org/wp-content/uploads/2024/08/mca.webp",
+      "https://mcachicago.org/wp-content/uploads/2024/08/mca-900x799.webp",
+      "https://mcachicago.org/wp-content/uploads/2024/08/mca-400x400.webp"
+    ]
   },
   {
     "end_time": "2:00 PM",
     "neighborhood": "Museum Campus",
     "cost": "Ticket required",
     "official_url": "https://www.fieldmuseum.org/",
-    "date_friendly": "maybe — daytime educational; family",
+    "date_friendly": "maybe \u2014 daytime educational; family",
     "party_fit": "family,all",
     "status": "scheduled",
     "notes": "No Late Hours in this exact week window.",
@@ -1557,14 +2002,21 @@
     "venue": "Field Museum",
     "category": "museum",
     "source_id": "field_museum",
-    "source_name": "Field Museum"
+    "source_name": "Field Museum",
+    "image": "https://www.datocms-assets.com/44232/1782495760-pfm-opening-edited.webp",
+    "images": [
+      "https://www.datocms-assets.com/44232/1782495760-pfm-opening-edited.webp",
+      "https://www.datocms-assets.com/44232/1782495760-pfm-opening-edited.webp?dpr=0.25&fm=webp",
+      "https://www.datocms-assets.com/44232/1782495760-pfm-opening-edited.webp?dpr=0.5&fm=webp",
+      "https://www.datocms-assets.com/44232/1782495760-pfm-opening-edited.webp?dpr=0.75&fm=webp"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Old Town",
     "cost": "from ~$45",
     "official_url": "https://www.secondcity.com",
-    "date_friendly": "yes — Sat early Mainstage",
+    "date_friendly": "yes \u2014 Sat early Mainstage",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "Also typical 9:30pm Sat; confirm tickets.",
@@ -1577,14 +2029,19 @@
     "venue": "The Second City Mainstage",
     "category": "comedy",
     "source_id": "second_city",
-    "source_name": "The Second City"
+    "source_name": "The Second City",
+    "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "5:00 PM",
     "neighborhood": "Uptown",
     "cost": "FREE",
     "official_url": "https://greenmilljazz.com/calendar/",
-    "date_friendly": "yes — iconic jazz club (21+/late evenings)",
+    "date_friendly": "yes \u2014 iconic jazz club (21+/late evenings)",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Paper Machete is satirical talk (free aft). | also via green_mill",
@@ -1597,14 +2054,21 @@
     "venue": "Green Mill Jazz Club",
     "category": "jazz_blues",
     "source_id": "green_mill",
-    "source_name": "Green Mill"
+    "source_name": "Green Mill",
+    "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+    "images": [
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/2MarcSmithGMl.jpeg"
+    ]
   },
   {
     "end_time": "11:00 PM",
     "neighborhood": "Logan Square / Hermosa",
     "cost": "Cover TBA",
     "official_url": "https://www.rosaslounge.com/calendar",
-    "date_friendly": "yes — intimate West Side blues",
+    "date_friendly": "yes \u2014 intimate West Side blues",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Closed Sun/Mon.",
@@ -1617,14 +2081,18 @@
     "venue": "Rosa's Lounge",
     "category": "jazz_blues",
     "source_id": "rosas_lounge",
-    "source_name": "Rosa's Lounge"
+    "source_name": "Rosa's Lounge",
+    "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "5:00 PM",
     "neighborhood": "Loop",
     "cost": "Free",
     "official_url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/2026-09-26/",
-    "date_friendly": "yes — free daytime exhibit",
+    "date_friendly": "yes \u2014 free daytime exhibit",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "Through Sep 27.",
@@ -1637,14 +2105,21 @@
     "venue": "Chicago Cultural Center",
     "category": "museum",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1400&q=80",
+      "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound.jpg",
+      "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound-900x400.jpg",
+      "https://cdn.choosechicago.com/uploads/2019/07/bean-night.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "$40 w/ code AUDIO",
     "official_url": "https://www.goodmantheatre.org/show/the-attic/",
-    "date_friendly": "yes — accessible matinee",
+    "date_friendly": "yes \u2014 accessible matinee",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "Touch tour noon. | also via goodman",
@@ -1657,14 +2132,21 @@
     "venue": "Goodman Theatre Albert",
     "category": "theater",
     "source_id": "goodman",
-    "source_name": "Goodman Theatre"
+    "source_name": "Goodman Theatre",
+    "image": "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Marquee_Image_Hero.webp",
+    "images": [
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Marquee_Image_Hero.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85-768x512.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85-992x661.webp"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Near North",
     "cost": "$22",
     "official_url": "https://www.choosechicago.com/event/the-best-of-io/2026-09-26/",
-    "date_friendly": "yes — polished weekend improv",
+    "date_friendly": "yes \u2014 polished weekend improv",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "also via choose_chicago",
@@ -1677,14 +2159,18 @@
     "venue": "iO Theater",
     "category": "comedy",
     "source_id": "existing_plans",
-    "source_name": "Night Out Chicago live plans"
+    "source_name": "Night Out Chicago live plans",
+    "image": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "Ticketed",
     "official_url": "https://do312.com/events/2026/9/26",
-    "date_friendly": "yes — film + live orchestra spectacle",
+    "date_friendly": "yes \u2014 film + live orchestra spectacle",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "also via do312 | also via do312",
@@ -1697,14 +2183,21 @@
     "venue": "The Auditorium",
     "category": "screening",
     "source_id": "do312",
-    "source_name": "Do312"
+    "source_name": "Do312",
+    "image": "https://cloudinary-assets.dostuffmedia.com/res/dostuff-media/image/upload/featuredlink-photo-62940/1784866117.jpg",
+    "images": [
+      "https://cloudinary-assets.dostuffmedia.com/res/dostuff-media/image/upload/featuredlink-photo-62940/1784866117.jpg",
+      "https://dostuff-assets.s3.amazonaws.com/property_asset/69740/tiktok.png",
+      "https://dostuff-assets.s3.amazonaws.com/property_asset/77296/do312-twitter.png",
+      "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/479714/cc1e8cb1-60e0-4804-a775-9949271a2d6d.png"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Lincoln Park",
     "cost": "Ticketed",
     "official_url": "https://www.steppenwolf.org/whats-on/2026-2027/topdog-underdog",
-    "date_friendly": "yes — Parks/Leon drama date",
+    "date_friendly": "yes \u2014 Parks/Leon drama date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "~2h25 with intermission. Confirm matinees.",
@@ -1717,14 +2210,21 @@
     "venue": "Steppenwolf Theatre Downstairs",
     "category": "theater",
     "source_id": "steppenwolf",
-    "source_name": "Steppenwolf Theatre"
+    "source_name": "Steppenwolf Theatre",
+    "image": "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1400&q=80",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1440&h=810&auto=compress%2Cformat&fit=min&dm=1785862675&s=68d1867b6a2384150ea7aa893b45637a",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1220&h=686&auto=compress%2Cformat&fit=min&dm=1785862675&s=6656d42ceaa44667cbcfbe7ea69c0012",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=980&h=552&auto=compress%2Cformat&fit=min&dm=1785862675&s=5e6c032eec5ea42c83db2993ae09a549"
+    ]
   },
   {
     "end_time": "6:00 PM",
     "neighborhood": "Uptown",
     "cost": "$10 cover",
     "official_url": "https://greenmilljazz.com/calendar/",
-    "date_friendly": "yes — iconic jazz club (21+/late evenings)",
+    "date_friendly": "yes \u2014 iconic jazz club (21+/late evenings)",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Paper Machete is satirical talk (free aft). | also via green_mill",
@@ -1737,14 +2237,21 @@
     "venue": "Green Mill Jazz Club",
     "category": "jazz_blues",
     "source_id": "green_mill",
-    "source_name": "Green Mill"
+    "source_name": "Green Mill",
+    "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+    "images": [
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/2MarcSmithGMl.jpeg"
+    ]
   },
   {
     "end_time": "3:00 PM",
     "neighborhood": "Hyde Park",
     "cost": "Free ($10 donation)",
     "official_url": "https://hydeparkjazzfestival.org/wagner-stage",
-    "date_friendly": "yes — free outdoor/chapel jazz",
+    "date_friendly": "yes \u2014 free outdoor/chapel jazz",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "20th anniversary Sep 26-27. | also via choose_chicago | also via choose_chicago",
@@ -1757,14 +2264,19 @@
     "venue": "Hyde Park Jazz Festival",
     "category": "festival",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago / HPJF"
+    "source_name": "Choose Chicago / HPJF",
+    "image": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=1400&q=80",
+      "https://static1.squarespace.com/static/5518e7b9e4b0c99d03da9599/t/66b397f3121f5f3b764c583b/1723045875317/Screenshot+2024-06-14+at+11.26.43+AM.png?format=1500w"
+    ]
   },
   {
     "end_time": "2:00 PM",
     "neighborhood": "Hyde Park",
     "cost": "Free ($10 donation)",
     "official_url": "https://hydeparkjazzfestival.org/pickensstage",
-    "date_friendly": "yes — free outdoor/chapel jazz",
+    "date_friendly": "yes \u2014 free outdoor/chapel jazz",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "20th anniversary Sep 26-27. | also via choose_chicago | also via choose_chicago",
@@ -1777,14 +2289,19 @@
     "venue": "Hyde Park Jazz Festival",
     "category": "festival",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago / HPJF"
+    "source_name": "Choose Chicago / HPJF",
+    "image": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=1400&q=80",
+      "https://static1.squarespace.com/static/5518e7b9e4b0c99d03da9599/t/66b397f3121f5f3b764c583b/1723045875317/Screenshot+2024-06-14+at+11.26.43+AM.png?format=1500w"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Streeterville",
     "cost": "Ticketed",
     "official_url": "https://lookingglasstheatre.org/plays/kowalski/",
-    "date_friendly": "yes — Galecki Williams/Brando play",
+    "date_friendly": "yes \u2014 Galecki Williams/Brando play",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Sep 15-Oct 25. ~90 min. Confirm showtimes.",
@@ -1797,14 +2314,21 @@
     "venue": "Lookingglass Theatre",
     "category": "theater",
     "source_id": "lookingglass",
-    "source_name": "Lookingglass Theatre"
+    "source_name": "Lookingglass Theatre",
+    "image": "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A0628-2-scaled.jpeg",
+    "images": [
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A0628-2-scaled.jpeg",
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1490-2-scaled.jpeg",
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1589-2-scaled.jpeg",
+      "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1829-2-scaled.jpeg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "TBA",
     "official_url": "https://www.choosechicago.com/event/lucy-darling-chicago-il-simply-darling-tour/2026-09-23/",
-    "date_friendly": "yes — earlier weekend magic-comedy",
+    "date_friendly": "yes \u2014 earlier weekend magic-comedy",
     "party_fit": "couple,friends,family",
     "status": "scheduled",
     "notes": "",
@@ -1817,14 +2341,21 @@
     "venue": "Studebaker Theater",
     "category": "magic",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
+    "images": [
+      "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
+      "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3.png",
+      "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-32x32.png",
+      "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-192x192.png"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "South Loop",
     "cost": "$16.99",
     "official_url": "https://buddyguy.com/events/",
-    "date_friendly": "yes — classic blues club date",
+    "date_friendly": "yes \u2014 classic blues club date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Typically 21+.",
@@ -1837,14 +2368,21 @@
     "venue": "Buddy Guy's Legends",
     "category": "jazz_blues",
     "source_id": "buddy_guys",
-    "source_name": "Buddy Guy's Legends"
+    "source_name": "Buddy Guy's Legends",
+    "image": "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-1024x316.jpg",
+    "images": [
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-1024x316.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/07/Skyline-No-Blue-scaled.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-300x93.jpg",
+      "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-768x237.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Old Town",
     "cost": "from ~$45",
     "official_url": "https://www.secondcity.com",
-    "date_friendly": "yes — Sunday Mainstage",
+    "date_friendly": "yes \u2014 Sunday Mainstage",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "Confirm exact Sun time.",
@@ -1857,14 +2395,19 @@
     "venue": "The Second City Mainstage",
     "category": "comedy",
     "source_id": "second_city",
-    "source_name": "The Second City"
+    "source_name": "The Second City",
+    "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Wrigleyville",
     "cost": "$15-$20 (21+)",
     "official_url": "https://smartbarchicago.com/event/queen-84/",
-    "date_friendly": "maybe — legendary house night",
+    "date_friendly": "maybe \u2014 legendary house night",
     "party_fit": "friends",
     "status": "scheduled",
     "notes": "Derrick Carter / Serafini / Shaun J Wright.",
@@ -1877,14 +2420,21 @@
     "venue": "Smartbar",
     "category": "live_music",
     "source_id": "resident_advisor",
-    "source_name": "Resident Advisor / Smartbar"
+    "source_name": "Resident Advisor / Smartbar",
+    "image": "https://smartbarchicago.com/wp-content/uploads/2024/03/20230225_SMARTBAR-2023-INTERIORS_SS0483W.jpg",
+    "images": [
+      "https://smartbarchicago.com/wp-content/uploads/2024/03/20230225_SMARTBAR-2023-INTERIORS_SS0483W.jpg",
+      "https://smartbarchicago.com/wp-content/uploads/2024/03/20230225_SMARTBAR-2023-INTERIORS_SS0483WEB-1024x683.jpg",
+      "https://smartbarchicago.com/wp-content/uploads/2024/03/20230225_SMARTBAR-2023-INTERIORS_SS0483WEB.jpg",
+      "https://smartbarchicago.com/wp-content/uploads/2026/08/Flowers_Portrait.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "Ticketed",
     "official_url": "https://www.livenation.com/event/vvG1jZ_5Um6fxw/sara-bareilles-the-good-grief-tour",
-    "date_friendly": "yes — theater concert date",
+    "date_friendly": "yes \u2014 theater concert date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Also Sep 28. | also via ticketmaster",
@@ -1897,14 +2447,18 @@
     "venue": "The Chicago Theatre",
     "category": "live_music",
     "source_id": "do312",
-    "source_name": "Do312"
+    "source_name": "Do312",
+    "image": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "5:00 PM",
     "neighborhood": "Loop",
     "cost": "Free",
     "official_url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/2026-09-27/",
-    "date_friendly": "yes — free daytime exhibit",
+    "date_friendly": "yes \u2014 free daytime exhibit",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "Through Sep 27.",
@@ -1917,14 +2471,21 @@
     "venue": "Chicago Cultural Center",
     "category": "museum",
     "source_id": "choose_chicago",
-    "source_name": "Choose Chicago"
+    "source_name": "Choose Chicago",
+    "image": "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1400&q=80",
+      "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound.jpg",
+      "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound-900x400.jpg",
+      "https://cdn.choosechicago.com/uploads/2019/07/bean-night.jpg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "$40 w/ code OPEN",
     "official_url": "https://www.goodmantheatre.org/show/the-attic/",
-    "date_friendly": "yes — Sun matinee accessible",
+    "date_friendly": "yes \u2014 Sun matinee accessible",
     "party_fit": "all",
     "status": "scheduled",
     "notes": "",
@@ -1937,14 +2498,21 @@
     "venue": "Goodman Theatre Albert",
     "category": "theater",
     "source_id": "goodman",
-    "source_name": "Goodman Theatre"
+    "source_name": "Goodman Theatre",
+    "image": "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Marquee_Image_Hero.webp",
+    "images": [
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Marquee_Image_Hero.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85-768x512.webp",
+      "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85-992x661.webp"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Lincoln Park",
     "cost": "Ticketed",
     "official_url": "https://www.steppenwolf.org/whats-on/2026-2027/topdog-underdog",
-    "date_friendly": "yes — Parks/Leon drama date",
+    "date_friendly": "yes \u2014 Parks/Leon drama date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "~2h25 with intermission. Confirm matinees.",
@@ -1957,14 +2525,21 @@
     "venue": "Steppenwolf Theatre Downstairs",
     "category": "theater",
     "source_id": "steppenwolf",
-    "source_name": "Steppenwolf Theatre"
+    "source_name": "Steppenwolf Theatre",
+    "image": "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1400&q=80",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1440&h=810&auto=compress%2Cformat&fit=min&dm=1785862675&s=68d1867b6a2384150ea7aa893b45637a",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1220&h=686&auto=compress%2Cformat&fit=min&dm=1785862675&s=6656d42ceaa44667cbcfbe7ea69c0012",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=980&h=552&auto=compress%2Cformat&fit=min&dm=1785862675&s=5e6c032eec5ea42c83db2993ae09a549"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Old Town",
     "cost": "Ticketed",
     "official_url": "https://do312.com/events/2026/9/28",
-    "date_friendly": "yes — Monday Best Of sketch",
+    "date_friendly": "yes \u2014 Monday Best Of sketch",
     "party_fit": "couple,friends,family",
     "status": "scheduled",
     "notes": "also via do312 | also via do312",
@@ -1977,14 +2552,18 @@
     "venue": "The Second City",
     "category": "comedy",
     "source_id": "do312",
-    "source_name": "Do312"
+    "source_name": "Do312",
+    "image": "https://images.unsplash.com/photo-1598387993441-a364f854c3e1?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1598387993441-a364f854c3e1?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "7:30 PM",
     "neighborhood": "Loop",
     "cost": "Free (verify)",
     "official_url": "https://www.artic.edu/events",
-    "date_friendly": "yes — evening lecture",
+    "date_friendly": "yes \u2014 evening lecture",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Listed on HappeningNext; confirm artic.edu.",
@@ -1997,14 +2576,18 @@
     "venue": "Art Institute of Chicago",
     "category": "museum",
     "source_id": "art_institute",
-    "source_name": "Art Institute of Chicago"
+    "source_name": "Art Institute of Chicago",
+    "image": "https://images.unsplash.com/photo-1491156855053-9cdff72c7f85?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1491156855053-9cdff72c7f85?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "12:00 AM",
     "neighborhood": "Uptown",
     "cost": "$10 Cover",
     "official_url": "https://greenmilljazz.com/events/joel-paterson-friends-2-2026-09-28/",
-    "date_friendly": "yes — iconic jazz club (21+/late evenings)",
+    "date_friendly": "yes \u2014 iconic jazz club (21+/late evenings)",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "Paper Machete is satirical talk (free aft). | also via do312",
@@ -2017,14 +2600,21 @@
     "venue": "Green Mill Jazz Club",
     "category": "jazz_blues",
     "source_id": "green_mill",
-    "source_name": "Green Mill"
+    "source_name": "Green Mill",
+    "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+    "images": [
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg",
+      "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/2MarcSmithGMl.jpeg"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "Ticketed",
     "official_url": "https://www.msg.com/events-tickets/sara-bareilles-the-chicago-theatre-september-2026/070064BDAE1748AB",
-    "date_friendly": "yes — theater concert date",
+    "date_friendly": "yes \u2014 theater concert date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "",
@@ -2037,14 +2627,18 @@
     "venue": "The Chicago Theatre",
     "category": "live_music",
     "source_id": "do312",
-    "source_name": "Do312"
+    "source_name": "Do312",
+    "image": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Loop",
     "cost": "Ticketed",
     "official_url": "https://www.livenation.com/event/vvG1jZ_5Um6fxw/sara-bareilles-the-good-grief-tour",
-    "date_friendly": "yes — theater concert",
+    "date_friendly": "yes \u2014 theater concert",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "",
@@ -2057,14 +2651,18 @@
     "venue": "The Chicago Theatre",
     "category": "live_music",
     "source_id": "ticketmaster",
-    "source_name": "Ticketmaster / Live Nation"
+    "source_name": "Ticketmaster / Live Nation",
+    "image": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Near North",
     "cost": "$17",
     "official_url": "https://www.choosechicago.com/event/the-armando-diaz/2026-09-28/",
-    "date_friendly": "yes — Monday Armando",
+    "date_friendly": "yes \u2014 Monday Armando",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "also via choose_chicago",
@@ -2077,14 +2675,18 @@
     "venue": "iO Theater",
     "category": "comedy",
     "source_id": "io_theater",
-    "source_name": "iO Theater"
+    "source_name": "iO Theater",
+    "image": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80"
+    ]
   },
   {
     "end_time": "",
     "neighborhood": "Lincoln Park",
     "cost": "Ticketed",
     "official_url": "https://www.steppenwolf.org/whats-on/2026-2027/topdog-underdog",
-    "date_friendly": "yes — Parks/Leon drama date",
+    "date_friendly": "yes \u2014 Parks/Leon drama date",
     "party_fit": "couple,friends",
     "status": "scheduled",
     "notes": "~2h25 with intermission. Confirm matinees.",
@@ -2097,6 +2699,13 @@
     "venue": "Steppenwolf Theatre Downstairs",
     "category": "theater",
     "source_id": "steppenwolf",
-    "source_name": "Steppenwolf Theatre"
+    "source_name": "Steppenwolf Theatre",
+    "image": "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1400&q=80",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1440&h=810&auto=compress%2Cformat&fit=min&dm=1785862675&s=68d1867b6a2384150ea7aa893b45637a",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1220&h=686&auto=compress%2Cformat&fit=min&dm=1785862675&s=6656d42ceaa44667cbcfbe7ea69c0012",
+      "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=980&h=552&auto=compress%2Cformat&fit=min&dm=1785862675&s=5e6c032eec5ea42c83db2993ae09a549"
+    ]
   }
 ]
