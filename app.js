@@ -1,6 +1,8 @@
 (function () {
   const proof = document.getElementById("proof");
   const catRow = document.getElementById("cat-row");
+  const hoodRow = document.getElementById("hood-row");
+  const timeRow = document.getElementById("time-row");
   const partyRow = document.getElementById("party-row");
   const nightRow = document.getElementById("night-row");
   const nightBlock = document.getElementById("night-block");
@@ -11,7 +13,10 @@
   let plans = [];
   let restaurants = [];
   let events = [];
+  let hoodChoices = [];
   let category = "all";
+  let hood = "all";
+  let timeBucket = "all";
   let party = "couple";
   let nightKey = null;
 
@@ -23,6 +28,22 @@
 
   const photoTimers = new WeakMap();
   const PARTY_LABEL = { couple: "Couple", family: "Family", friends: "Friends" };
+  const TIME_OPTIONS = [
+    { id: "all", label: "All" },
+    { id: "early", label: "Early" },
+    { id: "dinner", label: "Dinner" },
+    { id: "late", label: "Late" },
+  ];
+  const TIME_LABEL = { early: "Early", dinner: "Dinner", late: "Late" };
+  const VIBE_LABEL = {
+    all: "All",
+    comedy: "Comedy",
+    jazz_blues: "Jazz & blues",
+    theater: "Theater",
+    museum: "Museum",
+    magic: "Magic",
+    festival: "Festival",
+  };
 
   const VIBE_TAG_MAP = {
     comedy: ["lively", "date_night", "group_friendly"],
@@ -138,7 +159,9 @@
       "museum campus": ["museum campus", "loop", "south loop"],
       "near north": ["near north", "river north", "streeterville", "old town"],
       "river north": ["river north", "near north"],
+      streeterville: ["streeterville", "near north"],
       "south loop": ["south loop", "loop"],
+      "roscoe village": ["roscoe village", "lakeview"],
       "wicker park": ["wicker park"],
       lakeview: ["lakeview", "wrigleyville", "roscoe village"],
       wrigleyville: ["wrigleyville", "lakeview"],
@@ -169,6 +192,145 @@
     return (hit && hit.image) || "";
   }
 
+  function hoodKeysOverlap(a, b) {
+    const A = new Set(expandNeighborhoodKeys(a));
+    return expandNeighborhoodKeys(b).some((k) => A.has(k));
+  }
+
+  function hoodMatchScore(raw) {
+    if (hood === "all") return 2;
+    if (!raw) return 0;
+    return hoodKeysOverlap(raw, hood) ? 2 : 0;
+  }
+
+  function parseMinutes(raw) {
+    if (raw == null || raw === "") return null;
+    const s = String(raw).trim();
+    if (!s) return null;
+    const lower = s.toLowerCase();
+    if (/daytime|afternoon|brunch|morning|all day|exhibit/.test(lower) && !/\d/.test(s)) {
+      return 15 * 60;
+    }
+    const m = s.match(/(\d{1,2})(?::(\d{2}))?\s*(a\.?m\.?|p\.?m\.?)?/i);
+    if (!m) return null;
+    let h = parseInt(m[1], 10);
+    const mi = parseInt(m[2] || "0", 10);
+    const ap = (m[3] || "").toLowerCase().replace(/\./g, "");
+    if (ap === "pm" && h !== 12) h += 12;
+    if (ap === "am" && h === 12) h = 0;
+    if (!ap && h < 7) h += 12;
+    return h * 60 + mi;
+  }
+
+  function bucketFromMinutes(mins) {
+    if (mins == null) return null;
+    if (mins < 17 * 60 + 30) return "early";
+    if (mins < 20 * 60 + 30) return "dinner";
+    return "late";
+  }
+
+  function restaurantTimeBuckets(r) {
+    const text = String(r.meal_window || "").toLowerCase();
+    const buckets = new Set();
+    if (!text) {
+      buckets.add("dinner");
+      return [...buckets];
+    }
+    if (/breakfast|brunch|lunch|early|cafeteria|daytime|11am|7am/.test(text)) buckets.add("early");
+    if (/dinner|tasting|pre-show|4–|4-|5–|5-|~5|~4/.test(text)) buckets.add("dinner");
+    if (/late|11pm|–late|-late|after/.test(text)) buckets.add("late");
+    (text.match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm)?/gi) || []).forEach((chunk) => {
+      const b = bucketFromMinutes(parseMinutes(chunk));
+      if (b) buckets.add(b);
+    });
+    if (!buckets.size) buckets.add("dinner");
+    return [...buckets];
+  }
+
+  function eventTimeBucket(ev) {
+    return bucketFromMinutes(parseMinutes(ev.start_time || ev.start || ""));
+  }
+
+  function timeMatchScore(bucketsOrOne) {
+    if (timeBucket === "all") return 2;
+    const list = Array.isArray(bucketsOrOne)
+      ? bucketsOrOne
+      : bucketsOrOne
+        ? [bucketsOrOne]
+        : [];
+    if (!list.length) return 1;
+    if (list.includes(timeBucket)) return 2;
+    const order = ["early", "dinner", "late"];
+    const idx = order.indexOf(timeBucket);
+    if (idx < 0) return 0;
+    if (list.some((b) => Math.abs(order.indexOf(b) - idx) === 1)) return 1;
+    return 0;
+  }
+
+  function primaryTimeLabel(bucketsOrOne) {
+    const list = Array.isArray(bucketsOrOne)
+      ? bucketsOrOne
+      : bucketsOrOne
+        ? [bucketsOrOne]
+        : [];
+    if (!list.length) return "";
+    if (timeBucket !== "all" && list.includes(timeBucket)) return TIME_LABEL[timeBucket];
+    if (list.includes("dinner")) return TIME_LABEL.dinner;
+    return TIME_LABEL[list[0]] || "";
+  }
+
+  function vibeLabelForRestaurant(r) {
+    if (category !== "all" && matchesVibeRestaurant(r)) return VIBE_LABEL[category] || category;
+    const tags = restaurantTagSet(r);
+    for (const [id, mapped] of Object.entries(VIBE_TAG_MAP)) {
+      if (tags.has(id) || mapped.some((t) => tags.has(t))) return VIBE_LABEL[id] || id;
+    }
+    const focus = (r.category_focus || [])[0];
+    if (focus) return String(focus).replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+    return "";
+  }
+
+  function vibeLabelForEvent(ev) {
+    const cat = String(ev.category || "").toLowerCase();
+    if (cat && VIBE_LABEL[cat]) return VIBE_LABEL[cat];
+    if (category !== "all" && matchesVibeEvent(ev)) return VIBE_LABEL[category] || category;
+    return cat ? String(cat).replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()) : "";
+  }
+
+  function partyChipLabel(raw) {
+    const fits = String(raw || "")
+      .split(",")
+      .map((x) => x.trim().toLowerCase())
+      .filter(Boolean);
+    if (!fits.length) return PARTY_LABEL[party] || "Couple";
+    if (fits.includes(party)) return PARTY_LABEL[party];
+    return fits
+      .map((p) => PARTY_LABEL[p] || p.replace(/\b\w/g, (c) => c.toUpperCase()))
+      .join(" · ");
+  }
+
+  function softPick(scored, minKeep) {
+    const want = Math.max(minKeep || 3, 1);
+    const sorted = scored.slice().sort((a, b) => b.score - a.score);
+    if (!sorted.length) return [];
+    const hard = sorted.filter((x) => x.score >= 100);
+    if (hard.length >= want) return hard;
+    const soft = sorted.filter((x) => x.score >= 50);
+    if (soft.length >= want) return soft;
+    const any = sorted.filter((x) => x.score >= 20);
+    if (any.length) return any;
+    return sorted.slice(0, Math.min(want, sorted.length));
+  }
+
+  function flexMeta(hoodScore, timeScore, vibeOk) {
+    const flex = [];
+    if (hood !== "all" && hoodScore < 2) flex.push("hood");
+    if (timeBucket !== "all" && timeScore < 2) flex.push("time");
+    if (category !== "all" && !vibeOk) flex.push("vibe");
+    return flex.length ? flex : null;
+  }
+
+
   function sourceRank(r) {
     if (r.source_id === "corridor_seed") return 0;
     if (r.source_id === "editor_seed") return 1;
@@ -194,6 +356,8 @@
       if (matchesVibeEvent(ev)) score += 3;
     }
     if (partyFitsEvent(ev)) score += 2;
+    score += hoodMatchScore(ev.neighborhood) * 4;
+    score += timeMatchScore(eventTimeBucket(ev)) * 3;
     if (ev.image) score += 1;
     return score;
   }
@@ -226,7 +390,8 @@
     );
   }
 
-  function asEatOption(r) {
+  function asEatOption(r, meta) {
+    const times = restaurantTimeBuckets(r);
     return {
       _kind: "eat",
       _id: "eat:" + (r.restaurant_id || normName(r.name)),
@@ -240,10 +405,16 @@
       reserve_url: r.reserve_url || "",
       official_url: r.official_url || "",
       dishes: r.dishes || [],
+      _vibe: vibeLabelForRestaurant(r),
+      _time: primaryTimeLabel(times),
+      _timeBuckets: times,
+      _party: partyChipLabel(r.party_fit),
+      _flex: meta || null,
     };
   }
 
-  function asEventOption(ev) {
+  function asEventOption(ev, meta) {
+    const tb = eventTimeBucket(ev);
     return {
       _kind: "then",
       _id: "then:" + (ev.event_id || normName(ev.name) + "|" + (ev.date || "")),
@@ -257,11 +428,17 @@
       url: ev.official_url || "",
       date: ev.date || "",
       date_friendly: ev.date_friendly || "",
+      _vibe: vibeLabelForEvent(ev),
+      _time: primaryTimeLabel(tb),
+      _timeBuckets: tb ? [tb] : [],
+      _party: partyChipLabel(ev.party_fit),
+      _flex: meta || null,
     };
   }
 
-  function asPlanThenOption(plan, then) {
+  function asPlanThenOption(plan, then, meta) {
     const t = then || {};
+    const tb = bucketFromMinutes(parseMinutes(t.start || ""));
     return {
       _kind: "then",
       _id: "plan-then:" + (plan.for_night || "") + "|" + normName(t.name),
@@ -275,11 +452,19 @@
       url: t.url || "",
       date: plan.for_night || "",
       fromPlan: true,
+      _vibe: plan.vibe
+        ? String(plan.vibe).split(/[;,]|—/)[0].trim().slice(0, 28)
+        : "Host pick",
+      _time: primaryTimeLabel(tb),
+      _timeBuckets: tb ? [tb] : [],
+      _party: PARTY_LABEL[party] || "Couple",
+      _flex: meta || null,
     };
   }
 
-  function asBackupOption(raw, plan) {
+  function asBackupOption(raw, plan, meta) {
     const b = raw || {};
+    const tb = bucketFromMinutes(parseMinutes(b.start || ""));
     return {
       _kind: "backup",
       _id: "backup:" + (plan && plan.for_night ? plan.for_night + "|" : "") + normName(b.name),
@@ -294,6 +479,11 @@
       cuisine: b.cuisine || "",
       price_band: b.price_band || "",
       fromPlan: true,
+      _vibe: "Backup",
+      _time: primaryTimeLabel(tb),
+      _timeBuckets: tb ? [tb] : [],
+      _party: PARTY_LABEL[party] || "Couple",
+      _flex: meta || null,
     };
   }
 
@@ -311,39 +501,91 @@
   }
 
   function buildEatPool() {
-    const pool = restaurants.filter(
-      (r) =>
-        (r.status || "active") === "active" &&
-        partyFitsRestaurant(r) &&
-        matchesVibeRestaurant(r)
-    );
-    return sortRestaurants(pool).map(asEatOption);
+    const scored = restaurants
+      .filter((r) => (r.status || "active") === "active" && partyFitsRestaurant(r))
+      .map((r) => {
+        const vibeOk = matchesVibeRestaurant(r);
+        const h = hoodMatchScore(r.neighborhood);
+        const times = restaurantTimeBuckets(r);
+        const t = timeMatchScore(times);
+        let score = 0;
+        if (vibeOk || category === "all") score += 40;
+        else score += 5;
+        score += h * 30;
+        score += t * 25;
+        if ((category === "all" || vibeOk) && h >= 2 && t >= 2) score += 100;
+        else if ((category === "all" || vibeOk) && (h >= 1 || hood === "all") && t >= 1) score += 50;
+        else score += 20;
+        if (r.image) score += 1;
+        return { r, score, h, t, vibeOk };
+      });
+    const picked = softPick(scored, 4);
+    return sortRestaurants(picked.map((x) => x.r)).map((r) => {
+      const row = picked.find((p) => p.r === r) || { h: 2, t: 2, vibeOk: true };
+      return asEatOption(r, flexMeta(row.h, row.t, row.vibeOk));
+    });
   }
 
   function buildThenPool() {
-    let pool = events.filter((ev) => {
-      if (String(ev.status || "").toLowerCase() === "cancelled") return false;
-      if (!partyFitsEvent(ev)) return false;
-      if (nightKey && ev.date !== nightKey) return false;
-      return matchesVibeEvent(ev);
-    });
-
-    if (!pool.length && nightKey && category !== "all") {
-      pool = events.filter((ev) => {
+    const scored = events
+      .filter((ev) => {
         if (String(ev.status || "").toLowerCase() === "cancelled") return false;
         if (!partyFitsEvent(ev)) return false;
-        return ev.date === nightKey;
+        if (nightKey && ev.date !== nightKey) return false;
+        return true;
+      })
+      .map((ev) => {
+        const vibeOk = matchesVibeEvent(ev);
+        const h = hoodMatchScore(ev.neighborhood);
+        const tb = eventTimeBucket(ev);
+        const t = timeMatchScore(tb);
+        let score = scoreEvent(ev);
+        if ((category === "all" || vibeOk) && h >= 2 && t >= 2) score += 100;
+        else if ((category === "all" || vibeOk) && (h >= 1 || hood === "all") && t >= 1) score += 50;
+        else score += 20;
+        if (!vibeOk && category !== "all") score -= 15;
+        return { ev, score, h, t, vibeOk };
       });
+
+    let picked = softPick(scored, 4);
+
+    if (!picked.length && nightKey) {
+      const looser = events
+        .filter((ev) => {
+          if (String(ev.status || "").toLowerCase() === "cancelled") return false;
+          if (!partyFitsEvent(ev)) return false;
+          return ev.date === nightKey;
+        })
+        .map((ev) => {
+          const h = hoodMatchScore(ev.neighborhood);
+          const tb = eventTimeBucket(ev);
+          const t = timeMatchScore(tb);
+          return {
+            ev,
+            score: 30 + h * 20 + t * 15 + (ev.image ? 1 : 0),
+            h,
+            t,
+            vibeOk: matchesVibeEvent(ev),
+          };
+        });
+      picked = softPick(looser, 3);
     }
 
-    pool = pool.slice().sort((a, b) => scoreEvent(b) - scoreEvent(a));
-    const out = pool.map(asEventOption);
+    const out = picked
+      .slice()
+      .sort((a, b) => b.score - a.score)
+      .map((x) => asEventOption(x.ev, flexMeta(x.h, x.t, x.vibeOk)));
 
     if (!out.length) {
       relevantPlans().forEach((plan) => {
         const block = planPartyBlock(plan);
         const then = (block && block.then) || plan.then;
-        if (then && then.name) out.push(asPlanThenOption(plan, then));
+        if (then && then.name) {
+          const h = hoodMatchScore(plan.corridor);
+          const tb = bucketFromMinutes(parseMinutes(then.start || ""));
+          const t = timeMatchScore(tb);
+          out.push(asPlanThenOption(plan, then, flexMeta(h, t, true)));
+        }
       });
     }
     return out;
@@ -366,7 +608,11 @@
     relevantPlans().forEach((plan) => {
       const block = planPartyBlock(plan);
       const backup = (block && block.backup) || plan.backup;
-      if (backup && backup.name) push(asBackupOption(backup, plan));
+      if (backup && backup.name) {
+        const h = hoodMatchScore(plan.corridor || backup.neighborhood);
+        const tb = bucketFromMinutes(parseMinutes(backup.start || ""));
+        push(asBackupOption(backup, plan, flexMeta(h, timeMatchScore(tb), true)));
+      }
     });
 
     // Alternate dinners further down the eat list
@@ -460,12 +706,64 @@
     });
   }
 
+
+  function chipClass(kind, isMatch, isFlex) {
+    const bits = ["pill", kind];
+    if (isMatch) bits.push("is-match");
+    else if (isFlex) bits.push("is-flex");
+    return bits.join(" ");
+  }
+
+  function renderChips(item) {
+    if (!item) return "";
+    const flex = item._flex || [];
+    const chips = [];
+
+    const hoodName = item.neighborhood || "";
+    if (hoodName) {
+      const match = hood !== "all" && hoodMatchScore(hoodName) >= 2;
+      chips.push(
+        `<span class="${chipClass("hood", match, flex.includes("hood"))}" title="Neighborhood">${esc(hoodName)}</span>`
+      );
+    }
+
+    let timeName = item._time || "";
+    if (!timeName && item.start_time) {
+      timeName = TIME_LABEL[bucketFromMinutes(parseMinutes(item.start_time))] || "";
+    }
+    if (timeName) {
+      const match = timeBucket !== "all" && (item._timeBuckets || []).includes(timeBucket);
+      chips.push(
+        `<span class="${chipClass("time", match, flex.includes("time"))}" title="Time of night">${esc(timeName)}</span>`
+      );
+    }
+
+    const vibeName = item._vibe || "";
+    if (vibeName) {
+      const soft = flex.includes("vibe");
+      const match = category !== "all" && !soft;
+      chips.push(
+        `<span class="${chipClass("vibe", match, soft)}" title="Vibe">${esc(vibeName)}</span>`
+      );
+    }
+
+    const partyName = item._party || PARTY_LABEL[party];
+    if (partyName) {
+      chips.push(
+        `<span class="${chipClass("party", true, false)}" title="Who it’s for">${esc(partyName)}</span>`
+      );
+    }
+
+    if (!chips.length) return "";
+    return `<div class="pills" aria-label="Who this option is for">${chips.join("")}</div>`;
+  }
+
   function renderEatCopy(item) {
     if (!item) {
       return `
         <div class="copy">
           <h3 class="option-title">No dinners in that mix</h3>
-          <p class="lede">Flip the vibe or who you’re with — Chicago’s still cooking.</p>
+          <p class="lede">Flip neighborhood, time, or vibe — Chicago’s still cooking.</p>
         </div>`;
     }
     const cuisineLine = [item.cuisine, item.price_band].filter(Boolean).join(" · ");
@@ -474,10 +772,8 @@
     return `
       <div class="copy">
         <p class="eyebrow">${esc(item.neighborhood || "Chicago")}</p>
-        <div class="pills">
-          <span class="pill party">${esc(PARTY_LABEL[party] || "Couple")}</span>
-          ${cuisineLine ? `<span class="pill soft">${esc(cuisineLine)}</span>` : ""}
-        </div>
+        ${renderChips(item)}
+        ${cuisineLine ? `<p class="meta">${esc(cuisineLine)}</p>` : ""}
         <h3 class="option-title">${esc(item.name)}</h3>
         <p class="note">${esc(why)}</p>
         <div class="actions">
@@ -496,7 +792,7 @@
       return `
         <div class="copy">
           <h3 class="option-title">Nothing locked for that night</h3>
-          <p class="lede">Try another night — or swipe Backup for a soft landing.</p>
+          <p class="lede">Try another night or time — or swipe Backup for a soft landing.</p>
         </div>`;
     }
     const when = item.date ? nightLabel(item.date) : "";
@@ -505,9 +801,7 @@
     return `
       <div class="copy">
         <p class="eyebrow">${esc([item.neighborhood, when].filter(Boolean).join(" · ") || "Out tonight")}</p>
-        <div class="pills">
-          <span class="pill vibe">${item.fromPlan ? "Host pick" : "On the calendar"}</span>
-        </div>
+        ${renderChips(item)}
         <h3 class="option-title">${esc(item.name)}</h3>
         ${meta ? `<p class="meta">${esc(meta)}</p>` : ""}
         <p class="note">${esc(why)}</p>
@@ -526,19 +820,17 @@
       return `
         <div class="copy">
           <h3 class="option-title">You’re covered</h3>
-          <p class="lede">Widen the vibe — we’ll find a plan B.</p>
+          <p class="lede">Widen the filters — we’ll find a plan B.</p>
         </div>`;
     }
-    const metaBits = [item.neighborhood, item.start_time, item.cost, item.cuisine, item.price_band]
+    const metaBits = [item.start_time, item.cost, item.cuisine, item.price_band]
       .filter(Boolean)
       .join(" · ");
     const why = item.notes || "If the first plan’s packed — here’s plan B.";
     return `
       <div class="copy">
         <p class="eyebrow">Plan B</p>
-        <div class="pills">
-          <span class="pill soft">${item._id && String(item._id).includes("eat") ? "Dinner" : item.fromPlan ? "Host backup" : "Another option"}</span>
-        </div>
+        ${renderChips(item)}
         <h3 class="option-title">${esc(item.name)}</h3>
         ${metaBits ? `<p class="meta">${esc(metaBits)}</p>` : ""}
         ${item.venue ? `<p class="meta">${esc(item.venue)}</p>` : ""}
@@ -718,6 +1010,67 @@
     }
   }
 
+
+  function collectHoodChoices() {
+    const set = new Set();
+    restaurants.forEach((r) => {
+      const n = String(r.neighborhood || "").trim();
+      if (n) set.add(n);
+    });
+    events.forEach((ev) => {
+      const n = String(ev.neighborhood || "").trim();
+      if (n && !/^various$/i.test(n)) set.add(n);
+    });
+    plans.forEach((p) => {
+      const n = String(p.corridor || "").trim();
+      if (n) set.add(n);
+    });
+    const canon = (neighborhoods || []).map((n) => n.neighborhood).filter(Boolean);
+    const ordered = [];
+    const used = new Set();
+    canon.forEach((c) => {
+      const hit = [...set].find(
+        (s) => hoodKeysOverlap(s, c) || s.toLowerCase() === c.toLowerCase()
+      );
+      if (hit && !used.has(hit.toLowerCase())) {
+        ordered.push(hit);
+        used.add(hit.toLowerCase());
+      } else if (!used.has(c.toLowerCase()) && set.has(c)) {
+        ordered.push(c);
+        used.add(c.toLowerCase());
+      }
+    });
+    [...set]
+      .sort((a, b) => a.localeCompare(b))
+      .forEach((s) => {
+        if (!used.has(s.toLowerCase())) {
+          ordered.push(s);
+          used.add(s.toLowerCase());
+        }
+      });
+    return ordered;
+  }
+
+  function renderHoods() {
+    hoodRow.innerHTML = [
+      `<button type="button" role="tab" data-hood="all" aria-selected="${hood === "all"}">All</button>`,
+    ]
+      .concat(
+        hoodChoices.map((h) => {
+          const selected = h === hood;
+          return `<button type="button" role="tab" data-hood="${esc(h)}" aria-selected="${selected}">${esc(h)}</button>`;
+        })
+      )
+      .join("");
+  }
+
+  function renderTimes() {
+    timeRow.innerHTML = TIME_OPTIONS.map((t) => {
+      const selected = t.id === timeBucket;
+      return `<button type="button" role="tab" data-time="${esc(t.id)}" aria-selected="${selected}">${esc(t.label)}</button>`;
+    }).join("");
+  }
+
   function renderCats() {
     catRow.innerHTML = categories
       .map((c) => {
@@ -767,6 +1120,22 @@
     if (!btn) return;
     category = btn.dataset.cat;
     renderCats();
+    refreshFromFilters();
+  });
+
+  hoodRow.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-hood]");
+    if (!btn) return;
+    hood = btn.dataset.hood || "all";
+    renderHoods();
+    refreshFromFilters();
+  });
+
+  timeRow.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-time]");
+    if (!btn) return;
+    timeBucket = btn.dataset.time || "all";
+    renderTimes();
     refreshFromFilters();
   });
 
@@ -821,9 +1190,12 @@
       plans = Array.isArray(planData) ? planData : planData.plans || [];
       restaurants = Array.isArray(restData) ? restData : restData.restaurants || [];
       events = Array.isArray(eventData) ? eventData : eventData.events || [];
+      hoodChoices = collectHoodChoices();
       nightKey = null;
       updateProof();
       renderCats();
+      renderHoods();
+      renderTimes();
       renderParty();
       renderNights();
       rebuildPools();
