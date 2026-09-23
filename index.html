@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Night Out Chicago — Neighborhoods → Eat → Then</title>
-  <meta name="description" content="Browse Chicago by neighborhood, then lock a night: dinner, then something worth going out for." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Night Out Chicago — Snap a night</title>
+  <meta name="description" content="Chicago neighborhoods as full-screen cards: dinner, then something worth going out for." />
   <meta name="theme-color" content="#FF5A36" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -14,7 +14,7 @@
       <span class="wordmark">Night Out</span>
       <span class="chip">Chicago</span>
     </div>
-    <p class="proof" id="proof">Checking the boards…</p>
+    <p class="proof" id="proof">Loading nights…</p>
   </header>
 
   <nav class="toggles" aria-label="Filters">
@@ -36,27 +36,12 @@
     </div>
   </nav>
 
-  <main id="app">
-    <section class="slide open" id="open">
-      <div class="media" style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85b6b1ce5?auto=format&fit=crop&w=1800&q=80')"></div>
-      <div class="shade"></div>
-      <div class="copy">
-        <p class="eyebrow">Chicago first</p>
-        <h1>What’s on<br />in the neighborhood.</h1>
-        <p class="lede">Scroll the city. When you’re ready, lock a night — dinner, then something to do.</p>
-        <div class="actions">
-          <a class="btn" href="#reel">Start scrolling</a>
-        </div>
-      </div>
-    </section>
+  <div class="back-bar" id="back-bar" hidden>
+    <button type="button" class="btn ghost" id="back-to-deck">← Neighborhoods</button>
+  </div>
 
-    <div id="reel" class="reel" aria-label="Neighborhood reel"></div>
-    <section id="corridor" class="corridor" hidden aria-live="polite"></section>
-  </main>
+  <main id="deck" class="deck" aria-label="Night Out cards" tabindex="0"></main>
 
-  <footer class="foot">
-    <p>Living nights · nightoutchicago.com</p>
-  </footer>
   <script src="app.js"></script>
 </body>
 </html>
