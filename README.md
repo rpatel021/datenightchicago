@@ -13,4 +13,4 @@ Edit `plans.json` on `main`. Each night has `parties.couple` / `parties.family` 
 Cream `#FDFCF4` · Ink `#0A0A0A` · Sun `#FFCC33` · Mint `#E8F5E9` · Blush `#FFE5E5` · Paper `#FFFFFF`
 
 ## Restaurant catalog
-`restaurants.json` is the Eat catalog foundation (peer to the events warehouse). Use for Eat→Then matching / filters — no snap-card UI change required.
+`restaurants.json` is the Eat catalog foundation (peer to the events warehouse). The live matcher loads it with neighborhoods + plans: Eat is enriched or swapped from the catalog by party, vibe, and corridor neighborhood; Then/Backup stay in `plans.json`.
