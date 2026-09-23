@@ -5,8 +5,6 @@
   const nightRow = document.getElementById("night-row");
   const nightBlock = document.getElementById("night-block");
   const deckEl = document.getElementById("deck");
-  const backBar = document.getElementById("back-bar");
-  const backBtn = document.getElementById("back-to-deck");
 
   let neighborhoods = [];
   let categories = [];
@@ -16,10 +14,14 @@
   let category = "all";
   let party = "couple";
   let nightKey = null;
-  let mode = "hoods"; // hoods | night
-  let activeHood = null;
-  let io = null;
 
+  const lanes = {
+    eat: { key: "eat", title: "What to eat", pool: [], index: 0, identity: null },
+    then: { key: "then", title: "What to do", pool: [], index: 0, identity: null },
+    backup: { key: "backup", title: "Backup", pool: [], index: 0, identity: null },
+  };
+
+  const photoTimers = new WeakMap();
   const PARTY_LABEL = { couple: "Couple", family: "Family", friends: "Friends" };
 
   const VIBE_TAG_MAP = {
@@ -70,12 +72,6 @@
       .trim();
   }
 
-  function partyFits(n) {
-    const fits = (n.party_fits || []).map((x) => String(x).toLowerCase());
-    if (!fits.length) return true;
-    return fits.includes(party);
-  }
-
   function partyFitsRestaurant(r) {
     const raw = String(r.party_fit || "").trim();
     if (!raw) return true;
@@ -98,12 +94,6 @@
     return fits.includes(party);
   }
 
-  function matchesCategory(n) {
-    if (category === "all") return true;
-    if (n.category === category) return true;
-    return (n.category_ids || []).includes(category);
-  }
-
   function restaurantTagSet(r) {
     const tags = [].concat(r.vibe_tags || [], r.category_focus || []);
     return new Set(tags.map((t) => String(t).toLowerCase()));
@@ -116,6 +106,20 @@
     if (tags.has(cat)) return true;
     const mapped = VIBE_TAG_MAP[category] || VIBE_TAG_MAP[cat] || [];
     return mapped.some((t) => tags.has(t));
+  }
+
+  function matchesVibeEvent(ev) {
+    if (category === "all") return true;
+    if (String(ev.category || "").toLowerCase() === category) return true;
+    const hints = VIBE_EVENT_HINTS[category] || [];
+    const blob = (
+      String(ev.name || "") +
+      " " +
+      String(ev.notes || "") +
+      " " +
+      String(ev.venue || "")
+    ).toLowerCase();
+    return hints.some((h) => blob.includes(h));
   }
 
   function expandNeighborhoodKeys(raw) {
@@ -155,24 +159,14 @@
     return [...out];
   }
 
-  function restaurantInNeighborhood(r, hoodKeys) {
-    const hn = String(r.neighborhood || "").toLowerCase();
-    if (!hn || !hoodKeys.length) return false;
-    return hoodKeys.some((k) => hn === k || hn.includes(k) || k.includes(hn));
-  }
-
-  function eventInNeighborhood(ev, hoodKeys) {
-    const hn = String(ev.neighborhood || "").toLowerCase();
-    if (!hn) return false;
-    if (!hoodKeys.length) return false;
-    if (hn === "various") return true;
-    return hoodKeys.some((k) => hn === k || hn.includes(k) || k.includes(hn));
-  }
-
-  function findCatalogByName(name) {
-    const n = normName(name);
-    if (!n) return null;
-    return restaurants.find((r) => normName(r.name) === n) || null;
+  function hoodImageFor(name) {
+    const keys = expandNeighborhoodKeys(name);
+    if (!keys.length) return "";
+    const hit = neighborhoods.find((n) => {
+      const hn = String(n.neighborhood || "").toLowerCase();
+      return keys.some((k) => hn === k || hn.includes(k) || k.includes(hn));
+    });
+    return (hit && hit.image) || "";
   }
 
   function sourceRank(r) {
@@ -181,244 +175,548 @@
     return 2;
   }
 
-  function corridorHoodKeys(plan, eat) {
-    const keys = [];
-    expandNeighborhoodKeys(plan && plan.corridor).forEach((k) => keys.push(k));
-    if (eat && eat.neighborhood) {
-      expandNeighborhoodKeys(eat.neighborhood).forEach((k) => {
-        if (!keys.includes(k)) keys.push(k);
-      });
-    }
-    return keys;
-  }
-
-  function pickCatalogEat(hoodKeys) {
-    let pool = restaurants.filter(
-      (r) =>
-        (r.status || "active") === "active" &&
-        partyFitsRestaurant(r) &&
-        restaurantInNeighborhood(r, hoodKeys)
-    );
-    if (!pool.length) return null;
-    const vibeHits = pool.filter(matchesVibeRestaurant);
-    if (vibeHits.length) pool = vibeHits;
-    pool = pool.slice().sort((a, b) => {
+  function sortRestaurants(pool) {
+    return pool.slice().sort((a, b) => {
       const sr = sourceRank(a) - sourceRank(b);
       if (sr !== 0) return sr;
+      const ai = a.image ? 0 : 1;
+      const bi = b.image ? 0 : 1;
+      if (ai !== bi) return ai - bi;
       return String(a.name || "").localeCompare(String(b.name || ""));
     });
-    return pool[0] || null;
   }
 
-  function eatFromCatalog(r, dishes) {
-    return {
-      name: r.name,
-      url: r.reserve_url || r.official_url || "",
-      image: r.image || "",
-      why: r.notes || "",
-      dishes: dishes || [],
-      neighborhood: r.neighborhood || "",
-      cuisine: r.cuisine || "",
-      price_band: r.price_band || "",
-    };
-  }
-
-  function resolveEat(planEat, plan) {
-    const eat = planEat && typeof planEat === "object" ? planEat : {};
-    const hoodKeys = corridorHoodKeys(plan, eat);
-    const catalogHit = eat.name ? findCatalogByName(eat.name) : null;
-
-    if (catalogHit && partyFitsRestaurant(catalogHit)) {
-      return {
-        name: eat.name || catalogHit.name,
-        url: eat.url || catalogHit.reserve_url || catalogHit.official_url || "",
-        image: eat.image || catalogHit.image || "",
-        why: eat.why || eat.note || catalogHit.notes || "",
-        dishes: eat.dishes || [],
-        neighborhood: catalogHit.neighborhood || eat.neighborhood || "",
-        cuisine: catalogHit.cuisine || "",
-        price_band: catalogHit.price_band || "",
-      };
-    }
-
-    const noPlanEat = !eat.name;
-    const failsParty = !!(catalogHit && !partyFitsRestaurant(catalogHit));
-    if (noPlanEat || failsParty) {
-      const picked = pickCatalogEat(hoodKeys);
-      if (picked) {
-        const same = eat.name && normName(eat.name) === normName(picked.name);
-        return eatFromCatalog(picked, same ? eat.dishes || [] : []);
-      }
-    }
-
-    return {
-      name: eat.name || "",
-      url: eat.url || "",
-      image: eat.image || "",
-      why: eat.why || eat.note || "",
-      dishes: eat.dishes || [],
-      neighborhood: eat.neighborhood || "",
-      cuisine: "",
-      price_band: "",
-    };
-  }
-
-  function scoreEvent(ev, hoodKeys) {
+  function scoreEvent(ev) {
     let score = 0;
-    if (eventInNeighborhood(ev, hoodKeys)) score += 10;
-    if (nightKey && ev.date === nightKey) score += 8;
+    if (nightKey && ev.date === nightKey) score += 10;
     if (category !== "all") {
       if (String(ev.category || "").toLowerCase() === category) score += 6;
-      const hints = VIBE_EVENT_HINTS[category] || [];
-      const blob = (String(ev.name || "") + " " + String(ev.notes || "") + " " + String(ev.venue || "")).toLowerCase();
-      if (hints.some((h) => blob.includes(h))) score += 3;
+      if (matchesVibeEvent(ev)) score += 3;
     }
     if (partyFitsEvent(ev)) score += 2;
+    if (ev.image) score += 1;
     return score;
   }
 
-  function pickEvent(hoodKeys, preferredDate) {
-    const date = preferredDate || nightKey;
-    let pool = events.filter((ev) => {
-      if (String(ev.status || "").toLowerCase() === "cancelled") return false;
-      if (!partyFitsEvent(ev)) return false;
-      if (date && ev.date !== date) return false;
-      return eventInNeighborhood(ev, hoodKeys) || !hoodKeys.length;
-    });
-    if (!pool.length && date) {
-      pool = events.filter((ev) => {
-        if (String(ev.status || "").toLowerCase() === "cancelled") return false;
-        if (!partyFitsEvent(ev)) return false;
-        return eventInNeighborhood(ev, hoodKeys);
-      });
+  function imagesFor(item) {
+    const imgs = [];
+    const push = (u) => {
+      const url = String(u || "").trim();
+      if (url && !imgs.includes(url)) imgs.push(url);
+    };
+    if (!item) return imgs;
+    push(item.image);
+    if (Array.isArray(item.images)) item.images.forEach(push);
+    if (Array.isArray(item.photos)) item.photos.forEach(push);
+    if (Array.isArray(item.dishes)) {
+      item.dishes.forEach((d) => push(d && d.image));
     }
-    if (!pool.length) return null;
-    pool = pool.slice().sort((a, b) => scoreEvent(b, hoodKeys) - scoreEvent(a, hoodKeys));
-    return pool[0] || null;
+    push(hoodImageFor(item.neighborhood));
+    return imgs;
   }
 
-  function countEatsForHood(hoodName) {
-    const keys = expandNeighborhoodKeys(hoodName);
-    return restaurants.filter(
+  function optionId(item) {
+    if (!item) return "";
+    return (
+      item._id ||
+      item.restaurant_id ||
+      item.event_id ||
+      item.id ||
+      normName(item.name) + "|" + normName(item.neighborhood || item.venue || "")
+    );
+  }
+
+  function asEatOption(r) {
+    return {
+      _kind: "eat",
+      _id: "eat:" + (r.restaurant_id || normName(r.name)),
+      name: r.name,
+      neighborhood: r.neighborhood || "",
+      cuisine: r.cuisine || "",
+      price_band: r.price_band || "",
+      notes: r.notes || "",
+      image: r.image || "",
+      url: r.reserve_url || r.official_url || "",
+      reserve_url: r.reserve_url || "",
+      official_url: r.official_url || "",
+      dishes: r.dishes || [],
+    };
+  }
+
+  function asEventOption(ev) {
+    return {
+      _kind: "then",
+      _id: "then:" + (ev.event_id || normName(ev.name) + "|" + (ev.date || "")),
+      name: ev.name,
+      venue: ev.venue || "",
+      neighborhood: ev.neighborhood || "",
+      start_time: ev.start_time || "",
+      cost: ev.cost || "",
+      notes: ev.notes || ev.date_friendly || "",
+      image: ev.image || "",
+      url: ev.official_url || "",
+      date: ev.date || "",
+      date_friendly: ev.date_friendly || "",
+    };
+  }
+
+  function asPlanThenOption(plan, then) {
+    const t = then || {};
+    return {
+      _kind: "then",
+      _id: "plan-then:" + (plan.for_night || "") + "|" + normName(t.name),
+      name: t.name,
+      venue: t.venue || "",
+      neighborhood: plan.corridor || "",
+      start_time: t.start || "",
+      cost: t.cost || "",
+      notes: t.why || t.note || "",
+      image: t.image || "",
+      url: t.url || "",
+      date: plan.for_night || "",
+      fromPlan: true,
+    };
+  }
+
+  function asBackupOption(raw, plan) {
+    const b = raw || {};
+    return {
+      _kind: "backup",
+      _id: "backup:" + (plan && plan.for_night ? plan.for_night + "|" : "") + normName(b.name),
+      name: b.name,
+      neighborhood: (plan && plan.corridor) || b.neighborhood || "",
+      notes: b.note || b.why || "If the first plan’s packed — here’s plan B.",
+      image: b.image || "",
+      url: b.url || "",
+      venue: b.venue || "",
+      start_time: b.start || "",
+      cost: b.cost || "",
+      cuisine: b.cuisine || "",
+      price_band: b.price_band || "",
+      fromPlan: true,
+    };
+  }
+
+  function planPartyBlock(plan) {
+    const parties = (plan && plan.parties) || {};
+    return parties[party] || parties.couple || plan || {};
+  }
+
+  function relevantPlans() {
+    if (!plans.length) return [];
+    if (nightKey) return plans.filter((p) => p.for_night === nightKey);
+    const today = new Date().toISOString().slice(0, 10);
+    const upcoming = plans.filter((p) => p.for_night >= today);
+    return upcoming.length ? upcoming : plans.slice(0, 3);
+  }
+
+  function buildEatPool() {
+    const pool = restaurants.filter(
       (r) =>
         (r.status || "active") === "active" &&
         partyFitsRestaurant(r) &&
-        restaurantInNeighborhood(r, keys) &&
         matchesVibeRestaurant(r)
-    ).length;
+    );
+    return sortRestaurants(pool).map(asEatOption);
   }
 
-  function countEventsForHood(hoodName) {
-    const keys = expandNeighborhoodKeys(hoodName);
-    return events.filter((ev) => {
+  function buildThenPool() {
+    let pool = events.filter((ev) => {
       if (String(ev.status || "").toLowerCase() === "cancelled") return false;
       if (!partyFitsEvent(ev)) return false;
       if (nightKey && ev.date !== nightKey) return false;
-      if (category !== "all" && String(ev.category || "").toLowerCase() !== category) {
-        const hints = VIBE_EVENT_HINTS[category] || [];
-        const blob = (String(ev.name || "") + " " + String(ev.notes || "")).toLowerCase();
-        if (!hints.some((h) => blob.includes(h)) && String(ev.category || "").toLowerCase() !== category) {
-          // soft: still count if in hood when vibe is set but category mismatch — only count matching vibe
-          return false;
-        }
+      return matchesVibeEvent(ev);
+    });
+
+    if (!pool.length && nightKey && category !== "all") {
+      pool = events.filter((ev) => {
+        if (String(ev.status || "").toLowerCase() === "cancelled") return false;
+        if (!partyFitsEvent(ev)) return false;
+        return ev.date === nightKey;
+      });
+    }
+
+    pool = pool.slice().sort((a, b) => scoreEvent(b) - scoreEvent(a));
+    const out = pool.map(asEventOption);
+
+    if (!out.length) {
+      relevantPlans().forEach((plan) => {
+        const block = planPartyBlock(plan);
+        const then = (block && block.then) || plan.then;
+        if (then && then.name) out.push(asPlanThenOption(plan, then));
+      });
+    }
+    return out;
+  }
+
+  function buildBackupPool(eatPool, thenPool) {
+    const out = [];
+    const seen = new Set();
+    const eatIds = new Set(eatPool.slice(0, 1).map(optionId));
+    const thenIds = new Set(thenPool.slice(0, 1).map(optionId));
+
+    const push = (item) => {
+      if (!item || !item.name) return;
+      const id = optionId(item);
+      if (seen.has(id) || eatIds.has(id) || thenIds.has(id)) return;
+      seen.add(id);
+      out.push(item);
+    };
+
+    relevantPlans().forEach((plan) => {
+      const block = planPartyBlock(plan);
+      const backup = (block && block.backup) || plan.backup;
+      if (backup && backup.name) push(asBackupOption(backup, plan));
+    });
+
+    // Alternate dinners further down the eat list
+    eatPool.slice(1).forEach((item) => {
+      push(
+        Object.assign({}, item, {
+          _kind: "backup",
+          _id: "backup-eat:" + optionId(item),
+          notes: item.notes || "Solid backup table if the first spot’s slammed.",
+        })
+      );
+    });
+
+    // Alternate things to do
+    thenPool.slice(1).forEach((item) => {
+      push(
+        Object.assign({}, item, {
+          _kind: "backup",
+          _id: "backup-then:" + optionId(item),
+          notes: item.notes || "Another solid plan if tickets are gone.",
+        })
+      );
+    });
+
+    if (!out.length && eatPool.length) {
+      push(
+        Object.assign({}, eatPool[0], {
+          _kind: "backup",
+          _id: "backup-fallback:" + optionId(eatPool[0]),
+          notes: "Keep this one warm — Chicago fills up fast.",
+        })
+      );
+    }
+
+    return out;
+  }
+
+  function rebuildPools() {
+    const eatPool = buildEatPool();
+    const thenPool = buildThenPool();
+    const backupPool = buildBackupPool(eatPool, thenPool);
+
+    function applyPool(lane, pool) {
+      const prevId = lane.identity;
+      lane.pool = pool;
+      let idx = 0;
+      if (prevId) {
+        const found = pool.findIndex((item) => optionId(item) === prevId);
+        idx = found >= 0 ? found : 0;
       }
-      return eventInNeighborhood(ev, keys);
-    }).length;
-  }
-
-  function visibleNeighborhoods() {
-    return neighborhoods.filter((n) => matchesCategory(n) && partyFits(n));
-  }
-
-  function planForNight(iso) {
-    return plans.find((p) => p.for_night === iso) || null;
-  }
-
-  function defaultNight() {
-    const today = new Date().toISOString().slice(0, 10);
-    const upcoming = plans.find((p) => p.for_night >= today);
-    return (upcoming || plans[0] || {}).for_night || null;
-  }
-
-  function nightForHood(n) {
-    if (nightKey) return nightKey;
-    if (n && n.for_night) return n.for_night;
-    return defaultNight();
-  }
-
-  function pickCorridor(plan, hoodOverride) {
-    const parties = (plan && plan.parties) || {};
-    const block = parties[party] || parties.couple || plan || {};
-    const rawEat = (block && block.eat) || (plan && plan.eat) || {};
-    const synthetic = plan || {
-      for_night: nightKey,
-      corridor: hoodOverride || "",
-    };
-    if (hoodOverride && !synthetic.corridor) synthetic.corridor = hoodOverride;
-    if (hoodOverride && plan && !expandNeighborhoodKeys(plan.corridor).some((k) => expandNeighborhoodKeys(hoodOverride).includes(k))) {
-      // Plan corridor doesn't match hood — still resolve eat against hood
-      const hoodPlan = { corridor: hoodOverride, for_night: plan.for_night };
-      return {
-        eat: resolveEat({}, hoodPlan),
-        then: (block && block.then) || plan.then || {},
-        backup: (block && block.backup) || plan.backup || {},
-        transit: (block && block.transit) || plan.transit || "",
-        dont: (block && block.dont) || plan.dont || "",
-        corridor: hoodOverride,
-        for_night: plan.for_night,
-      };
+      lane.index = pool.length ? Math.min(idx, pool.length - 1) : 0;
+      lane.identity = pool.length ? optionId(pool[lane.index]) : null;
     }
-    return {
-      eat: resolveEat(rawEat, synthetic),
-      then: (block && block.then) || (plan && plan.then) || {},
-      backup: (block && block.backup) || (plan && plan.backup) || {},
-      transit: (block && block.transit) || (plan && plan.transit) || "",
-      dont: (block && block.dont) || (plan && plan.dont) || "",
-      corridor: (plan && plan.corridor) || hoodOverride || "",
-      for_night: (plan && plan.for_night) || nightKey,
-    };
+
+    applyPool(lanes.eat, eatPool);
+    applyPool(lanes.then, thenPool);
+    applyPool(lanes.backup, backupPool);
   }
 
-  function mediaHtml(imageUrl, letter) {
-    const lettermark = esc((letter || "?").charAt(0).toUpperCase());
-    if (imageUrl) {
-      return `<div class="card-media" style="background-image:url('${esc(imageUrl)}')"></div>`;
+  function bgHtml(item, letter) {
+    const imgs = imagesFor(item);
+    const mark = esc((letter || (item && item.name) || "?").charAt(0).toUpperCase());
+    if (!imgs.length) {
+      return `<div class="bg-stack"><div class="bg-fallback"><span class="lettermark" aria-hidden="true">${mark}</span></div></div>`;
     }
-    return `<div class="card-media fallback"><span class="lettermark" aria-hidden="true">${lettermark}</span></div>`;
-  }
-
-  function observeCards() {
-    if (io) io.disconnect();
-    const nodes = deckEl.querySelectorAll(".card");
-    if (!("IntersectionObserver" in window)) {
-      nodes.forEach((n) => n.classList.add("is-in"));
-      return;
+    if (imgs.length === 1) {
+      return `<div class="bg-stack"><div class="bg-slide ken-burns is-active" style="background-image:url('${esc(imgs[0])}')"></div></div>`;
     }
-    io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) e.target.classList.add("is-in");
-        });
-      },
-      { root: deckEl, threshold: 0.35 }
-    );
-    nodes.forEach((n) => io.observe(n));
+    return `<div class="bg-stack" data-carousel="1">${imgs
+      .map(
+        (src, i) =>
+          `<div class="bg-slide${i === 0 ? " is-active" : ""}" style="background-image:url('${esc(src)}')"></div>`
+      )
+      .join("")}</div>`;
   }
 
-  function scrollDeckTop() {
-    deckEl.scrollTo({ top: 0, behavior: "auto" });
+  function startCarousels(root) {
+    root.querySelectorAll(".bg-stack[data-carousel]").forEach((stack) => {
+      const slides = [...stack.querySelectorAll(".bg-slide")];
+      if (slides.length < 2) return;
+      if (photoTimers.has(stack)) {
+        clearInterval(photoTimers.get(stack));
+      }
+      let i = 0;
+      const timer = setInterval(() => {
+        slides[i].classList.remove("is-active");
+        i = (i + 1) % slides.length;
+        slides[i].classList.add("is-active");
+      }, 4200);
+      photoTimers.set(stack, timer);
+    });
   }
 
-  function sizeCards() {
+  function renderEatCopy(item) {
+    if (!item) {
+      return `
+        <div class="copy">
+          <h3 class="option-title">No dinners in that mix</h3>
+          <p class="lede">Flip the vibe or who you’re with — Chicago’s still cooking.</p>
+        </div>`;
+    }
+    const cuisineLine = [item.cuisine, item.price_band].filter(Boolean).join(" · ");
+    const why = item.notes || "Start hungry — good table energy.";
+    const link = item.reserve_url || item.url || item.official_url || "";
+    return `
+      <div class="copy">
+        <p class="eyebrow">${esc(item.neighborhood || "Chicago")}</p>
+        <div class="pills">
+          <span class="pill party">${esc(PARTY_LABEL[party] || "Couple")}</span>
+          ${cuisineLine ? `<span class="pill soft">${esc(cuisineLine)}</span>` : ""}
+        </div>
+        <h3 class="option-title">${esc(item.name)}</h3>
+        <p class="note">${esc(why)}</p>
+        <div class="actions">
+          ${link ? `<a class="btn flame" href="${esc(link)}" target="_blank" rel="noopener">Reserve</a>` : ""}
+          ${
+            item.official_url && item.official_url !== link
+              ? `<a class="btn ghost" href="${esc(item.official_url)}" target="_blank" rel="noopener">Official site</a>`
+              : ""
+          }
+        </div>
+      </div>`;
+  }
+
+  function renderThenCopy(item) {
+    if (!item) {
+      return `
+        <div class="copy">
+          <h3 class="option-title">Nothing locked for that night</h3>
+          <p class="lede">Try another night — or swipe Backup for a soft landing.</p>
+        </div>`;
+    }
+    const when = item.date ? nightLabel(item.date) : "";
+    const meta = [item.start_time, item.cost, item.venue].filter(Boolean).join(" · ");
+    const why = item.notes || "Then laugh, listen, or wander.";
+    return `
+      <div class="copy">
+        <p class="eyebrow">${esc([item.neighborhood, when].filter(Boolean).join(" · ") || "Out tonight")}</p>
+        <div class="pills">
+          <span class="pill vibe">${item.fromPlan ? "Host pick" : "On the calendar"}</span>
+        </div>
+        <h3 class="option-title">${esc(item.name)}</h3>
+        ${meta ? `<p class="meta">${esc(meta)}</p>` : ""}
+        <p class="note">${esc(why)}</p>
+        <div class="actions">
+          ${
+            item.url
+              ? `<a class="btn flame" href="${esc(item.url)}" target="_blank" rel="noopener">Tickets / Details</a>`
+              : ""
+          }
+        </div>
+      </div>`;
+  }
+
+  function renderBackupCopy(item) {
+    if (!item) {
+      return `
+        <div class="copy">
+          <h3 class="option-title">You’re covered</h3>
+          <p class="lede">Widen the vibe — we’ll find a plan B.</p>
+        </div>`;
+    }
+    const metaBits = [item.neighborhood, item.start_time, item.cost, item.cuisine, item.price_band]
+      .filter(Boolean)
+      .join(" · ");
+    const why = item.notes || "If the first plan’s packed — here’s plan B.";
+    return `
+      <div class="copy">
+        <p class="eyebrow">Plan B</p>
+        <div class="pills">
+          <span class="pill soft">${item._id && String(item._id).includes("eat") ? "Dinner" : item.fromPlan ? "Host backup" : "Another option"}</span>
+        </div>
+        <h3 class="option-title">${esc(item.name)}</h3>
+        ${metaBits ? `<p class="meta">${esc(metaBits)}</p>` : ""}
+        ${item.venue ? `<p class="meta">${esc(item.venue)}</p>` : ""}
+        <p class="note">${esc(why)}</p>
+        <div class="actions">
+          ${
+            item.url
+              ? `<a class="btn" href="${esc(item.url)}" target="_blank" rel="noopener">Details</a>`
+              : ""
+          }
+        </div>
+      </div>`;
+  }
+
+  function renderOptionPanel(laneKey, item) {
+    const letter = (item && (item.cuisine || item.name)) || laneKey;
+    let copy = "";
+    if (laneKey === "eat") copy = renderEatCopy(item);
+    else if (laneKey === "then") copy = renderThenCopy(item);
+    else copy = renderBackupCopy(item);
+    return `
+      <div class="option-panel" data-option-id="${esc(optionId(item))}">
+        ${bgHtml(item, letter)}
+        <div class="shade"></div>
+        ${copy}
+      </div>`;
+  }
+
+  function chromeHtml(lane) {
+    const n = lane.pool.length;
+    const idx = n ? lane.index + 1 : 0;
+    const dots =
+      n > 1 && n <= 10
+        ? `<div class="option-dots" aria-hidden="true">${lane.pool
+            .map((_, i) => `<span class="${i === lane.index ? "is-on" : ""}"></span>`)
+            .join("")}</div>`
+        : `<div class="option-dots"></div>`;
+    return `
+      <div class="lane-chrome">
+        <button type="button" class="nav-hit" data-dir="-1" aria-label="Previous option" ${n < 2 ? "disabled" : ""}>‹</button>
+        ${dots}
+        <span class="option-count">${n ? `${idx} / ${n}` : "0 / 0"}</span>
+        <button type="button" class="nav-hit" data-dir="1" aria-label="Next option" ${n < 2 ? "disabled" : ""}>›</button>
+      </div>`;
+  }
+
+  function sizeLanes() {
     const h = deckEl.clientHeight;
     if (!h) return;
-    deckEl.querySelectorAll(".card").forEach((c) => {
+    deckEl.querySelectorAll(".lane").forEach((c) => {
       c.style.height = h + "px";
       c.style.minHeight = h + "px";
     });
   }
 
+  function renderDeck() {
+    const order = ["eat", "then", "backup"];
+    deckEl.innerHTML = order
+      .map((key, i) => {
+        const lane = lanes[key];
+        const item = lane.pool[lane.index] || null;
+        const empty = !item;
+        return `
+        <section class="lane${empty ? " empty-lane" : ""}" data-lane="${key}">
+          <h2 class="lane-heading">${esc(lane.title)}</h2>
+          <div class="option-stage" data-stage="${key}">
+            ${renderOptionPanel(key, item)}
+          </div>
+          ${chromeHtml(lane)}
+          ${i === 0 ? `<div class="swipe-hint">Swipe up · swipe sideways for more</div>` : ""}
+        </section>`;
+      })
+      .join("");
 
+    sizeLanes();
+    startCarousels(deckEl);
+    wireLaneGestures();
+  }
+
+  function wireLaneGestures() {
+    deckEl.querySelectorAll(".lane").forEach((laneEl) => {
+      const key = laneEl.dataset.lane;
+      let startX = 0;
+      let startY = 0;
+      let tracking = false;
+
+      laneEl.addEventListener(
+        "pointerdown",
+        (e) => {
+          if (e.target.closest("a,button")) return;
+          tracking = true;
+          startX = e.clientX;
+          startY = e.clientY;
+        },
+        { passive: true }
+      );
+
+      laneEl.addEventListener(
+        "pointerup",
+        (e) => {
+          if (!tracking) return;
+          tracking = false;
+          const dx = e.clientX - startX;
+          const dy = e.clientY - startY;
+          if (Math.abs(dx) < 48) return;
+          if (Math.abs(dx) < Math.abs(dy) * 1.15) return;
+          shiftLane(key, dx < 0 ? 1 : -1);
+        },
+        { passive: true }
+      );
+
+      laneEl.addEventListener("pointercancel", () => {
+        tracking = false;
+      });
+
+      laneEl.querySelectorAll(".nav-hit").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const dir = Number(btn.dataset.dir) || 1;
+          shiftLane(key, dir);
+        });
+      });
+    });
+  }
+
+  function shiftLane(key, dir) {
+    const lane = lanes[key];
+    if (!lane || lane.pool.length < 2) return;
+    const next = (lane.index + dir + lane.pool.length) % lane.pool.length;
+    setLaneIndex(key, next, dir);
+  }
+
+  function setLaneIndex(key, nextIndex, dir) {
+    const lane = lanes[key];
+    if (!lane.pool.length) return;
+    const stage = deckEl.querySelector(`[data-stage="${key}"]`);
+    const laneEl = deckEl.querySelector(`[data-lane="${key}"]`);
+    if (!stage || !laneEl) {
+      lane.index = nextIndex;
+      lane.identity = optionId(lane.pool[nextIndex]);
+      renderDeck();
+      return;
+    }
+
+    const current = stage.querySelector(".option-panel");
+    lane.index = nextIndex;
+    lane.identity = optionId(lane.pool[nextIndex]);
+    const incoming = document.createElement("div");
+    incoming.innerHTML = renderOptionPanel(key, lane.pool[nextIndex]);
+    const panel = incoming.firstElementChild;
+    panel.classList.add(dir > 0 ? "is-enter-left" : "is-enter-right");
+    stage.appendChild(panel);
+
+    requestAnimationFrame(() => {
+      if (current) current.classList.add(dir > 0 ? "is-exit-left" : "is-exit-right");
+      panel.classList.remove("is-enter-left", "is-enter-right");
+    });
+
+    window.setTimeout(() => {
+      if (current && current.parentNode) current.parentNode.removeChild(current);
+      startCarousels(stage);
+    }, 300);
+
+    const chrome = laneEl.querySelector(".lane-chrome");
+    if (chrome) {
+      const tmp = document.createElement("div");
+      tmp.innerHTML = chromeHtml(lane);
+      chrome.replaceWith(tmp.firstElementChild);
+      laneEl.querySelectorAll(".nav-hit").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          shiftLane(key, Number(btn.dataset.dir) || 1);
+        });
+      });
+    }
+  }
 
   function renderCats() {
     catRow.innerHTML = categories
@@ -459,261 +757,9 @@
     proof.textContent = `${rCount} dinners · ${eCount} things to do`;
   }
 
-  function renderHoodDeck() {
-    mode = "hoods";
-    activeHood = null;
-    backBar.hidden = true;
-    const list = visibleNeighborhoods();
-    if (!list.length) {
-      deckEl.innerHTML = `
-        <article class="card empty-card">
-          <div class="card-media fallback"><span class="lettermark">?</span></div>
-          <div class="shade"></div>
-          <div class="copy">
-            <h2>Nothing in that mix</h2>
-            <p class="lede">Flip vibe or who you’re with — Chicago’s still out there.</p>
-          </div>
-        </article>`;
-      observeCards();
-      sizeCards();
-      scrollDeckTop();
-      return;
-    }
-
-    deckEl.innerHTML = list
-      .map((n, i) => {
-        const eats = countEatsForHood(n.neighborhood);
-        const evs = countEventsForHood(n.neighborhood);
-        const countLine =
-          eats || evs
-            ? `${eats} dinner${eats === 1 ? "" : "s"} · ${evs} to do`
-            : "Peek what’s nearby";
-        const hook = (n.hook && n.hook.name) || "A neighborhood worth the trip.";
-        const night = nightForHood(n);
-        const nightBit = night ? ` · ${shortNight(night)}` : "";
-        return `
-        <article class="card" data-hood="${esc(n.id)}">
-          ${mediaHtml(n.image, n.neighborhood)}
-          <div class="shade"></div>
-          <div class="copy">
-            <div class="pills">
-              <span class="pill vibe">${esc(n.category_label || "Chicago")}</span>
-              <span class="pill count">${esc(countLine)}</span>
-            </div>
-            <h2>${esc(n.neighborhood)}</h2>
-            <p class="hook">${esc(hook)}</p>
-            <p class="meta">${esc(n.neighborhood)}${esc(nightBit)}</p>
-            <div class="actions">
-              <button type="button" class="btn flame" data-open-hood="${esc(n.id)}" data-night="${esc(night || "")}">Make it a night</button>
-            </div>
-          </div>
-          ${i === 0 ? `<div class="swipe-hint">Swipe up</div>` : ""}
-        </article>`;
-      })
-      .join("");
-    observeCards();
-    sizeCards();
-    scrollDeckTop();
-  }
-
-  function thenFromEvent(ev) {
-    if (!ev) return null;
-    return {
-      name: ev.name,
-      start: ev.start_time || "",
-      cost: ev.cost || "",
-      url: ev.official_url || "",
-      image: ev.image || "",
-      why: ev.notes || ev.date_friendly || "",
-      venue: ev.venue || "",
-      neighborhood: ev.neighborhood || "",
-      fromEvent: true,
-    };
-  }
-
-  function renderNightDeck(hoodId) {
-    const hood = neighborhoods.find((n) => n.id === hoodId) || activeHood;
-    if (!hood) {
-      renderHoodDeck();
-      return;
-    }
-    activeHood = hood;
-    mode = "night";
-    backBar.hidden = false;
-
-    const iso = nightForHood(hood);
-    nightKey = iso || nightKey;
-    renderNights();
-
-    const plan = iso ? planForNight(iso) : null;
-    const c = pickCorridor(plan, hood.neighborhood);
-    const eat = c.eat || {};
-    const hoodKeys = expandNeighborhoodKeys(hood.neighborhood).concat(
-      expandNeighborhoodKeys(c.corridor)
-    );
-    const uniqKeys = [...new Set(hoodKeys)];
-
-    let then = thenFromEvent(pickEvent(uniqKeys, iso));
-    if (!then) {
-      const planThen = c.then || {};
-      if (planThen.name) {
-        then = {
-          name: planThen.name,
-          start: planThen.start || "",
-          cost: planThen.cost || "",
-          url: planThen.url || "",
-          image: planThen.image || "",
-          why: planThen.why || planThen.note || "",
-          venue: planThen.venue || "",
-          neighborhood: "",
-          fromEvent: false,
-        };
-      }
-    }
-
-    const backup = c.backup || {};
-    const dont = typeof c.dont === "string" ? c.dont : (c.dont && c.dont.note) || "";
-    const transit = typeof c.transit === "string" ? c.transit : (c.transit && c.transit.note) || "";
-    const partyLabel = PARTY_LABEL[party] || "Couple";
-    const nightBit = iso ? nightLabel(iso) : "Tonight";
-    const cuisineLine = [eat.cuisine, eat.price_band].filter(Boolean).join(" · ");
-
-    // If no eat from plan, try catalog for hood
-    let finalEat = eat;
-    if (!finalEat.name) {
-      const picked = pickCatalogEat(expandNeighborhoodKeys(hood.neighborhood));
-      if (picked) finalEat = eatFromCatalog(picked, []);
-    }
-
-    const cards = [];
-
-    // Eat card
-    if (finalEat.name) {
-      const why = finalEat.why || "Start hungry — good table energy.";
-      cards.push(`
-        <article class="card">
-          ${mediaHtml(finalEat.image, finalEat.cuisine || finalEat.name)}
-          <div class="shade"></div>
-          <div class="copy">
-            <p class="eyebrow">Eat · ${esc(hood.neighborhood)} · ${esc(nightBit)}</p>
-            <div class="pills">
-              <span class="pill party">${esc(partyLabel)}</span>
-              ${cuisineLine ? `<span class="pill soft">${esc(cuisineLine)}</span>` : ""}
-            </div>
-            <h2>${esc(finalEat.name)}</h2>
-            <p class="note">${esc(why)}</p>
-            <div class="actions">
-              ${
-                finalEat.url
-                  ? `<a class="btn flame" href="${esc(finalEat.url)}" target="_blank" rel="noopener">Reserve</a>`
-                  : ""
-              }
-            </div>
-          </div>
-          <div class="swipe-hint">Swipe up</div>
-        </article>`);
-    }
-
-    // Then card
-    if (then && then.name) {
-      const meta = [then.start, then.cost, then.venue].filter(Boolean).join(" · ");
-      const why = then.why || "Then laugh, listen, or wander.";
-      cards.push(`
-        <article class="card">
-          ${mediaHtml(then.image || finalEat.image || hood.image, then.name)}
-          <div class="shade"></div>
-          <div class="copy">
-            <p class="eyebrow">Then · ${esc(shortNight(iso) || "out")}</p>
-            <div class="pills">
-              <span class="pill vibe">${then.fromEvent ? "On tonight" : "Editor pick"}</span>
-            </div>
-            <h2>${esc(then.name)}</h2>
-            ${meta ? `<p class="meta">${esc(meta)}</p>` : ""}
-            <p class="note">${esc(why)}</p>
-            <div class="actions">
-              ${
-                then.url
-                  ? `<a class="btn flame" href="${esc(then.url)}" target="_blank" rel="noopener">Tickets / Details</a>`
-                  : ""
-              }
-            </div>
-          </div>
-        </article>`);
-    }
-
-    // Backup
-    if (backup && backup.name) {
-      cards.push(`
-        <article class="card">
-          ${mediaHtml(backup.image || hood.image, backup.name)}
-          <div class="shade"></div>
-          <div class="copy">
-            <p class="eyebrow">Backup</p>
-            <h2>${esc(backup.name)}</h2>
-            <p class="note">${esc(backup.note || backup.why || "If the first plan’s packed — here’s plan B.")}</p>
-            <div class="actions">
-              ${
-                backup.url
-                  ? `<a class="btn" href="${esc(backup.url)}" target="_blank" rel="noopener">Details</a>`
-                  : ""
-              }
-            </div>
-          </div>
-        </article>`);
-    }
-
-    // Get there / Don’t
-    if (transit || dont) {
-      cards.push(`
-        <article class="card">
-          ${mediaHtml(hood.image, "C")}
-          <div class="shade"></div>
-          <div class="copy">
-            <p class="eyebrow">Get there · Don’t</p>
-            <h2>Keep it easy</h2>
-            <ul class="compact-list">
-              ${transit ? `<li><strong>Get there</strong><span>${esc(transit)}</span></li>` : ""}
-              ${dont ? `<li><strong>Don’t</strong><span>${esc(dont)}</span></li>` : ""}
-            </ul>
-            <div class="actions">
-              <button type="button" class="btn ghost" id="back-inline">← More neighborhoods</button>
-            </div>
-          </div>
-        </article>`);
-    }
-
-    if (!cards.length) {
-      deckEl.innerHTML = `
-        <article class="card empty-card">
-          <div class="card-media fallback"><span class="lettermark">?</span></div>
-          <div class="shade"></div>
-          <div class="copy">
-            <h2>Nothing locked for that night</h2>
-            <p class="lede">Try another night or flip who you’re with.</p>
-            <div class="actions" style="justify-content:center">
-              <button type="button" class="btn ghost" id="back-inline">← Neighborhoods</button>
-            </div>
-          </div>
-        </article>`;
-    } else {
-      deckEl.innerHTML = cards.join("");
-    }
-
-    observeCards();
-    sizeCards();
-    scrollDeckTop();
-
-    const inlineBack = document.getElementById("back-inline");
-    if (inlineBack) inlineBack.addEventListener("click", () => renderHoodDeck());
-  }
-
-  function openHood(hoodId) {
-    const n = neighborhoods.find((h) => h.id === hoodId);
-    if (!n) return;
-    const preferred = nightForHood(n);
-    if (preferred) nightKey = preferred;
-    renderNights();
-    renderNightDeck(hoodId);
+  function refreshFromFilters() {
+    rebuildPools();
+    renderDeck();
   }
 
   catRow.addEventListener("click", (e) => {
@@ -721,8 +767,7 @@
     if (!btn) return;
     category = btn.dataset.cat;
     renderCats();
-    if (mode === "night" && activeHood) renderNightDeck(activeHood.id);
-    else renderHoodDeck();
+    refreshFromFilters();
   });
 
   partyRow.addEventListener("click", (e) => {
@@ -730,8 +775,7 @@
     if (!btn) return;
     party = btn.dataset.party;
     renderParty();
-    if (mode === "night" && activeHood) renderNightDeck(activeHood.id);
-    else renderHoodDeck();
+    refreshFromFilters();
   });
 
   nightRow.addEventListener("click", (e) => {
@@ -739,21 +783,31 @@
     if (!btn) return;
     nightKey = btn.dataset.night || null;
     renderNights();
-    if (mode === "night" && activeHood) renderNightDeck(activeHood.id);
-    else renderHoodDeck();
+    refreshFromFilters();
   });
 
-  deckEl.addEventListener("click", (e) => {
-    const btn = e.target.closest("button[data-open-hood]");
-    if (!btn) return;
-    const iso = btn.dataset.night;
-    if (iso) nightKey = iso;
-    openHood(btn.dataset.openHood);
+  window.addEventListener("resize", () => sizeLanes());
+
+  deckEl.addEventListener("keydown", (e) => {
+    if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+    const laneEl = deckEl.querySelector(".lane");
+    // Prefer the lane closest to scroll center
+    const cards = [...deckEl.querySelectorAll(".lane")];
+    const mid = deckEl.scrollTop + deckEl.clientHeight / 2;
+    let best = cards[0];
+    let bestDist = Infinity;
+    cards.forEach((c) => {
+      const center = c.offsetTop + c.offsetHeight / 2;
+      const d = Math.abs(center - mid);
+      if (d < bestDist) {
+        bestDist = d;
+        best = c;
+      }
+    });
+    if (!best) return;
+    e.preventDefault();
+    shiftLane(best.dataset.lane, e.key === "ArrowRight" ? 1 : -1);
   });
-
-  backBtn.addEventListener("click", () => renderHoodDeck());
-
-  window.addEventListener("resize", () => sizeCards());
 
   Promise.all([
     fetch("neighborhoods.json").then((r) => r.json()),
@@ -772,19 +826,26 @@
       renderCats();
       renderParty();
       renderNights();
-      renderHoodDeck();
+      rebuildPools();
+      renderDeck();
     })
     .catch((err) => {
       console.error(err);
       proof.textContent = "Couldn’t load tonight";
       deckEl.innerHTML = `
-        <article class="card empty-card">
-          <div class="card-media fallback"><span class="lettermark">!</span></div>
-          <div class="shade"></div>
-          <div class="copy">
-            <h2>Couldn’t load Chicago</h2>
-            <p class="lede">Give it a refresh — we’ll be right here.</p>
+        <section class="lane empty-lane">
+          <h2 class="lane-heading">Night Out</h2>
+          <div class="option-stage">
+            <div class="option-panel">
+              <div class="bg-stack"><div class="bg-fallback"><span class="lettermark">!</span></div></div>
+              <div class="shade"></div>
+              <div class="copy">
+                <h3 class="option-title">Couldn’t load Chicago</h3>
+                <p class="lede">Give it a refresh — we’ll be right here.</p>
+              </div>
+            </div>
           </div>
-        </article>`;
+        </section>`;
+      sizeLanes();
     });
 })();

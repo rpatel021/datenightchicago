@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Night Out Chicago — Snap a night</title>
-  <meta name="description" content="Chicago neighborhoods as full-screen cards: dinner, then something worth going out for." />
+  <meta name="description" content="Chicago nights in three swipes: what to eat, what to do, and a backup — filter by vibe, who you’re with, and the night." />
   <meta name="theme-color" content="#FF5A36" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -20,11 +20,11 @@
   <nav class="toggles" aria-label="Filters">
     <div class="toggle-block">
       <span class="toggle-label">Vibe</span>
-      <div class="pill-row" id="cat-row" role="tablist"></div>
+      <div class="pill-row wrap" id="cat-row" role="tablist"></div>
     </div>
     <div class="toggle-block">
       <span class="toggle-label">With</span>
-      <div class="pill-row" id="party-row" role="tablist">
+      <div class="pill-row wrap" id="party-row" role="tablist">
         <button type="button" role="tab" data-party="couple" aria-selected="true">Couple</button>
         <button type="button" role="tab" data-party="family" aria-selected="false">Family</button>
         <button type="button" role="tab" data-party="friends" aria-selected="false">Friends</button>
@@ -32,15 +32,11 @@
     </div>
     <div class="toggle-block" id="night-block" hidden>
       <span class="toggle-label">Night</span>
-      <div class="pill-row" id="night-row" role="tablist"></div>
+      <div class="pill-row wrap" id="night-row" role="tablist"></div>
     </div>
   </nav>
 
-  <div class="back-bar" id="back-bar" hidden>
-    <button type="button" class="btn ghost" id="back-to-deck">← Neighborhoods</button>
-  </div>
-
-  <main id="deck" class="deck" aria-label="Night Out cards" tabindex="0"></main>
+  <main id="deck" class="deck" aria-label="Night Out lanes" tabindex="0"></main>
 
   <script src="app.js"></script>
 </body>
