@@ -1,1 +1,1156 @@
-SEE_FILE
+[
+  {
+    "restaurant_id": "cafe-ba-ba-reeba",
+    "name": "Cafe Ba-Ba-Reeba",
+    "neighborhood": "Lincoln Park",
+    "cuisine": "spanish",
+    "category_focus": [
+      "date_night",
+      "lively",
+      "tapas",
+      "group_friendly"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "lively",
+      "tapas",
+      "group_friendly"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner 4–10pm (patio/share plates)",
+    "official_url": "https://www.cafebabareeba.com/",
+    "reserve_url": "https://www.cafebabareeba.com/",
+    "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg",
+    "status": "active",
+    "notes": "Lincoln Park tapas staple from corridor plans. Share plates; lively rooms. Kids OK earlier; later gets louder. Dishes from plans: Gambas, Patatas bravas.",
+    "source_id": "corridor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok — corridor seed"
+  },
+  {
+    "restaurant_id": "mon-ami-gabi",
+    "name": "Mon Ami Gabi",
+    "neighborhood": "Lincoln Park",
+    "cuisine": "french",
+    "category_focus": [
+      "date_night",
+      "classic",
+      "steak_frites",
+      "pre_theater"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "classic",
+      "steak_frites",
+      "pre_theater"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~4–10pm",
+    "official_url": "https://www.monamigabi.com/chicago/",
+    "reserve_url": "https://www.monamigabi.com/chicago/",
+    "image": "https://storage.googleapis.com/monamigabi2023_bucket/wp-content/uploads/a3607ff2-7b8a7573.png",
+    "status": "active",
+    "notes": "Lincoln Park French bistro near iO. Steak frites date energy; early seatings work for families. Dishes from plans: Steak frites, Roast chicken.",
+    "source_id": "corridor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok — corridor seed"
+  },
+  {
+    "restaurant_id": "lula-cafe",
+    "name": "Lula Cafe",
+    "neighborhood": "Logan Square",
+    "cuisine": "american",
+    "category_focus": [
+      "date_night",
+      "quiet",
+      "farm_to_table",
+      "neighborhood"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "quiet",
+      "farm_to_table",
+      "neighborhood"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~5–10pm (brunch weekends)",
+    "official_url": "https://www.lulacafe.com/",
+    "reserve_url": null,
+    "image": "https://images.getbento.com/accounts/7ddb4f625c4916181f9d829acbae6562/media/images/73830StockLula_1.jpg",
+    "status": "active",
+    "notes": "Logan Square farm-to-table classic. Seasonal plates; book ahead. Family-friendly early; intimate later. Dishes from plans: Seasonal plate, Market veg.",
+    "source_id": "corridor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "reserve_url unknown — use official site / call; corridor seed"
+  },
+  {
+    "restaurant_id": "orsos",
+    "name": "Orso's",
+    "neighborhood": "Old Town",
+    "cuisine": "italian",
+    "category_focus": [
+      "date_night",
+      "quiet",
+      "classic",
+      "pre_theater"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "quiet",
+      "classic",
+      "pre_theater"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~4–10pm",
+    "official_url": "https://www.orsosrestaurant.com/",
+    "reserve_url": "https://www.orsosrestaurant.com/",
+    "image": "https://orsos-restaurant.s3.us-west-2.amazonaws.com/orsos-front-restaurant.webp",
+    "status": "active",
+    "notes": "Old Town Italian near Second City/Zanies. Pre-show pasta corridor staple. Dishes from plans: Pasta, Antipasti.",
+    "source_id": "corridor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok — corridor seed"
+  },
+  {
+    "restaurant_id": "twin-anchors-restaurant-and-tavern",
+    "name": "Twin Anchors Restaurant & Tavern",
+    "neighborhood": "Old Town",
+    "cuisine": "bbq",
+    "category_focus": [
+      "lively",
+      "classic",
+      "group_friendly",
+      "kid_friendly"
+    ],
+    "vibe_tags": [
+      "lively",
+      "classic",
+      "group_friendly",
+      "kid_friendly"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~4–11pm",
+    "official_url": "https://www.twinanchorsribs.com/",
+    "reserve_url": null,
+    "image": "https://www.twinanchorsribs.com/wp-content/uploads/Hero-image.jpg",
+    "status": "active",
+    "notes": "Old Town baby-back ribs tavern. Cash-vibe classic; lines on weekends. Family OK; loud rooms. Dishes from plans: Baby back ribs, Plate.",
+    "source_id": "corridor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "often no online reserve — walk-in/call; corridor seed"
+  },
+  {
+    "restaurant_id": "anteprima",
+    "name": "Anteprima",
+    "neighborhood": "Uptown",
+    "cuisine": "italian",
+    "category_focus": [
+      "date_night",
+      "quiet",
+      "neighborhood",
+      "kid_friendly"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "quiet",
+      "neighborhood",
+      "kid_friendly"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~5–10pm",
+    "official_url": "https://www.anteprimachicago.net/",
+    "reserve_url": null,
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80",
+    "status": "active",
+    "notes": "Andersonville Italian used on family corridor nights. Pasta + antipasti; calmer than Hopleaf. Dishes from plans: Pasta, Antipasti.",
+    "source_id": "corridor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "neighborhood tagged Uptown (Andersonville); confirm reserve path"
+  },
+  {
+    "restaurant_id": "hopleaf",
+    "name": "Hopleaf",
+    "neighborhood": "Uptown",
+    "cuisine": "belgian",
+    "category_focus": [
+      "date_night",
+      "lively",
+      "beer_bar",
+      "mussels"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "lively",
+      "beer_bar",
+      "mussels"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~5–11pm",
+    "official_url": "https://hopleafbar.com/",
+    "reserve_url": null,
+    "image": "https://hopleafbar.com/wp-content/uploads/2021/03/Unknown.jpeg",
+    "status": "active",
+    "notes": "Andersonville/Uptown Belgian beer + mussels. Strong couple/friends pick; not a high-chair family room. Dishes from plans: Mussels, Frites.",
+    "source_id": "corridor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "neighborhood tagged Uptown (Andersonville edge); reserve often walk-in/call"
+  },
+  {
+    "restaurant_id": "the-sit-down-cafe-and-sushi-bar",
+    "name": "The Sit Down Cafe & Sushi Bar",
+    "neighborhood": "Hyde Park",
+    "cuisine": "sushi",
+    "category_focus": [
+      "date_night",
+      "quiet",
+      "neighborhood"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "quiet",
+      "neighborhood"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~5–9pm",
+    "official_url": "https://www.sitdownchicago.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Hyde Park cafe + sushi. Casual date near festival venues.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "confirm hours/reserve"
+  },
+  {
+    "restaurant_id": "valois-restaurant",
+    "name": "Valois Restaurant",
+    "neighborhood": "Hyde Park",
+    "cuisine": "american",
+    "category_focus": [
+      "kid_friendly",
+      "classic",
+      "casual",
+      "group_friendly"
+    ],
+    "vibe_tags": [
+      "kid_friendly",
+      "classic",
+      "casual",
+      "group_friendly"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$",
+    "meal_window": "breakfast–early dinner (cafeteria hours)",
+    "official_url": "https://www.valoisrestaurant.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Hyde Park cafeteria classic ('See Your Food'). Cheap, fast, family-easy before campus events.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "no reserve — tray line; hours end early evening"
+  },
+  {
+    "restaurant_id": "virtue",
+    "name": "Virtue",
+    "neighborhood": "Hyde Park",
+    "cuisine": "southern",
+    "category_focus": [
+      "date_night",
+      "quiet",
+      "neighborhood",
+      "group_friendly"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "quiet",
+      "neighborhood",
+      "group_friendly"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~5–9pm",
+    "official_url": "https://www.virtuerestaurant.com/",
+    "reserve_url": "https://www.virtuerestaurant.com/",
+    "image": null,
+    "status": "active",
+    "notes": "Hyde Park Southern by Erick Williams. Strong date + festival nights (HPJF). Book ahead.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok"
+  },
+  {
+    "restaurant_id": "mia-francesca",
+    "name": "Mia Francesca",
+    "neighborhood": "Lakeview",
+    "cuisine": "italian",
+    "category_focus": [
+      "date_night",
+      "lively",
+      "group_friendly",
+      "classic"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "lively",
+      "group_friendly",
+      "classic"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~4–10pm",
+    "official_url": "https://www.miafrancesca.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Lakeview Italian staple near Southport / Wrigley corridor. Mixed parties.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "multi-location brand — Lakeview original"
+  },
+  {
+    "restaurant_id": "spacca-napoli",
+    "name": "Spacca Napoli",
+    "neighborhood": "Lakeview",
+    "cuisine": "pizza",
+    "category_focus": [
+      "kid_friendly",
+      "lively",
+      "group_friendly",
+      "classic"
+    ],
+    "vibe_tags": [
+      "kid_friendly",
+      "lively",
+      "group_friendly",
+      "classic"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~5–10pm",
+    "official_url": "https://www.spaccanapolipizzeria.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Wood-fired Neapolitan in Ravenswood/Lakeview corridor. High-chair friendly pizza night.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "often walk-in wait"
+  },
+  {
+    "restaurant_id": "gejas-cafe",
+    "name": "Geja's Cafe",
+    "neighborhood": "Lincoln Park",
+    "cuisine": "fondue",
+    "category_focus": [
+      "date_night",
+      "quiet",
+      "romantic",
+      "classic"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "quiet",
+      "romantic",
+      "classic"
+    ],
+    "party_fit": "couple",
+    "price_band": "$$$",
+    "meal_window": "dinner ~5–10pm",
+    "official_url": "https://www.gejascafe.com/",
+    "reserve_url": "https://www.gejascafe.com/",
+    "image": null,
+    "status": "active",
+    "notes": "Fondue date-night institution. Intimate tables; couples only vibe (not family/groups of friends casually).",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok"
+  },
+  {
+    "restaurant_id": "pequods-pizza",
+    "name": "Pequod's Pizza",
+    "neighborhood": "Lincoln Park",
+    "cuisine": "pizza",
+    "category_focus": [
+      "kid_friendly",
+      "lively",
+      "group_friendly",
+      "classic"
+    ],
+    "vibe_tags": [
+      "kid_friendly",
+      "lively",
+      "group_friendly",
+      "classic"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "lunch & dinner ~11am–11pm",
+    "official_url": "https://www.pequodspizza.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Pan-pizza institution (Lincoln Park). Family + friends; waits on weekends.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "walk-in; second location Morton Grove irrelevant here"
+  },
+  {
+    "restaurant_id": "r-j-grunts",
+    "name": "R.J. Grunts",
+    "neighborhood": "Lincoln Park",
+    "cuisine": "american",
+    "category_focus": [
+      "kid_friendly",
+      "lively",
+      "classic",
+      "group_friendly"
+    ],
+    "vibe_tags": [
+      "kid_friendly",
+      "lively",
+      "classic",
+      "group_friendly"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "lunch & dinner ~11am–9pm",
+    "official_url": "https://www.rjgruntschicago.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Lincoln Park burger/salad bar classic near zoo/park. Family-friendly casual.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "walk-in heavy"
+  },
+  {
+    "restaurant_id": "daisies",
+    "name": "Daisies",
+    "neighborhood": "Logan Square",
+    "cuisine": "american",
+    "category_focus": [
+      "date_night",
+      "quiet",
+      "pasta",
+      "seasonal"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "quiet",
+      "pasta",
+      "seasonal"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$$",
+    "meal_window": "dinner ~5–10pm",
+    "official_url": "https://www.daisieschicago.com/",
+    "reserve_url": "https://www.daisieschicago.com/",
+    "image": null,
+    "status": "active",
+    "notes": "Seasonal Midwestern pasta (Logan). Strong couple date; book ahead.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok — popular; reserve early"
+  },
+  {
+    "restaurant_id": "longman-and-eagle",
+    "name": "Longman & Eagle",
+    "neighborhood": "Logan Square",
+    "cuisine": "american",
+    "category_focus": [
+      "date_night",
+      "lively",
+      "whiskey",
+      "neighborhood"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "lively",
+      "whiskey",
+      "neighborhood"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~5–11pm (late kitchen varies)",
+    "official_url": "https://www.longmanandeagle.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Logan Square whiskey + elevated comfort. Couple/friends; boisterous; not a family high-chair spot.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "often walk-in / limited reserve"
+  },
+  {
+    "restaurant_id": "mi-tocaya-antojeria",
+    "name": "Mi Tocaya Antojeria",
+    "neighborhood": "Logan Square",
+    "cuisine": "mexican",
+    "category_focus": [
+      "date_night",
+      "lively",
+      "chef_driven"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "lively",
+      "chef_driven"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~5–10pm",
+    "official_url": "https://www.mitocaya.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Diana Dávila's Mexican antojitos in Logan. Couple/friends; intimate room.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "confirm reserve path"
+  },
+  {
+    "restaurant_id": "cindys-rooftop",
+    "name": "Cindy's Rooftop",
+    "neighborhood": "Loop",
+    "cuisine": "american",
+    "category_focus": [
+      "date_night",
+      "lively",
+      "rooftop",
+      "views"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "lively",
+      "rooftop",
+      "views"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$$",
+    "meal_window": "dinner ~5–10pm (weather/season dependent)",
+    "official_url": "https://www.cindysrooftop.com/",
+    "reserve_url": "https://www.cindysrooftop.com/",
+    "image": null,
+    "status": "active",
+    "notes": "Chicago Athletic Association rooftop with skyline views. Strong couple/friends vibes; windy/seasonal; not ideal with young kids.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "reserve via CAA / OpenTable path on site"
+  },
+  {
+    "restaurant_id": "petterinos",
+    "name": "Petterino's",
+    "neighborhood": "Loop",
+    "cuisine": "italian",
+    "category_focus": [
+      "date_night",
+      "classic",
+      "pre_theater",
+      "quiet"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "classic",
+      "pre_theater",
+      "quiet"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~4–10pm (pre-show)",
+    "official_url": "https://www.petterinos.com/",
+    "reserve_url": "https://www.petterinos.com/",
+    "image": null,
+    "status": "active",
+    "notes": "Theater District Italian near Goodman/Cadillac Palace. Pre-show classic; early family seatings work.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok"
+  },
+  {
+    "restaurant_id": "the-dearborn",
+    "name": "The Dearborn",
+    "neighborhood": "Loop",
+    "cuisine": "american",
+    "category_focus": [
+      "date_night",
+      "lively",
+      "group_friendly"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "lively",
+      "group_friendly"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~4–10pm",
+    "official_url": "https://www.thedearbornhicago.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Loop American near State Street. Solid post-work / pre-event eat.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "confirm current reserve_url"
+  },
+  {
+    "restaurant_id": "the-gage",
+    "name": "The Gage",
+    "neighborhood": "Loop",
+    "cuisine": "american",
+    "category_focus": [
+      "date_night",
+      "lively",
+      "gastropub",
+      "pre_theater"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "lively",
+      "gastropub",
+      "pre_theater"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$",
+    "meal_window": "lunch & dinner ~11am–10pm",
+    "official_url": "https://www.thegagechicago.com/",
+    "reserve_url": "https://www.thegagechicago.com/",
+    "image": null,
+    "status": "active",
+    "notes": "Millennium Park adjacent gastropub. Pre-Grant Park / theater corridor. Energetic bar; not a quiet kids room.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok — well-known Loop date spot"
+  },
+  {
+    "restaurant_id": "bavettes-bar-and-boeuf",
+    "name": "Bavette's Bar & Boeuf",
+    "neighborhood": "Near North",
+    "cuisine": "steakhouse",
+    "category_focus": [
+      "date_night",
+      "quiet",
+      "steakhouse",
+      "cocktails"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "quiet",
+      "steakhouse",
+      "cocktails"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$$$",
+    "meal_window": "dinner ~5–10pm",
+    "official_url": "https://www.bavetteschicago.com/",
+    "reserve_url": "https://www.bavetteschicago.com/",
+    "image": null,
+    "status": "active",
+    "notes": "Dark, speakeasy steakhouse (Boka group). Couple special-occasion; not family.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok — book well ahead"
+  },
+  {
+    "restaurant_id": "beatrix",
+    "name": "Beatrix",
+    "neighborhood": "Near North",
+    "cuisine": "american",
+    "category_focus": [
+      "quiet",
+      "kid_friendly",
+      "group_friendly",
+      "all_day"
+    ],
+    "vibe_tags": [
+      "quiet",
+      "kid_friendly",
+      "group_friendly",
+      "all_day"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "breakfast–dinner ~7am–9pm",
+    "official_url": "https://beatrixrestaurants.com/location/streeterville/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Approachable American (Streeterville / River North locations). Easy family + mixed-party eat before Loop events.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "multi-location — Streeterville/River North; pick closest to corridor"
+  },
+  {
+    "restaurant_id": "gibsons-bar-and-steakhouse",
+    "name": "Gibsons Bar & Steakhouse",
+    "neighborhood": "Near North",
+    "cuisine": "steakhouse",
+    "category_focus": [
+      "date_night",
+      "classic",
+      "steakhouse",
+      "lively"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "classic",
+      "steakhouse",
+      "lively"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$$$",
+    "meal_window": "dinner ~4–11pm",
+    "official_url": "https://www.gibsonssteakhouse.com/location/gibsons-bar-steakhouse-chicago/",
+    "reserve_url": "https://www.gibsonssteakhouse.com/location/gibsons-bar-steakhouse-chicago/",
+    "image": null,
+    "status": "active",
+    "notes": "Rush Street steakhouse icon. Cocktail + steak couple/friends; loud celebratory rooms; not family-first.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok"
+  },
+  {
+    "restaurant_id": "gt-fish-and-oyster",
+    "name": "GT Fish & Oyster",
+    "neighborhood": "Near North",
+    "cuisine": "seafood",
+    "category_focus": [
+      "date_night",
+      "lively",
+      "oysters",
+      "group_friendly"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "lively",
+      "oysters",
+      "group_friendly"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$$",
+    "meal_window": "dinner ~5–10pm",
+    "official_url": "https://www.gtoyster.com/",
+    "reserve_url": "https://www.gtoyster.com/",
+    "image": null,
+    "status": "active",
+    "notes": "River North/Near North oyster & seafood date spot. Lively bar energy.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok"
+  },
+  {
+    "restaurant_id": "rpm-italian",
+    "name": "RPM Italian",
+    "neighborhood": "Near North",
+    "cuisine": "italian",
+    "category_focus": [
+      "date_night",
+      "lively",
+      "group_friendly"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "lively",
+      "group_friendly"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$$",
+    "meal_window": "dinner ~5–11pm",
+    "official_url": "https://www.rpmrestaurants.com/rpm-italian-chicago/",
+    "reserve_url": "https://www.rpmrestaurants.com/rpm-italian-chicago/",
+    "image": null,
+    "status": "active",
+    "notes": "River North polished Italian. Date + friends celebrations; stylish rooms.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok"
+  },
+  {
+    "restaurant_id": "topo-gigio",
+    "name": "Topo Gigio",
+    "neighborhood": "Old Town",
+    "cuisine": "italian",
+    "category_focus": [
+      "date_night",
+      "classic",
+      "quiet",
+      "pre_theater"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "classic",
+      "quiet",
+      "pre_theater"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~4–10pm",
+    "official_url": "https://www.topogigiochicago.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Old Town Italian near Wells comedy corridor. Pre–Second City / Zanies alternate to Orso's.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "confirm reserve"
+  },
+  {
+    "restaurant_id": "5-rabanitos",
+    "name": "5 Rabanitos",
+    "neighborhood": "Pilsen",
+    "cuisine": "mexican",
+    "category_focus": [
+      "kid_friendly",
+      "lively",
+      "neighborhood",
+      "group_friendly"
+    ],
+    "vibe_tags": [
+      "kid_friendly",
+      "lively",
+      "neighborhood",
+      "group_friendly"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "lunch & dinner ~11am–9pm",
+    "official_url": "https://www.5rabanitos.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Pilsen Mexican family-friendly plates before Thalia / neighborhood walks.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "confirm current hours"
+  },
+  {
+    "restaurant_id": "duseks-board-and-beer",
+    "name": "Dusek's Board & Beer",
+    "neighborhood": "Pilsen",
+    "cuisine": "american",
+    "category_focus": [
+      "date_night",
+      "lively",
+      "beer",
+      "pre_theater"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "lively",
+      "beer",
+      "pre_theater"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~5–11pm",
+    "official_url": "https://www.dusekschicago.com/",
+    "reserve_url": "https://www.dusekschicago.com/",
+    "image": null,
+    "status": "active",
+    "notes": "Attached to Thalia Hall — perfect Eat→Then for Pilsen shows. Beer-forward; 21+ energy evenings.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok"
+  },
+  {
+    "restaurant_id": "pleasant-house-pub",
+    "name": "Pleasant House Pub",
+    "neighborhood": "Pilsen",
+    "cuisine": "british",
+    "category_focus": [
+      "kid_friendly",
+      "lively",
+      "pot_pies",
+      "group_friendly"
+    ],
+    "vibe_tags": [
+      "kid_friendly",
+      "lively",
+      "pot_pies",
+      "group_friendly"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~5–10pm",
+    "official_url": "https://www.pleasanthousepub.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Pilsen pot pies + pub. Casual family/friends before shows.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok"
+  },
+  {
+    "restaurant_id": "acadia",
+    "name": "Acadia",
+    "neighborhood": "South Loop",
+    "cuisine": "contemporary",
+    "category_focus": [
+      "date_night",
+      "quiet",
+      "fine_dining"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "quiet",
+      "fine_dining"
+    ],
+    "party_fit": "couple",
+    "price_band": "$$$$",
+    "meal_window": "dinner tasting ~5:30–9pm",
+    "official_url": "https://www.acadiachicago.com/",
+    "reserve_url": "https://www.acadiachicago.com/",
+    "image": null,
+    "status": "active",
+    "notes": "Fine-dining tasting (special occasion). Couples; not family or large casual groups.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "tasting menu / tasting hours — confirm before matching"
+  },
+  {
+    "restaurant_id": "chicago-firehouse-restaurant",
+    "name": "Chicago Firehouse Restaurant",
+    "neighborhood": "South Loop",
+    "cuisine": "american",
+    "category_focus": [
+      "date_night",
+      "classic",
+      "group_friendly"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "classic",
+      "group_friendly"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~5–10pm",
+    "official_url": "https://www.chicagofirehouse.com/",
+    "reserve_url": "https://www.chicagofirehouse.com/",
+    "image": null,
+    "status": "active",
+    "notes": "Historic firehouse setting in South Loop. Classic American; works for mixed parties.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok"
+  },
+  {
+    "restaurant_id": "gioco",
+    "name": "Gioco",
+    "neighborhood": "South Loop",
+    "cuisine": "italian",
+    "category_focus": [
+      "date_night",
+      "quiet",
+      "neighborhood"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "quiet",
+      "neighborhood"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~5–10pm",
+    "official_url": "https://www.gioco-chicago.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "South Loop Italian near Blues / Museum Campus nights. Good pre–Buddy Guy's corridor.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "confirm reserve_url"
+  },
+  {
+    "restaurant_id": "joes-seafood-prime-steak-and-stone-crab",
+    "name": "Joe's Seafood, Prime Steak & Stone Crab",
+    "neighborhood": "Streeterville",
+    "cuisine": "seafood",
+    "category_focus": [
+      "date_night",
+      "classic",
+      "steakhouse",
+      "group_friendly"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "classic",
+      "steakhouse",
+      "group_friendly"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$$",
+    "meal_window": "dinner ~5–10pm",
+    "official_url": "https://www.joes.net/chicago/",
+    "reserve_url": "https://www.joes.net/chicago/",
+    "image": null,
+    "status": "active",
+    "notes": "Streeterville seafood/steak institution. Special-occasion couple/friends; dressier; not kid-primary.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "ok"
+  },
+  {
+    "restaurant_id": "volare",
+    "name": "Volare",
+    "neighborhood": "Streeterville",
+    "cuisine": "italian",
+    "category_focus": [
+      "date_night",
+      "classic",
+      "quiet",
+      "pre_theater"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "classic",
+      "quiet",
+      "pre_theater"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~4–10pm",
+    "official_url": "https://www.volarerestaurant.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Streeterville Italian near Mag Mile / Navy Pier corridor. Classic red-sauce date energy.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "confirm reserve path"
+  },
+  {
+    "restaurant_id": "big-jones",
+    "name": "Big Jones",
+    "neighborhood": "Uptown",
+    "cuisine": "southern",
+    "category_focus": [
+      "date_night",
+      "quiet",
+      "brunch",
+      "neighborhood"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "quiet",
+      "brunch",
+      "neighborhood"
+    ],
+    "party_fit": "couple,family,friends",
+    "price_band": "$$",
+    "meal_window": "brunch & dinner (check daypart)",
+    "official_url": "https://www.bigjoneschicago.com/",
+    "reserve_url": "https://www.bigjoneschicago.com/",
+    "image": null,
+    "status": "active",
+    "notes": "Andersonville Southern (tagged Uptown corridor). Bourbon + biscuits date; brunch family-friendly.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "Andersonville — tagged Uptown to align scout neighborhoods"
+  },
+  {
+    "restaurant_id": "big-star",
+    "name": "Big Star",
+    "neighborhood": "Wicker Park",
+    "cuisine": "mexican",
+    "category_focus": [
+      "lively",
+      "tacos",
+      "group_friendly"
+    ],
+    "vibe_tags": [
+      "lively",
+      "tacos",
+      "group_friendly"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$",
+    "meal_window": "dinner ~5pm–late",
+    "official_url": "https://www.bigstarchicago.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Wicker Park tacos + whiskey. Loud patio; friends-first; not quiet date or young kids.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "walk-in / patio waits"
+  },
+  {
+    "restaurant_id": "doves-luncheonette",
+    "name": "Dove's Luncheonette",
+    "neighborhood": "Wicker Park",
+    "cuisine": "mexican",
+    "category_focus": [
+      "date_night",
+      "lively",
+      "tex_mex",
+      "group_friendly"
+    ],
+    "vibe_tags": [
+      "date_night",
+      "lively",
+      "tex_mex",
+      "group_friendly"
+    ],
+    "party_fit": "couple,friends",
+    "price_band": "$$",
+    "meal_window": "dinner ~5–10pm (brunch weekends)",
+    "official_url": "https://www.doveschicago.com/",
+    "reserve_url": null,
+    "image": null,
+    "status": "active",
+    "notes": "Wicker Park Tex-Mex diner-ish from One Off. Couple/friends; counter energy.",
+    "source_id": "editor_seed",
+    "scraped_at": "2026-09-23T12:55:00-05:00",
+    "first_seen": "2026-09-23",
+    "verify": "neighborhood beyond core 11 but in events inventory"
+  }
+]
