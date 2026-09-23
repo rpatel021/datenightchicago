@@ -19,6 +19,7 @@
   let timeBucket = "all";
   let party = "couple";
   let nightKey = null;
+  let flexible = false;
 
   const lanes = {
     eat: { key: "eat", title: "What to eat", pool: [], index: 0, identity: null },
@@ -309,27 +310,54 @@
       .join(" · ");
   }
 
-  function softPick(scored, minKeep) {
-    const want = Math.max(minKeep || 3, 1);
-    const sorted = scored.slice().sort((a, b) => b.score - a.score);
-    if (!sorted.length) return [];
-    const hard = sorted.filter((x) => x.score >= 100);
-    if (hard.length >= want) return hard;
-    const soft = sorted.filter((x) => x.score >= 50);
-    if (soft.length >= want) return soft;
-    const any = sorted.filter((x) => x.score >= 20);
-    if (any.length) return any;
-    return sorted.slice(0, Math.min(want, sorted.length));
+  function isStrictFit(h, t, vibeOk) {
+    return (category === "all" || vibeOk) && h >= 2 && t >= 2;
+  }
+
+  function isNearFit(h, t, vibeOk) {
+    if (isStrictFit(h, t, vibeOk)) return false;
+    // Near: vibe still holds (or All), plus near-time and/or near-hood — never party-soft.
+    if (category === "all" || vibeOk) {
+      if ((h >= 1 || hood === "all") && t >= 1) return true;
+      // Broader swipe options when Flexible is on: exact time, other hood (or reverse).
+      if (hood !== "all" && h === 0 && t >= 2) return true;
+      if (timeBucket !== "all" && t === 0 && h >= 2) return true;
+      return false;
+    }
+    // Soft vibe only when hood + time are exact.
+    return h >= 2 && t >= 2;
   }
 
   function flexMeta(hoodScore, timeScore, vibeOk) {
+    if (isStrictFit(hoodScore, timeScore, vibeOk)) return null;
     const flex = [];
     if (hood !== "all" && hoodScore < 2) flex.push("hood");
     if (timeBucket !== "all" && timeScore < 2) flex.push("time");
     if (category !== "all" && !vibeOk) flex.push("vibe");
-    return flex.length ? flex : null;
+    return flex.length ? flex : ["broader"];
   }
 
+  function pickByFit(scored) {
+    const sorted = scored.slice().sort((a, b) => b.score - a.score);
+    const strict = sorted.filter((x) => x.fit === "strict");
+    if (!flexible) return strict;
+    const near = sorted.filter((x) => x.fit === "near");
+    const seen = new Set();
+    const out = [];
+    strict.concat(near).forEach((x) => {
+      const id = x.id || String(out.length);
+      if (seen.has(id)) return;
+      seen.add(id);
+      out.push(x);
+    });
+    return out;
+  }
+
+  function scoreFit(h, t, vibeOk) {
+    if (isStrictFit(h, t, vibeOk)) return { fit: "strict", bonus: 100 };
+    if (isNearFit(h, t, vibeOk)) return { fit: "near", bonus: 50 };
+    return { fit: "out", bonus: 0 };
+  }
 
   function sourceRank(r) {
     if (r.source_id === "corridor_seed") return 0;
@@ -508,19 +536,31 @@
         const h = hoodMatchScore(r.neighborhood);
         const times = restaurantTimeBuckets(r);
         const t = timeMatchScore(times);
-        let score = 0;
+        const { fit, bonus } = scoreFit(h, t, vibeOk);
+        let score = bonus;
         if (vibeOk || category === "all") score += 40;
         else score += 5;
         score += h * 30;
         score += t * 25;
-        if ((category === "all" || vibeOk) && h >= 2 && t >= 2) score += 100;
-        else if ((category === "all" || vibeOk) && (h >= 1 || hood === "all") && t >= 1) score += 50;
-        else score += 20;
         if (r.image) score += 1;
-        return { r, score, h, t, vibeOk };
-      });
-    const picked = softPick(scored, 4);
-    return sortRestaurants(picked.map((x) => x.r)).map((r) => {
+        return {
+          r,
+          score,
+          h,
+          t,
+          vibeOk,
+          fit,
+          id: "eat:" + (r.restaurant_id || normName(r.name)),
+        };
+      })
+      .filter((x) => x.fit !== "out");
+    const picked = pickByFit(scored);
+    const strictRows = picked.filter((x) => x.fit === "strict");
+    const nearRows = picked.filter((x) => x.fit === "near");
+    const ordered = sortRestaurants(strictRows.map((x) => x.r)).concat(
+      sortRestaurants(nearRows.map((x) => x.r))
+    );
+    return ordered.map((r) => {
       const row = picked.find((p) => p.r === r) || { h: 2, t: 2, vibeOk: true };
       return asEatOption(r, flexMeta(row.h, row.t, row.vibeOk));
     });
@@ -539,53 +579,48 @@
         const h = hoodMatchScore(ev.neighborhood);
         const tb = eventTimeBucket(ev);
         const t = timeMatchScore(tb);
-        let score = scoreEvent(ev);
-        if ((category === "all" || vibeOk) && h >= 2 && t >= 2) score += 100;
-        else if ((category === "all" || vibeOk) && (h >= 1 || hood === "all") && t >= 1) score += 50;
-        else score += 20;
+        const { fit, bonus } = scoreFit(h, t, vibeOk);
+        let score = scoreEvent(ev) + bonus;
         if (!vibeOk && category !== "all") score -= 15;
-        return { ev, score, h, t, vibeOk };
-      });
+        return {
+          ev,
+          score,
+          h,
+          t,
+          vibeOk,
+          fit,
+          id: "then:" + (ev.event_id || normName(ev.name) + "|" + (ev.date || "")),
+        };
+      })
+      .filter((x) => x.fit !== "out");
 
-    let picked = softPick(scored, 4);
-
-    if (!picked.length && nightKey) {
-      const looser = events
-        .filter((ev) => {
-          if (String(ev.status || "").toLowerCase() === "cancelled") return false;
-          if (!partyFitsEvent(ev)) return false;
-          return ev.date === nightKey;
-        })
-        .map((ev) => {
-          const h = hoodMatchScore(ev.neighborhood);
-          const tb = eventTimeBucket(ev);
-          const t = timeMatchScore(tb);
-          return {
-            ev,
-            score: 30 + h * 20 + t * 15 + (ev.image ? 1 : 0),
-            h,
-            t,
-            vibeOk: matchesVibeEvent(ev),
-          };
-        });
-      picked = softPick(looser, 3);
-    }
+    let picked = pickByFit(scored);
 
     const out = picked
       .slice()
       .sort((a, b) => b.score - a.score)
       .map((x) => asEventOption(x.ev, flexMeta(x.h, x.t, x.vibeOk)));
 
-    if (!out.length) {
+    // Plan-curated "then": strict always eligible; near only when Flexible is on.
+    {
+      const have = new Set(out.map(optionId));
       relevantPlans().forEach((plan) => {
         const block = planPartyBlock(plan);
         const then = (block && block.then) || plan.then;
-        if (then && then.name) {
-          const h = hoodMatchScore(plan.corridor);
-          const tb = bucketFromMinutes(parseMinutes(then.start || ""));
-          const t = timeMatchScore(tb);
-          out.push(asPlanThenOption(plan, then, flexMeta(h, t, true)));
-        }
+        if (!then || !then.name) return;
+        const h = hoodMatchScore(plan.corridor);
+        const tb = bucketFromMinutes(parseMinutes(then.start || ""));
+        const t = timeMatchScore(tb);
+        const vibeOk = true;
+        const strict = isStrictFit(h, t, vibeOk);
+        const near = isNearFit(h, t, vibeOk);
+        if (!strict && !(flexible && near)) return;
+        const opt = asPlanThenOption(plan, then, flexMeta(h, t, vibeOk));
+        const id = optionId(opt);
+        if (have.has(id)) return;
+        have.add(id);
+        if (strict) out.unshift(opt);
+        else out.push(opt);
       });
     }
     return out;
@@ -608,10 +643,14 @@
     relevantPlans().forEach((plan) => {
       const block = planPartyBlock(plan);
       const backup = (block && block.backup) || plan.backup;
-      if (backup && backup.name) {
-        const h = hoodMatchScore(plan.corridor || backup.neighborhood);
-        const tb = bucketFromMinutes(parseMinutes(backup.start || ""));
-        push(asBackupOption(backup, plan, flexMeta(h, timeMatchScore(tb), true)));
+      if (!backup || !backup.name) return;
+      const h = hoodMatchScore(plan.corridor || backup.neighborhood);
+      const t = timeMatchScore(bucketFromMinutes(parseMinutes(backup.start || "")));
+      const vibeOk = true;
+      const strict = isStrictFit(h, t, vibeOk);
+      const near = isNearFit(h, t, vibeOk);
+      if (strict || (flexible && near)) {
+        push(asBackupOption(backup, plan, flexMeta(h, t, vibeOk)));
       }
     });
 
@@ -714,6 +753,11 @@
     return bits.join(" ");
   }
 
+  function renderFlexCue(item) {
+    if (!flexible || !item || !item._flex || !item._flex.length) return "";
+    return `<span class="flex-cue" title="Near match — filters stay put">Flexible pick</span>`;
+  }
+
   function renderChips(item) {
     if (!item) return "";
     const flex = item._flex || [];
@@ -763,7 +807,7 @@
       return `
         <div class="copy">
           <h3 class="option-title">No dinners in that mix</h3>
-          <p class="lede">Flip neighborhood, time, or vibe — Chicago’s still cooking.</p>
+          <p class="lede">${flexible ? "Nothing nearby enough — flip a filter." : "Flip a filter, or turn on Flexible for near matches."}</p>
         </div>`;
     }
     const cuisineLine = [item.cuisine, item.price_band].filter(Boolean).join(" · ");
@@ -772,6 +816,7 @@
     return `
       <div class="copy">
         <p class="eyebrow">${esc(item.neighborhood || "Chicago")}</p>
+        ${renderFlexCue(item)}
         ${renderChips(item)}
         ${cuisineLine ? `<p class="meta">${esc(cuisineLine)}</p>` : ""}
         <h3 class="option-title">${esc(item.name)}</h3>
@@ -792,7 +837,7 @@
       return `
         <div class="copy">
           <h3 class="option-title">Nothing locked for that night</h3>
-          <p class="lede">Try another night or time — or swipe Backup for a soft landing.</p>
+          <p class="lede">${flexible ? "Nothing nearby enough — try another night or time." : "Try another night or time — or turn on Flexible for near matches."}</p>
         </div>`;
     }
     const when = item.date ? nightLabel(item.date) : "";
@@ -801,6 +846,7 @@
     return `
       <div class="copy">
         <p class="eyebrow">${esc([item.neighborhood, when].filter(Boolean).join(" · ") || "Out tonight")}</p>
+        ${renderFlexCue(item)}
         ${renderChips(item)}
         <h3 class="option-title">${esc(item.name)}</h3>
         ${meta ? `<p class="meta">${esc(meta)}</p>` : ""}
@@ -820,7 +866,7 @@
       return `
         <div class="copy">
           <h3 class="option-title">You’re covered</h3>
-          <p class="lede">Widen the filters — we’ll find a plan B.</p>
+          <p class="lede">${flexible ? "Widen the filters — we’ll find a plan B." : "Widen the filters, or turn on Flexible for near matches."}</p>
         </div>`;
     }
     const metaBits = [item.start_time, item.cost, item.cuisine, item.price_band]
@@ -830,6 +876,7 @@
     return `
       <div class="copy">
         <p class="eyebrow">Plan B</p>
+        ${renderFlexCue(item)}
         ${renderChips(item)}
         <h3 class="option-title">${esc(item.name)}</h3>
         ${metaBits ? `<p class="meta">${esc(metaBits)}</p>` : ""}
@@ -1155,6 +1202,21 @@
     refreshFromFilters();
   });
 
+  const flexToggle = document.getElementById("flex-toggle");
+  function renderFlexible() {
+    if (!flexToggle) return;
+    flexToggle.setAttribute("aria-checked", flexible ? "true" : "false");
+    const state = flexToggle.querySelector(".flex-state");
+    if (state) state.textContent = flexible ? "On" : "Off";
+  }
+  if (flexToggle) {
+    flexToggle.addEventListener("click", () => {
+      flexible = !flexible;
+      renderFlexible();
+      refreshFromFilters();
+    });
+  }
+
   window.addEventListener("resize", () => sizeLanes());
 
   deckEl.addEventListener("keydown", (e) => {
@@ -1198,6 +1260,7 @@
       renderTimes();
       renderParty();
       renderNights();
+      renderFlexible();
       rebuildPools();
       renderDeck();
     })

@@ -118,6 +118,70 @@ body {
 #hood-row button[aria-selected="true"] { background: var(--sky); color: var(--ink); }
 #time-row button[aria-selected="true"] { background: #E8B4F8; color: var(--ink); }
 
+.flex-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 0.12rem;
+}
+.flex-block .toggle-label { margin-bottom: 0; }
+.flex-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 0;
+  background: transparent;
+  color: rgba(255,253,248,0.78);
+  font-family: system-ui, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.1rem 0;
+}
+.flex-track {
+  position: relative;
+  width: 2.35rem;
+  height: 1.28rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+.flex-thumb {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 50%;
+  background: rgba(255,253,248,0.85);
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+.flex-switch[aria-checked="true"] .flex-track {
+  background: rgba(184,242,194,0.35);
+  border-color: var(--mint);
+}
+.flex-switch[aria-checked="true"] .flex-thumb {
+  transform: translateX(1.05rem);
+  background: var(--mint);
+}
+.flex-switch[aria-checked="true"] .flex-state { color: var(--mint); font-weight: 700; }
+.flex-cue {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 0.35rem;
+  font-family: system-ui, sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,253,248,0.62);
+  border: 1px dashed rgba(255,253,248,0.35);
+  border-radius: 999px;
+  padding: 0.18rem 0.48rem;
+}
+
 .deck {
   flex: 1 1 auto;
   min-height: 0;
