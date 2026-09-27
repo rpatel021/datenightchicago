@@ -1,566 +1,6 @@
 [
   {
-    "for_night": "2026-09-21",
-    "corridor": "Lincoln Park",
-    "parties": {
-      "couple": {
-        "eat": {
-          "name": "Cafe Ba-Ba-Reeba",
-          "url": "https://www.cafebabareeba.com/",
-          "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg",
-          "dishes": [
-            {
-              "name": "Gambas",
-              "image": "images/dish-shrimp.jpg"
-            },
-            {
-              "name": "Patatas bravas",
-              "image": "images/dish-patatas.jpg"
-            }
-          ]
-        },
-        "then": {
-          "name": "Magic Mondays at iO",
-          "start": "7:00 PM",
-          "url": "https://www.choosechicago.com/event/magic-mondays-2/2026-09-21/",
-          "cost": "$20 (recommends 12+)",
-          "image": "https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?auto=format&fit=crop&w=1400&q=80"
-        },
-        "backup": {
-          "name": "Green Mill: Joel Paterson & Friends",
-          "url": "https://greenmilljazz.com/events/joel-paterson-friends-2-2026-09-21/",
-          "note": "Mon 8pm $10 \u2014 21+ / late. Couple or friends backup only; not family.",
-          "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
-          "images": [
-            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
-            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
-            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg"
-          ]
-        },
-        "transit": "Ride/Uber ~10\u201315 min Halsted \u2192 iO (1501 N Kingsbury). Or #8 Halsted + short walk west.",
-        "dont": "Don\u2019t cut dinner late\u2014seated by 5:15 for 7pm call. Don\u2019t default to River North after. Green Mill ba"
-      },
-      "family": {
-        "eat": {
-          "name": "Cafe Ba-Ba-Reeba",
-          "url": "https://www.cafebabareeba.com/",
-          "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg",
-          "dishes": [
-            {
-              "name": "Gambas",
-              "image": "images/dish-shrimp.jpg"
-            },
-            {
-              "name": "Patatas bravas",
-              "image": "images/dish-patatas.jpg"
-            }
-          ]
-        },
-        "then": {
-          "name": "Tangible Sound: Arrival to a Higher Ground (Chicago Cultural Center)",
-          "start": "Daytime / late afternoon (free exhibit)",
-          "url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/2026-09-21/",
-          "cost": "Free",
-          "image": "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1400&q=80"
-        },
-        "backup": {
-          "name": "Magic Mondays at iO ($20, recommends 12+)",
-          "url": "https://www.choosechicago.com/event/magic-mondays-2/2026-09-21/",
-          "note": "Skip Green Mill (21+/late). Prefer dessert walk in LP if museum closed early.",
-          "image": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80",
-          "images": [
-            "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80"
-          ]
-        },
-        "transit": "Early dinner in LP, then CTA/Uber downtown to Cultural Center (78 E Washington) for Tangible Sound before close.",
-        "dont": "Don\u2019t use Green Mill as family backup. Don\u2019t book Magic Mondays for under-12. Confirm Cultural Cente"
-      },
-      "friends": {
-        "eat": {
-          "name": "Cafe Ba-Ba-Reeba",
-          "url": "https://www.cafebabareeba.com/",
-          "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg",
-          "dishes": [
-            {
-              "name": "Gambas",
-              "image": "images/dish-shrimp.jpg"
-            },
-            {
-              "name": "Patatas bravas",
-              "image": "images/dish-patatas.jpg"
-            }
-          ]
-        },
-        "then": {
-          "name": "The Armando Diaz at iO",
-          "start": "7:00 PM",
-          "url": "https://www.choosechicago.com/event/the-armando-diaz/2026-09-21/",
-          "cost": "$17",
-          "image": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80"
-        },
-        "backup": {
-          "name": "Green Mill: Joel Paterson & Friends",
-          "url": "https://greenmilljazz.com/events/joel-paterson-friends-2-2026-09-21/",
-          "note": "Mon 8pm $10 \u2014 21+ / late. Couple or friends backup only; not family.",
-          "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
-          "images": [
-            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
-            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
-            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg"
-          ]
-        },
-        "transit": "Same LP \u2192 iO corridor as couple; Street/SpotHero near Kingsbury.",
-        "dont": "Don\u2019t arrive late for Armando. Green Mill after is optional 21+ jazz \u2014 not required."
-      }
-    },
-    "eat": {
-      "name": "Cafe Ba-Ba-Reeba",
-      "url": "https://www.cafebabareeba.com/",
-      "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg",
-      "dishes": [
-        {
-          "name": "Gambas"
-        },
-        {
-          "name": "Patatas bravas"
-        }
-      ]
-    },
-    "then": {
-      "name": "Magic Mondays at iO",
-      "start": "7:00 PM",
-      "url": "https://www.choosechicago.com/event/magic-mondays-2/2026-09-21/",
-      "cost": "$20 (recommends 12+)",
-      "image": "https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?auto=format&fit=crop&w=1400&q=80"
-    },
-    "backup": {
-      "name": "Green Mill: Joel Paterson & Friends",
-      "url": "https://greenmilljazz.com/events/joel-paterson-friends-2-2026-09-21/",
-      "note": "Mon 8pm $10 \u2014 21+ / late. Couple or friends backup only; not family."
-    },
-    "transit": "Ride/Uber ~10\u201315 min Halsted \u2192 iO (1501 N Kingsbury). Or #8 Halsted + short walk west.",
-    "dont": "Don\u2019t cut dinner late\u2014seated by 5:15 for 7pm call. Don\u2019t default to River North after. Green Mill ba",
-    "vibe": "Playful weeknight magic + shareable tapas; talk at dinner, quiet during the show",
-    "budget": "food+show ~$100\u2013130 for two"
-  },
-  {
-    "for_night": "2026-09-22",
-    "corridor": "Logan/Humboldt",
-    "parties": {
-      "couple": {
-        "eat": {
-          "name": "Lula Cafe",
-          "url": "https://www.lulacafe.com/",
-          "image": "https://images.getbento.com/accounts/7ddb4f625c4916181f9d829acbae6562/media/images/73830StockLula_1.jpg",
-          "dishes": [
-            {
-              "name": "Seasonal plate",
-              "image": "images/dish-seasonal.jpg"
-            },
-            {
-              "name": "Market veg",
-              "image": "images/dish-vegpasta.jpg"
-            }
-          ]
-        },
-        "then": {
-          "name": "Comic Court at Lincoln Lodge",
-          "start": "9:00 PM",
-          "url": "https://www.choosechicago.com/event/comic-court-chicagos-1-comedy-court-show/2026-09-22/",
-          "cost": "$8",
-          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
-        },
-        "backup": {
-          "name": "Logan Theatre",
-          "url": "https://www.logan-theatre.com",
-          "note": "If Lodge sold or 9pm is too late: catch a screen at Logan Theatre.",
-          "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80",
-          "images": [
-            "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80"
-          ]
-        },
-        "transit": "Walk/short ride Kedzie Blvd Lula \u2192 Lincoln Lodge. Blue Line Logan Square.",
-        "dont": "Don\u2019t try Lula brunch as pre-show (walk-in waits). Comic Court is 9pm \u2014 leave buffer."
-      },
-      "family": {
-        "eat": {
-          "name": "Lula Cafe",
-          "url": "https://www.lulacafe.com/",
-          "image": "https://images.getbento.com/accounts/7ddb4f625c4916181f9d829acbae6562/media/images/73830StockLula_1.jpg",
-          "dishes": [
-            {
-              "name": "Seasonal plate",
-              "image": "images/dish-seasonal.jpg"
-            },
-            {
-              "name": "Market veg",
-              "image": "images/dish-vegpasta.jpg"
-            }
-          ]
-        },
-        "then": {
-          "name": "Logan Theatre (kid-OK movie)",
-          "start": "Check showtimes day-of",
-          "url": "https://www.logan-theatre.com",
-          "cost": "Ticket prices vary",
-          "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80"
-        },
-        "backup": {
-          "name": "Dessert / ice cream walk in Logan Square",
-          "url": "https://www.lulacafe.com/",
-          "note": "Do NOT use Comic Court 9pm as family Then. Confirm movie rating day-of.",
-          "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80",
-          "images": [
-            "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80"
-          ]
-        },
-        "transit": "Stay in Logan Square \u2014 Lula then short walk/ride to Logan Theatre (2541 N Kedzie).",
-        "dont": "Never book Comic Court as family primary (late / standup vibe). Confirm showtimes day-of."
-      },
-      "friends": {
-        "eat": {
-          "name": "Lula Cafe",
-          "url": "https://www.lulacafe.com/",
-          "image": "https://images.getbento.com/accounts/7ddb4f625c4916181f9d829acbae6562/media/images/73830StockLula_1.jpg",
-          "dishes": [
-            {
-              "name": "Seasonal plate",
-              "image": "images/dish-seasonal.jpg"
-            },
-            {
-              "name": "Market veg",
-              "image": "images/dish-vegpasta.jpg"
-            }
-          ]
-        },
-        "then": {
-          "name": "Comic Court at Lincoln Lodge",
-          "start": "9:00 PM",
-          "url": "https://www.choosechicago.com/event/comic-court-chicagos-1-comedy-court-show/2026-09-22/",
-          "cost": "$8",
-          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
-        },
-        "backup": {
-          "name": "What\u2019s Funny festival at Comedy Bar River North",
-          "url": "https://www.choosechicago.com/",
-          "note": "Friends only if willing to leave Logan/Humboldt for River North \u2014 verify lineup day-of."
-        },
-        "transit": "Lula \u2192 Lincoln Lodge on foot/short ride. What\u2019s Funny backup means leaving corridor to River North.",
-        "dont": "Don\u2019t drag the group West Loop for dinner. What\u2019s Funny is friends-only stretch backup."
-      }
-    },
-    "eat": {
-      "name": "Lula Cafe",
-      "url": "https://www.lulacafe.com/",
-      "image": "https://images.getbento.com/accounts/7ddb4f625c4916181f9d829acbae6562/media/images/73830StockLula_1.jpg",
-      "dishes": [
-        {
-          "name": "Seasonal plate"
-        },
-        {
-          "name": "Market veg"
-        }
-      ]
-    },
-    "then": {
-      "name": "Comic Court at Lincoln Lodge",
-      "start": "9:00 PM",
-      "url": "https://www.choosechicago.com/event/comic-court-chicagos-1-comedy-court-show/2026-09-22/",
-      "cost": "$8",
-      "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
-    },
-    "backup": {
-      "name": "Logan Theatre",
-      "url": "https://www.logan-theatre.com",
-      "note": "If Lodge sold or 9pm is too late: catch a screen at Logan Theatre."
-    },
-    "transit": "Walk/short ride Kedzie Blvd Lula \u2192 Lincoln Lodge. Blue Line Logan Square.",
-    "dont": "Don\u2019t try Lula brunch as pre-show (walk-in waits). Comic Court is 9pm \u2014 leave buffer.",
-    "vibe": "Logan market dinner then late indie Comic Court \u2014 intimate under-$120 weeknight",
-    "budget": "Under ~$120 \u2014 Lula $$ + Comic Court $8\u00d72"
-  },
-  {
-    "for_night": "2026-09-23",
-    "corridor": "Andersonville/Uptown",
-    "parties": {
-      "couple": {
-        "eat": {
-          "name": "Hopleaf",
-          "url": "https://hopleafbar.com/",
-          "image": "https://hopleafbar.com/wp-content/uploads/2021/03/Unknown.jpeg",
-          "dishes": [
-            {
-              "name": "Mussels",
-              "image": "images/dish-mussels.jpg"
-            },
-            {
-              "name": "Frites",
-              "image": "images/dish-frites.jpg"
-            }
-          ]
-        },
-        "then": {
-          "name": "Walter King Jr. \u2018The Spellbinder\u2019 at Chicago Magic Lounge",
-          "start": "7:00 PM",
-          "url": "https://www.chicagomagiclounge.com/ono",
-          "cost": "$44 Main Floor / $50 Front Row (+ fee)",
-          "image": "https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?auto=format&fit=crop&w=1400&q=80"
-        },
-        "backup": {
-          "name": "Blind Wolf Comedy (DEN Hotel Lakeview)",
-          "url": "https://www.denhotelchicago.com/blindwolf",
-          "note": "If Magic Lounge sold: Blind Wolf free/tip speakeasy \u2014 VERIFY seating day-of.",
-          "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1400&q=80",
-          "images": [
-            "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1400&q=80"
-          ]
-        },
-        "transit": "Walk ~5 min Clark St Hopleaf (5148 N Clark) \u2192 Chicago Magic Lounge (5050 N Clark).",
-        "dont": "Don\u2019t skip ONO tickets\u2014they sell. Hopleaf is 21+ dining. Budget exceeds $120."
-      },
-      "family": {
-        "eat": {
-          "name": "Anteprima",
-          "url": "https://www.anteprimachicago.net/",
-          "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80",
-          "dishes": [
-            {
-              "name": "Pasta",
-              "image": "images/dish-pasta.jpg"
-            },
-            {
-              "name": "Antipasti",
-              "image": "images/dish-antipasti.jpg"
-            }
-          ]
-        },
-        "then": {
-          "name": "Tangible Sound: Arrival to a Higher Ground (Chicago Cultural Center)",
-          "start": "Daytime / late afternoon (free exhibit)",
-          "url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/2026-09-21/",
-          "cost": "Free",
-          "image": "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1400&q=80"
-        },
-        "backup": {
-          "name": "Lucy Darling at Studebaker (7:30 PM) \u2014 VERIFY age-appropriate",
-          "url": "https://www.choosechicago.com/event/lucy-darling-chicago-il-simply-darling-tour/2026-09-23/",
-          "note": "Character/comedy-magic tour \u2014 check age guidance before booking kids. Do not use Hopleaf (21+).",
-          "image": "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
-          "images": [
-            "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
-            "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3.png",
-            "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-32x32.png"
-          ]
-        },
-        "transit": "Early Anteprima on Clark, then CTA/Uber to Cultural Center for Tangible Sound before close \u2014 or stay north for Lucy Darl",
-        "dont": "Hopleaf is 21+ \u2014 do not use for family Eat. Confirm museum hours. Lucy Darling age guidance uncertai"
-      },
-      "friends": {
-        "eat": {
-          "name": "Hopleaf",
-          "url": "https://hopleafbar.com/",
-          "image": "https://hopleafbar.com/wp-content/uploads/2021/03/Unknown.jpeg",
-          "dishes": [
-            {
-              "name": "Mussels",
-              "image": "images/dish-mussels.jpg"
-            },
-            {
-              "name": "Frites",
-              "image": "images/dish-frites.jpg"
-            }
-          ]
-        },
-        "then": {
-          "name": "Blind Wolf Comedy at DEN Hotel Lakeview",
-          "start": "Evening (check day-of)",
-          "url": "https://www.denhotelchicago.com/blindwolf",
-          "cost": "Often free / tip \u2014 VERIFY seating via @blindwolfcomedy",
-          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
-        },
-        "backup": {
-          "name": "Lucy Darling at Studebaker 7:30 PM",
-          "url": "https://www.choosechicago.com/event/lucy-darling-chicago-il-simply-darling-tour/2026-09-23/",
-          "note": "Pivot if Blind Wolf line/verify fails. Magic Lounge Spellbinder also works if splurging.",
-          "image": "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
-          "images": [
-            "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
-            "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3.png",
-            "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-32x32.png"
-          ]
-        },
-        "transit": "Hopleaf \u2192 short ride to DEN Hotel Lakeview for Blind Wolf; or further to Studebaker for Lucy Darling.",
-        "dont": "Blind Wolf seating is verify=true. Don\u2019t sit bar-only at Hopleaf if the group needs to talk."
-      }
-    },
-    "eat": {
-      "name": "Hopleaf",
-      "url": "https://hopleafbar.com/",
-      "image": "https://hopleafbar.com/wp-content/uploads/2021/03/Unknown.jpeg",
-      "dishes": [
-        {
-          "name": "Mussels"
-        },
-        {
-          "name": "Frites"
-        }
-      ]
-    },
-    "then": {
-      "name": "Walter King Jr. \u2018The Spellbinder\u2019 at Chicago Magic Lounge",
-      "start": "7:00 PM",
-      "url": "https://www.chicagomagiclounge.com/ono",
-      "cost": "$44 Main Floor / $50 Front Row (+ fee)",
-      "image": "https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?auto=format&fit=crop&w=1400&q=80"
-    },
-    "backup": {
-      "name": "Blind Wolf Comedy (DEN Hotel Lakeview)",
-      "url": "https://www.denhotelchicago.com/blindwolf",
-      "note": "If Magic Lounge sold: Blind Wolf free/tip speakeasy \u2014 VERIFY seating day-of."
-    },
-    "transit": "Walk ~5 min Clark St Hopleaf (5148 N Clark) \u2192 Chicago Magic Lounge (5050 N Clark).",
-    "dont": "Don\u2019t skip ONO tickets\u2014they sell. Hopleaf is 21+ dining. Budget exceeds $120.",
-    "vibe": "Andersonville talk-dinner then close-up magic; intimate table show, strong date ",
-    "budget": "OVER ~$120 \u2014 Magic Lounge tickets ~$98\u2013110 for two + Hopleaf"
-  },
-  {
-    "for_night": "2026-09-24",
-    "corridor": "Old Town",
-    "parties": {
-      "couple": {
-        "eat": {
-          "name": "Orso's",
-          "url": "https://www.orsosrestaurant.com/",
-          "image": "https://orsos-restaurant.s3.us-west-2.amazonaws.com/orsos-front-restaurant.webp",
-          "dishes": [
-            {
-              "name": "Pasta",
-              "image": "images/dish-pasta.jpg"
-            },
-            {
-              "name": "Antipasti",
-              "image": "images/dish-antipasti.jpg"
-            }
-          ]
-        },
-        "then": {
-          "name": "Cliff Cash at Zanies",
-          "start": "7:00 PM",
-          "url": "https://chicago.zanies.com/calendar/category/series/2026-cliff-cash/zanies-comedy-club-chicago/chicago-illinois/",
-          "cost": "from ~$43 (21+)",
-          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
-        },
-        "backup": {
-          "name": "Second City: Pandemonium Please Hold",
-          "url": "https://www.choosechicago.com/event/pandemonium-please-hold/2026-09-23/",
-          "note": "Weeknight sketch alt if Zanies sold or you want earlier; confirm exact Thu/Fri showtimes.",
-          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
-          "images": [
-            "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
-          ]
-        },
-        "transit": "Walk ~5\u20138 min Wells St Orso\u2019s \u2192 Zanies (1548 N Wells).",
-        "dont": "Don\u2019t book the 9:15pm set if you want talk after. 21+ at Zanies."
-      },
-      "family": {
-        "eat": {
-          "name": "Orso's",
-          "url": "https://www.orsosrestaurant.com/",
-          "image": "https://orsos-restaurant.s3.us-west-2.amazonaws.com/orsos-front-restaurant.webp",
-          "dishes": [
-            {
-              "name": "Pasta",
-              "image": "images/dish-pasta.jpg"
-            },
-            {
-              "name": "Antipasti",
-              "image": "images/dish-antipasti.jpg"
-            }
-          ]
-        },
-        "then": {
-          "name": "Second City: Pandemonium Please Hold (weeknight / early)",
-          "start": "Confirm weeknight showtime",
-          "url": "https://www.choosechicago.com/event/pandemonium-please-hold/2026-09-23/",
-          "cost": "from ~$45 \u2014 sketch often OK for older kids; VERIFY",
-          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
-        },
-        "backup": {
-          "name": "Early movie near Old Town / River North",
-          "url": "https://www.amctheatres.com/",
-          "note": "If Second City age/content uncertain: early movie + dessert. Never Zanies for family."
-        },
-        "transit": "Orso\u2019s on Wells \u2192 short walk to Second City (1616 N Wells) if showing; else ride to a nearby cinema.",
-        "dont": "NEVER use Zanies 21+ as family Then. Confirm Second City age suitability day-of."
-      },
-      "friends": {
-        "eat": {
-          "name": "Orso's",
-          "url": "https://www.orsosrestaurant.com/",
-          "image": "https://orsos-restaurant.s3.us-west-2.amazonaws.com/orsos-front-restaurant.webp",
-          "dishes": [
-            {
-              "name": "Pasta",
-              "image": "images/dish-pasta.jpg"
-            },
-            {
-              "name": "Antipasti",
-              "image": "images/dish-antipasti.jpg"
-            }
-          ]
-        },
-        "then": {
-          "name": "Cliff Cash at Zanies",
-          "start": "7:00 PM",
-          "url": "https://chicago.zanies.com/calendar/category/series/2026-cliff-cash/zanies-comedy-club-chicago/chicago-illinois/",
-          "cost": "from ~$43 (21+)",
-          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
-        },
-        "backup": {
-          "name": "Second City: Pandemonium Please Hold",
-          "url": "https://www.choosechicago.com/event/pandemonium-please-hold/2026-09-23/",
-          "note": "Weeknight sketch alt if Zanies sold or you want earlier; confirm exact Thu/Fri showtimes.",
-          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
-          "images": [
-            "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
-          ]
-        },
-        "transit": "Walk Orso\u2019s \u2192 Zanies. Easy no-car corridor.",
-        "dont": "Don\u2019t wander to River North clubs after. Prefer 7pm set over 9:15."
-      }
-    },
-    "eat": {
-      "name": "Orso's",
-      "url": "https://www.orsosrestaurant.com/",
-      "image": "https://orsos-restaurant.s3.us-west-2.amazonaws.com/orsos-front-restaurant.webp",
-      "dishes": [
-        {
-          "name": "Pasta"
-        },
-        {
-          "name": "Antipasti"
-        }
-      ]
-    },
-    "then": {
-      "name": "Cliff Cash at Zanies",
-      "start": "7:00 PM",
-      "url": "https://chicago.zanies.com/calendar/category/series/2026-cliff-cash/zanies-comedy-club-chicago/chicago-illinois/",
-      "cost": "from ~$43 (21+)",
-      "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
-    },
-    "backup": {
-      "name": "Second City: Pandemonium Please Hold",
-      "url": "https://www.choosechicago.com/event/pandemonium-please-hold/2026-09-23/",
-      "note": "Weeknight sketch alt if Zanies sold or you want earlier; confirm exact Thu/Fri showtimes."
-    },
-    "transit": "Walk ~5\u20138 min Wells St Orso\u2019s \u2192 Zanies (1548 N Wells).",
-    "dont": "Don\u2019t book the 9:15pm set if you want talk after. 21+ at Zanies.",
-    "vibe": "Classic Old Town Italian booths then early Zanies headliner; talk at dinner, lau",
-    "budget": "Near/over $120 \u2014 tickets ~$86 for two + Orso\u2019s $$"
-  },
-  {
-    "for_night": "2026-09-25",
+    "for_night": "2026-09-28",
     "corridor": "Old Town",
     "parties": {
       "couple": {
@@ -571,7 +11,7 @@
           "dishes": [
             {
               "name": "Baby back ribs",
-              "image": "images/dish-ribs.jpg"
+              "image": "https://www.twinanchorsribs.com/wp-content/uploads/Hero-image.jpg"
             },
             {
               "name": "Plate",
@@ -580,57 +20,60 @@
           ]
         },
         "then": {
-          "name": "Second City: Pandemonium Please Hold (Mainstage)",
-          "start": "6:30 PM",
-          "url": "https://www.choosechicago.com/event/pandemonium-please-hold-2/2026-09-25/",
-          "cost": "from ~$45",
-          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
+          "name": "Best of The Second City",
+          "start": "7:00 PM",
+          "url": "https://do312.com/events/2026/9/28/best-of-the-second-city-tickets",
+          "cost": "Ticketed",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34558450/8148ac76-4f6a-40bd-9071-789bef3279db.jpg"
         },
         "backup": {
-          "name": "Cliff Cash at Zanies Fri 7pm (or later set)",
-          "url": "https://chicago.zanies.com/calendar/category/series/2026-cliff-cash/zanies-comedy-club-chicago/chicago-illinois/",
-          "note": "If Twin Anchors wait blows 6:30 call: Orso\u2019s OpenTable then Zanies \u2014 or later Second City if available.",
-          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31250271/b6d77546-9cfa-4372-a7d2-9e6e6e6e6e6e",
+          "name": "Green Mill: Joel Paterson & Friends",
+          "url": "https://greenmilljazz.com/events/joel-paterson-friends-2-2026-09-28/",
+          "note": "Mon 8pm Uptown jazz staple — 21+/late. Couple or friends backup; not family.",
+          "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
           "images": [
-            "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31250271/b6d77546-9cfa-4372-a7d2-9e6e6e6e6e6e",
-            "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31250271/b6d77546-9cfa-4372-a7d2-97bdbcd5b9e4.png",
-            "https://cloudinary-assets.dostuffmedia.com/res/dostuff-media/image/upload/featuredlink-photo-62940/1784866117.jpg",
-            "https://dostuff-assets.s3.amazonaws.com/property_asset/69740/tiktok.png"
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg"
           ]
         },
-        "transit": "Walk Sedgwick Twin Anchors \u2192 Second City (1616 N Wells). Leave 20+ min buffer.",
-        "dont": "Don\u2019t arrive Twin Anchors at 5:45 Fri expecting a booth. Budget over $120."
+        "transit": "Walk Wells/North from Twin Anchors → Second City (~5–8 min). Backup: Red Line to Lawrence for Green Mill.",
+        "dont": "Don’t cut ribs dinner late — seated by 5:15 for a 7pm Best Of. Green Mill is 21+ nightcap only."
       },
       "family": {
         "eat": {
-          "name": "Twin Anchors Restaurant & Tavern",
-          "url": "https://www.twinanchorsribs.com/",
-          "image": "https://www.twinanchorsribs.com/wp-content/uploads/Hero-image.jpg",
+          "name": "Orso's",
+          "url": "https://www.orsosrestaurant.com/",
+          "image": "https://orsos-restaurant.s3.us-west-2.amazonaws.com/orsos-front-restaurant.webp",
           "dishes": [
             {
-              "name": "Baby back ribs",
-              "image": "images/dish-ribs.jpg"
+              "name": "Pasta",
+              "image": "https://orsos-restaurant.s3.us-west-2.amazonaws.com/orsos-front-restaurant.webp"
             },
             {
-              "name": "Plate",
-              "image": "https://www.twinanchorsribs.com/wp-content/uploads/Hero-image.jpg"
+              "name": "Antipasti",
+              "image": "https://orsos-restaurant.s3.us-west-2.amazonaws.com/orsos-front-restaurant.webp"
             }
           ]
         },
         "then": {
-          "name": "Second City: Pandemonium Please Hold (Mainstage)",
-          "start": "6:30 PM",
-          "url": "https://www.choosechicago.com/event/pandemonium-please-hold-2/2026-09-25/",
-          "cost": "from ~$45",
-          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
+          "name": "Best of The Second City",
+          "start": "7:00 PM",
+          "url": "https://do312.com/events/2026/9/28/best-of-the-second-city-tickets",
+          "cost": "Ticketed",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34558450/8148ac76-4f6a-40bd-9071-789bef3279db.jpg"
         },
         "backup": {
-          "name": "Early dessert / Old Town walk \u2014 skip late clubs",
-          "url": "https://www.twinanchorsribs.com/",
-          "note": "If sketch content uncertain for your kids: ribs + gelato/walk only. Never Zanies 21+."
+          "name": "The Armando Diaz Experience at iO",
+          "url": "https://www.choosechicago.com/event/the-armando-diaz/2026-09-28/",
+          "note": "If Best Of is tight: Armando at iO — check age vibe. Skip Green Mill with kids.",
+          "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1400&q=80",
+          "images": [
+            "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1400&q=80"
+          ]
         },
-        "transit": "Arrive Twin Anchors early; short walk to Second City for 6:30.",
-        "dont": "Don\u2019t use Zanies as family Then. Confirm sketch suitability; leave before late sets."
+        "transit": "Orso’s → Second City is an easy Old Town stroll. iO backup is a short ride to Kingsbury.",
+        "dont": "Skip Green Mill with kids. Confirm Second City age guidance for littles."
       },
       "friends": {
         "eat": {
@@ -640,7 +83,7 @@
           "dishes": [
             {
               "name": "Baby back ribs",
-              "image": "images/dish-ribs.jpg"
+              "image": "https://www.twinanchorsribs.com/wp-content/uploads/Hero-image.jpg"
             },
             {
               "name": "Plate",
@@ -649,19 +92,25 @@
           ]
         },
         "then": {
-          "name": "Cliff Cash at Zanies (Fri)",
+          "name": "Best of The Second City",
           "start": "7:00 PM",
-          "url": "https://chicago.zanies.com/calendar/category/series/2026-cliff-cash/zanies-comedy-club-chicago/chicago-illinois/",
-          "cost": "from ~$43 (21+)",
-          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
+          "url": "https://do312.com/events/2026/9/28/best-of-the-second-city-tickets",
+          "cost": "Ticketed",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34558450/8148ac76-4f6a-40bd-9071-789bef3279db.jpg"
         },
         "backup": {
-          "name": "Second City Pandemonium 6:30 PM",
-          "url": "https://www.choosechicago.com/event/pandemonium-please-hold-2/2026-09-25/",
-          "note": "If group wants earlier call time than Zanies 7pm."
+          "name": "Green Mill: Joel Paterson & Friends",
+          "url": "https://greenmilljazz.com/events/joel-paterson-friends-2-2026-09-28/",
+          "note": "Mon 8pm Uptown jazz staple — 21+/late. Couple or friends backup; not family.",
+          "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+          "images": [
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg"
+          ]
         },
-        "transit": "Twin Anchors \u2192 walk Wells to Zanies (1548 N Wells).",
-        "dont": "21+ at Zanies. Don\u2019t blow the call time on a long Twin Anchors wait \u2014 arrive early."
+        "transit": "Ribs then sketch on Wells. Optional late jazz hop north to the Mill.",
+        "dont": "Don’t stack a second 9pm show without checking runtimes."
       }
     },
     "eat": {
@@ -670,164 +119,752 @@
       "image": "https://www.twinanchorsribs.com/wp-content/uploads/Hero-image.jpg",
       "dishes": [
         {
-          "name": "Baby back ribs"
+          "name": "Baby back ribs",
+          "image": "https://www.twinanchorsribs.com/wp-content/uploads/Hero-image.jpg"
         },
         {
-          "name": "Plate"
+          "name": "Plate",
+          "image": "https://www.twinanchorsribs.com/wp-content/uploads/Hero-image.jpg"
         }
       ]
     },
     "then": {
-      "name": "Second City: Pandemonium Please Hold (Mainstage)",
-      "start": "6:30 PM",
-      "url": "https://www.choosechicago.com/event/pandemonium-please-hold-2/2026-09-25/",
-      "cost": "from ~$45",
-      "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
+      "name": "Best of The Second City",
+      "start": "7:00 PM",
+      "url": "https://do312.com/events/2026/9/28/best-of-the-second-city-tickets",
+      "cost": "Ticketed",
+      "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34558450/8148ac76-4f6a-40bd-9071-789bef3279db.jpg"
     },
     "backup": {
-      "name": "Cliff Cash at Zanies Fri 7pm (or later set)",
-      "url": "https://chicago.zanies.com/calendar/category/series/2026-cliff-cash/zanies-comedy-club-chicago/chicago-illinois/",
-      "note": "If Twin Anchors wait blows 6:30 call: Orso\u2019s OpenTable then Zanies \u2014 or later Second City if available."
+      "name": "Green Mill: Joel Paterson & Friends",
+      "url": "https://greenmilljazz.com/events/joel-paterson-friends-2-2026-09-28/",
+      "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+      "note": "Mon 8pm Uptown jazz staple — 21+/late. Couple or friends backup; not family."
     },
-    "transit": "Walk Sedgwick Twin Anchors \u2192 Second City (1616 N Wells). Leave 20+ min buffer.",
-    "dont": "Don\u2019t arrive Twin Anchors at 5:45 Fri expecting a booth. Budget over $120.",
-    "vibe": "Old Town classic: early ribs walk-in then Second City Mainstage sketch",
-    "budget": "OVER ~$120 \u2014 Mainstage from $45\u00d72 plus Twin Anchors ribs/dri"
+    "transit": "Walk Wells/North from Twin Anchors → Second City (~5–8 min). Backup: Red Line to Lawrence for Green Mill.",
+    "dont": "Don’t cut ribs dinner late — seated by 5:15 for a 7pm Best Of. Green Mill is 21+ nightcap only.",
+    "vibe": "Classic Old Town weeknight — ribs, sketch comedy, optional Uptown jazz",
+    "budget": "food+show ~$90–140 for two"
   },
   {
-    "for_night": "2026-09-26",
+    "for_night": "2026-09-30",
     "corridor": "Lincoln Park",
     "parties": {
       "couple": {
         "eat": {
-          "name": "Mon Ami Gabi",
-          "url": "https://www.monamigabi.com/chicago/",
-          "image": "https://storage.googleapis.com/monamigabi2023_bucket/wp-content/uploads/a3607ff2-7b8a7573.png",
+          "name": "Cafe Ba-Ba-Reeba",
+          "url": "https://www.cafebabareeba.com/",
+          "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg",
           "dishes": [
             {
-              "name": "Steak frites",
-              "image": "images/dish-steak.jpg"
+              "name": "Gambas",
+              "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg"
             },
             {
-              "name": "Roast chicken",
-              "image": "images/dish-roast.jpg"
+              "name": "Patatas bravas",
+              "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg"
             }
           ]
         },
         "then": {
-          "name": "The Best of iO",
+          "name": "Topdog/Underdog at Steppenwolf",
           "start": "7:30 PM",
-          "url": "https://www.choosechicago.com/event/the-best-of-io/2026-09-26/",
-          "cost": "$22",
-          "image": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80"
+          "url": "https://do312.com/events/2026/9/30/topdog-underdog-tickets",
+          "cost": "Ticketed",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34375914/e96d56af-6e2f-4709-b7f4-cbd250c87f3b.jpg"
         },
         "backup": {
-          "name": "Other iO rooms / rain-check Magic Mondays",
-          "url": "https://ioimprov.com",
-          "note": "If Best of iO sold: check same-night iO rooms. Avoid Kingston Mines as date backup.",
-          "image": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80",
+          "name": "Second City: Pandemonium, Please Hold",
+          "url": "https://do312.com/events/2026/9/30/pandemonium-please-hold-tickets",
+          "note": "If Steppenwolf is scarce: Pandemonium at Second City — short ride south to Old Town.",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34604834/d4fe4b6e-37b5-44d5-95c0-685319f751d5.jpg",
           "images": [
-            "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1400&q=80"
+            "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34604834/d4fe4b6e-37b5-44d5-95c0-685319f751d5.jpg"
           ]
         },
-        "transit": "Short Uber Lincoln Park West \u2192 iO Kingsbury (~10\u201315 min).",
-        "dont": "Don\u2019t linger past ~6:45 at Mon Ami Gabi for 7:30 call. Talk before/after\u2014improv needs quiet during."
+        "transit": "Halsted tapas → Steppenwolf (1650 N Halsted) walk/short ride. Second City backup ~10 min south.",
+        "dont": "Don’t under-budget curtain — be seated early. Read Topdog content notes before you go."
       },
       "family": {
         "eat": {
-          "name": "Mon Ami Gabi",
-          "url": "https://www.monamigabi.com/chicago/",
-          "image": "https://storage.googleapis.com/monamigabi2023_bucket/wp-content/uploads/a3607ff2-7b8a7573.png",
+          "name": "Cafe Ba-Ba-Reeba",
+          "url": "https://www.cafebabareeba.com/",
+          "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg",
           "dishes": [
             {
-              "name": "Steak frites",
-              "image": "images/dish-steak.jpg"
+              "name": "Gambas",
+              "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg"
             },
             {
-              "name": "Roast chicken",
-              "image": "images/dish-roast.jpg"
+              "name": "Patatas bravas",
+              "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg"
             }
           ]
         },
         "then": {
-          "name": "Hyde Park Jazz Festival \u2014 Smart Museum afternoon (free)",
-          "start": "Afternoon (check festival schedule)",
-          "url": "https://www.hydeparkjazzfestival.org/",
-          "cost": "Free",
-          "image": "https://images.unsplash.com/photo-1415201364774-f6f0bb35d5d1?auto=format&fit=crop&w=1400&q=80"
+          "name": "Topdog/Underdog at Steppenwolf",
+          "start": "7:30 PM",
+          "url": "https://do312.com/events/2026/9/30/topdog-underdog-tickets",
+          "cost": "Ticketed",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34375914/e96d56af-6e2f-4709-b7f4-cbd250c87f3b.jpg"
         },
         "backup": {
-          "name": "Tangible Sound free exhibit (through 9/27 daytime)",
-          "url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/2026-09-21/",
-          "note": "Do early dinner only in LP and skip late iO if jazz fest logistics are hard."
+          "name": "Second City: Pandemonium, Please Hold",
+          "url": "https://do312.com/events/2026/9/30/pandemonium-please-hold-tickets",
+          "note": "Pandemonium can work for older kids; Topdog is sharper/adult — check advisories.",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34604834/d4fe4b6e-37b5-44d5-95c0-685319f751d5.jpg",
+          "images": [
+            "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34604834/d4fe4b6e-37b5-44d5-95c0-685319f751d5.jpg"
+          ]
         },
-        "transit": "Early Gabi in LP; then rideshare to Hyde Park Smart Museum for festival programming \u2014 or Cultural Center for Tangible So",
-        "dont": "Don\u2019t take young kids to late Best of iO / Harold\u2019s After Dark. Confirm jazz fest afternoon schedule"
+        "transit": "Stay on Halsted — Ba-Ba-Reeba to Steppenwolf is easy.",
+        "dont": "Check Topdog advisories before bringing teens."
       },
       "friends": {
         "eat": {
-          "name": "Mon Ami Gabi",
-          "url": "https://www.monamigabi.com/chicago/",
-          "image": "https://storage.googleapis.com/monamigabi2023_bucket/wp-content/uploads/a3607ff2-7b8a7573.png",
+          "name": "Cafe Ba-Ba-Reeba",
+          "url": "https://www.cafebabareeba.com/",
+          "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg",
           "dishes": [
             {
-              "name": "Steak frites",
-              "image": "images/dish-steak.jpg"
+              "name": "Gambas",
+              "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg"
             },
             {
-              "name": "Roast chicken",
-              "image": "images/dish-roast.jpg"
+              "name": "Patatas bravas",
+              "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg"
             }
           ]
         },
         "then": {
-          "name": "The Best of iO",
+          "name": "Topdog/Underdog at Steppenwolf",
           "start": "7:30 PM",
-          "url": "https://www.choosechicago.com/event/the-best-of-io/2026-09-26/",
-          "cost": "$22",
-          "image": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80"
+          "url": "https://do312.com/events/2026/9/30/topdog-underdog-tickets",
+          "cost": "Ticketed",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34375914/e96d56af-6e2f-4709-b7f4-cbd250c87f3b.jpg"
         },
         "backup": {
-          "name": "Harold\u2019s After Dark at iO 11pm $10",
-          "url": "https://ioimprov.com",
-          "note": "Late \u2014 friends only. Earlier Best of iO is the safer primary.",
-          "image": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80",
+          "name": "Second City: Pandemonium, Please Hold",
+          "url": "https://do312.com/events/2026/9/30/pandemonium-please-hold-tickets",
+          "note": "If Steppenwolf is scarce: Pandemonium at Second City — short ride south to Old Town.",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34604834/d4fe4b6e-37b5-44d5-95c0-685319f751d5.jpg",
           "images": [
-            "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80"
+            "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34604834/d4fe4b6e-37b5-44d5-95c0-685319f751d5.jpg"
           ]
         },
-        "transit": "Gabi \u2192 Uber to iO. Stay for Harold\u2019s After Dark only if energy is there.",
-        "dont": "Harold\u2019s After Dark is 11pm \u2014 friends only, not a first date or family plan."
+        "transit": "Share plates then theater on Halsted. Post-show nearby — not River North by default.",
+        "dont": "Book Steppenwolf early midweek for a group."
       }
     },
     "eat": {
-      "name": "Mon Ami Gabi",
-      "url": "https://www.monamigabi.com/chicago/",
-      "image": "https://storage.googleapis.com/monamigabi2023_bucket/wp-content/uploads/a3607ff2-7b8a7573.png",
+      "name": "Cafe Ba-Ba-Reeba",
+      "url": "https://www.cafebabareeba.com/",
+      "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg",
       "dishes": [
         {
-          "name": "Steak frites"
+          "name": "Gambas",
+          "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg"
         },
         {
-          "name": "Roast chicken"
+          "name": "Patatas bravas",
+          "image": "https://storage.googleapis.com/cafebabareeba_bucket/wp-content/uploads/c6cfd608-cbbr_spring-menu_0041-1.jpg"
         }
       ]
     },
     "then": {
-      "name": "The Best of iO",
+      "name": "Topdog/Underdog at Steppenwolf",
       "start": "7:30 PM",
-      "url": "https://www.choosechicago.com/event/the-best-of-io/2026-09-26/",
-      "cost": "$22",
-      "image": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1400&q=80"
+      "url": "https://do312.com/events/2026/9/30/topdog-underdog-tickets",
+      "cost": "Ticketed",
+      "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34375914/e96d56af-6e2f-4709-b7f4-cbd250c87f3b.jpg"
     },
     "backup": {
-      "name": "Other iO rooms / rain-check Magic Mondays",
-      "url": "https://ioimprov.com",
-      "note": "If Best of iO sold: check same-night iO rooms. Avoid Kingston Mines as date backup."
+      "name": "Second City: Pandemonium, Please Hold",
+      "url": "https://do312.com/events/2026/9/30/pandemonium-please-hold-tickets",
+      "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34604834/d4fe4b6e-37b5-44d5-95c0-685319f751d5.jpg",
+      "note": "If Steppenwolf is scarce: Pandemonium at Second City — short ride south to Old Town."
     },
-    "transit": "Short Uber Lincoln Park West \u2192 iO Kingsbury (~10\u201315 min).",
-    "dont": "Don\u2019t linger past ~6:45 at Mon Ami Gabi for 7:30 call. Talk before/after\u2014improv needs quiet during.",
-    "vibe": "Lincoln Park French bistro then Best of iO improv; polished weekend without stad",
-    "budget": "Near/over $120 \u2014 tickets $44 for two + Mon Ami Gabi dinner"
+    "transit": "Halsted tapas → Steppenwolf (1650 N Halsted) walk/short ride. Second City backup ~10 min south.",
+    "dont": "Don’t under-budget curtain — be seated early. Read Topdog content notes before you go.",
+    "vibe": "Lincoln Park theater night — shareable tapas, serious stage, easy Halsted spine",
+    "budget": "food+show ~$120–180 for two"
+  },
+  {
+    "for_night": "2026-10-01",
+    "corridor": "Andersonville/Uptown",
+    "parties": {
+      "couple": {
+        "eat": {
+          "name": "Anteprima",
+          "url": "https://www.anteprimachicago.net/",
+          "image": "https://images.squarespace-cdn.com/content/v1/5b04ad0596d455bcadf5a4f1/1529047504361-R48IO9NNCWH6XSRLQSTN/Anteprima+Exterior.JPG",
+          "dishes": [
+            {
+              "name": "Pasta",
+              "image": "https://images.squarespace-cdn.com/content/v1/5b04ad0596d455bcadf5a4f1/1529047504361-R48IO9NNCWH6XSRLQSTN/Anteprima+Exterior.JPG"
+            },
+            {
+              "name": "Antipasti",
+              "image": "https://images.squarespace-cdn.com/content/v1/5b04ad0596d455bcadf5a4f1/1529047504361-R48IO9NNCWH6XSRLQSTN/Anteprima+Exterior.JPG"
+            }
+          ]
+        },
+        "then": {
+          "name": "The Signature Show at Chicago Magic Lounge",
+          "start": "8:00 PM",
+          "url": "https://www.chicagomagiclounge.com/signature-show",
+          "cost": "from ~$40+",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33021981/1bcde3d8-85ae-4f77-bcb0-8438c64a3ecf.jpg"
+        },
+        "backup": {
+          "name": "Green Mill: Alan Gresik's Swing Orchestra",
+          "url": "https://greenmilljazz.com/events/8pm-midnight-alan-gresiks-swing-orchestra-2026-10-01/",
+          "note": "Uptown jazz backup — Alan Gresik swing orchestra at Green Mill. 21+. Not family.",
+          "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+          "images": [
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg"
+          ]
+        },
+        "transit": "Anteprima (Uptown) → Magic Lounge (Andersonville) is a short Clark ride. Mill backup on Broadway.",
+        "dont": "Reserve Magic Lounge — cabaret seating books up. 21+; 16+ with guardian."
+      },
+      "family": {
+        "eat": {
+          "name": "Hopleaf",
+          "url": "https://hopleafbar.com/",
+          "image": "https://hopleafbar.com/wp-content/uploads/2021/03/Unknown.jpeg",
+          "dishes": [
+            {
+              "name": "Mussels",
+              "image": "https://hopleafbar.com/wp-content/uploads/2021/03/Unknown.jpeg"
+            },
+            {
+              "name": "Frites",
+              "image": "https://hopleafbar.com/wp-content/uploads/2021/03/Unknown.jpeg"
+            }
+          ]
+        },
+        "then": {
+          "name": "Inevitable: Magic & Mentalism at Stars & Garters",
+          "start": "7:00 PM",
+          "url": "https://do312.com/events/2026/10/1/inevitable-a-new-magic-and-mentalism-show",
+          "cost": "Ticketed",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34118144/560cc6b8-e51c-4c4f-b6e2-ab0ab8f4c47a.png"
+        },
+        "backup": {
+          "name": "Chicago Magic Lounge Signature Show",
+          "url": "https://www.chicagomagiclounge.com/signature-show",
+          "note": "Magic Lounge Signature can work 16+ with guardian — confirm policy. Skip Mill late sets with kids.",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33021981/1bcde3d8-85ae-4f77-bcb0-8438c64a3ecf.jpg",
+          "images": [
+            "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33021981/1bcde3d8-85ae-4f77-bcb0-8438c64a3ecf.jpg"
+          ]
+        },
+        "transit": "Hopleaf → Stars & Garters (Avondale) short west ride; or stay north for Magic Lounge.",
+        "dont": "Green Mill late ≠ family plan. Confirm magic age rules."
+      },
+      "friends": {
+        "eat": {
+          "name": "Anteprima",
+          "url": "https://www.anteprimachicago.net/",
+          "image": "https://images.squarespace-cdn.com/content/v1/5b04ad0596d455bcadf5a4f1/1529047504361-R48IO9NNCWH6XSRLQSTN/Anteprima+Exterior.JPG",
+          "dishes": [
+            {
+              "name": "Pasta",
+              "image": "https://images.squarespace-cdn.com/content/v1/5b04ad0596d455bcadf5a4f1/1529047504361-R48IO9NNCWH6XSRLQSTN/Anteprima+Exterior.JPG"
+            },
+            {
+              "name": "Antipasti",
+              "image": "https://images.squarespace-cdn.com/content/v1/5b04ad0596d455bcadf5a4f1/1529047504361-R48IO9NNCWH6XSRLQSTN/Anteprima+Exterior.JPG"
+            }
+          ]
+        },
+        "then": {
+          "name": "The Signature Show at Chicago Magic Lounge",
+          "start": "8:00 PM",
+          "url": "https://www.chicagomagiclounge.com/signature-show",
+          "cost": "from ~$40+",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33021981/1bcde3d8-85ae-4f77-bcb0-8438c64a3ecf.jpg"
+        },
+        "backup": {
+          "name": "Green Mill: Alan Gresik's Swing Orchestra",
+          "url": "https://greenmilljazz.com/events/8pm-midnight-alan-gresiks-swing-orchestra-2026-10-01/",
+          "note": "Uptown jazz backup — Alan Gresik swing orchestra at Green Mill. 21+. Not family.",
+          "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+          "images": [
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
+            "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg"
+          ]
+        },
+        "transit": "Italian in Uptown then cabaret magic — classic north-side stack. Mill for the nightcap crew.",
+        "dont": "Don’t stack Mill AND Magic without energy — pick one late room."
+      }
+    },
+    "eat": {
+      "name": "Anteprima",
+      "url": "https://www.anteprimachicago.net/",
+      "image": "https://images.squarespace-cdn.com/content/v1/5b04ad0596d455bcadf5a4f1/1529047504361-R48IO9NNCWH6XSRLQSTN/Anteprima+Exterior.JPG",
+      "dishes": [
+        {
+          "name": "Pasta",
+          "image": "https://images.squarespace-cdn.com/content/v1/5b04ad0596d455bcadf5a4f1/1529047504361-R48IO9NNCWH6XSRLQSTN/Anteprima+Exterior.JPG"
+        },
+        {
+          "name": "Antipasti",
+          "image": "https://images.squarespace-cdn.com/content/v1/5b04ad0596d455bcadf5a4f1/1529047504361-R48IO9NNCWH6XSRLQSTN/Anteprima+Exterior.JPG"
+        }
+      ]
+    },
+    "then": {
+      "name": "The Signature Show at Chicago Magic Lounge",
+      "start": "8:00 PM",
+      "url": "https://www.chicagomagiclounge.com/signature-show",
+      "cost": "from ~$40+",
+      "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33021981/1bcde3d8-85ae-4f77-bcb0-8438c64a3ecf.jpg"
+    },
+    "backup": {
+      "name": "Green Mill: Alan Gresik's Swing Orchestra",
+      "url": "https://greenmilljazz.com/events/8pm-midnight-alan-gresiks-swing-orchestra-2026-10-01/",
+      "image": "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+      "note": "Uptown jazz backup — Alan Gresik swing orchestra at Green Mill. 21+. Not family."
+    },
+    "transit": "Anteprima (Uptown) → Magic Lounge (Andersonville) is a short Clark ride. Mill backup on Broadway.",
+    "dont": "Reserve Magic Lounge — cabaret seating books up. 21+; 16+ with guardian.",
+    "vibe": "North-side magic cabaret — pasta, close-up wonder, optional Green Mill swing",
+    "budget": "food+show ~$110–160 for two"
+  },
+  {
+    "for_night": "2026-10-02",
+    "corridor": "Pilsen",
+    "parties": {
+      "couple": {
+        "eat": {
+          "name": "Dusek's Board & Beer",
+          "url": "https://www.dusekschicago.com/",
+          "image": "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/1584543927895-2OG0BE6LOF74FM48JC3P/TGPilsen-2.JPG",
+          "dishes": [
+            {
+              "name": "House favorite",
+              "image": "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/1584543927895-2OG0BE6LOF74FM48JC3P/TGPilsen-2.JPG"
+            },
+            {
+              "name": "Share plates",
+              "image": "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/1584543927895-2OG0BE6LOF74FM48JC3P/TGPilsen-2.JPG"
+            }
+          ]
+        },
+        "then": {
+          "name": "Adam Paddock at Ramova Theatre",
+          "start": "7:30 PM",
+          "url": "https://do312.com/events/2026/10/2/adam-paddock-tickets",
+          "cost": "Ticketed",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32220159/d4054aff-ae56-4581-9723-1cf3aee012a8.png"
+        },
+        "backup": {
+          "name": "DJ Shadow at The Vic",
+          "url": "https://do312.com/events/2026/10/2/dj-shadow-celebrates-30-years-of-endtroducing-tickets",
+          "note": "If Ramova isn’t the mood: DJ Shadow’s Endtroducing anniversary at The Vic (Lakeview) — also Fri.",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31766487/bf7a6e31-a0c1-40bd-aa15-7840cb5778be.jpg",
+          "images": [
+            "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31766487/bf7a6e31-a0c1-40bd-aa15-7840cb5778be.jpg"
+          ]
+        },
+        "transit": "Dusek’s (Thalia Hall block) → Ramova in Bridgeport is a short south ride. Pink Line + ride works.",
+        "dont": "Ramova is a proper theater — leave buffer from dinner."
+      },
+      "family": {
+        "eat": {
+          "name": "Pleasant House Pub",
+          "url": "https://www.pleasanthousepub.com/",
+          "image": "https://static.spotapps.co/website_images/ab_websites/8454_website_v1/shared_image.jpg",
+          "dishes": [
+            {
+              "name": "House favorite",
+              "image": "https://static.spotapps.co/website_images/ab_websites/8454_website_v1/shared_image.jpg"
+            },
+            {
+              "name": "Share plates",
+              "image": "https://static.spotapps.co/website_images/ab_websites/8454_website_v1/shared_image.jpg"
+            }
+          ]
+        },
+        "then": {
+          "name": "Adam Paddock at Ramova Theatre",
+          "start": "7:30 PM",
+          "url": "https://do312.com/events/2026/10/2/adam-paddock-tickets",
+          "cost": "Ticketed",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32220159/d4054aff-ae56-4581-9723-1cf3aee012a8.png"
+        },
+        "backup": {
+          "name": "Adam Paddock at Ramova (confirm age)",
+          "url": "https://do312.com/events/2026/10/2/adam-paddock-tickets",
+          "note": "Confirm age fit for Adam Paddock; if not, keep dessert in Pilsen — skip Vic club energy with kids.",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32220159/d4054aff-ae56-4581-9723-1cf3aee012a8.png",
+          "images": [
+            "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32220159/d4054aff-ae56-4581-9723-1cf3aee012a8.png"
+          ]
+        },
+        "transit": "Pleasant House → Ramova is an easy Pilsen/Bridgeport hop.",
+        "dont": "Skip Vic as family backup tonight — keep it local/earlier."
+      },
+      "friends": {
+        "eat": {
+          "name": "5 Rabanitos",
+          "url": "https://www.5rabanitos.com/",
+          "image": "https://static.spotapps.co/web/5rabanitos--com/custom/video_poster.jpg",
+          "dishes": [
+            {
+              "name": "House favorite",
+              "image": "https://static.spotapps.co/web/5rabanitos--com/custom/video_poster.jpg"
+            },
+            {
+              "name": "Share plates",
+              "image": "https://static.spotapps.co/web/5rabanitos--com/custom/video_poster.jpg"
+            }
+          ]
+        },
+        "then": {
+          "name": "Adam Paddock at Ramova Theatre",
+          "start": "7:30 PM",
+          "url": "https://do312.com/events/2026/10/2/adam-paddock-tickets",
+          "cost": "Ticketed",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32220159/d4054aff-ae56-4581-9723-1cf3aee012a8.png"
+        },
+        "backup": {
+          "name": "DJ Shadow at The Vic",
+          "url": "https://do312.com/events/2026/10/2/dj-shadow-celebrates-30-years-of-endtroducing-tickets",
+          "note": "If Ramova isn’t the mood: DJ Shadow’s Endtroducing anniversary at The Vic (Lakeview) — also Fri.",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31766487/bf7a6e31-a0c1-40bd-aa15-7840cb5778be.jpg",
+          "images": [
+            "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31766487/bf7a6e31-a0c1-40bd-aa15-7840cb5778be.jpg"
+          ]
+        },
+        "transit": "5 Rabanitos → Ramova. Post-show stay south/west — or deliberate Vic hop.",
+        "dont": "Don’t lose the group to a random second Uber across town."
+      }
+    },
+    "eat": {
+      "name": "Dusek's Board & Beer",
+      "url": "https://www.dusekschicago.com/",
+      "image": "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/1584543927895-2OG0BE6LOF74FM48JC3P/TGPilsen-2.JPG",
+      "dishes": [
+        {
+          "name": "House favorite",
+          "image": "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/1584543927895-2OG0BE6LOF74FM48JC3P/TGPilsen-2.JPG"
+        },
+        {
+          "name": "Share plates",
+          "image": "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/1584543927895-2OG0BE6LOF74FM48JC3P/TGPilsen-2.JPG"
+        }
+      ]
+    },
+    "then": {
+      "name": "Adam Paddock at Ramova Theatre",
+      "start": "7:30 PM",
+      "url": "https://do312.com/events/2026/10/2/adam-paddock-tickets",
+      "cost": "Ticketed",
+      "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32220159/d4054aff-ae56-4581-9723-1cf3aee012a8.png"
+    },
+    "backup": {
+      "name": "DJ Shadow at The Vic",
+      "url": "https://do312.com/events/2026/10/2/dj-shadow-celebrates-30-years-of-endtroducing-tickets",
+      "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31766487/bf7a6e31-a0c1-40bd-aa15-7840cb5778be.jpg",
+      "note": "If Ramova isn’t the mood: DJ Shadow’s Endtroducing anniversary at The Vic (Lakeview) — also Fri."
+    },
+    "transit": "Dusek’s (Thalia Hall block) → Ramova in Bridgeport is a short south ride. Pink Line + ride works.",
+    "dont": "Ramova is a proper theater — leave buffer from dinner.",
+    "vibe": "Pilsen Friday — beer-hall dinner then a Ramova stage night",
+    "budget": "food+show ~$90–140 for two"
+  },
+  {
+    "for_night": "2026-10-03",
+    "corridor": "Lakeview",
+    "parties": {
+      "couple": {
+        "eat": {
+          "name": "Mia Francesca",
+          "url": "https://www.miafrancesca.com/",
+          "image": "https://images.getbento.com/accounts/1b23cd36c568b69e43b2f69228151683/media/images/49412Photo-2_1_1.png",
+          "dishes": [
+            {
+              "name": "Pasta",
+              "image": "https://images.getbento.com/accounts/1b23cd36c568b69e43b2f69228151683/media/images/49412Photo-2_1_1.png"
+            },
+            {
+              "name": "Share plates",
+              "image": "https://images.getbento.com/accounts/1b23cd36c568b69e43b2f69228151683/media/images/49412Photo-2_1_1.png"
+            }
+          ]
+        },
+        "then": {
+          "name": "Boy Harsher at Metro",
+          "start": "7:00 PM",
+          "url": "https://do312.com/events/2026/10/3/boy-harsher-tickets",
+          "cost": "Ticketed",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32710383/5e4fa718-5e29-4849-a37b-b95d37be87a1.png"
+        },
+        "backup": {
+          "name": "Lineage at Smartbar",
+          "url": "https://smartbarchicago.com/event/lineage/",
+          "note": "Sat late alternative — Smartbar/Metro corridor. 21+ club energy; not family.",
+          "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1400&q=80",
+          "images": [
+            "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1400&q=80"
+          ]
+        },
+        "transit": "Mia Francesca (Southport/Lakeview) → Metro (3730 N Clark) is a short ride. Red Line Addison + walk.",
+        "dont": "Metro is a standing room show — leave bags light. Not a kids night; use Steppenwolf for family."
+      },
+      "family": {
+        "eat": {
+          "name": "Spacca Napoli",
+          "url": "https://www.spaccanapolipizzeria.com/",
+          "image": "https://images.squarespace-cdn.com/content/v1/66df109a79103c3b13692458/1729209141497-I0DSNJ67G5GBKQBXZQ0I/SpaccaNapoli2018_4640.jpg",
+          "dishes": [
+            {
+              "name": "Pasta",
+              "image": "https://images.squarespace-cdn.com/content/v1/66df109a79103c3b13692458/1729209141497-I0DSNJ67G5GBKQBXZQ0I/SpaccaNapoli2018_4640.jpg"
+            },
+            {
+              "name": "Share plates",
+              "image": "https://images.squarespace-cdn.com/content/v1/66df109a79103c3b13692458/1729209141497-I0DSNJ67G5GBKQBXZQ0I/SpaccaNapoli2018_4640.jpg"
+            }
+          ]
+        },
+        "then": {
+          "name": "Topdog/Underdog at Steppenwolf",
+          "start": "7:30 PM",
+          "url": "https://do312.com/events/2026/9/17/topdog-underdog-tickets-info",
+          "cost": "Ticketed",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34466989/94d146f0-1559-4fa0-bd1c-ef934439ef3c.png"
+        },
+        "backup": {
+          "name": "Topdog/Underdog at Steppenwolf",
+          "url": "https://do312.com/events/2026/9/17/topdog-underdog-tickets-info",
+          "note": "Keep Steppenwolf as family primary; skip Metro/Smartbar with kids.",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34466989/94d146f0-1559-4fa0-bd1c-ef934439ef3c.png",
+          "images": [
+            "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34466989/94d146f0-1559-4fa0-bd1c-ef934439ef3c.png"
+          ]
+        },
+        "transit": "Spacca Napoli → Steppenwolf is a south ride down Halsted/Clark corridor.",
+        "dont": "Do NOT use Metro/Boy Harsher as family Then."
+      },
+      "friends": {
+        "eat": {
+          "name": "Mia Francesca",
+          "url": "https://www.miafrancesca.com/",
+          "image": "https://images.getbento.com/accounts/1b23cd36c568b69e43b2f69228151683/media/images/49412Photo-2_1_1.png",
+          "dishes": [
+            {
+              "name": "Pasta",
+              "image": "https://images.getbento.com/accounts/1b23cd36c568b69e43b2f69228151683/media/images/49412Photo-2_1_1.png"
+            },
+            {
+              "name": "Share plates",
+              "image": "https://images.getbento.com/accounts/1b23cd36c568b69e43b2f69228151683/media/images/49412Photo-2_1_1.png"
+            }
+          ]
+        },
+        "then": {
+          "name": "Boy Harsher at Metro",
+          "start": "7:00 PM",
+          "url": "https://do312.com/events/2026/10/3/boy-harsher-tickets",
+          "cost": "Ticketed",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32710383/5e4fa718-5e29-4849-a37b-b95d37be87a1.png"
+        },
+        "backup": {
+          "name": "Lineage at Smartbar",
+          "url": "https://smartbarchicago.com/event/lineage/",
+          "note": "Sat late alternative — Smartbar/Metro corridor. 21+ club energy; not family.",
+          "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1400&q=80",
+          "images": [
+            "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1400&q=80"
+          ]
+        },
+        "transit": "Pasta then Metro — classic Lakeview Saturday. Smartbar backup is steps away in the same nightlife pocket.",
+        "dont": "Buy Metro tickets ahead; door can be rough on big nights."
+      }
+    },
+    "eat": {
+      "name": "Mia Francesca",
+      "url": "https://www.miafrancesca.com/",
+      "image": "https://images.getbento.com/accounts/1b23cd36c568b69e43b2f69228151683/media/images/49412Photo-2_1_1.png",
+      "dishes": [
+        {
+          "name": "Pasta",
+          "image": "https://images.getbento.com/accounts/1b23cd36c568b69e43b2f69228151683/media/images/49412Photo-2_1_1.png"
+        },
+        {
+          "name": "Share plates",
+          "image": "https://images.getbento.com/accounts/1b23cd36c568b69e43b2f69228151683/media/images/49412Photo-2_1_1.png"
+        }
+      ]
+    },
+    "then": {
+      "name": "Boy Harsher at Metro",
+      "start": "7:00 PM",
+      "url": "https://do312.com/events/2026/10/3/boy-harsher-tickets",
+      "cost": "Ticketed",
+      "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32710383/5e4fa718-5e29-4849-a37b-b95d37be87a1.png"
+    },
+    "backup": {
+      "name": "Lineage at Smartbar",
+      "url": "https://smartbarchicago.com/event/lineage/",
+      "note": "Sat late alternative — Smartbar/Metro corridor. 21+ club energy; not family.",
+      "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1400&q=80"
+    },
+    "transit": "Mia Francesca (Southport/Lakeview) → Metro (3730 N Clark) is a short ride. Red Line Addison + walk.",
+    "dont": "Metro is a standing room show — leave bags light. Not a kids night; use Steppenwolf for family.",
+    "vibe": "Lakeview Saturday — neighborhood Italian then a Metro darkwave night",
+    "budget": "food+show ~$90–150 for two"
+  },
+  {
+    "for_night": "2026-10-04",
+    "corridor": "West Loop/West Town",
+    "parties": {
+      "couple": {
+        "eat": {
+          "name": "Avec",
+          "url": "https://www.avecrestaurant.com/",
+          "image": "https://images.getbento.com/accounts/ebd8868d5a1468df664c380099992dfe/media/images/40516Untitled_5.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+          "dishes": [
+            {
+              "name": "Shared Mediterranean plates",
+              "image": "https://images.getbento.com/accounts/ebd8868d5a1468df664c380099992dfe/media/images/40516Untitled_5.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100"
+            },
+            {
+              "name": "Brandade",
+              "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80"
+            }
+          ]
+        },
+        "then": {
+          "name": "Outcast Jazz Band Big Band Dance Party",
+          "start": "6:00 PM",
+          "url": "https://dice.fm/event/8exkqv-outcast-jazz-bands-big-band-dance-party-4th-oct-epiphany-center-for-the-arts-epiphany-hall-chicago-tickets",
+          "cost": "from ~$25",
+          "image": "https://dice-media.imgix.net/attachments/2025-07-31/abd64f79-4219-4463-a158-6ac56c46131c.jpg?rect=403%2C0%2C768%2C768"
+        },
+        "backup": {
+          "name": "Half Gringa, Matt Gold",
+          "url": "https://do312.com/events/2026/10/4/half-gringa-matt-gold-tickets",
+          "note": "If Epiphany isn’t your room: Half Gringa at The Hideout (West Town) — intimate Sunday set.",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34483834/80dbad95-36e4-4fce-9afe-becd9ea3ed34.jpg",
+          "images": [
+            "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34483834/80dbad95-36e4-4fce-9afe-becd9ea3ed34.jpg"
+          ]
+        },
+        "transit": "Avec (West Loop) → Epiphany Center (201 S Ashland) is a short west ride/walk. Hideout backup north in West Town.",
+        "dont": "Big-band dance energy — wear shoes you can move in. Confirm ticket tier on Dice (price shown in-app)."
+      },
+      "family": {
+        "eat": {
+          "name": "Monteverde",
+          "url": "https://monteverdechicago.com/",
+          "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80",
+          "dishes": [
+            {
+              "name": "Pasta",
+              "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80"
+            },
+            {
+              "name": "Seasonal antipasti",
+              "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80"
+            }
+          ]
+        },
+        "then": {
+          "name": "Outcast Jazz Band Big Band Dance Party",
+          "start": "6:00 PM",
+          "url": "https://dice.fm/event/8exkqv-outcast-jazz-bands-big-band-dance-party-4th-oct-epiphany-center-for-the-arts-epiphany-hall-chicago-tickets",
+          "cost": "from ~$25",
+          "image": "https://dice-media.imgix.net/attachments/2025-07-31/abd64f79-4219-4463-a158-6ac56c46131c.jpg?rect=403%2C0%2C768%2C768"
+        },
+        "backup": {
+          "name": "Outcast Jazz Band at Epiphany (confirm door)",
+          "url": "https://dice.fm/event/8exkqv-outcast-jazz-bands-big-band-dance-party-4th-oct-epiphany-center-for-the-arts-epiphany-hall-chicago-tickets",
+          "note": "Dance party is joyful/family-flexible earlier evening — confirm door policy. Hideout late = not for littles.",
+          "image": "https://dice-media.imgix.net/attachments/2025-07-31/abd64f79-4219-4463-a158-6ac56c46131c.jpg?rect=403%2C0%2C768%2C768",
+          "images": [
+            "https://dice-media.imgix.net/attachments/2025-07-31/abd64f79-4219-4463-a158-6ac56c46131c.jpg?rect=403%2C0%2C768%2C768",
+            "https://dice-media.imgix.net/attachments/2025-07-31/abd64f79-4219-4463-a158-6ac56c46131c.jpg?rect=147%2C0%2C1280%2C768",
+            "https://dice-media.imgix.net/attachments/2025-07-31/abd64f79-4219-4463-a158-6ac56c46131c.jpg?rect=576%2C0%2C422%2C768"
+          ]
+        },
+        "transit": "Monteverde → Epiphany is an easy West Loop/near-west hop.",
+        "dont": "Earlier 6pm start helps families. Skip Hideout late backup with kids."
+      },
+      "friends": {
+        "eat": {
+          "name": "Avec",
+          "url": "https://www.avecrestaurant.com/",
+          "image": "https://images.getbento.com/accounts/ebd8868d5a1468df664c380099992dfe/media/images/40516Untitled_5.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+          "dishes": [
+            {
+              "name": "Shared Mediterranean plates",
+              "image": "https://images.getbento.com/accounts/ebd8868d5a1468df664c380099992dfe/media/images/40516Untitled_5.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100"
+            },
+            {
+              "name": "Brandade",
+              "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80"
+            }
+          ]
+        },
+        "then": {
+          "name": "Outcast Jazz Band Big Band Dance Party",
+          "start": "6:00 PM",
+          "url": "https://dice.fm/event/8exkqv-outcast-jazz-bands-big-band-dance-party-4th-oct-epiphany-center-for-the-arts-epiphany-hall-chicago-tickets",
+          "cost": "from ~$25",
+          "image": "https://dice-media.imgix.net/attachments/2025-07-31/abd64f79-4219-4463-a158-6ac56c46131c.jpg?rect=403%2C0%2C768%2C768"
+        },
+        "backup": {
+          "name": "Half Gringa, Matt Gold",
+          "url": "https://do312.com/events/2026/10/4/half-gringa-matt-gold-tickets",
+          "note": "If Epiphany isn’t your room: Half Gringa at The Hideout (West Town) — intimate Sunday set.",
+          "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34483834/80dbad95-36e4-4fce-9afe-becd9ea3ed34.jpg",
+          "images": [
+            "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34483834/80dbad95-36e4-4fce-9afe-becd9ea3ed34.jpg"
+          ]
+        },
+        "transit": "Shared plates then a big-band dance floor — best Sunday group energy on the near west side.",
+        "dont": "Buy Dice tickets ahead; don’t bank on door."
+      }
+    },
+    "eat": {
+      "name": "Avec",
+      "url": "https://www.avecrestaurant.com/",
+      "image": "https://images.getbento.com/accounts/ebd8868d5a1468df664c380099992dfe/media/images/40516Untitled_5.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
+      "dishes": [
+        {
+          "name": "Shared Mediterranean plates",
+          "image": "https://images.getbento.com/accounts/ebd8868d5a1468df664c380099992dfe/media/images/40516Untitled_5.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100"
+        },
+        {
+          "name": "Brandade",
+          "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80"
+        }
+      ]
+    },
+    "then": {
+      "name": "Outcast Jazz Band Big Band Dance Party",
+      "start": "6:00 PM",
+      "url": "https://dice.fm/event/8exkqv-outcast-jazz-bands-big-band-dance-party-4th-oct-epiphany-center-for-the-arts-epiphany-hall-chicago-tickets",
+      "cost": "from ~$25",
+      "image": "https://dice-media.imgix.net/attachments/2025-07-31/abd64f79-4219-4463-a158-6ac56c46131c.jpg?rect=403%2C0%2C768%2C768"
+    },
+    "backup": {
+      "name": "Half Gringa, Matt Gold",
+      "url": "https://do312.com/events/2026/10/4/half-gringa-matt-gold-tickets",
+      "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34483834/80dbad95-36e4-4fce-9afe-becd9ea3ed34.jpg",
+      "note": "If Epiphany isn’t your room: Half Gringa at The Hideout (West Town) — intimate Sunday set."
+    },
+    "transit": "Avec (West Loop) → Epiphany Center (201 S Ashland) is a short west ride/walk. Hideout backup north in West Town.",
+    "dont": "Big-band dance energy — wear shoes you can move in. Confirm ticket tier on Dice (price shown in-app).",
+    "vibe": "West Loop Sunday — shared plates then a big-band dance party at Epiphany",
+    "budget": "food+show ~$100–150 for two"
   }
 ]

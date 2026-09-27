@@ -1,91 +1,42 @@
 {
-  "scouted_count": 105,
-  "categories": [
-    "Jazz & blues",
-    "Comedy",
-    "Odd one-offs",
-    "Theater"
+  "updated": "2026-09-27T09:04:00-05:00",
+  "window": [
+    "2026-09-28",
+    "2026-10-11"
   ],
-  "highlights": [
+  "events_count": 697,
+  "restaurants_count": 105,
+  "nights": [
     {
-      "name": "Chicago Cellar Boys at Green Mill",
-      "date": "2026-09-22",
-      "start": null,
-      "neighborhood": "Uptown",
-      "venue": "Green Mill Jazz Club",
-      "cost": "$10 cover",
-      "official_url": "https://greenmilljazz.com/events/8pm-midnight-chicago-cellar-boys-2026-09-22/",
-      "category": "jazz_blues"
+      "for_night": "2026-09-28",
+      "corridor": "Old Town",
+      "then": "Best of The Second City"
     },
     {
-      "name": "Chicago Underground Comedy",
-      "date": "2026-09-22",
-      "start": null,
-      "neighborhood": "Roscoe Village",
-      "venue": "Beat Kitchen",
-      "cost": "TBA",
-      "official_url": "https://do312.com/events/2026/9/22",
-      "category": "comedy"
+      "for_night": "2026-09-30",
+      "corridor": "Lincoln Park",
+      "then": "Topdog/Underdog at Steppenwolf"
     },
     {
-      "name": "Chris O'Leary at Buddy Guy's Legends",
-      "date": "2026-09-22",
-      "start": null,
-      "neighborhood": "South Loop",
-      "venue": "Buddy Guy's Legends",
-      "cost": "Ticketed",
-      "official_url": "https://buddyguy.com/events/",
-      "category": "jazz_blues"
+      "for_night": "2026-10-01",
+      "corridor": "Andersonville/Uptown",
+      "then": "The Signature Show at Chicago Magic Lounge"
     },
     {
-      "name": "Comic Court at Lincoln Lodge",
-      "date": "2026-09-22",
-      "start": null,
-      "neighborhood": "Logan Square",
-      "venue": "The Lincoln Lodge",
-      "cost": "$8",
-      "official_url": "https://www.choosechicago.com/event/comic-court-chicagos-1-comedy-court-show/2026-09-22/",
-      "category": "comedy"
+      "for_night": "2026-10-02",
+      "corridor": "Pilsen",
+      "then": "Adam Paddock at Ramova Theatre"
     },
     {
-      "name": "Dave Herrero / Pete Galanis at Rosa's Lounge",
-      "date": "2026-09-22",
-      "start": null,
-      "neighborhood": "Logan Square / Hermosa",
-      "venue": "Rosa's Lounge",
-      "cost": "Cover TBA",
-      "official_url": "https://www.rosaslounge.com/calendar",
-      "category": "jazz_blues"
+      "for_night": "2026-10-03",
+      "corridor": "Lakeview",
+      "then": "Boy Harsher at Metro"
     },
     {
-      "name": "Ilana Glazer Live!",
-      "date": "2026-09-22",
-      "start": null,
-      "neighborhood": "Loop",
-      "venue": "The Chicago Theatre",
-      "cost": "Ticketed",
-      "official_url": "https://www.msg.com/events-tickets/ilana-glazer-the-chicago-theatre-september-2026/070064CFBC609889",
-      "category": "comedy"
-    },
-    {
-      "name": "Jacques Ze Whipper: Circus Kid",
-      "date": "2026-09-22",
-      "start": null,
-      "neighborhood": "Pilsen",
-      "venue": "Thalia Hall",
-      "cost": "Ticketed (17+)",
-      "official_url": "https://thaliahallchicago.com/",
-      "category": "other"
-    },
-    {
-      "name": "KOWALSKI",
-      "date": "2026-09-22",
-      "start": null,
-      "neighborhood": "Streeterville",
-      "venue": "Lookingglass Theatre",
-      "cost": "Ticketed",
-      "official_url": "https://lookingglasstheatre.org/plays/kowalski/",
-      "category": "theater"
+      "for_night": "2026-10-04",
+      "corridor": "West Loop/West Town",
+      "then": "Outcast Jazz Band Big Band Dance Party"
     }
-  ]
+  ],
+  "blurb": "Sunday refresh: next-week Chicago date-night corridors across Old Town, Wicker, Lincoln Park, Andersonville, Pilsen, and West Loop."
 }
