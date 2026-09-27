@@ -19,38 +19,33 @@
 
   <nav class="toggles" aria-label="Filters">
     <div class="toggle-block">
-      <span class="toggle-label" id="cat-row-label">Vibe</span>
+      <span class="sr-only" id="cat-row-label">Vibe</span>
       <div class="pill-row scroll" id="cat-row" role="tablist" aria-labelledby="cat-row-label"></div>
     </div>
     <div class="toggle-block">
-      <div class="toggle-head">
-        <span class="toggle-label" id="hood-label">Neighborhood</span>
-        <span class="toggle-hint" id="hood-hint" aria-hidden="true"></span>
-      </div>
-      <div class="pill-row scroll" id="hood-row" role="tablist" aria-labelledby="hood-label"></div>
+      <span class="sr-only" id="hood-label">Neighborhood</span>
+      <div class="pill-row scroll two-row" id="hood-row" role="tablist" aria-labelledby="hood-label"></div>
     </div>
     <div class="toggle-block">
-      <span class="toggle-label" id="time-row-label">Time</span>
+      <span class="sr-only" id="time-row-label">Time</span>
       <div class="pill-row scroll" id="time-row" role="tablist" aria-labelledby="time-row-label"></div>
     </div>
-    <div class="toggle-block">
-      <span class="toggle-label" id="party-row-label">With</span>
+    <div class="toggle-block with-flex">
+      <span class="sr-only" id="party-row-label">With</span>
       <div class="pill-row scroll" id="party-row" role="tablist" aria-labelledby="party-row-label">
         <button type="button" role="tab" data-party="couple" data-key="couple" aria-selected="true" tabindex="0">Couple</button>
         <button type="button" role="tab" data-party="family" data-key="family" aria-selected="false" tabindex="-1">Family</button>
         <button type="button" role="tab" data-party="friends" data-key="friends" aria-selected="false" tabindex="-1">Friends</button>
       </div>
+      <button type="button" id="flex-toggle" class="flex-switch" role="switch" aria-checked="false" aria-labelledby="flex-label" title="When on, swipe options may include near matches after exact fits">
+        <span class="flex-name" id="flex-label">Flexible</span>
+        <span class="flex-track" aria-hidden="true"><span class="flex-thumb"></span></span>
+        <span class="flex-state sr-only">Off</span>
+      </button>
     </div>
     <div class="toggle-block" id="night-block" hidden>
-      <span class="toggle-label" id="night-row-label">Night</span>
+      <span class="sr-only" id="night-row-label">Night</span>
       <div class="pill-row scroll" id="night-row" role="tablist" aria-labelledby="night-row-label"></div>
-    </div>
-    <div class="toggle-block flex-block">
-      <span class="toggle-label" id="flex-label">Flexible</span>
-      <button type="button" id="flex-toggle" class="flex-switch" role="switch" aria-checked="false" aria-labelledby="flex-label" title="When on, swipe options may include near matches after exact fits">
-        <span class="flex-track" aria-hidden="true"><span class="flex-thumb"></span></span>
-        <span class="flex-state">Off</span>
-      </button>
     </div>
   </nav>
 

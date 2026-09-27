@@ -71,18 +71,35 @@
       .replace(/"/g, "&quot;");
   }
 
+  // Plan/event dates are Chicago calendar days ("YYYY-MM-DD"). Anchor at noon
+  // UTC (7am Chicago) and format in America/Chicago so the label never slips a
+  // day, whatever zone the visitor's device is in.
+  const CHI = "America/Chicago";
+  function isoNoon(iso) {
+    const [y, m, d] = String(iso).split("-").map(Number);
+    return new Date(Date.UTC(y, (m || 1) - 1, d || 1, 12));
+  }
+  function chicagoTodayKey() {
+    return new Intl.DateTimeFormat("en-CA", { timeZone: CHI, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  }
+
   function nightLabel(iso) {
     if (!iso) return "";
-    return new Date(iso + "T12:00:00").toLocaleDateString("en-US", {
+    return isoNoon(iso).toLocaleDateString("en-US", {
+      timeZone: CHI,
       weekday: "short",
       month: "short",
       day: "numeric",
     });
   }
 
-  function shortNight(iso) {
+  // Date-chip content: small weekday (or "Tonight") + "Sep 30".
+  function nightChipHtml(iso) {
     if (!iso) return "";
-    return new Date(iso + "T12:00:00").toLocaleDateString("en-US", { weekday: "short" });
+    const d = isoNoon(iso);
+    const dow = iso === chicagoTodayKey() ? "Tonight" : d.toLocaleDateString("en-US", { timeZone: CHI, weekday: "short" });
+    const md = d.toLocaleDateString("en-US", { timeZone: CHI, month: "short", day: "numeric" });
+    return `<span class="dow">${esc(dow)}</span>${esc(md)}`;
   }
 
   function normName(s) {
@@ -389,6 +406,40 @@
     return score;
   }
 
+  // Ask for a sharper source where it's free and safe: bump CDN width params
+  // (Unsplash / unsigned imgix) and swap small WordPress resized variants
+  // (e.g. -600x400.jpg) for the original upload. Signed URLs are left alone.
+  function hiRes(src) {
+    let u = String(src || "");
+    try {
+      const url = new URL(u, location.href);
+      const cdn = /(^|\.)images\.unsplash\.com$|\.imgix\.net$/.test(url.hostname);
+      if (cdn && !url.searchParams.has("s")) {
+        const w = parseInt(url.searchParams.get("w"), 10);
+        if (w && w < 1400) {
+          const h = parseInt(url.searchParams.get("h"), 10);
+          url.searchParams.set("w", "1400");
+          if (h) url.searchParams.set("h", String(Math.round((h * 1400) / w)));
+        }
+      }
+      u = url.href;
+    } catch (e) {
+      return src;
+    }
+    return u.replace(/(\/wp-content\/uploads\/.+?)-(\d{2,4})x\d{2,4}(\.(?:jpe?g|webp))$/i, (m, base, w, ext) =>
+      parseInt(w, 10) < 800 ? base + ext : m
+    );
+  }
+
+  // background-image layers: sharper source on top, original underneath as a
+  // fallback if the upgraded URL fails to load.
+  function bgUrl(src) {
+    const hi = hiRes(src);
+    return hi && hi !== src
+      ? `url('${esc(hi)}'), url('${esc(src)}')`
+      : `url('${esc(src)}')`;
+  }
+
   function imagesFor(item) {
     const imgs = [];
     const push = (u) => {
@@ -533,7 +584,7 @@
   function relevantPlans() {
     if (!plans.length) return [];
     if (nightKey) return plans.filter((p) => p.for_night === nightKey);
-    const today = new Date().toISOString().slice(0, 10);
+    const today = chicagoTodayKey();
     const upcoming = plans.filter((p) => p.for_night >= today);
     return upcoming.length ? upcoming : plans.slice(0, 3);
   }
@@ -728,12 +779,12 @@
       return `<div class="bg-stack"><div class="bg-fallback"><span class="lettermark" aria-hidden="true">${mark}</span></div></div>`;
     }
     if (imgs.length === 1) {
-      return `<div class="bg-stack"><div class="bg-slide ken-burns is-active" style="background-image:url('${esc(imgs[0])}')"></div></div>`;
+      return `<div class="bg-stack"><div class="bg-slide ken-burns is-active" style="background-image:${bgUrl(imgs[0])}"></div></div>`;
     }
     return `<div class="bg-stack" data-carousel="1">${imgs
       .map(
         (src, i) =>
-          `<div class="bg-slide${i === 0 ? " is-active" : ""}" style="background-image:url('${esc(src)}')"></div>`
+          `<div class="bg-slide${i === 0 ? " is-active" : ""}" style="background-image:${bgUrl(src)}"></div>`
       )
       .join("")}</div>
       <div class="photo-ticks" aria-hidden="true">${imgs
@@ -1224,8 +1275,6 @@
     const max = row.scrollWidth - row.clientWidth;
     row.classList.toggle("fade-l", row.scrollLeft > 4);
     row.classList.toggle("fade-r", max > 4 && row.scrollLeft < max - 4);
-    const hint = row.id === "hood-row" ? document.getElementById("hood-hint") : null;
-    if (hint) hint.classList.toggle("is-off", !(max > 4 && row.scrollLeft < max - 4));
   }
 
   function centerSelected(row, smooth) {
@@ -1252,27 +1301,25 @@
     row.dataset.ready = "1";
   }
 
-  function chip(attr, value, label, selected) {
-    return `<button type="button" role="tab" data-${attr}="${esc(value)}" data-key="${esc(value)}" aria-selected="${selected}" tabindex="${selected ? 0 : -1}">${esc(label)}</button>`;
+  function chip(attr, value, label, selected, html) {
+    return `<button type="button" role="tab" data-${attr}="${esc(value)}" data-key="${esc(value)}" aria-selected="${selected}" tabindex="${selected ? 0 : -1}">${html || esc(label)}</button>`;
   }
 
   function renderHoods() {
     paintRow(
       hoodRow,
-      [chip("hood", "all", "All", hood === "all")]
+      [chip("hood", "all", "All areas", hood === "all")]
         .concat(hoodChoices.map((h) => chip("hood", h, h, h === hood)))
         .join("")
     );
-    const hint = document.getElementById("hood-hint");
-    if (hint) hint.textContent = `${hoodChoices.length} areas · swipe`;
   }
 
   function renderTimes() {
-    paintRow(timeRow, TIME_OPTIONS.map((t) => chip("time", t.id, t.label, t.id === timeBucket)).join(""));
+    paintRow(timeRow, TIME_OPTIONS.map((t) => chip("time", t.id, t.id === "all" ? "Any time" : t.label, t.id === timeBucket)).join(""));
   }
 
   function renderCats() {
-    paintRow(catRow, categories.map((c) => chip("cat", c.id, c.label, c.id === category)).join(""));
+    paintRow(catRow, categories.map((c) => chip("cat", c.id, c.id === "all" ? "All vibes" : c.label, c.id === category)).join(""));
   }
 
   function renderParty() {
@@ -1292,8 +1339,8 @@
     nightBlock.hidden = false;
     paintRow(
       nightRow,
-      [chip("night", "", "Any", !nightKey)]
-        .concat(plans.map((p) => chip("night", p.for_night, shortNight(p.for_night), p.for_night === nightKey)))
+      [chip("night", "", "Any night", !nightKey)]
+        .concat(plans.map((p) => chip("night", p.for_night, "", p.for_night === nightKey, nightChipHtml(p.for_night))))
         .join("")
     );
   }
