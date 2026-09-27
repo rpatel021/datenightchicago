@@ -27,7 +27,6 @@
     backup: { key: "backup", title: "Backup", pool: [], index: 0, identity: null },
   };
 
-  const photoTimers = new WeakMap();
   const PARTY_LABEL = { couple: "Couple", family: "Family", friends: "Friends" };
   const TIME_OPTIONS = [
     { id: "all", label: "All" },
@@ -736,26 +735,11 @@
         (src, i) =>
           `<div class="bg-slide${i === 0 ? " is-active" : ""}" style="background-image:url('${esc(src)}')"></div>`
       )
-      .join("")}</div>`;
+      .join("")}</div>
+      <div class="photo-ticks" aria-hidden="true">${imgs
+        .map((_, i) => `<span class="${i === 0 ? "is-on" : ""}"></span>`)
+        .join("")}</div>`;
   }
-
-  function startCarousels(root) {
-    root.querySelectorAll(".bg-stack[data-carousel]").forEach((stack) => {
-      const slides = [...stack.querySelectorAll(".bg-slide")];
-      if (slides.length < 2) return;
-      if (photoTimers.has(stack)) {
-        clearInterval(photoTimers.get(stack));
-      }
-      let i = 0;
-      const timer = setInterval(() => {
-        slides[i].classList.remove("is-active");
-        i = (i + 1) % slides.length;
-        slides[i].classList.add("is-active");
-      }, 4200);
-      photoTimers.set(stack, timer);
-    });
-  }
-
 
   function chipClass(kind, isMatch, isFlex) {
     const bits = ["pill", kind];
@@ -917,22 +901,24 @@
       </div>`;
   }
 
-  function chromeHtml(lane) {
-    const n = lane.pool.length;
-    const idx = n ? lane.index + 1 : 0;
-    const dots =
-      n > 1 && n <= 10
-        ? `<div class="option-dots" aria-hidden="true">${lane.pool
-            .map((_, i) => `<span class="${i === lane.index ? "is-on" : ""}"></span>`)
-            .join("")}</div>`
-        : `<div class="option-dots"></div>`;
-    return `
-      <div class="lane-chrome">
-        <button type="button" class="nav-hit" data-dir="-1" aria-label="Previous option" ${n < 2 ? "disabled" : ""}>‹</button>
-        ${dots}
-        <span class="option-count">${n ? `${idx} / ${n}` : "0 / 0"}</span>
-        <button type="button" class="nav-hit" data-dir="1" aria-label="Next option" ${n < 2 ? "disabled" : ""}>›</button>
-      </div>`;
+  /* ---------- Peek carousel lanes (native scroll-snap) ---------- */
+
+  const laneUi = {};
+  const HYDRATE_RADIUS = 2;
+  const reduceMotion =
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const CHEV_L = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  const CHEV_R = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+  function pagerHtml(n) {
+    if (n < 2) return `<span class="option-pager"></span>`;
+    if (n <= 10) {
+      return `<span class="option-pager option-dots" aria-hidden="true">${Array.from(
+        { length: n },
+        () => "<span></span>"
+      ).join("")}</span>`;
+    }
+    return `<span class="option-pager option-progress" aria-hidden="true"><span></span></span>`;
   }
 
   function sizeLanes() {
@@ -944,128 +930,251 @@
     });
   }
 
+  function stopPhotoTimers() {
+    Object.values(laneUi).forEach((ui) => {
+      if (ui && ui.timer) clearInterval(ui.timer);
+      if (ui) ui.timer = null;
+    });
+  }
+
   function renderDeck() {
+    stopPhotoTimers();
     const order = ["eat", "then", "backup"];
     deckEl.innerHTML = order
       .map((key, i) => {
         const lane = lanes[key];
-        const item = lane.pool[lane.index] || null;
-        const empty = !item;
+        const n = lane.pool.length;
+        const count = Math.max(n, 1);
+        const cards = Array.from(
+          { length: count },
+          (_, j) =>
+            `<article class="opt-card" data-i="${j}" role="group" aria-roledescription="option" aria-label="${
+              n ? `${j + 1} of ${n}` : "No options"
+            }"></article>`
+        ).join("");
+        const nav =
+          n > 1
+            ? `<button type="button" class="lane-nav prev" data-dir="-1" aria-label="Previous option">${CHEV_L}</button>
+               <button type="button" class="lane-nav next" data-dir="1" aria-label="Next option">${CHEV_R}</button>`
+            : "";
         return `
-        <section class="lane${empty ? " empty-lane" : ""}" data-lane="${key}">
-          <h2 class="lane-heading">${esc(lane.title)}</h2>
-          <div class="option-stage" data-stage="${key}">
-            ${renderOptionPanel(key, item)}
+        <section class="lane${n ? "" : " empty-lane"}${n === 1 ? " is-single" : ""}" data-lane="${key}" aria-label="${esc(lane.title)}">
+          <header class="lane-head">
+            <h2 class="lane-heading">${esc(lane.title)}</h2>
+            <span class="option-count" aria-live="polite">${n ? `${lane.index + 1} / ${n}` : ""}</span>
+          </header>
+          <div class="lane-viewport">
+            <div class="option-track" data-track="${key}" role="region" aria-roledescription="carousel" aria-label="${esc(lane.title)} options">${cards}</div>
+            ${nav}
           </div>
-          ${chromeHtml(lane)}
-          ${i === 0 ? `<div class="swipe-hint">Swipe up · swipe sideways for more</div>` : ""}
+          <div class="lane-foot">
+            <span></span>
+            ${pagerHtml(n)}
+            ${i === 0 ? `<span class="swipe-hint">Swipe up for what to do</span>` : "<span></span>"}
+          </div>
         </section>`;
       })
       .join("");
 
     sizeLanes();
-    startCarousels(deckEl);
-    wireLaneGestures();
+    order.forEach(setupLane);
   }
 
-  function wireLaneGestures() {
-    deckEl.querySelectorAll(".lane").forEach((laneEl) => {
-      const key = laneEl.dataset.lane;
-      let startX = 0;
-      let startY = 0;
-      let tracking = false;
+  function laneStride(ui) {
+    const c = ui.cards;
+    if (c.length > 1) return c[1].offsetLeft - c[0].offsetLeft || 1;
+    return (c[0] && c[0].offsetWidth) || 1;
+  }
 
-      laneEl.addEventListener(
-        "pointerdown",
-        (e) => {
-          if (e.target.closest("a,button")) return;
-          tracking = true;
-          startX = e.clientX;
-          startY = e.clientY;
-        },
-        { passive: true }
-      );
+  function nearestIndex(ui) {
+    const i = Math.round(ui.track.scrollLeft / laneStride(ui));
+    return Math.max(0, Math.min(ui.cards.length - 1, i));
+  }
 
-      laneEl.addEventListener(
-        "pointerup",
-        (e) => {
-          if (!tracking) return;
-          tracking = false;
-          const dx = e.clientX - startX;
-          const dy = e.clientY - startY;
-          if (Math.abs(dx) < 48) return;
-          if (Math.abs(dx) < Math.abs(dy) * 1.15) return;
-          shiftLane(key, dx < 0 ? 1 : -1);
-        },
-        { passive: true }
-      );
+  function hydrate(key, j) {
+    const ui = laneUi[key];
+    const card = ui && ui.cards[j];
+    if (!card || card.dataset.h) return;
+    card.innerHTML = renderOptionPanel(key, lanes[key].pool[j] || null);
+    card.dataset.h = "1";
+  }
 
-      laneEl.addEventListener("pointercancel", () => {
-        tracking = false;
-      });
+  function hydrateAround(key, idx) {
+    for (let j = idx - HYDRATE_RADIUS; j <= idx + HYDRATE_RADIUS; j++) hydrate(key, j);
+  }
 
-      laneEl.querySelectorAll(".nav-hit").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
+  function markActive(key, idx, force) {
+    const ui = laneUi[key];
+    const lane = lanes[key];
+    if (!ui || (!force && idx === ui.active)) return;
+    ui.active = idx;
+    if (lane.pool.length) {
+      lane.index = idx;
+      lane.identity = optionId(lane.pool[idx]);
+    }
+    hydrateAround(key, idx);
+    ui.cards.forEach((c, j) => {
+      c.classList.toggle("is-active", j === idx);
+      c.classList.toggle("is-before", j < idx);
+      c.classList.toggle("is-after", j > idx);
+    });
+    const n = lane.pool.length;
+    const count = ui.laneEl.querySelector(".option-count");
+    if (count) count.textContent = n ? `${idx + 1} / ${n}` : "";
+    const dots = ui.laneEl.querySelectorAll(".option-dots > span");
+    dots.forEach((d, j) => d.classList.toggle("is-on", j === idx));
+    const bar = ui.laneEl.querySelector(".option-progress > span");
+    if (bar && n > 1) {
+      const w = Math.max(12, 100 / n);
+      bar.style.width = w + "%";
+      bar.style.left = (idx / (n - 1)) * (100 - w) + "%";
+    }
+    ui.laneEl.querySelectorAll(".lane-nav").forEach((b) => {
+      const dir = Number(b.dataset.dir);
+      b.disabled = dir < 0 ? idx <= 0 : idx >= ui.cards.length - 1;
+    });
+    activatePhotos(key);
+  }
+
+  function goTo(key, j, instant) {
+    const ui = laneUi[key];
+    if (!ui) return;
+    const target = Math.max(0, Math.min(ui.cards.length - 1, j));
+    hydrateAround(key, target);
+    const left = target * laneStride(ui);
+    if (instant) {
+      ui.track.scrollLeft = left;
+      markActive(key, target, true);
+    } else {
+      ui.track.scrollTo({ left, behavior: reduceMotion ? "auto" : "smooth" });
+    }
+  }
+
+  function stepPhoto(card, dir) {
+    const slides = [...card.querySelectorAll(".bg-slide")];
+    if (slides.length < 2) return false;
+    let i = Number(card.dataset.p || 0);
+    slides[i].classList.remove("is-active");
+    i = (i + dir + slides.length) % slides.length;
+    slides[i].classList.add("is-active");
+    card.dataset.p = String(i);
+    card.querySelectorAll(".photo-ticks > span").forEach((t, k) => t.classList.toggle("is-on", k === i));
+    return true;
+  }
+
+  function activatePhotos(key) {
+    const ui = laneUi[key];
+    if (!ui) return;
+    if (ui.timer) clearInterval(ui.timer);
+    ui.timer = null;
+    const card = ui.cards[ui.active];
+    if (!card || reduceMotion || !card.querySelector(".bg-stack[data-carousel]")) return;
+    ui.timer = setInterval(() => stepPhoto(card, 1), 4200);
+  }
+
+  function setupLane(key) {
+    const laneEl = deckEl.querySelector(`[data-lane="${key}"]`);
+    if (!laneEl) return;
+    const track = laneEl.querySelector(".option-track");
+    const ui = {
+      laneEl,
+      track,
+      cards: [...track.querySelectorAll(".opt-card")],
+      active: -1,
+      timer: null,
+      raf: 0,
+      drag: null,
+      suppressClick: false,
+    };
+    laneUi[key] = ui;
+    goTo(key, lanes[key].index || 0, true);
+
+    track.addEventListener(
+      "scroll",
+      () => {
+        if (ui.raf) return;
+        ui.raf = requestAnimationFrame(() => {
+          ui.raf = 0;
+          markActive(key, nearestIndex(ui));
+        });
+      },
+      { passive: true }
+    );
+
+    // Tap a peeking card → center it. Tap the active card's photo → next photo.
+    track.addEventListener(
+      "click",
+      (e) => {
+        if (ui.suppressClick) {
           e.preventDefault();
           e.stopPropagation();
-          const dir = Number(btn.dataset.dir) || 1;
-          shiftLane(key, dir);
-        });
+          return;
+        }
+        const card = e.target.closest(".opt-card");
+        if (!card) return;
+        const j = Number(card.dataset.i);
+        if (j !== ui.active) {
+          e.preventDefault();
+          e.stopPropagation();
+          goTo(key, j);
+          return;
+        }
+        if (e.target.closest("a,button")) return;
+        if (stepPhoto(card, 1)) activatePhotos(key);
+      },
+      true
+    );
+
+    // Desktop: click-and-drag the lane like a touch swipe (touch/trackpad stay native).
+    track.addEventListener("pointerdown", (e) => {
+      if (e.pointerType !== "mouse" || e.button !== 0) return;
+      if (e.target.closest("a,button")) return;
+      ui.drag = { x: e.clientX, left: track.scrollLeft, start: ui.active, moved: false, id: e.pointerId };
+    });
+    track.addEventListener("pointermove", (e) => {
+      const d = ui.drag;
+      if (!d || e.pointerId !== d.id) return;
+      const dx = e.clientX - d.x;
+      if (!d.moved) {
+        if (Math.abs(dx) < 6) return;
+        d.moved = true;
+        try {
+          track.setPointerCapture(e.pointerId);
+        } catch (_) {}
+        track.classList.add("is-dragging");
+      }
+      track.scrollLeft = d.left - dx;
+    });
+    const endDrag = (e) => {
+      const d = ui.drag;
+      if (!d || e.pointerId !== d.id) return;
+      ui.drag = null;
+      if (!d.moved) return;
+      const dx = e.clientX - d.x;
+      let target = nearestIndex(ui);
+      if (Math.abs(dx) > 40 && target === d.start) target = d.start + (dx < 0 ? 1 : -1);
+      ui.suppressClick = true;
+      setTimeout(() => (ui.suppressClick = false), 60);
+      goTo(key, target);
+      setTimeout(() => track.classList.remove("is-dragging"), reduceMotion ? 0 : 480);
+    };
+    track.addEventListener("pointerup", endDrag);
+    track.addEventListener("pointercancel", endDrag);
+    track.addEventListener("dragstart", (e) => e.preventDefault());
+
+    laneEl.querySelectorAll(".lane-nav").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goTo(key, ui.active + (Number(btn.dataset.dir) || 1));
       });
     });
   }
 
   function shiftLane(key, dir) {
-    const lane = lanes[key];
-    if (!lane || lane.pool.length < 2) return;
-    const next = (lane.index + dir + lane.pool.length) % lane.pool.length;
-    setLaneIndex(key, next, dir);
-  }
-
-  function setLaneIndex(key, nextIndex, dir) {
-    const lane = lanes[key];
-    if (!lane.pool.length) return;
-    const stage = deckEl.querySelector(`[data-stage="${key}"]`);
-    const laneEl = deckEl.querySelector(`[data-lane="${key}"]`);
-    if (!stage || !laneEl) {
-      lane.index = nextIndex;
-      lane.identity = optionId(lane.pool[nextIndex]);
-      renderDeck();
-      return;
-    }
-
-    const current = stage.querySelector(".option-panel");
-    lane.index = nextIndex;
-    lane.identity = optionId(lane.pool[nextIndex]);
-    const incoming = document.createElement("div");
-    incoming.innerHTML = renderOptionPanel(key, lane.pool[nextIndex]);
-    const panel = incoming.firstElementChild;
-    panel.classList.add(dir > 0 ? "is-enter-left" : "is-enter-right");
-    stage.appendChild(panel);
-
-    requestAnimationFrame(() => {
-      if (current) current.classList.add(dir > 0 ? "is-exit-left" : "is-exit-right");
-      panel.classList.remove("is-enter-left", "is-enter-right");
-    });
-
-    window.setTimeout(() => {
-      if (current && current.parentNode) current.parentNode.removeChild(current);
-      startCarousels(stage);
-    }, 300);
-
-    const chrome = laneEl.querySelector(".lane-chrome");
-    if (chrome) {
-      const tmp = document.createElement("div");
-      tmp.innerHTML = chromeHtml(lane);
-      chrome.replaceWith(tmp.firstElementChild);
-      laneEl.querySelectorAll(".nav-hit").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          shiftLane(key, Number(btn.dataset.dir) || 1);
-        });
-      });
-    }
+    const ui = laneUi[key];
+    if (!ui || ui.cards.length < 2) return;
+    goTo(key, ui.active + dir);
   }
 
 
@@ -1109,39 +1218,70 @@
     return ordered;
   }
 
+  /* ---------- Scrollable filter rows (one line, edge fades) ---------- */
+
+  function updateRowFades(row) {
+    const max = row.scrollWidth - row.clientWidth;
+    row.classList.toggle("fade-l", row.scrollLeft > 4);
+    row.classList.toggle("fade-r", max > 4 && row.scrollLeft < max - 4);
+    const hint = row.id === "hood-row" ? document.getElementById("hood-hint") : null;
+    if (hint) hint.classList.toggle("is-off", !(max > 4 && row.scrollLeft < max - 4));
+  }
+
+  function centerSelected(row, smooth) {
+    const sel = row.querySelector('[aria-selected="true"]');
+    if (!sel) return updateRowFades(row);
+    const max = row.scrollWidth - row.clientWidth;
+    const left = Math.max(0, Math.min(max, sel.offsetLeft - (row.clientWidth - sel.offsetWidth) / 2));
+    row.scrollTo({ left, behavior: smooth && !reduceMotion ? "smooth" : "auto" });
+    updateRowFades(row);
+  }
+
+  function paintRow(row, html) {
+    const keep = row.scrollLeft;
+    const hadFocus = row.contains(document.activeElement)
+      ? document.activeElement.getAttribute("data-key")
+      : null;
+    row.innerHTML = html;
+    row.scrollLeft = keep;
+    if (hadFocus != null) {
+      const again = row.querySelector(`[data-key="${CSS.escape(hadFocus)}"]`);
+      if (again) again.focus({ preventScroll: true });
+    }
+    centerSelected(row, row.dataset.ready === "1");
+    row.dataset.ready = "1";
+  }
+
+  function chip(attr, value, label, selected) {
+    return `<button type="button" role="tab" data-${attr}="${esc(value)}" data-key="${esc(value)}" aria-selected="${selected}" tabindex="${selected ? 0 : -1}">${esc(label)}</button>`;
+  }
+
   function renderHoods() {
-    hoodRow.innerHTML = [
-      `<button type="button" role="tab" data-hood="all" aria-selected="${hood === "all"}">All</button>`,
-    ]
-      .concat(
-        hoodChoices.map((h) => {
-          const selected = h === hood;
-          return `<button type="button" role="tab" data-hood="${esc(h)}" aria-selected="${selected}">${esc(h)}</button>`;
-        })
-      )
-      .join("");
+    paintRow(
+      hoodRow,
+      [chip("hood", "all", "All", hood === "all")]
+        .concat(hoodChoices.map((h) => chip("hood", h, h, h === hood)))
+        .join("")
+    );
+    const hint = document.getElementById("hood-hint");
+    if (hint) hint.textContent = `${hoodChoices.length} areas · swipe`;
   }
 
   function renderTimes() {
-    timeRow.innerHTML = TIME_OPTIONS.map((t) => {
-      const selected = t.id === timeBucket;
-      return `<button type="button" role="tab" data-time="${esc(t.id)}" aria-selected="${selected}">${esc(t.label)}</button>`;
-    }).join("");
+    paintRow(timeRow, TIME_OPTIONS.map((t) => chip("time", t.id, t.label, t.id === timeBucket)).join(""));
   }
 
   function renderCats() {
-    catRow.innerHTML = categories
-      .map((c) => {
-        const selected = c.id === category;
-        return `<button type="button" role="tab" data-cat="${esc(c.id)}" aria-selected="${selected}">${esc(c.label)}</button>`;
-      })
-      .join("");
+    paintRow(catRow, categories.map((c) => chip("cat", c.id, c.label, c.id === category)).join(""));
   }
 
   function renderParty() {
     [...partyRow.querySelectorAll("button")].forEach((btn) => {
-      btn.setAttribute("aria-selected", btn.dataset.party === party ? "true" : "false");
+      const on = btn.dataset.party === party;
+      btn.setAttribute("aria-selected", on ? "true" : "false");
+      btn.setAttribute("tabindex", on ? "0" : "-1");
     });
+    centerSelected(partyRow, true);
   }
 
   function renderNights() {
@@ -1150,17 +1290,34 @@
       return;
     }
     nightBlock.hidden = false;
-    nightRow.innerHTML = [
-      `<button type="button" role="tab" data-night="" aria-selected="${nightKey ? "false" : "true"}">Any</button>`,
-    ]
-      .concat(
-        plans.map((p) => {
-          const selected = p.for_night === nightKey;
-          return `<button type="button" role="tab" data-night="${esc(p.for_night)}" aria-selected="${selected}">${esc(shortNight(p.for_night))}</button>`;
-        })
-      )
-      .join("");
+    paintRow(
+      nightRow,
+      [chip("night", "", "Any", !nightKey)]
+        .concat(plans.map((p) => chip("night", p.for_night, shortNight(p.for_night), p.for_night === nightKey)))
+        .join("")
+    );
   }
+
+  document.querySelectorAll(".pill-row.scroll").forEach((row) => {
+    row.addEventListener("scroll", () => updateRowFades(row), { passive: true });
+    // Arrow keys move between chips; Enter/Space selects (native button).
+    row.addEventListener("keydown", (e) => {
+      const keys = ["ArrowLeft", "ArrowRight", "Home", "End"];
+      if (!keys.includes(e.key)) return;
+      const btns = [...row.querySelectorAll("button")];
+      const at = btns.indexOf(document.activeElement);
+      if (at < 0) return;
+      e.preventDefault();
+      e.stopPropagation();
+      let next = at;
+      if (e.key === "ArrowLeft") next = Math.max(0, at - 1);
+      if (e.key === "ArrowRight") next = Math.min(btns.length - 1, at + 1);
+      if (e.key === "Home") next = 0;
+      if (e.key === "End") next = btns.length - 1;
+      btns.forEach((b, k) => b.setAttribute("tabindex", k === next ? "0" : "-1"));
+      btns[next].focus();
+    });
+  });
 
   function updateProof() {
     const rCount = restaurants.filter((r) => (r.status || "active") === "active").length;
@@ -1228,11 +1385,15 @@
     });
   }
 
-  window.addEventListener("resize", () => sizeLanes());
+  window.addEventListener("resize", () => {
+    sizeLanes();
+    Object.keys(laneUi).forEach((k) => laneUi[k] && goTo(k, laneUi[k].active, true));
+    document.querySelectorAll(".pill-row.scroll").forEach(updateRowFades);
+  });
 
   deckEl.addEventListener("keydown", (e) => {
     if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
-    const laneEl = deckEl.querySelector(".lane");
+    if (e.target.closest && e.target.closest(".pill-row")) return;
     // Prefer the lane closest to scroll center
     const cards = [...deckEl.querySelectorAll(".lane")];
     const mid = deckEl.scrollTop + deckEl.clientHeight / 2;
@@ -1280,8 +1441,8 @@
       proof.textContent = "Couldn’t load tonight";
       deckEl.innerHTML = `
         <section class="lane empty-lane">
-          <h2 class="lane-heading">Night Out</h2>
-          <div class="option-stage">
+          <header class="lane-head"><h2 class="lane-heading">Night Out</h2></header>
+          <div class="lane-viewport"><div class="option-track"><article class="opt-card is-active">
             <div class="option-panel">
               <div class="bg-stack"><div class="bg-fallback"><span class="lettermark">!</span></div></div>
               <div class="shade"></div>
@@ -1290,7 +1451,7 @@
                 <p class="lede">Give it a refresh — we’ll be right here.</p>
               </div>
             </div>
-          </div>
+          </article></div></div>
         </section>`;
       sizeLanes();
     });
