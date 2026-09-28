@@ -1,1 +1,10 @@
-PLACEHOLDER
+:root {
+  --ink: #0B0B0B;
+  --paper: #FFFDF8;
+  --sun: #FFCC33;
+  --flame: #FF5A36;
+  --mint: #B8F2C2;
+  --sky: #7EC8E3;
+  --line: rgba(255,255,255,0.28);
+  --soft: rgba(255,253,248,0.78);
+}
