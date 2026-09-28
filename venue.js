@@ -45,6 +45,15 @@
     const s = String(u || "").trim();
     return /^https?:\/\//i.test(s) ? s : "";
   }
+  // images may also be site-relative (approved venue photos live in /images/venues/<slug>/)
+  function safeImg(u) {
+    const s = String(u || "").trim();
+    return /^https?:\/\//i.test(s) || /^\/images\/[\w\/.-]+$/.test(s) ? s : "";
+  }
+  function longDate(iso) {
+    const d = new Date(String(iso).slice(0, 10) + "T12:00:00-05:00");
+    return isNaN(d) ? "" : d.toLocaleDateString("en-US", { timeZone: CHI, month: "short", day: "numeric", year: "numeric" });
+  }
   function todayKey() {
     return new Date().toLocaleDateString("en-CA", { timeZone: CHI });
   }
@@ -125,7 +134,7 @@
     if (!v && !r && !all.length) return null;
     v = v || { slug, kind: r ? "restaurant" : "venue", name: r ? r.name : all[0].venue, details: {} };
     const d = v.details || {};
-    const m = { slug, kind: v.kind, cuisine: "", tags: [], images: [] };
+    const m = { slug, kind: v.kind, cuisine: "", tags: [], images: [], updated: v.updated || "" };
     if (r) {
       Object.assign(m, {
         name: r.name, neighborhood: r.neighborhood || "", hours: r.meal_window || "", price: r.price_band || "",
@@ -150,7 +159,7 @@
     FIELDS.forEach(([k]) => { if (d[k]) m[k] = d[k]; });
     if (Array.isArray(d.images) && d.images.length) m.images = d.images.concat(m.images.filter((u) => d.images.indexOf(u) < 0));
     m.tags = [...new Set(m.tags.map((t) => String(t).toLowerCase()))].slice(0, 6);
-    m.images = m.images.filter((u) => safeUrl(u)).slice(0, 8);
+    m.images = m.images.filter((u) => safeImg(u)).slice(0, 8);
 
     const today = todayKey();
     const seen = new Set();
@@ -159,7 +168,7 @@
       .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : minutes(a.start_time) - minutes(b.start_time)))
       .filter((e) => { const k = e.date + "|" + norm(e.name); if (seen.has(k)) return false; seen.add(k); return true; })
       .map((e) => ({ event_id: e.event_id || "", name: e.name || "", date: e.date || "", start_time: e.start_time || "", cost: e.cost || "",
-        notes: e.notes || "", date_friendly: e.date_friendly || "", url: safeUrl(e.official_url), image: [e.image].concat(e.images || []).find((u) => u && !/unsplash\.com|cdninstagram\.com|fbcdn\.net/.test(u)) || "" }));
+        notes: e.notes || "", date_friendly: e.date_friendly || "", url: safeUrl(e.official_url), event_image: safeImg(e.event_image), image: [e.image].concat(e.images || []).find((u) => u && !/unsplash\.com|cdninstagram\.com|fbcdn\.net/.test(u)) || "" }));
     return m;
   }
 
@@ -244,7 +253,9 @@
     const meta = [p.long, time, cost].filter(Boolean).join(" · ");
     const note = e.notes && !/^confirm time|^also via/i.test(e.notes) ? e.notes.split(" | ")[0] : "";
     const rel = editMode ? "noopener noreferrer" : "noopener";
-    return `<article class="ev${e.image ? " has-img" : ""}${opts && opts.cls ? " " + opts.cls : ""}">
+    const big = e.event_image || "";
+    const thumb = big ? "" : e.image;
+    return `<article class="ev${thumb ? " has-img" : ""}${big ? " has-flyer" : ""}${opts && opts.cls ? " " + opts.cls : ""}">
       <div class="ev-date" aria-hidden="true"><span class="dow">${esc(p.dow)}</span><span class="day">${esc(p.day)}</span><span class="mon">${esc(p.mon)}</span></div>
       <div>
         <h3>${esc(e.name)}</h3>
@@ -253,7 +264,9 @@
         ${e.url ? `<a class="more" href="${esc(e.url)}" target="_blank" rel="${rel}">Details →</a>` : ""}
         ${opts && opts.tools ? opts.tools : ""}
       </div>
-      ${e.image ? `<div class="ev-img" style="background-image:url('${esc(e.image)}')" aria-hidden="true"></div>` : ""}
+      ${thumb ? `<div class="ev-img" style="background-image:url('${esc(thumb)}')" aria-hidden="true"></div>` : ""}
+      ${big ? `<div class="ev-flyer"><img src="${esc(big)}" alt="${esc(e.name)}" loading="lazy" /></div>` : ""}
+      ${opts && opts.after ? opts.after : ""}
     </article>`;
   }
 
@@ -292,7 +305,8 @@
       <section class="section" aria-labelledby="events-h">
         <div class="section-head"><h2 id="events-h">Upcoming events</h2></div>
         <div class="events">${m.events.length ? m.events.map((e) => eventCard(e)).join("") : `<div class="card"><p class="empty">No upcoming events listed right now.</p></div>`}</div>
-      </section>`;
+      </section>
+      ${m.updated && longDate(m.updated) ? `<p class="updated">Last updated ${esc(longDate(m.updated))}</p>` : ""}`;
     wireCarousel(pageEl);
   }
 
@@ -314,14 +328,31 @@
   function renderEditor(m) {
     const orig = {};
     FIELDS.forEach(([k]) => (orig[k] = m[k] || ""));
-    const state = { listing: Object.assign({}, orig), editingDetails: false, evEdits: {}, newEvents: [], seq: 0 };
+    const MAX_PHOTOS = 10;
+    const MAX_BYTES = 10 * 1024 * 1024;
+    const state = {
+      listing: Object.assign({}, orig), editingDetails: false, evEdits: {}, newEvents: [], seq: 0,
+      // venue photos: current catalog photos + new ones picked on this phone (uploaded on Submit)
+      photos: m.images.map((u, i) => ({ id: "c" + i, source: "existing", url: u, thumb: u })),
+      newCount: 0, main: m.images.length ? "c0" : null, evImg: {}, picker: null, busy: 0,
+    };
+    const initialMain = state.main;
 
     pageEl.innerHTML = `
-      <div class="intro"><strong>This is your page on Night Out Chicago.</strong>Keep it up to date, and we review changes before they go live.
+      <div class="intro"><strong>This is your page on Night Out Chicago.</strong>Update any details, add photos and event flyers, and pick your main photo. Nothing is required: change only what you want. We review everything before it goes live.
         <small>Private link for ${esc(m.name)}. It doesn’t expire, so bookmark it and come back anytime. Please don’t share it publicly.</small></div>
-      ${heroHtml(m)}
-      <section class="head" id="head"></section>
+      <div id="hero-wrap">${heroHtml(m)}</div>
       <form id="ed" novalidate>
+        <section class="section" aria-labelledby="photos-h">
+          <div class="section-head"><h2 id="photos-h">Photos</h2><span class="hint" id="photo-hint"></span></div>
+          <div class="ph-grid" id="ph-grid"></div>
+          <label class="btn ghost add-ph" id="add-ph-label">
+            <input type="file" id="add-ph" accept="image/*" multiple class="vh" />
+            <span aria-hidden="true">＋</span> Add photos
+          </label>
+          <p class="ph-note" id="ph-note">Up to ${MAX_PHOTOS} per update. We shrink big photos automatically.</p>
+        </section>
+        <section class="head" id="head"></section>
         <section class="section" aria-labelledby="details-h">
           <div class="section-head"><h2 id="details-h">Details</h2>
             <button type="button" class="btn small ghost edit-toggle" id="details-toggle" aria-pressed="false" aria-controls="details-body">Edit</button></div>
@@ -333,11 +364,16 @@
           <button type="button" class="btn ghost add-ev" id="add-ev">+ Add an event</button>
         </section>
         <section class="section" aria-labelledby="contact-h">
-          <div class="section-head"><h2 id="contact-h">Who’s sending this?</h2></div>
+          <div class="section-head"><h2 id="contact-h">Who’s sending this? <em class="opt">optional</em></h2></div>
           <div class="card">
-            <label class="field"><span>Your name</span><input name="contact_name" autocomplete="name" required maxlength="120" /></label>
-            <label class="field"><span>Email <em>(only used if we have a question)</em></span><input name="contact_email" type="email" inputmode="email" autocomplete="email" required maxlength="160" /></label>
-            <label class="field"><span>Note to our editors <em>(optional: photos, corrections, anything else)</em></span><textarea name="note" maxlength="1500" rows="3"></textarea></label>
+            <label class="field"><span>Your name</span><input name="contact_name" autocomplete="name" maxlength="120" /></label>
+            <label class="field"><span>Email <em>(only used if we have a question)</em></span><input name="contact_email" type="email" inputmode="email" autocomplete="email" maxlength="160" /></label>
+          </div>
+        </section>
+        <section class="section" aria-labelledby="else-h">
+          <div class="section-head"><h2 id="else-h">Anything else we should know?</h2></div>
+          <div class="card">
+            <label class="field"><span class="vh">Anything else we should know?</span><textarea name="anything_else" id="anything-else" maxlength="2000" rows="4" placeholder="Specials, closures, a new chef, holiday hours, private events…"></textarea></label>
           </div>
         </section>
         <div class="submit-bar">
@@ -346,21 +382,81 @@
           <p>Nothing goes live until we’ve reviewed it.</p>
           <p class="err" id="err" role="alert" hidden></p>
         </div>
-      </form>`;
+      </form>
+      <input type="file" id="ev-file" accept="image/*" class="vh" tabindex="-1" aria-hidden="true" />`;
     wireCarousel(pageEl);
     const form = pageEl.querySelector("#ed");
+    const heroWrap = pageEl.querySelector("#hero-wrap");
     const headEl = pageEl.querySelector("#head");
     const detailsBody = pageEl.querySelector("#details-body");
     const toggle = pageEl.querySelector("#details-toggle");
     const evList = pageEl.querySelector("#ev-list");
     const countEl = pageEl.querySelector("#change-count");
     const errEl = pageEl.querySelector("#err");
+    const phGrid = pageEl.querySelector("#ph-grid");
+    const phInput = pageEl.querySelector("#add-ph");
+    const phNote = pageEl.querySelector("#ph-note");
+    const phHint = pageEl.querySelector("#photo-hint");
+    const evFile = pageEl.querySelector("#ev-file");
+    const elseBox = pageEl.querySelector("#anything-else");
+
+    /* ---- image prep: downscale to ~2000px JPEG on the phone (also strips location metadata) ---- */
+    function prepImage(file) {
+      const okType = /^image\/(jpeg|png|webp|heic|heif|gif)$/.test(file.type);
+      const keep = () => okType && file.size <= MAX_BYTES
+        ? Promise.resolve({ blob: file, type: file.type, bytes: file.size, thumb: URL.createObjectURL(file) })
+        : Promise.reject(new Error(okType ? "too_big" : "type"));
+      if (file.type === "image/gif" || !window.createImageBitmap || file.size > 40 * 1024 * 1024) return keep();
+      return createImageBitmap(file, { imageOrientation: "from-image" }).catch(() => createImageBitmap(file)).then((bmp) => {
+        const scale = Math.min(1, 2000 / Math.max(bmp.width, bmp.height));
+        const w = Math.max(1, Math.round(bmp.width * scale)), h = Math.max(1, Math.round(bmp.height * scale));
+        const c = document.createElement("canvas");
+        c.width = w; c.height = h;
+        c.getContext("2d").drawImage(bmp, 0, 0, w, h);
+        if (bmp.close) bmp.close();
+        return new Promise((res) => c.toBlob(res, "image/jpeg", 0.85)).then((blob) => {
+          if (!blob) return keep();
+          if (blob.size > MAX_BYTES) throw new Error("too_big");
+          return { blob, type: "image/jpeg", bytes: blob.size, thumb: URL.createObjectURL(blob) };
+        });
+      }, keep);
+    }
+    function prepError(e) {
+      return e && e.message === "type" ? "That file isn’t a photo we can use. Try a JPG, PNG or HEIC." : "That photo is too large (over 10 MB). Try a smaller one.";
+    }
 
     function preview() {
       return Object.assign({}, m, state.listing);
     }
     function paintHead() {
       headEl.innerHTML = headHtml(preview());
+    }
+    function photoById(id) {
+      return state.photos.find((p) => p.id === id);
+    }
+    function paintHero() {
+      const imgs = state.photos.map((p) => p.thumb);
+      const mi = state.photos.findIndex((p) => p.id === state.main);
+      if (mi > 0) imgs.unshift(imgs.splice(mi, 1)[0]);
+      heroWrap.innerHTML = heroHtml(Object.assign({}, m, { images: imgs }));
+      wireCarousel(heroWrap);
+    }
+    function paintPhotos() {
+      const n = state.photos.filter((p) => p.source === "upload").length;
+      phHint.textContent = state.photos.length > 1 ? "Tap a photo to make it your main one" : "";
+      phGrid.innerHTML = state.photos.map((p) => {
+        const on = p.id === state.main;
+        return `<div class="ph${on ? " is-main" : ""}${p.source === "upload" ? " is-new" : ""}">
+          <button type="button" class="ph-pick" data-main="${p.id}" aria-pressed="${on}" aria-label="${on ? "Main photo" : "Make this the main photo"}">
+            <img src="${esc(p.thumb)}" alt="" loading="lazy" />
+            <span class="ph-tag">${on ? "★ Main photo" : "☆ Make main"}</span>
+          </button>
+          ${p.source === "upload" ? `<span class="ph-new">New</span><button type="button" class="ph-x" data-rm="${p.id}" aria-label="Remove this photo">×</button>` : ""}
+        </div>`;
+      }).join("") || `<p class="ph-empty">No photos yet. Add a few so people can see the place.</p>`;
+      phNote.textContent = n >= MAX_PHOTOS ? `That’s ${MAX_PHOTOS} new photos, the most for one update. Send more in another update.` : `Up to ${MAX_PHOTOS} per update${n ? ` (${n} added)` : ""}. We shrink big photos automatically.`;
+      pageEl.querySelector("#add-ph-label").classList.toggle("is-disabled", n >= MAX_PHOTOS);
+      phInput.disabled = n >= MAX_PHOTOS;
     }
     function paintDetails() {
       toggle.setAttribute("aria-pressed", state.editingDetails ? "true" : "false");
@@ -389,20 +485,52 @@
       detailsBody.querySelectorAll("input, textarea, select").forEach((el) => el.classList.toggle("is-changed", (state.listing[el.name] || "") !== (orig[el.name] || "")));
     }
 
+    /* ---- event picture: pick one of the venue's photos or upload a photo/flyer (one per event) ---- */
+    function evImgUrl(key) {
+      const c = state.evImg[key];
+      if (!c) return "";
+      if (c.source === "photo") { const p = photoById(c.photoId); return p ? p.thumb : ""; }
+      return c.thumb || "";
+    }
+    function evPicHtml(key) {
+      const url = evImgUrl(key);
+      const open = state.picker === key;
+      let html = `<div class="ev-pic" data-key="${key}">`;
+      if (url) {
+        html += `<div class="ev-pic-chosen"><img src="${esc(url)}" alt="Chosen event picture" />
+          <div><span class="ev-pic-label">Event picture</span>
+          <button type="button" class="linkish" data-act="pic-open" data-key="${key}">Change</button>
+          <button type="button" class="linkish danger" data-act="pic-clear" data-key="${key}">Remove</button></div></div>`;
+      } else if (!open) {
+        html += `<button type="button" class="btn small ghost pic-btn" data-act="pic-open" data-key="${key}"><span aria-hidden="true">＋</span> Add a photo or flyer</button>`;
+      }
+      if (open) {
+        const photos = state.photos;
+        html += `<div class="picker" role="group" aria-label="Choose the event picture">
+          <div class="picker-head"><span>Choose the event picture</span><button type="button" class="linkish" data-act="pic-close" data-key="${key}">Cancel</button></div>
+          <button type="button" class="btn small pic-up" data-act="pic-upload" data-key="${key}"><span aria-hidden="true">⇪</span> Upload a photo or flyer</button>
+          ${photos.length ? `<p class="picker-sub">Or use one of your photos</p>
+          <div class="picker-grid">${photos.map((p) => `<button type="button" class="pk${state.evImg[key] && state.evImg[key].photoId === p.id ? " is-on" : ""}" data-act="pic-photo" data-key="${key}" data-photo="${p.id}" aria-label="Use this photo"><img src="${esc(p.thumb)}" alt="" loading="lazy" /></button>`).join("")}</div>` : ""}
+        </div>`;
+      }
+      return html + `</div>`;
+    }
+
     function evFormHtml(key, e, isNew) {
       const f = (n, label, val, attrs) => `<label class="field"><span>${label}</span><input name="${n}" value="${esc(val || "")}" ${attrs || ""} /></label>`;
       return `<div class="ev-form" data-key="${key}">
         <div class="ev-form-head"><span>${isNew ? "New event" : "Edit event"}</span>
           <button type="button" class="linkish ${isNew ? "danger" : ""}" data-act="${isNew ? "remove" : "close"}">${isNew ? "Remove" : "Done"}</button></div>
-        ${f("title", "Event title", e.title, 'maxlength="160" required')}
+        ${f("title", "Event title", e.title, 'maxlength="160"')}
         <div class="two">
-          ${f("date", "Date", e.date, `type="date" required min="${todayKey()}"`)}
+          ${f("date", "Date", e.date, `type="date" min="${todayKey()}"`)}
           ${f("start_time", "Start time", e.start_time, 'maxlength="40" placeholder="7:30 PM or TBA"')}
         </div>
         ${f("price", "Price", e.price, 'maxlength="60" placeholder="Free, $25, $20–40"')}
         <label class="field"><span>Short description</span><textarea name="description" maxlength="500" rows="2">${esc(e.description || "")}</textarea></label>
         ${f("link", "Link (tickets or details)", e.link, 'type="url" inputmode="url" maxlength="300" placeholder="https://"')}
         ${isNew ? "" : `<label class="check"><input type="checkbox" name="cancelled" ${e.cancelled ? "checked" : ""} /> This event is cancelled</label>`}
+        <div class="ev-form-pic">${evPicHtml(key)}</div>
       </div>`;
     }
     function existingAsForm(e) {
@@ -414,9 +542,10 @@
         const key = "x" + i;
         const ed = state.evEdits[key];
         if (ed && ed.open) return html.push(evFormHtml(key, ed.data, false));
-        const shown = ed ? Object.assign({}, e, { name: ed.data.title, date: ed.data.date, start_time: ed.data.start_time, cost: ed.data.price, notes: ed.data.description, url: safeUrl(ed.data.link) }) : e;
-        const tag = ed && ed.data.cancelled ? `<span class="pill">Marked cancelled</span> ` : ed && ed.changed ? `<span class="pill price">Edited</span> ` : "";
-        html.push(eventCard(shown, { cls: ed && ed.data.cancelled ? "is-cancel" : "", tools: `<div class="ev-edit-row">${tag}<button type="button" class="linkish" data-act="edit" data-key="${key}">Edit</button></div>` }));
+        let shown = ed ? Object.assign({}, e, { name: ed.data.title, date: ed.data.date, start_time: ed.data.start_time, cost: ed.data.price, notes: ed.data.description, url: safeUrl(ed.data.link) }) : e;
+        if (state.evImg[key]) shown = Object.assign({}, shown, { event_image: "", image: "" }); // picture shown in the picker row
+        const tag = ed && ed.data.cancelled ? `<span class="pill">Marked cancelled</span> ` : ed && ed.changed ? `<span class="pill price">Edited</span> ` : state.evImg[key] ? `<span class="pill price">New picture</span> ` : "";
+        html.push(eventCard(shown, { cls: ed && ed.data.cancelled ? "is-cancel" : "", tools: `<div class="ev-edit-row">${tag}<button type="button" class="linkish" data-act="edit" data-key="${key}">Edit details</button></div>`, after: `<div class="ev-after">${evPicHtml(key)}</div>` }));
       });
       state.newEvents.forEach((n) => html.push(evFormHtml(n.key, n.data, true)));
       evList.innerHTML = html.join("") || `<div class="card"><p class="empty">No upcoming events listed yet. Add your next one below.</p></div>`;
@@ -429,8 +558,15 @@
       const base = existingAsForm(m.events[i]);
       return Object.keys(data).some((k) => String(data[k] || "").trim() !== String(base[k] || "").trim());
     }
+    function newEventFilled(n) {
+      return ["title", "date", "start_time", "price", "description", "link"].some((k) => String(n.data[k] || "").trim()) || !!state.evImg[n.key];
+    }
     function updateCount() {
-      const n = changedFields().length + Object.values(state.evEdits).filter((x) => x.changed).length + state.newEvents.length;
+      const nPh = state.photos.filter((p) => p.source === "upload").length;
+      const evKeys = new Set(Object.keys(state.evEdits).filter((k) => state.evEdits[k].changed));
+      Object.keys(state.evImg).forEach((k) => { if (k[0] === "x") evKeys.add(k); });
+      const n = changedFields().length + evKeys.size + state.newEvents.filter(newEventFilled).length + nPh +
+        (state.main !== initialMain ? 1 : 0) + (elseBox.value.trim() ? 1 : 0);
       countEl.textContent = n ? `${n} change${n > 1 ? "s" : ""} ready to send` : "";
     }
 
@@ -447,6 +583,70 @@
       paintHead();
       updateCount();
     });
+    elseBox.addEventListener("input", updateCount);
+
+    phInput.addEventListener("change", () => {
+      const files = [...phInput.files];
+      phInput.value = "";
+      if (!files.length) return;
+      showErr("");
+      const room = MAX_PHOTOS - state.photos.filter((p) => p.source === "upload").length;
+      if (files.length > room) showErr(`Only ${MAX_PHOTOS} new photos per update, so we kept the first ${Math.max(room, 0)}. Send the rest in another update.`);
+      state.busy++;
+      phNote.textContent = "Getting your photos ready…";
+      Promise.all(files.slice(0, Math.max(room, 0)).map((f) => prepImage(f).then((r) => r, (e) => ({ error: prepError(e) }))))
+        .then((results) => {
+          state.busy--;
+          const bad = results.filter((r) => r.error);
+          results.filter((r) => !r.error).forEach((r) => {
+            const id = "u" + ++state.newCount;
+            state.photos.push(Object.assign({ id, source: "upload" }, r));
+            if (!state.main) state.main = id;
+          });
+          if (bad.length) showErr(bad[0].error);
+          paintPhotos(); paintHero(); paintEvents(); updateCount();
+        });
+    });
+    phGrid.addEventListener("click", (ev) => {
+      const rm = ev.target.closest("[data-rm]");
+      if (rm) {
+        const id = rm.dataset.rm;
+        const p = photoById(id);
+        state.photos = state.photos.filter((x) => x.id !== id);
+        if (p && p.thumb && p.source === "upload") URL.revokeObjectURL(p.thumb);
+        if (state.main === id) state.main = state.photos.length ? (initialMain && photoById(initialMain) ? initialMain : state.photos[0].id) : null;
+        Object.keys(state.evImg).forEach((k) => { if (state.evImg[k].photoId === id) delete state.evImg[k]; });
+        paintPhotos(); paintHero(); paintEvents(); updateCount();
+        return;
+      }
+      const b = ev.target.closest("[data-main]");
+      if (!b) return;
+      state.main = b.dataset.main;
+      paintPhotos(); paintHero(); updateCount();
+    });
+
+    let evFileKey = null;
+    evFile.addEventListener("change", () => {
+      const f = evFile.files[0];
+      evFile.value = "";
+      const key = evFileKey;
+      if (!f || !key) return;
+      showErr("");
+      prepImage(f).then((r) => {
+        const old = state.evImg[key];
+        if (old && old.source === "upload" && old.thumb) URL.revokeObjectURL(old.thumb);
+        state.evImg[key] = Object.assign({ source: "upload" }, r);
+        state.picker = null;
+        paintEvents(); updateCount();
+      }, (e) => showErr(prepError(e)));
+    });
+
+    function eventTitleFor(key) {
+      if (key[0] === "x") { const ed = state.evEdits[key]; return (ed && ed.data.title) || m.events[+key.slice(1)].name; }
+      const n = state.newEvents.find((x) => x.key === key);
+      return (n && n.data.title) || "New event";
+    }
+
     evList.addEventListener("click", (ev) => {
       const b = ev.target.closest("[data-act]");
       if (!b) return;
@@ -464,7 +664,24 @@
         paintEvents();
       } else if (act === "remove") {
         state.newEvents = state.newEvents.filter((n) => n.key !== key);
+        delete state.evImg[key];
         paintEvents();
+      } else if (act === "pic-open") {
+        state.picker = key;
+        paintEvents();
+      } else if (act === "pic-close") {
+        state.picker = null;
+        paintEvents();
+      } else if (act === "pic-clear") {
+        delete state.evImg[key];
+        paintEvents();
+      } else if (act === "pic-photo") {
+        state.evImg[key] = { source: "photo", photoId: b.dataset.photo };
+        state.picker = null;
+        paintEvents();
+      } else if (act === "pic-upload") {
+        evFileKey = key;
+        evFile.click();
       }
       updateCount();
     });
@@ -473,6 +690,7 @@
       if (!box) return;
       const key = box.dataset.key;
       const el = ev.target;
+      if (!el.name) return;
       const val = el.type === "checkbox" ? el.checked : el.value;
       if (key[0] === "x") {
         state.evEdits[key].data[el.name] = val;
@@ -496,69 +714,133 @@
       errEl.textContent = msg;
       errEl.hidden = !msg;
     }
+    const btn = pageEl.querySelector("#submit-btn");
+    function resetBtn() {
+      btn.disabled = false;
+      btn.textContent = "Submit updates for review";
+    }
+
+    // Uploads go straight to a private bucket through one-time signed URLs (valid edit link required).
+    function uploadAll(items) {
+      if (!items.length) return Promise.resolve([]);
+      return fetch("/api/upload-url", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ slug: m.slug, k: token, files: items.map((it) => ({ kind: it.kind, content_type: it.type, size: it.bytes })) }),
+      }).then((r) => r.json().catch(() => ({})).then((j) => ({ status: r.status, j }))).then(({ status, j }) => {
+        if (status !== 200 || !j.ok || !Array.isArray(j.uploads) || j.uploads.length !== items.length) {
+          const e = new Error(status === 403 ? "invalid" : status === 429 ? "rate" : "upload");
+          throw e;
+        }
+        let done = 0;
+        btn.textContent = `Uploading photos 0 of ${items.length}…`;
+        const one = (it, u) => fetch(u.signed_url, { method: "PUT", headers: { "Content-Type": it.type, "x-upsert": "false" }, body: it.blob })
+          .then((r) => { if (!r.ok) throw new Error("upload"); done++; btn.textContent = `Uploading photos ${done} of ${items.length}…`; return Object.assign({}, it, { path: u.path }); });
+        // two at a time is kind to phone connections
+        const out = new Array(items.length);
+        let next = 0;
+        const worker = () => next < items.length ? (function (i) { next++; return one(items[i], j.uploads[i]).then((x) => { out[i] = x; return worker(); }); })(next) : Promise.resolve();
+        return Promise.all([worker(), worker()]).then(() => out);
+      });
+    }
+
     form.addEventListener("submit", (ev) => {
       ev.preventDefault();
       showErr("");
+      if (state.busy) { showErr("Still getting your photos ready. Try again in a second."); return; }
       const contactName = form.contact_name.value.trim();
       const contactEmail = form.contact_email.value.trim();
-      const note = form.note.value.trim();
-      if (!contactName || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(contactEmail)) {
-        showErr("Please add your name and a valid email so we can reach you with questions.");
-        (contactName ? form.contact_email : form.contact_name).focus();
+      const anythingElse = elseBox.value.trim();
+      if (contactEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(contactEmail)) {
+        showErr("That email doesn’t look right. Fix it or leave it blank.");
+        form.contact_email.focus();
         return;
       }
-      for (const n of state.newEvents) {
-        if (!n.data.title.trim() || !n.data.date) {
-          showErr("Each new event needs a title and a date (or remove it).");
-          const f = evList.querySelector(`.ev-form[data-key="${n.key}"] input`);
-          if (f) f.focus();
-          return;
-        }
-      }
-      const urlBad = [state.listing.website, state.listing.booking].concat(state.newEvents.map((n) => n.data.link), Object.values(state.evEdits).map((x) => x.data.link))
+      const newEvents = state.newEvents.filter(newEventFilled);
+      const urlBad = [state.listing.website, state.listing.booking].concat(newEvents.map((n) => n.data.link), Object.values(state.evEdits).map((x) => x.data.link))
         .some((u) => u && u.trim() && !/^https?:\/\/\S+\.\S+/i.test(u.trim()) && !/^[\w.-]+\.[a-z]{2,}(\/\S*)?$/i.test(u.trim()));
       if (urlBad) { showErr("One of the links doesn’t look like a web address. Please check it (e.g. https://example.com)."); return; }
-      const events = [];
-      Object.keys(state.evEdits).forEach((key) => {
-        const x = state.evEdits[key];
-        if (!x.changed) return;
-        const e = m.events[+key.slice(1)];
-        events.push(Object.assign({ action: x.data.cancelled ? "cancel" : "update", event_id: e.event_id, original: existingAsForm(e) }, x.data));
-      });
-      state.newEvents.forEach((n) => events.push(Object.assign({ action: "add" }, n.data)));
+
       const changed = changedFields();
-      if (!changed.length && !events.length && !note) {
-        showErr("Nothing has changed yet. Tap Edit on Details, add an event, or leave a note.");
+      const newPhotos = state.photos.filter((p) => p.source === "upload");
+      const evImgKeys = Object.keys(state.evImg).filter((k) => k[0] === "x" || newEvents.some((n) => n.key === k));
+      const mainChanged = state.main !== initialMain;
+      const anyEvEdit = Object.values(state.evEdits).some((x) => x.changed);
+      if (!changed.length && !anyEvEdit && !newEvents.length && !anythingElse && !newPhotos.length && !evImgKeys.length && !mainChanged) {
+        showErr("Nothing has changed yet. Add photos, tap Edit on Details, add an event, or write a note below.");
         return;
       }
-      const btn = pageEl.querySelector("#submit-btn");
+      // files to upload: new venue photos + event pictures uploaded from this phone
+      const items = newPhotos.map((p) => ({ ref: p.id, kind: "venue_photo", blob: p.blob, type: p.type, bytes: p.bytes }));
+      evImgKeys.forEach((k) => {
+        const c = state.evImg[k];
+        if (c.source === "upload") items.push({ ref: "ev:" + k, kind: "event_image", blob: c.blob, type: c.type, bytes: c.bytes, evKey: k });
+      });
       btn.disabled = true;
-      btn.textContent = "Sending…";
-      const payload = {
-        slug: m.slug,
-        k: token,
-        contact: { name: contactName, email: contactEmail },
-        listing: Object.assign({}, state.listing, { note_to_editors: note, changed_fields: changed }),
-        events,
-        original: { listing: orig, kind: m.kind, page: location.origin + "/v/" + m.slug },
-      };
-      fetch("/api/submit", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) })
-        .then((r) => r.json().catch(() => ({})).then((j) => ({ status: r.status, j })))
-        .then(({ status, j }) => {
-          if (status === 200 && j.ok) return renderThanks(m);
-          btn.disabled = false;
-          btn.textContent = "Submit updates for review";
-          if (status === 403) showErr("This edit link isn’t valid anymore. Please ask us for a fresh link.");
-          else if (status === 429) showErr("Lots of updates in the last hour. Please try again a bit later.");
-          else showErr(j && j.error ? j.error : "Couldn’t send just now. Check your connection and try again.");
-        })
-        .catch(() => {
-          btn.disabled = false;
-          btn.textContent = "Submit updates for review";
-          showErr("Couldn’t send just now. Check your connection and try again.");
+      btn.textContent = items.length ? "Preparing photos…" : "Sending…";
+      uploadAll(items).then((done) => {
+        const pathOf = {};
+        done.forEach((d) => (pathOf[d.ref] = d.path));
+        const evRef = (k) => (k[0] === "x" ? m.events[+k.slice(1)].event_id || "x:" + k.slice(1) : "new:" + k.slice(1));
+        const choiceFor = (k) => {
+          const c = state.evImg[k];
+          if (!c) return null;
+          if (c.source === "upload") return { source: "upload", path: pathOf["ev:" + k] };
+          const p = photoById(c.photoId);
+          if (!p) return null;
+          return p.source === "existing" ? { source: "existing", url: p.url } : { source: "upload", path: pathOf[p.id] };
+        };
+        const uploads = done.map((d) => ({
+          path: d.path, kind: d.kind, bytes: d.bytes, content_type: d.type,
+          event_ref: d.evKey ? evRef(d.evKey) : "", event_title: d.evKey ? eventTitleFor(d.evKey) : "",
+        }));
+        const events = [];
+        m.events.forEach((e, i) => {
+          const key = "x" + i;
+          const x = state.evEdits[key];
+          const choice = choiceFor(key);
+          if (!(x && x.changed) && !choice) return;
+          const data = x ? x.data : existingAsForm(e);
+          const action = x && x.changed ? (data.cancelled ? "cancel" : "update") : "photo";
+          const out = Object.assign({ action, event_id: e.event_id, ref: evRef(key), original: existingAsForm(e) }, data);
+          if (choice) out.image_choice = choice;
+          events.push(out);
         });
+        newEvents.forEach((n) => {
+          const out = Object.assign({ action: "add", ref: evRef(n.key) }, n.data);
+          const choice = choiceFor(n.key);
+          if (choice) out.image_choice = choice;
+          events.push(out);
+        });
+        const mp = mainChanged && state.main ? photoById(state.main) : null;
+        const main_photo = mp ? (mp.source === "existing" ? { source: "existing", url: mp.url } : { source: "upload", path: pathOf[mp.id] }) : null;
+        btn.textContent = "Sending…";
+        const payload = {
+          slug: m.slug,
+          k: token,
+          contact: { name: contactName, email: contactEmail },
+          listing: Object.assign({}, state.listing, { anything_else: anythingElse, changed_fields: changed, main_photo }),
+          events,
+          uploads,
+          original: { listing: orig, kind: m.kind, page: location.origin + "/v/" + m.slug },
+        };
+        return fetch("/api/submit", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) })
+          .then((r) => r.json().catch(() => ({})).then((j) => ({ status: r.status, j })))
+          .then(({ status, j }) => {
+            if (status === 200 && j.ok) return renderThanks(m);
+            resetBtn();
+            if (status === 403) showErr("This edit link isn’t valid anymore. Please ask us for a fresh link.");
+            else if (status === 429) showErr("Lots of updates in the last hour. Please try again a bit later.");
+            else showErr(j && j.error ? j.error : "Couldn’t send just now. Check your connection and try again.");
+          });
+      }).catch((e) => {
+        resetBtn();
+        if (e && e.message === "invalid") showErr("This edit link isn’t valid anymore. Please ask us for a fresh link.");
+        else if (e && e.message === "rate") showErr("Lots of photos in the last hour. Please try again a bit later.");
+        else showErr(items.length ? "Your photos didn’t upload. Check your connection and try again." : "Couldn’t send just now. Check your connection and try again.");
+      });
     });
 
+    paintPhotos();
     paintHead();
     paintDetails();
     paintEvents();

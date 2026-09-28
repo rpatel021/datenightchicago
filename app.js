@@ -536,8 +536,9 @@
       start_time: ev.start_time || "",
       cost: ev.cost || "",
       notes: ev.notes || ev.date_friendly || "",
-      image: ev.image || "",
-      images: Array.isArray(ev.images) ? ev.images.slice() : [],
+      // event_image = approved venue-supplied photo/flyer (preferred); else the scraped image
+      image: ev.event_image || ev.image || "",
+      images: (ev.event_image && ev.image ? [ev.image] : []).concat(Array.isArray(ev.images) ? ev.images : []),
       photos: Array.isArray(ev.photos) ? ev.photos.slice() : [],
       url: ev.official_url || "",
       date: ev.date || "",

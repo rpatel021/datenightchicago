@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-28T14:17:13-05:00",
+ "generated_at": "2026-09-28T15:14:01-05:00",
  "note": "Stable slug index for /v/<slug>. Built by datenight-scout/build_venues.py; 'details' is approved venue-supplied data and is preserved.",
  "count": 231,
  "venues": [
@@ -14,7 +14,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "d4b347a6011c",
+   "updated": "2026-09-23"
   },
   {
    "slug": "acadia",
@@ -27,7 +29,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "326844638c4a",
+   "updated": "2026-09-23"
   },
   {
    "slug": "adalina",
@@ -40,7 +44,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "bd50e601c481",
+   "updated": "2026-09-24"
   },
   {
    "slug": "akahoshi-ramen",
@@ -53,7 +59,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "85db93fd40fd",
+   "updated": "2026-09-24"
   },
   {
    "slug": "alinea",
@@ -66,7 +74,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "a62b214977e8",
+   "updated": "2026-09-24"
   },
   {
    "slug": "all-well",
@@ -79,7 +89,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "32739854ab5c",
+   "updated": "2026-09-24"
   },
   {
    "slug": "anelya",
@@ -92,7 +104,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "d8e0d8b3263b",
+   "updated": "2026-09-24"
   },
   {
    "slug": "anteprima",
@@ -105,7 +119,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "a6688eeb052c",
+   "updated": "2026-09-27"
   },
   {
    "slug": "asador-bastian",
@@ -118,7 +134,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "211c799aac10",
+   "updated": "2026-09-24"
   },
   {
    "slug": "ascione-bistro",
@@ -131,7 +149,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "ec2127f402fa",
+   "updated": "2026-09-27"
   },
   {
    "slug": "au-cheval",
@@ -144,7 +164,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "8ddfb164f10c",
+   "updated": "2026-09-27"
   },
   {
    "slug": "avec",
@@ -157,7 +179,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "f193ee0b2168",
+   "updated": "2026-09-27"
   },
   {
    "slug": "bar-roma",
@@ -170,7 +194,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "c9e4c04bf07e",
+   "updated": "2026-09-27"
   },
   {
    "slug": "bavettes-bar-and-boeuf",
@@ -183,7 +209,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "30760b31564f",
+   "updated": "2026-09-23"
   },
   {
    "slug": "bayan-ko",
@@ -196,7 +224,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "75d3569cd1e7",
+   "updated": "2026-09-27"
   },
   {
    "slug": "beatrix",
@@ -209,7 +239,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "7a0431563e98",
+   "updated": "2026-09-23"
   },
   {
    "slug": "beaumonts",
@@ -222,7 +254,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "c20f2ea45141",
+   "updated": "2026-09-24"
   },
   {
    "slug": "bienmesabe",
@@ -235,7 +269,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "64eb18abfeec",
+   "updated": "2026-09-27"
   },
   {
    "slug": "big-jones",
@@ -248,7 +284,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "27ad429dc163",
+   "updated": "2026-09-23"
   },
   {
    "slug": "big-star",
@@ -261,7 +299,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "7b4486a8f973",
+   "updated": "2026-09-23"
   },
   {
    "slug": "bistro-campagne",
@@ -274,7 +314,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "2447b46ef6c0",
+   "updated": "2026-09-24"
   },
   {
    "slug": "boka",
@@ -287,7 +329,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "c3a54866fdd2",
+   "updated": "2026-09-24"
   },
   {
    "slug": "bungalow-by-middle-brow",
@@ -300,7 +344,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "a1e3b7cb162e",
+   "updated": "2026-09-24"
   },
   {
    "slug": "cafe-ba-ba-reeba",
@@ -313,7 +359,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "fd718327be82",
+   "updated": "2026-09-23"
   },
   {
    "slug": "cafe-yaya",
@@ -326,7 +374,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "845ae645f2d1",
+   "updated": "2026-09-27"
   },
   {
    "slug": "carino",
@@ -339,7 +389,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "5531edeeb2d9",
+   "updated": "2026-09-24"
   },
   {
    "slug": "cellar-door-provisions",
@@ -352,7 +404,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "2803e1153f86",
+   "updated": "2026-09-24"
   },
   {
    "slug": "cerdito-muerto",
@@ -365,7 +419,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "0d105a5f3885",
+   "updated": "2026-09-24"
   },
   {
    "slug": "chez-joel",
@@ -378,7 +434,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "cbb51aebe687",
+   "updated": "2026-09-24"
   },
   {
    "slug": "chicago-firehouse-restaurant",
@@ -391,7 +449,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "2f86d85ae13e",
+   "updated": "2026-09-23"
   },
   {
    "slug": "cho-sun-ok",
@@ -404,7 +464,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "82cd96cef9c7",
+   "updated": "2026-09-27"
   },
   {
    "slug": "chubby-boys",
@@ -417,7 +479,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "0e374199828d",
+   "updated": "2026-09-24"
   },
   {
    "slug": "ciccio-mio",
@@ -430,7 +494,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "b88a041051c3",
+   "updated": "2026-09-24"
   },
   {
    "slug": "cindys-rooftop",
@@ -443,7 +509,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "6c8638e80559",
+   "updated": "2026-09-23"
   },
   {
    "slug": "community-tavern",
@@ -456,7 +524,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "c63da4d74618",
+   "updated": "2026-09-24"
   },
   {
    "slug": "daisies",
@@ -469,7 +539,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "b022a3c0a79a",
+   "updated": "2026-09-23"
   },
   {
    "slug": "daisies-west-loop",
@@ -482,7 +554,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "0d5c8cf1e02c",
+   "updated": "2026-09-24"
   },
   {
    "slug": "deliz-italian-steakhouse",
@@ -495,7 +569,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "a23a02771605",
+   "updated": "2026-09-24"
   },
   {
    "slug": "demera",
@@ -508,7 +584,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "d381fc31e981",
+   "updated": "2026-09-27"
   },
   {
    "slug": "doves-luncheonette",
@@ -521,7 +599,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "c2b5256c1cf1",
+   "updated": "2026-09-23"
   },
   {
    "slug": "duck-sel",
@@ -534,7 +614,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "8683085bfdc3",
+   "updated": "2026-09-24"
   },
   {
    "slug": "duseks-board-and-beer",
@@ -547,7 +629,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "2e69d354863e",
+   "updated": "2026-09-23"
   },
   {
    "slug": "esme",
@@ -560,7 +644,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "deda0406e0e3",
+   "updated": "2026-09-24"
   },
   {
    "slug": "ever",
@@ -573,7 +659,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "0958108da6c7",
+   "updated": "2026-09-24"
   },
   {
    "slug": "fiya",
@@ -586,7 +674,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "1e28ebab6b4c",
+   "updated": "2026-09-27"
   },
   {
    "slug": "frontera-grill",
@@ -599,7 +689,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "3288608d0ede",
+   "updated": "2026-09-24"
   },
   {
    "slug": "galit",
@@ -612,7 +704,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "68799be1113b",
+   "updated": "2026-09-24"
   },
   {
    "slug": "gejas-cafe",
@@ -625,7 +719,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "ef02d2bd5c8a",
+   "updated": "2026-09-23"
   },
   {
    "slug": "gibsons-bar-and-steakhouse",
@@ -638,7 +734,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "6dcc20e559c4",
+   "updated": "2026-09-23"
   },
   {
    "slug": "gioco",
@@ -651,7 +749,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "f814cedfa0f1",
+   "updated": "2026-09-23"
   },
   {
    "slug": "girl-and-the-goat",
@@ -664,7 +764,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "2e56c69c05fd",
+   "updated": "2026-09-27"
   },
   {
    "slug": "gt-fish-and-oyster",
@@ -677,7 +779,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "e9522e1cc324",
+   "updated": "2026-09-23"
   },
   {
    "slug": "haisous-vietnamese-kitchen",
@@ -690,7 +794,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "2113289693de",
+   "updated": "2026-09-24"
   },
   {
    "slug": "hermosa-restaurant",
@@ -703,7 +809,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "7055a7635fd9",
+   "updated": "2026-09-24"
   },
   {
    "slug": "hopleaf",
@@ -716,7 +824,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "dd4a649990ae",
+   "updated": "2026-09-23"
   },
   {
    "slug": "indienne",
@@ -729,7 +839,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "8b747231e3ff",
+   "updated": "2026-09-24"
   },
   {
    "slug": "jeong",
@@ -742,7 +854,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "46b8b21b04f3",
+   "updated": "2026-09-24"
   },
   {
    "slug": "joes-seafood-prime-steak-and-stone-crab",
@@ -755,7 +869,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "143e3a53e287",
+   "updated": "2026-09-23"
   },
   {
    "slug": "kasama",
@@ -768,7 +884,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "4f396ea23785",
+   "updated": "2026-09-24"
   },
   {
    "slug": "khmai-cambodian-fine-dining",
@@ -781,7 +899,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "2e5931221f6f",
+   "updated": "2026-09-24"
   },
   {
    "slug": "kumiko",
@@ -794,7 +914,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "a4a90dce9ed9",
+   "updated": "2026-09-24"
   },
   {
    "slug": "kyoten",
@@ -807,7 +929,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "e618ef637335",
+   "updated": "2026-09-24"
   },
   {
    "slug": "le-sud",
@@ -820,7 +944,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 1
+   "event_count": 1,
+   "data_hash": "e66c9329be44",
+   "updated": "2026-09-28"
   },
   {
    "slug": "little-bad-wolf",
@@ -833,7 +959,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "1ac3fc5b20dc",
+   "updated": "2026-09-27"
   },
   {
    "slug": "longman-and-eagle",
@@ -846,7 +974,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "349e92d999f1",
+   "updated": "2026-09-23"
   },
   {
    "slug": "luellas-southern-kitchen",
@@ -859,7 +989,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "cd4c2b1d9920",
+   "updated": "2026-09-24"
   },
   {
    "slug": "lula-cafe",
@@ -872,7 +1004,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "e6d73a042565",
+   "updated": "2026-09-23"
   },
   {
    "slug": "mama-delia",
@@ -885,7 +1019,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "3354cda607cc",
+   "updated": "2026-09-27"
   },
   {
    "slug": "maple-ash",
@@ -898,7 +1034,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "08e4a0b36d42",
+   "updated": "2026-09-24"
   },
   {
    "slug": "mariscos-san-pedro",
@@ -911,7 +1049,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "eb01db02a3cc",
+   "updated": "2026-09-24"
   },
   {
    "slug": "maxwells-trading",
@@ -924,7 +1064,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "2210254807f4",
+   "updated": "2026-09-24"
   },
   {
    "slug": "mi-tocaya-antojeria",
@@ -937,7 +1079,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "1003a03be51b",
+   "updated": "2026-09-23"
   },
   {
    "slug": "mia-francesca",
@@ -950,7 +1094,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "e1f06d7e0c83",
+   "updated": "2026-09-23"
   },
   {
    "slug": "milli-by-metric",
@@ -963,7 +1109,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "c498714f98a3",
+   "updated": "2026-09-24"
   },
   {
    "slug": "millys-pizza",
@@ -976,7 +1124,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "eac03f8db3ca",
+   "updated": "2026-09-24"
   },
   {
    "slug": "mirra",
@@ -989,7 +1139,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "c9d1d557710c",
+   "updated": "2026-09-24"
   },
   {
    "slug": "mister-tiger",
@@ -1002,7 +1154,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "8f999e019f92",
+   "updated": "2026-09-24"
   },
   {
    "slug": "mon-ami-gabi",
@@ -1015,7 +1169,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "20b63aebba29",
+   "updated": "2026-09-23"
   },
   {
    "slug": "monteverde",
@@ -1028,7 +1184,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "25e493858ba2",
+   "updated": "2026-09-27"
   },
   {
    "slug": "nadu",
@@ -1041,7 +1199,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "9b7ccc711d4a",
+   "updated": "2026-09-24"
   },
   {
    "slug": "nine-bar",
@@ -1054,7 +1214,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "08fde14de3a6",
+   "updated": "2026-09-24"
   },
   {
    "slug": "north-pond",
@@ -1067,7 +1229,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "86655eb32c8f",
+   "updated": "2026-09-24"
   },
   {
    "slug": "obelix",
@@ -1080,7 +1244,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "f350473c4b6c",
+   "updated": "2026-09-24"
   },
   {
    "slug": "oda",
@@ -1093,7 +1259,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "ac6ef16073e9",
+   "updated": "2026-09-27"
   },
   {
    "slug": "olivers-south-loop",
@@ -1106,7 +1274,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "359b96910b89",
+   "updated": "2026-09-24"
   },
   {
    "slug": "oriole",
@@ -1119,7 +1289,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "b767ec25c39b",
+   "updated": "2026-09-24"
   },
   {
    "slug": "orsos",
@@ -1132,7 +1304,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "251300a70861",
+   "updated": "2026-09-23"
   },
   {
    "slug": "parachute-hifi",
@@ -1145,7 +1319,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "e0dd01bc69ea",
+   "updated": "2026-09-24"
   },
   {
    "slug": "pequods-pizza",
@@ -1158,7 +1334,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "231485d46f23",
+   "updated": "2026-09-23"
   },
   {
    "slug": "petterinos",
@@ -1171,7 +1349,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "5aca7048cffe",
+   "updated": "2026-09-23"
   },
   {
    "slug": "piccolo-sogno",
@@ -1184,7 +1364,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "3421ea03e750",
+   "updated": "2026-09-24"
   },
   {
    "slug": "pizzamici",
@@ -1197,7 +1379,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "b2698ee39244",
+   "updated": "2026-09-24"
   },
   {
    "slug": "pleasant-house-pub",
@@ -1210,7 +1394,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "95f564cef1a7",
+   "updated": "2026-09-23"
   },
   {
    "slug": "port-union",
@@ -1223,7 +1409,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "75a85d855daa",
+   "updated": "2026-09-27"
   },
   {
    "slug": "qxy-dumplings-wicker-park",
@@ -1236,7 +1424,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "72381bd4b44b",
+   "updated": "2026-09-27"
   },
   {
    "slug": "r-j-grunts",
@@ -1249,7 +1439,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "7023d3789178",
+   "updated": "2026-09-23"
   },
   {
    "slug": "riccardo-trattoria",
@@ -1262,7 +1454,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "7d6b7e2e7d1c",
+   "updated": "2026-09-24"
   },
   {
    "slug": "rooh",
@@ -1275,7 +1469,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "34950c92a2e3",
+   "updated": "2026-09-24"
   },
   {
    "slug": "rose-mary",
@@ -1288,7 +1484,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "885943575328",
+   "updated": "2026-09-24"
   },
   {
    "slug": "rpm-italian",
@@ -1301,7 +1499,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "87446274b516",
+   "updated": "2026-09-23"
   },
   {
    "slug": "santa-masa-tamaleria",
@@ -1314,7 +1514,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "c825499fe9a4",
+   "updated": "2026-09-24"
   },
   {
    "slug": "sky-pilsen",
@@ -1327,7 +1529,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "a45f80cd671a",
+   "updated": "2026-09-24"
   },
   {
    "slug": "smyth",
@@ -1340,7 +1544,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "f8df9f1b8ecf",
+   "updated": "2026-09-24"
   },
   {
    "slug": "spacca-napoli",
@@ -1353,7 +1559,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "b0b62a10974b",
+   "updated": "2026-09-23"
   },
   {
    "slug": "spinning-j",
@@ -1366,7 +1574,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "6147e320cbb3",
+   "updated": "2026-09-24"
   },
   {
    "slug": "superkhana-international",
@@ -1379,7 +1589,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "23b56183e64c",
+   "updated": "2026-09-24"
   },
   {
    "slug": "taan",
@@ -1392,7 +1604,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "9eaadabed859",
+   "updated": "2026-09-24"
   },
   {
    "slug": "tala-house",
@@ -1405,7 +1619,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "c8ae7083e034",
+   "updated": "2026-09-27"
   },
   {
    "slug": "taqueria-chingon",
@@ -1418,7 +1634,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "bfebc621346e",
+   "updated": "2026-09-24"
   },
   {
    "slug": "the-dearborn",
@@ -1431,7 +1649,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "c378ea041522",
+   "updated": "2026-09-23"
   },
   {
    "slug": "the-duck-inn",
@@ -1444,7 +1664,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "eeaeff9da3f6",
+   "updated": "2026-09-24"
   },
   {
    "slug": "the-gage",
@@ -1457,7 +1679,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "444ecc7f9858",
+   "updated": "2026-09-23"
   },
   {
    "slug": "the-publican",
@@ -1470,7 +1694,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "3176db0e78dc",
+   "updated": "2026-09-27"
   },
   {
    "slug": "the-sit-down-cafe-and-sushi-bar",
@@ -1483,7 +1709,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "769c94bc8c66",
+   "updated": "2026-09-23"
   },
   {
    "slug": "topo-gigio",
@@ -1496,7 +1724,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "7cd219c82745",
+   "updated": "2026-09-23"
   },
   {
    "slug": "tre-dita",
@@ -1509,7 +1739,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "b5e8ec610982",
+   "updated": "2026-09-24"
   },
   {
    "slug": "trino",
@@ -1522,7 +1754,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "ddc0e96dbfbd",
+   "updated": "2026-09-24"
   },
   {
    "slug": "turquoise",
@@ -1535,7 +1769,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "687e1b2d3ce8",
+   "updated": "2026-09-27"
   },
   {
    "slug": "twin-anchors-restaurant-and-tavern",
@@ -1548,7 +1784,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "4cd08d8da4ef",
+   "updated": "2026-09-23"
   },
   {
    "slug": "uvae",
@@ -1561,7 +1799,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "b958552f13e6",
+   "updated": "2026-09-27"
   },
   {
    "slug": "valhalla-chicago",
@@ -1574,7 +1814,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "838ca5bc8e92",
+   "updated": "2026-09-24"
   },
   {
    "slug": "valois-restaurant",
@@ -1587,7 +1829,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "fcfcef1b0e90",
+   "updated": "2026-09-23"
   },
   {
    "slug": "vincent",
@@ -1600,7 +1844,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "413d11719185",
+   "updated": "2026-09-27"
   },
   {
    "slug": "virtue",
@@ -1613,7 +1859,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "88ba27e8d8cc",
+   "updated": "2026-09-23"
   },
   {
    "slug": "volare",
@@ -1626,7 +1874,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "535c45bd4455",
+   "updated": "2026-09-23"
   },
   {
    "slug": "xocome-antojeria",
@@ -1639,7 +1889,9 @@
    "active": true,
    "details": {},
    "first_indexed": "2026-09-28",
-   "event_count": 0
+   "event_count": 0,
+   "data_hash": "4b973cf2387b",
+   "updated": "2026-09-24"
   },
   {
    "slug": "360-chicago",
@@ -1660,7 +1912,9 @@
     "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-768x512.jpg",
     "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-1536x1024.jpg"
    ],
-   "sample_url": "https://www.choosechicago.com/events/"
+   "sample_url": "https://www.choosechicago.com/events/",
+   "data_hash": "bdddeb5c75d0",
+   "updated": "2026-09-22"
   },
   {
    "slug": "alhambra-palace-patio",
@@ -1676,7 +1930,9 @@
    "event_count": 1,
    "neighborhood": "Near West",
    "images": [],
-   "sample_url": "https://dice.fm/event/8e99yr-hello-sundays-w-dennis-quin-27th-sep-alhambra-palace-patio-chicago-tickets"
+   "sample_url": "https://dice.fm/event/8e99yr-hello-sundays-w-dennis-quin-27th-sep-alhambra-palace-patio-chicago-tickets",
+   "data_hash": "be332057741f",
+   "updated": "2026-09-24"
   },
   {
    "slug": "annoyance-theatre",
@@ -1696,7 +1952,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32028592/e2282052-bae3-40c9-b2d2-3bdf90a6fd03.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32028876/e856d578-bd36-40db-80ad-ea5ba98b9e19.png"
    ],
-   "sample_url": "https://do312.com/events/weekly/mon/training-center-annoyance-student-jam-tickets"
+   "sample_url": "https://do312.com/events/weekly/mon/training-center-annoyance-student-jam-tickets",
+   "data_hash": "643abf921cd0",
+   "updated": "2026-09-27"
   },
   {
    "slug": "art-institute-of-chicago",
@@ -1713,7 +1971,9 @@
    "event_count": 2,
    "neighborhood": "Loop",
    "images": [],
-   "sample_url": "https://www.artic.edu/events/6542/conversation-lee-miller-fearless"
+   "sample_url": "https://www.artic.edu/events/6542/conversation-lee-miller-fearless",
+   "data_hash": "ea558d04159e",
+   "updated": "2026-09-22"
   },
   {
    "slug": "auditorium",
@@ -1736,7 +1996,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31894934/454871e8-5a3b-4d2e-8bad-196882105da6.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31605855/bedea029-301e-4f5b-b0be-685461880274.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/26"
+   "sample_url": "https://do312.com/events/2026/9/26",
+   "data_hash": "83afad0be3d8",
+   "updated": "2026-09-27"
   },
   {
    "slug": "avondale-music-hall",
@@ -1755,7 +2017,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34138016/bbda5a1b-4d36-4281-8e2d-acd97cd1845b.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32056706/16c21484-621b-48b1-beb2-60bab886797f.png"
    ],
-   "sample_url": "https://do312.com/events/2026/9/28/elder-tickets-nlgev5o"
+   "sample_url": "https://do312.com/events/2026/9/28/elder-tickets-nlgev5o",
+   "data_hash": "4ecc8cff6cba",
+   "updated": "2026-09-27"
   },
   {
    "slug": "bassment",
@@ -1771,7 +2035,9 @@
    "event_count": 1,
    "neighborhood": "West Loop",
    "images": [],
-   "sample_url": "https://dice.fm/event/pywrop-house-calls-w-jay-de-lys-26th-sep-bassment-chicago-tickets"
+   "sample_url": "https://dice.fm/event/pywrop-house-calls-w-jay-de-lys-26th-sep-bassment-chicago-tickets",
+   "data_hash": "840587a2d5f7",
+   "updated": "2026-09-24"
   },
   {
    "slug": "beat-kitchen",
@@ -1794,7 +2060,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33093061/5222eaab-f941-4b08-9f34-28977a0ec5df.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32674871/2555626f-48a9-4858-8e86-e1f6e8607dce.png"
    ],
-   "sample_url": "https://do312.com/events/2026/9/22"
+   "sample_url": "https://do312.com/events/2026/9/22",
+   "data_hash": "bc01d653d5e0",
+   "updated": "2026-09-27"
   },
   {
    "slug": "blind-wolf-speakeasy-den-hotel",
@@ -1810,7 +2078,9 @@
    "event_count": 1,
    "neighborhood": "Lakeview",
    "images": [],
-   "sample_url": "https://www.denhotelchicago.com/blindwolf"
+   "sample_url": "https://www.denhotelchicago.com/blindwolf",
+   "data_hash": "15bab36b1c4c",
+   "updated": "2026-09-22"
   },
   {
    "slug": "bookclub",
@@ -1832,7 +2102,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34445830/61277596-57e2-4731-aff6-e331904715f5.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34558924/475c97fd-04a8-4903-95d9-78b34774415d.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/28/hymphomania-the-live-experience-starring-zee-machine-tickets"
+   "sample_url": "https://do312.com/events/2026/9/28/hymphomania-the-live-experience-starring-zee-machine-tickets",
+   "data_hash": "61ce8703161d",
+   "updated": "2026-09-27"
   },
   {
    "slug": "bottom-lounge",
@@ -1850,7 +2122,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33722106/6a17f4cf-4bfe-4078-bd46-a0da0ca9e433.png"
    ],
-   "sample_url": "https://do312.com/events/2026/10/4/ajj-greet-death-tickets"
+   "sample_url": "https://do312.com/events/2026/10/4/ajj-greet-death-tickets",
+   "data_hash": "6b01a8b41e1a",
+   "updated": "2026-09-27"
   },
   {
    "slug": "broken-shaker-at-freehand-chicago",
@@ -1868,7 +2142,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33149790/528ed345-2a40-47a7-ad4f-6710ede7bc74.jpg"
    ],
-   "sample_url": "https://do312.com/events/weekly/mon/every-monday-thursday-happy-hour-tickets"
+   "sample_url": "https://do312.com/events/weekly/mon/every-monday-thursday-happy-hour-tickets",
+   "data_hash": "0920ccc1b816",
+   "updated": "2026-09-27"
   },
   {
    "slug": "buddy-guys-legends",
@@ -1889,7 +2165,9 @@
     "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-300x93.jpg",
     "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-768x237.jpg"
    ],
-   "sample_url": "https://buddyguy.com/events/"
+   "sample_url": "https://buddyguy.com/events/",
+   "data_hash": "399864a28e66",
+   "updated": "2026-09-22"
   },
   {
    "slug": "butch-mcguires",
@@ -1907,7 +2185,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32112140/7c337bad-6c2f-44f2-a30a-4b05f41db9b5.jpg"
    ],
-   "sample_url": "https://do312.com/events/weekly/mon/jokes-on-division-at-butch-mcguire-s-tickets"
+   "sample_url": "https://do312.com/events/weekly/mon/jokes-on-division-at-butch-mcguire-s-tickets",
+   "data_hash": "a2fcf7b2e1bd",
+   "updated": "2026-09-27"
   },
   {
    "slug": "byline-bank-aragon-ballroom",
@@ -1930,7 +2210,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32190134/32d49021-19df-4fee-acf9-feda8a106423.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31754473/de8bdbee-2a5f-4fbb-abbe-ca9df5c28dbe.png"
    ],
-   "sample_url": "https://do312.com/events/2026/9/30/steve-lacy-oh-yeah-tour-tickets"
+   "sample_url": "https://do312.com/events/2026/9/30/steve-lacy-oh-yeah-tour-tickets",
+   "data_hash": "a9f6e3f6c375",
+   "updated": "2026-09-27"
   },
   {
    "slug": "california-clipper",
@@ -1948,7 +2230,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34465961/0f3c9e59-d894-4e25-be3f-f27cc557a66a.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/5/injustice-watch-check-your-judges-tickets"
+   "sample_url": "https://do312.com/events/2026/10/5/injustice-watch-check-your-judges-tickets",
+   "data_hash": "ebe6f2c96011",
+   "updated": "2026-09-27"
   },
   {
    "slug": "cermak-hall",
@@ -1967,7 +2251,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32781535/acb53ee5-a3ee-4e6d-b7c7-9bd00555b4ed.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32171942/bd70be8c-4c46-4275-a670-5374d7a2b8ce.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/2/indo-warehouse-tickets"
+   "sample_url": "https://do312.com/events/2026/10/2/indo-warehouse-tickets",
+   "data_hash": "f25dff23f177",
+   "updated": "2026-09-27"
   },
   {
    "slug": "chicago-cultural-center",
@@ -1988,7 +2274,9 @@
     "https://cdn.choosechicago.com/uploads/2019/07/bean-night.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34299367/eb981ac2-12db-4a4f-8a4f-a60505891ec3.jpg"
    ],
-   "sample_url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/"
+   "sample_url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/",
+   "data_hash": "4d8c2036ae76",
+   "updated": "2026-09-27"
   },
   {
    "slug": "chicago-improv-comedy-club",
@@ -2006,7 +2294,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31796202/479eac79-9923-4080-bbc1-747bb3a673f6.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/11/godfrey-tickets"
+   "sample_url": "https://do312.com/events/2026/10/11/godfrey-tickets",
+   "data_hash": "0a40603b09ea",
+   "updated": "2026-09-27"
   },
   {
    "slug": "chicago-magic-lounge",
@@ -2027,7 +2317,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33526601/d6c1b718-f45b-4dcf-9acc-cbd61de1df0a.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34555661/c15b6c1e-b38d-453c-b57b-1b37d3a5e89a.jpg"
    ],
-   "sample_url": "https://www.chicagomagiclounge.com/signature-show"
+   "sample_url": "https://www.chicagomagiclounge.com/signature-show",
+   "data_hash": "30aca5514c48",
+   "updated": "2026-09-27"
   },
   {
    "slug": "chicago-symphony-orchestra",
@@ -2046,7 +2338,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31386331/077019eb-2972-4276-bd56-da87f27b21fb.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31386336/70257897-4a46-462e-955d-a25a5e2eb2bc.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/4/ludovico-einaudi-solo-piano-tickets"
+   "sample_url": "https://do312.com/events/2026/10/4/ludovico-einaudi-solo-piano-tickets",
+   "data_hash": "780ab9b7710a",
+   "updated": "2026-09-27"
   },
   {
    "slug": "chicago-theatre",
@@ -2069,7 +2363,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32456172/d7b0e27f-b916-4fa6-900d-34278d10320f.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32532926/7a56cbb0-7546-468a-89a8-efe6e201e8a0.jpg"
    ],
-   "sample_url": "https://www.livenation.com/event/vvG1jZ_5Um6fxw/sara-bareilles-the-good-grief-tour"
+   "sample_url": "https://www.livenation.com/event/vvG1jZ_5Um6fxw/sara-bareilles-the-good-grief-tour",
+   "data_hash": "6539e30dbcf8",
+   "updated": "2026-09-27"
   },
   {
    "slug": "chop-shop",
@@ -2092,7 +2388,9 @@
     "https://dice-media.imgix.net/attachments/2026-06-04/ea992963-d76f-4e81-a8ae-acb76d888450.jpg?rect=0%2C1703%2C3783%2C2270",
     "https://dice-media.imgix.net/attachments/2026-06-04/ea992963-d76f-4e81-a8ae-acb76d888450.jpg?rect=331%2C0%2C3121%2C5675"
    ],
-   "sample_url": "https://do312.com/events/2026/9/24/karl-denson-s-tiny-universe-tickets"
+   "sample_url": "https://do312.com/events/2026/9/24/karl-denson-s-tiny-universe-tickets",
+   "data_hash": "e935148e507a",
+   "updated": "2026-09-27"
   },
   {
    "slug": "chopin-theatre",
@@ -2113,7 +2411,9 @@
     "https://cdn.choosechicago.com/uploads/2026/09/Screenshot-2026-09-17-195131-768x240.png",
     "https://cdn.choosechicago.com/uploads/2026/09/Screenshot-2026-09-17-195131-1536x479.png"
    ],
-   "sample_url": "https://www.choosechicago.com/event/unveiling-at-the-chopin-theatre/"
+   "sample_url": "https://www.choosechicago.com/event/unveiling-at-the-chopin-theatre/",
+   "data_hash": "3429e7ecd537",
+   "updated": "2026-09-22"
   },
   {
    "slug": "cobra-lounge",
@@ -2136,7 +2436,9 @@
     "https://dice-media.imgix.net/attachments/2026-06-09/f550f8d4-2840-44ea-915a-e56ddb153c42.jpg?rect=338%2C0%2C825%2C1500",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32710799/63a35fcd-a3c8-4288-8276-8f8e49a1ab76.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/27/liam-st-john-year-of-the-horse-tickets"
+   "sample_url": "https://do312.com/events/2026/9/27/liam-st-john-year-of-the-horse-tickets",
+   "data_hash": "405c074bc9ff",
+   "updated": "2026-09-27"
   },
   {
    "slug": "comedy-bar",
@@ -2155,7 +2457,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33785285/da9f92eb-dd4a-446a-98bd-36d73e4b9b63.png"
    ],
-   "sample_url": "https://www.eventbrite.com/e/tuesday-september-22-whats-funny-comedy-festival-tickets-1996757867533"
+   "sample_url": "https://www.eventbrite.com/e/tuesday-september-22-whats-funny-comedy-festival-tickets-1996757867533",
+   "data_hash": "7fea870b396e",
+   "updated": "2026-09-27"
   },
   {
    "slug": "concord-music-hall",
@@ -2175,7 +2479,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32539217/7caf75a6-bfb3-4d9e-8083-e3ef87a711cf.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33435940/9ea56a19-2d70-4c84-b37f-71c05b4466d7.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/3/seth-david-tickets"
+   "sample_url": "https://do312.com/events/2026/10/3/seth-david-tickets",
+   "data_hash": "0ceffbe87fef",
+   "updated": "2026-09-27"
   },
   {
    "slug": "constellation",
@@ -2195,7 +2501,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32673337/d9ae9f8a-2c95-4d86-a1a2-5c8b332db983.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32673336/3a85b771-e095-4e8e-85d0-078be70435ca.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/24/glenn-jones-w-liam-grant-katie-ernst-tickets"
+   "sample_url": "https://do312.com/events/2026/9/24/glenn-jones-w-liam-grant-katie-ernst-tickets",
+   "data_hash": "973b26bcfa39",
+   "updated": "2026-09-27"
   },
   {
    "slug": "credit-union-1-amphitheatre",
@@ -2214,7 +2522,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33845028/750f3dd7-9ca7-42e2-a50c-db6c138497aa.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33890331/ce085019-cd99-4c63-9583-67fd519ecf65.png"
    ],
-   "sample_url": "https://do312.com/events/2026/10/3/fuerza-regida-this-is-our-dream-tour-2026-tickets"
+   "sample_url": "https://do312.com/events/2026/10/3/fuerza-regida-this-is-our-dream-tour-2026-tickets",
+   "data_hash": "595927f8df79",
+   "updated": "2026-09-27"
   },
   {
    "slug": "cubby-bear",
@@ -2232,7 +2542,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34567020/99acc7e2-2743-4c78-8251-b08f4574294a.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/7/cameron-davies-w-tyler-stock-tickets"
+   "sample_url": "https://do312.com/events/2026/10/7/cameron-davies-w-tyler-stock-tickets",
+   "data_hash": "172cc93ca2b1",
+   "updated": "2026-09-27"
   },
   {
    "slug": "den-theatre",
@@ -2248,7 +2560,9 @@
    "event_count": 1,
    "neighborhood": "Wicker Park",
    "images": [],
-   "sample_url": "https://thedentheatre.com/performances/2026/9/23/dana-goldberg-outrageous-the-den-theatre-comedy-club-chicago"
+   "sample_url": "https://thedentheatre.com/performances/2026/9/23/dana-goldberg-outrageous-the-den-theatre-comedy-club-chicago",
+   "data_hash": "5232daa2bbaa",
+   "updated": "2026-09-22"
   },
   {
    "slug": "emporium-arcade-bar-logan-square",
@@ -2266,7 +2580,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32911110/a92dc7ff-74dc-4411-97fc-f2cd8eb01764.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/30/bracket-at-the-emporium-tickets"
+   "sample_url": "https://do312.com/events/2026/9/30/bracket-at-the-emporium-tickets",
+   "data_hash": "89fa1b020656",
+   "updated": "2026-09-27"
   },
   {
    "slug": "emporium-arcade-bar-wicker-park",
@@ -2284,7 +2600,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34300360/56eb2737-61f2-47d5-a0bd-55566f6652fe.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/5/bring-your-own-game-night-tickets"
+   "sample_url": "https://do312.com/events/2026/10/5/bring-your-own-game-night-tickets",
+   "data_hash": "b60a4af8e2b0",
+   "updated": "2026-09-27"
   },
   {
    "slug": "empty-bottle",
@@ -2307,7 +2625,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34302962/529bccf8-5316-42d6-afbc-c7d255cce77f.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31958702/48083d25-a041-486e-b23d-53d166937ec5.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/24/way-dynamic-star-moles-tickets"
+   "sample_url": "https://do312.com/events/2026/9/24/way-dynamic-star-moles-tickets",
+   "data_hash": "689db808d3e5",
+   "updated": "2026-09-27"
   },
   {
    "slug": "epiphany-center-for-the-arts",
@@ -2333,7 +2653,9 @@
     "https://dice-media.imgix.net/attachments/2025-07-31/abd64f79-4219-4463-a158-6ac56c46131c.jpg?rect=403%2C0%2C768%2C768",
     "https://dice-media.imgix.net/attachments/2025-07-31/abd64f79-4219-4463-a158-6ac56c46131c.jpg?rect=147%2C0%2C1280%2C768"
    ],
-   "sample_url": "https://dice.fm/event/xe3emk-free-blues-friday-featuring-bear-williams-trio-25th-sep-epiphany-center-for-the-arts-epiphany-hall-chicago-tickets"
+   "sample_url": "https://dice.fm/event/xe3emk-free-blues-friday-featuring-bear-williams-trio-25th-sep-epiphany-center-for-the-arts-epiphany-hall-chicago-tickets",
+   "data_hash": "e123f8a953d0",
+   "updated": "2026-09-27"
   },
   {
    "slug": "estelles-cafe-and-pub",
@@ -2352,7 +2674,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31878592/14b35319-b964-4ff3-97ea-af87e0160928.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31875847/dcf0d27c-1283-489a-9d45-5a71cfe4cefc.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/29/dj-papa-g-tickets"
+   "sample_url": "https://do312.com/events/2026/9/29/dj-papa-g-tickets",
+   "data_hash": "9f2e64f67172",
+   "updated": "2026-09-27"
   },
   {
    "slug": "field-museum",
@@ -2373,7 +2697,9 @@
     "https://www.datocms-assets.com/44232/1782495760-pfm-opening-edited.webp?dpr=0.5&fm=webp",
     "https://www.datocms-assets.com/44232/1782495760-pfm-opening-edited.webp?dpr=0.75&fm=webp"
    ],
-   "sample_url": "https://www.choosechicago.com/event/dinos/2026-09-24/"
+   "sample_url": "https://www.choosechicago.com/event/dinos/2026-09-24/",
+   "data_hash": "474c15d2d57e",
+   "updated": "2026-09-24"
   },
   {
    "slug": "furama",
@@ -2391,7 +2717,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34380718/bd7fa642-9ec6-4c61-b93a-f6d55f57ca28.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/10/dim-sum-drag-blade-sia-an-ode-to-black-vampires-tickets"
+   "sample_url": "https://do312.com/events/2026/10/10/dim-sum-drag-blade-sia-an-ode-to-black-vampires-tickets",
+   "data_hash": "a3d72dba89d1",
+   "updated": "2026-09-27"
   },
   {
    "slug": "garcias-chicago",
@@ -2414,7 +2742,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32934213/ba7a83cd-f1fc-4df2-b781-c9b40b5a78df.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32047000/94b14627-cd34-45b7-a29d-19ac24c9f31a.png"
    ],
-   "sample_url": "https://do312.com/events/2026/9/23"
+   "sample_url": "https://do312.com/events/2026/9/23",
+   "data_hash": "d5c3e1a2efc9",
+   "updated": "2026-09-27"
   },
   {
    "slug": "gman-tavern",
@@ -2432,7 +2762,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34191969/ddec24de-3fcf-40c5-b9f5-5a7675e5c258.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/11/hair-pop-chicago-s-indie-hair-show-tickets"
+   "sample_url": "https://do312.com/events/2026/10/11/hair-pop-chicago-s-indie-hair-show-tickets",
+   "data_hash": "507663241184",
+   "updated": "2026-09-27"
   },
   {
    "slug": "goodman-theatre",
@@ -2457,7 +2789,9 @@
     "https://www.goodmantheatre.org/wp-content/plugins/wp-rocket/assets/img/youtube.png",
     "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2627_Attic_Hero-1500x1000-1-500x334.webp"
    ],
-   "sample_url": "https://www.goodmantheatre.org/show/the-attic/"
+   "sample_url": "https://www.goodmantheatre.org/show/the-attic/",
+   "data_hash": "1baa7b98d8b9",
+   "updated": "2026-09-27"
   },
   {
    "slug": "green-mill-jazz-club",
@@ -2482,7 +2816,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31879046/fcdf3364-967a-4242-ad83-7ba3a7cb499e.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31871132/cffa917d-34c6-4b87-8110-999c0aee5d03.jpg"
    ],
-   "sample_url": "https://greenmilljazz.com/calendar/"
+   "sample_url": "https://greenmilljazz.com/calendar/",
+   "data_hash": "5d21768733e3",
+   "updated": "2026-09-27"
   },
   {
    "slug": "harris-theater-for-music-and-dance",
@@ -2505,7 +2841,9 @@
     "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/cb4423af-c61f-47c1-8fae-2cbffb75e99a/2025-09-14_Chicago-Gourmet_Gourmet-Tailgate_Event_1653.jpg?format=1000w",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34218015/4651dcb7-f9db-4ba1-8eec-296185d2d3a3.jpg"
    ],
-   "sample_url": "https://www.chicagogourmet.org/page/events"
+   "sample_url": "https://www.chicagogourmet.org/page/events",
+   "data_hash": "2484b963dfa4",
+   "updated": "2026-09-27"
   },
   {
    "slug": "hey-nonny",
@@ -2523,7 +2861,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34487223/c223f8c8-2afd-47f3-936d-461acfc22070.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/6/cocktails-with-jim-tinaglia-tickets"
+   "sample_url": "https://do312.com/events/2026/10/6/cocktails-with-jim-tinaglia-tickets",
+   "data_hash": "e9e14563226b",
+   "updated": "2026-09-27"
   },
   {
    "slug": "hideaway",
@@ -2541,7 +2881,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33813020/41ac9d84-6436-4720-8d02-1b9255fc1917.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/10/baauer-tickets"
+   "sample_url": "https://do312.com/events/2026/10/10/baauer-tickets",
+   "data_hash": "5e202fe73580",
+   "updated": "2026-09-27"
   },
   {
    "slug": "hideout",
@@ -2565,7 +2907,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34483834/80dbad95-36e4-4fce-9afe-becd9ea3ed34.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34446676/e448e3ff-6a71-4d44-8b22-47909c6733a0.jpg"
    ],
-   "sample_url": "https://www.hideoutchicago.com/shows"
+   "sample_url": "https://www.hideoutchicago.com/shows",
+   "data_hash": "ccef9f74eb47",
+   "updated": "2026-09-27"
   },
   {
    "slug": "hollywood-casino-joliet",
@@ -2583,7 +2927,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32184440/aa87e947-d21b-4237-b69b-491f9edac0eb.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/9/war-tickets"
+   "sample_url": "https://do312.com/events/2026/10/9/war-tickets",
+   "data_hash": "f35c1b846561",
+   "updated": "2026-09-27"
   },
   {
    "slug": "house-of-blues",
@@ -2606,7 +2952,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32767631/595795b3-c3d0-4fc7-8d20-adcad44e3cd5.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32627482/02906022-4dc2-4a32-bf2f-63e65c38bab6.png"
    ],
-   "sample_url": "https://do312.com/events/2026/9/28/chicago-made-music-showcase-semi-finals-tickets"
+   "sample_url": "https://do312.com/events/2026/9/28/chicago-made-music-showcase-semi-finals-tickets",
+   "data_hash": "0a2551f36e87",
+   "updated": "2026-09-27"
   },
   {
    "slug": "humboldt-park",
@@ -2624,7 +2972,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31253029/52825ea3-0317-4b18-8b03-fa5436219114.png"
    ],
-   "sample_url": "https://do312.com/events/2026/10/3/diplos-run-club-tickets"
+   "sample_url": "https://do312.com/events/2026/10/3/diplos-run-club-tickets",
+   "data_hash": "64a5cc6326cf",
+   "updated": "2026-09-27"
   },
   {
    "slug": "hyde-park-jazz-festival",
@@ -2642,7 +2992,9 @@
    "images": [
     "https://static1.squarespace.com/static/5518e7b9e4b0c99d03da9599/t/66b397f3121f5f3b764c583b/1723045875317/Screenshot+2024-06-14+at+11.26.43+AM.png?format=1500w"
    ],
-   "sample_url": "https://hydeparkjazzfestival.org/wagner-stage"
+   "sample_url": "https://hydeparkjazzfestival.org/wagner-stage",
+   "data_hash": "318f03b0dcb1",
+   "updated": "2026-09-22"
   },
   {
    "slug": "hydrate-nightclub",
@@ -2660,7 +3012,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33543282/e0b0f667-ab10-4c7d-9193-3b0305269778.jpg"
    ],
-   "sample_url": "https://do312.com/events/weekly/mon/mondays-are-ruff-tickets"
+   "sample_url": "https://do312.com/events/weekly/mon/mondays-are-ruff-tickets",
+   "data_hash": "eeb23c49b444",
+   "updated": "2026-09-27"
   },
   {
    "slug": "io-theater",
@@ -2681,7 +3035,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/29462072/d5d631b6-80a6-4fe1-b44b-9624f06112e0.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/29462074/4f1023fc-55dc-4356-80ef-7252511d87cb.png"
    ],
-   "sample_url": "https://www.choosechicago.com/event/the-fizz-show-2/2026-09-23/"
+   "sample_url": "https://www.choosechicago.com/event/the-fizz-show-2/2026-09-23/",
+   "data_hash": "cb504e69e5ac",
+   "updated": "2026-09-27"
   },
   {
    "slug": "ivy-hall-dispensary-logan-square",
@@ -2699,7 +3055,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34458826/76928652-6a40-4bbc-8f87-35145ebdb22e.png"
    ],
-   "sample_url": "https://do312.com/events/2026/10/1/ivy-hall-game-day-pack-giveaway-tickets"
+   "sample_url": "https://do312.com/events/2026/10/1/ivy-hall-game-day-pack-giveaway-tickets",
+   "data_hash": "4118860d0d5f",
+   "updated": "2026-09-27"
   },
   {
    "slug": "joes-live",
@@ -2717,7 +3075,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32064314/dc349698-440c-4f8a-9990-1b4094d6188e.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/1/ashley-cooke-the-baby-blues-tour-tickets"
+   "sample_url": "https://do312.com/events/2026/10/1/ashley-cooke-the-baby-blues-tour-tickets",
+   "data_hash": "f4c3c6015b42",
+   "updated": "2026-09-27"
   },
   {
    "slug": "landmark-century-centre-cinema",
@@ -2733,7 +3093,9 @@
    "event_count": 1,
    "neighborhood": "Lakeview",
    "images": [],
-   "sample_url": "https://www.choosechicago.com/event/series/reeling-the-chicago-lgbtq-international-film-festival/"
+   "sample_url": "https://www.choosechicago.com/event/series/reeling-the-chicago-lgbtq-international-film-festival/",
+   "data_hash": "6d23bafc88df",
+   "updated": "2026-09-22"
   },
   {
    "slug": "laugh-factory-chicago",
@@ -2749,7 +3111,9 @@
    "event_count": 1,
    "neighborhood": "Lakeview",
    "images": [],
-   "sample_url": "https://laughfactorychicago.standuptix.com/calendar/2026-09"
+   "sample_url": "https://laughfactorychicago.standuptix.com/calendar/2026-09",
+   "data_hash": "0c16b15e0f05",
+   "updated": "2026-09-22"
   },
   {
    "slug": "liars-club",
@@ -2767,7 +3131,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33733247/589151b0-7b77-4123-9ac4-5cc482202512.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/8/schaffer-the-darklord-coolzey-bad-motorfingers-burned-or-buried-tickets"
+   "sample_url": "https://do312.com/events/2026/10/8/schaffer-the-darklord-coolzey-bad-motorfingers-burned-or-buried-tickets",
+   "data_hash": "c70b4ca46eb3",
+   "updated": "2026-09-27"
   },
   {
    "slug": "lincoln-hall",
@@ -2790,7 +3156,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/30766040/36714e0c-1ea6-4873-9da2-fc963a228e5b.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31661285/a5190659-94b0-4c5a-9b59-cb87320ecccb.png"
    ],
-   "sample_url": "https://do312.com/events/2026/9/24/aj-lee-blue-summit-big-richard-tickets"
+   "sample_url": "https://do312.com/events/2026/9/24/aj-lee-blue-summit-big-richard-tickets",
+   "data_hash": "2683fe10f127",
+   "updated": "2026-09-27"
   },
   {
    "slug": "lincoln-lodge",
@@ -2806,7 +3174,9 @@
    "event_count": 1,
    "neighborhood": "Logan Square",
    "images": [],
-   "sample_url": "https://www.choosechicago.com/event/comic-court-chicagos-1-comedy-court-show/2026-09-22/"
+   "sample_url": "https://www.choosechicago.com/event/comic-court-chicagos-1-comedy-court-show/2026-09-22/",
+   "data_hash": "9b04bb77f879",
+   "updated": "2026-09-22"
   },
   {
    "slug": "lincoln-park-zoo",
@@ -2824,7 +3194,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33715039/7086aa1d-52b5-43d4-b0e7-1a5434fd98dd.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/25/fall-fest-tickets"
+   "sample_url": "https://do312.com/events/2026/9/25/fall-fest-tickets",
+   "data_hash": "e996d3368571",
+   "updated": "2026-09-27"
   },
   {
    "slug": "logan-theatre",
@@ -2843,7 +3215,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/617860/d043fc42-ca1c-4920-b6fc-15f5c41efd7a.jpg"
    ],
-   "sample_url": "https://do312.com/events/weekly/tue/logan-square-theatres-movie-themed-trivia"
+   "sample_url": "https://do312.com/events/weekly/tue/logan-square-theatres-movie-themed-trivia",
+   "data_hash": "c1b1eb9189ac",
+   "updated": "2026-09-27"
   },
   {
    "slug": "lookingglass-theatre",
@@ -2864,7 +3238,9 @@
     "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1589-2-scaled.jpeg",
     "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1829-2-scaled.jpeg"
    ],
-   "sample_url": "https://lookingglasstheatre.org/plays/kowalski/"
+   "sample_url": "https://lookingglasstheatre.org/plays/kowalski/",
+   "data_hash": "e2a5f177d54b",
+   "updated": "2026-09-22"
   },
   {
    "slug": "mandel-hall",
@@ -2882,7 +3258,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33861318/3b2afec8-998e-4116-b33f-8616d3b70117.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/11/cso-chamber-music-at-the-university-of-chicago-tickets"
+   "sample_url": "https://do312.com/events/2026/10/11/cso-chamber-music-at-the-university-of-chicago-tickets",
+   "data_hash": "9fcf4d57b188",
+   "updated": "2026-09-27"
   },
   {
    "slug": "martyrs",
@@ -2902,7 +3280,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/29433128/d19a4583-230d-42a1-8ee7-dc5646a1f9f0.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/29430869/0b272bb2-4405-40aa-b31e-c77815dbbdeb.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/3/el-ten-eleven-tickets"
+   "sample_url": "https://do312.com/events/2026/10/3/el-ten-eleven-tickets",
+   "data_hash": "ab7085a55a98",
+   "updated": "2026-09-27"
   },
   {
    "slug": "metro",
@@ -2925,7 +3305,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32627909/f352354c-b53a-4291-a303-47e6aa3bf1ee.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32627914/4ee56fb0-eb82-4509-a537-855cca5e58e7.png"
    ],
-   "sample_url": "https://do312.com/events/2026/9/24/culture-wars-tickets"
+   "sample_url": "https://do312.com/events/2026/9/24/culture-wars-tickets",
+   "data_hash": "b8192c33fb7a",
+   "updated": "2026-09-27"
   },
   {
    "slug": "mfk-restaurant",
@@ -2943,7 +3325,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31333747/854a3a8b-e631-4c9b-ab8e-4fe76e61b454.jpg"
    ],
-   "sample_url": "https://do312.com/events/weekly/sat/pintxos-porrons-tickets"
+   "sample_url": "https://do312.com/events/weekly/sat/pintxos-porrons-tickets",
+   "data_hash": "db16e4c2ea78",
+   "updated": "2026-09-27"
   },
   {
    "slug": "museum-of-contemporary-art",
@@ -2965,7 +3349,9 @@
     "https://mcachicago.org/wp-content/uploads/2024/08/mca-900x799.webp",
     "https://mcachicago.org/wp-content/uploads/2024/08/mca-400x400.webp"
    ],
-   "sample_url": "https://mcachicago.org/whats-on/events/melanie-mclain-peripersonal-2026-09-22/"
+   "sample_url": "https://mcachicago.org/whats-on/events/melanie-mclain-peripersonal-2026-09-22/",
+   "data_hash": "70946b524ae9",
+   "updated": "2026-09-27"
   },
   {
    "slug": "national-museum-of-mexican-art-pilsen",
@@ -2986,7 +3372,9 @@
     "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-768x512.jpg",
     "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-1536x1024.jpg"
    ],
-   "sample_url": "https://www.choosechicago.com/events/"
+   "sample_url": "https://www.choosechicago.com/events/",
+   "data_hash": "8adf9f5f25e0",
+   "updated": "2026-09-22"
   },
   {
    "slug": "north-shore-center-for-the-performing-arts",
@@ -3004,7 +3392,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34360332/dc0efd59-a20b-4d06-836b-e7da0f5c3721.png"
    ],
-   "sample_url": "https://do312.com/events/2026/10/7/ghostbusters-in-concert-tickets-north-shore"
+   "sample_url": "https://do312.com/events/2026/10/7/ghostbusters-in-concert-tickets-north-shore",
+   "data_hash": "2c55ab1623a9",
+   "updated": "2026-09-27"
   },
   {
    "slug": "northwestern-medicine-field-at-martin-stadium",
@@ -3022,7 +3412,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/30739799/b2718b1b-6bc0-4080-ae66-ed241de776e8.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/4/chicago-stars-fc-vs-denver-summit-fc-tickets"
+   "sample_url": "https://do312.com/events/2026/10/4/chicago-stars-fc-vs-denver-summit-fc-tickets",
+   "data_hash": "249b2cc9fb90",
+   "updated": "2026-09-27"
   },
   {
    "slug": "old-town-school-of-folk-music",
@@ -3045,7 +3437,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32114384/0c40ed23-0b57-4c3c-bc57-5c753968148a.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32770153/3f72e0c7-2b73-4048-ab66-79b0a85b35b0.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/24/beth-orton-tickets"
+   "sample_url": "https://do312.com/events/2026/9/24/beth-orton-tickets",
+   "data_hash": "d76078bf29e1",
+   "updated": "2026-09-27"
   },
   {
    "slug": "original-mothers",
@@ -3064,7 +3458,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31382769/aef17089-fa17-419a-96b6-8bffdb14d0d1.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32983262/038ac1d1-e60a-4c90-853b-ed771c65c34e.jpg"
    ],
-   "sample_url": "https://do312.com/events/weekly/wed/live-dj-schedule-tickets"
+   "sample_url": "https://do312.com/events/weekly/wed/live-dj-schedule-tickets",
+   "data_hash": "d89543da30d9",
+   "updated": "2026-09-27"
   },
   {
    "slug": "outset",
@@ -3083,7 +3479,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34349644/8e1a4c28-fa8a-4bf6-89fd-b77870fcb33a.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32199940/059c1cb3-47f3-4410-bee6-a5f639ff2fea.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/1/simple-things-tickets"
+   "sample_url": "https://do312.com/events/2026/10/1/simple-things-tickets",
+   "data_hash": "c435b3fd98e8",
+   "updated": "2026-09-27"
   },
   {
    "slug": "palmhouse",
@@ -3101,7 +3499,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33190206/f2542b3d-1d2b-4237-91e3-b7b4eb266ddd.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/10/mocktoberfest-2026-tickets"
+   "sample_url": "https://do312.com/events/2026/10/10/mocktoberfest-2026-tickets",
+   "data_hash": "60777d61a127",
+   "updated": "2026-09-27"
   },
   {
    "slug": "park-west",
@@ -3122,7 +3522,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33330722/2673420d-2a8f-4569-988d-8c84c1dfae9f.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32083600/ecbbb6d9-05fe-4eeb-9687-7f104f730e28.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/29/domi-jd-beck-tickets"
+   "sample_url": "https://do312.com/events/2026/9/29/domi-jd-beck-tickets",
+   "data_hash": "6e68e7d8be66",
+   "updated": "2026-09-27"
   },
   {
    "slug": "piazza",
@@ -3140,7 +3542,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34155032/71df7a8e-771b-44ee-8847-3be803353bdf.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/2/tributes-led-zeppelin-and-the-doors-tickets"
+   "sample_url": "https://do312.com/events/2026/10/2/tributes-led-zeppelin-and-the-doors-tickets",
+   "data_hash": "13f1b426470c",
+   "updated": "2026-09-27"
   },
   {
    "slug": "pritzker-pavilion-stage",
@@ -3161,7 +3565,9 @@
     "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/2de08402-ed9c-4b14-b3ff-cf0feffd4fdf/Header+Text+-+Web+Pages+%2811%29.png?format=750w",
     "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/2de08402-ed9c-4b14-b3ff-cf0feffd4fdf/Header+Text+-+Web+Pages+%2811%29.png?format=1000w"
    ],
-   "sample_url": "https://www.chicagogourmet.org/page/globalstagedinner"
+   "sample_url": "https://www.chicagogourmet.org/page/globalstagedinner",
+   "data_hash": "b4b15b5cb078",
+   "updated": "2026-09-22"
   },
   {
    "slug": "prysm",
@@ -3179,7 +3585,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32885109/bb901810-8f6c-4dfa-bea0-c67cda74ce06.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/10/dusky-tickets"
+   "sample_url": "https://do312.com/events/2026/10/10/dusky-tickets",
+   "data_hash": "2d70932e1637",
+   "updated": "2026-09-27"
   },
   {
    "slug": "radius",
@@ -3200,7 +3608,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32816488/7e78583d-5587-4cdf-9595-12d8a26f15c9.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33217980/91fee411-2bc3-4659-b13b-94fad83596ef.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/2/ben-bohmer-tickets"
+   "sample_url": "https://do312.com/events/2026/10/2/ben-bohmer-tickets",
+   "data_hash": "5c6b9c57c9a7",
+   "updated": "2026-09-27"
   },
   {
    "slug": "ramova-theatre",
@@ -3220,7 +3630,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33874700/9de940f7-2349-4a80-8538-c46fb64ec684.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32220159/d4054aff-ae56-4581-9723-1cf3aee012a8.png"
    ],
-   "sample_url": "https://do312.com/events/2026/9/25/s-carey-tickets"
+   "sample_url": "https://do312.com/events/2026/9/25/s-carey-tickets",
+   "data_hash": "1aa9c07f92d1",
+   "updated": "2026-09-27"
   },
   {
    "slug": "reggies",
@@ -3244,7 +3656,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/29249222/980a61ce-0923-4943-9cd4-ce9a8264745a.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33861627/f28026b8-18c4-4c6b-97d7-de88415a4db7.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/30/drag-talk-tickets"
+   "sample_url": "https://do312.com/events/2026/9/30/drag-talk-tickets",
+   "data_hash": "d6ed17047266",
+   "updated": "2026-09-27"
   },
   {
    "slug": "reid-murdoch-building",
@@ -3265,7 +3679,9 @@
     "https://cdn.choosechicago.com/uploads/2026/04/2526_TOTM_1500x1000-768x512.jpg",
     "https://cdn.choosechicago.com/uploads/2026/04/2526_TOTM_1500x1000-600x400.jpg"
    ],
-   "sample_url": "https://www.choosechicago.com/event/theater-of-the-mind/2026-09-22/"
+   "sample_url": "https://www.choosechicago.com/event/theater-of-the-mind/2026-09-22/",
+   "data_hash": "a20eefdd6d7e",
+   "updated": "2026-09-24"
   },
   {
    "slug": "replay-lincoln-park",
@@ -3285,7 +3701,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33540992/1896eadb-b1b5-4321-a4d8-16fe3bdd54ae.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33054877/261c8974-f4a3-4f5c-a602-2bbd3c0441cc.jpg"
    ],
-   "sample_url": "https://do312.com/events/weekly/mon/the-replay-runback-super-smash-brothers-ultimate-tournament-tickets"
+   "sample_url": "https://do312.com/events/weekly/mon/the-replay-runback-super-smash-brothers-ultimate-tournament-tickets",
+   "data_hash": "8847de95f599",
+   "updated": "2026-09-27"
   },
   {
    "slug": "rivers-casino-des-plaines",
@@ -3303,7 +3721,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32410908/dee035e9-fa0d-44c6-9957-1aca8a91b460.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/9/tower-of-power-tickets"
+   "sample_url": "https://do312.com/events/2026/10/9/tower-of-power-tickets",
+   "data_hash": "c363a5c82c93",
+   "updated": "2026-09-27"
   },
   {
    "slug": "riviera-theatre",
@@ -3326,7 +3746,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32478130/34fb29ff-7af7-4442-8693-35d24529da68.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33570987/ffba5ede-df72-47ca-8963-f40fa0607854.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/26/the-garden-with-ghost-mountian-tickets"
+   "sample_url": "https://do312.com/events/2026/9/26/the-garden-with-ghost-mountian-tickets",
+   "data_hash": "c6964a5fedf5",
+   "updated": "2026-09-27"
   },
   {
    "slug": "rosas-lounge",
@@ -3342,7 +3764,9 @@
    "event_count": 5,
    "neighborhood": "Logan Square / Hermosa",
    "images": [],
-   "sample_url": "https://www.rosaslounge.com/calendar"
+   "sample_url": "https://www.rosaslounge.com/calendar",
+   "data_hash": "e39e425f3d9e",
+   "updated": "2026-09-22"
   },
   {
    "slug": "salt-shed",
@@ -3365,7 +3789,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32046857/d7984677-a90b-42c5-8af4-373c7cb526fe.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32611226/1bf2e9cd-bc7d-4cbd-93d3-8242f10343c3.png"
    ],
-   "sample_url": "https://do312.com/events/2026/9/29/mon-rovia-bloodline-tour-tickets"
+   "sample_url": "https://do312.com/events/2026/9/29/mon-rovia-bloodline-tour-tickets",
+   "data_hash": "afb6bf045d6c",
+   "updated": "2026-09-27"
   },
   {
    "slug": "schubas",
@@ -3388,7 +3814,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33897932/dbbe40b5-35d7-4ac0-b911-c25ff5bc0319.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33979691/c6ebe9dd-7e48-4c67-840b-c2c217e2d93c.png"
    ],
-   "sample_url": "https://do312.com/events/2026/9/28/nick-wagen-tickets"
+   "sample_url": "https://do312.com/events/2026/9/28/nick-wagen-tickets",
+   "data_hash": "586fd05605a3",
+   "updated": "2026-09-27"
   },
   {
    "slug": "second-city",
@@ -3408,7 +3836,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34558450/8148ac76-4f6a-40bd-9071-789bef3279db.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34604834/d4fe4b6e-37b5-44d5-95c0-685319f751d5.jpg"
    ],
-   "sample_url": "https://www.choosechicago.com/event/pandemonium-please-hold/2026-09-23/"
+   "sample_url": "https://www.choosechicago.com/event/pandemonium-please-hold/2026-09-23/",
+   "data_hash": "8a4a4f927885",
+   "updated": "2026-09-27"
   },
   {
    "slug": "sleeping-village",
@@ -3429,7 +3859,9 @@
     "https://dice-media.imgix.net/attachments/2026-09-17/15497f9d-1124-4237-a02c-6361fe48c42a.jpg?rect=168%2C0%2C741%2C1348",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34221777/363b9089-b2d5-4b42-8ade-fdd3d5231464.jpg"
    ],
-   "sample_url": "https://dice.fm/event/mxnd3k-deceits-w-computer-kill-fantasma-negra-27th-sep-sleeping-village-chicago-tickets"
+   "sample_url": "https://dice.fm/event/mxnd3k-deceits-w-computer-kill-fantasma-negra-27th-sep-sleeping-village-chicago-tickets",
+   "data_hash": "730b66ae2a55",
+   "updated": "2026-09-27"
   },
   {
    "slug": "smartbar",
@@ -3452,7 +3884,9 @@
     "https://smartbarchicago.com/wp-content/uploads/2026/08/Flowers_Portrait.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34224321/33793b78-afd8-4ea2-bb96-4b459455e610.jpg"
    ],
-   "sample_url": "https://smartbarchicago.com/event/flowers-of-romance-15/"
+   "sample_url": "https://smartbarchicago.com/event/flowers-of-romance-15/",
+   "data_hash": "fca9aa062183",
+   "updated": "2026-09-27"
   },
   {
    "slug": "smoke-and-mirrors",
@@ -3468,7 +3902,9 @@
    "event_count": 2,
    "neighborhood": "Logan Square",
    "images": [],
-   "sample_url": "https://dice.fm/event/k62xm8-marrn-25th-sep-smoke-mirrors-chicago-tickets"
+   "sample_url": "https://dice.fm/event/k62xm8-marrn-25th-sep-smoke-mirrors-chicago-tickets",
+   "data_hash": "3f69422c83f9",
+   "updated": "2026-09-24"
   },
   {
    "slug": "sound-bar",
@@ -3486,7 +3922,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33510961/dd9599e9-54fe-4bc7-af69-f2e76ae76fa8.png"
    ],
-   "sample_url": "https://do312.com/events/2026/10/9/elephante-tickets"
+   "sample_url": "https://do312.com/events/2026/10/9/elephante-tickets",
+   "data_hash": "e31dafc50d91",
+   "updated": "2026-09-27"
   },
   {
    "slug": "space",
@@ -3508,7 +3946,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34196903/e20300f5-6efa-4d88-ab74-dc889c33b800.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32811906/8ae990fd-3971-4040-9990-59b96cabf2b7.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/28/blue-monday-fernando-jones-tickets"
+   "sample_url": "https://do312.com/events/2026/9/28/blue-monday-fernando-jones-tickets",
+   "data_hash": "48bc065ed8b2",
+   "updated": "2026-09-27"
   },
   {
    "slug": "spybar",
@@ -3531,7 +3971,9 @@
     "https://dice-media.imgix.net/attachments/2026-06-02/78b528f9-107b-49f0-9374-ac46e49bb44d.jpg?rect=0%2C216%2C1080%2C648",
     "https://dice-media.imgix.net/attachments/2026-06-02/78b528f9-107b-49f0-9374-ac46e49bb44d.jpg?rect=243%2C0%2C594%2C1080"
    ],
-   "sample_url": "https://dice.fm/event/bbg82v-thursday-social-open-decks-night-market-24th-sep-spybar-chicago-tickets"
+   "sample_url": "https://dice.fm/event/bbg82v-thursday-social-open-decks-night-market-24th-sep-spybar-chicago-tickets",
+   "data_hash": "2eb30665775e",
+   "updated": "2026-09-27"
   },
   {
    "slug": "stars-and-garters",
@@ -3549,7 +3991,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34118144/560cc6b8-e51c-4c4f-b6e2-ab0ab8f4c47a.png"
    ],
-   "sample_url": "https://do312.com/events/2026/10/1/inevitable-a-new-magic-and-mentalism-show"
+   "sample_url": "https://do312.com/events/2026/10/1/inevitable-a-new-magic-and-mentalism-show",
+   "data_hash": "1406dc5ff877",
+   "updated": "2026-09-27"
   },
   {
    "slug": "steppenwolf-theatre",
@@ -3572,7 +4016,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34466989/94d146f0-1559-4fa0-bd1c-ef934439ef3c.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34375914/e96d56af-6e2f-4709-b7f4-cbd250c87f3b.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/17/topdog-underdog-tickets-info"
+   "sample_url": "https://do312.com/events/2026/9/17/topdog-underdog-tickets-info",
+   "data_hash": "ed2358ac8544",
+   "updated": "2026-09-27"
   },
   {
    "slug": "studebaker-theater",
@@ -3593,7 +4039,9 @@
     "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-32x32.png",
     "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-192x192.png"
    ],
-   "sample_url": "https://www.choosechicago.com/event/lucy-darling-chicago-il-simply-darling-tour/2026-09-23/"
+   "sample_url": "https://www.choosechicago.com/event/lucy-darling-chicago-il-simply-darling-tour/2026-09-23/",
+   "data_hash": "90f61367bb23",
+   "updated": "2026-09-22"
   },
   {
    "slug": "subterranean",
@@ -3616,7 +4064,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31332429/3afc8d3e-8407-4903-9524-a6eb9f07ca63.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32117804/e3d2361a-616c-4aa6-9e9f-899774f69c1a.png"
    ],
-   "sample_url": "https://do312.com/events/2026/9/24/sub-urban-the-bell-tolls-tour-tickets-klmop8l"
+   "sample_url": "https://do312.com/events/2026/9/24/sub-urban-the-bell-tolls-tour-tickets-klmop8l",
+   "data_hash": "294e3d8762fb",
+   "updated": "2026-09-27"
   },
   {
    "slug": "tao-chicago",
@@ -3634,7 +4084,9 @@
    "images": [
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34522078/70698754-3750-41e6-93c3-016683a7fc3d.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/10/10/steve-aoki-tickets"
+   "sample_url": "https://do312.com/events/2026/10/10/steve-aoki-tickets",
+   "data_hash": "d49037cf39ec",
+   "updated": "2026-09-27"
   },
   {
    "slug": "tetto-rooftop",
@@ -3650,7 +4102,9 @@
    "event_count": 1,
    "neighborhood": "West Loop",
    "images": [],
-   "sample_url": "https://dice.fm/event/q2q38p--double-touch-at-tetto-rooftop-25th-sep-tetto-rooftop-chicago-tickets"
+   "sample_url": "https://dice.fm/event/q2q38p--double-touch-at-tetto-rooftop-25th-sep-tetto-rooftop-chicago-tickets",
+   "data_hash": "4139ef9689d8",
+   "updated": "2026-09-24"
   },
   {
    "slug": "thalia-hall",
@@ -3673,7 +4127,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31633667/8c5885b2-1e45-457e-9b70-04e433b395b1.png",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/30149322/066a2b1b-9167-49ec-a7a3-6afa87c87fc2.png"
    ],
-   "sample_url": "https://thaliahallchicago.com/"
+   "sample_url": "https://thaliahallchicago.com/",
+   "data_hash": "6056bb3bf77c",
+   "updated": "2026-09-27"
   },
   {
    "slug": "vic-theatre",
@@ -3696,7 +4152,9 @@
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33576872/3d5c3255-cbee-4b7d-92cc-560c58e41310.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32421637/942ed6c3-183f-4799-baed-38b541bdf168.jpg"
    ],
-   "sample_url": "https://do312.com/events/2026/9/29/lambrini-girls-tickets"
+   "sample_url": "https://do312.com/events/2026/9/29/lambrini-girls-tickets",
+   "data_hash": "48b0bf3c4ba8",
+   "updated": "2026-09-27"
   },
   {
    "slug": "victory-gardens-biograph",
@@ -3717,7 +4175,9 @@
     "https://victorygardens.org/wp-content/uploads/2023/03/bg-ticket-decoration.png",
     "https://victorygardens.org/wp-content/uploads/2023/02/background-people-feedback-home-1.png"
    ],
-   "sample_url": "https://victorygardens.org/"
+   "sample_url": "https://victorygardens.org/",
+   "data_hash": "36a27cad8a2d",
+   "updated": "2026-09-24"
   },
   {
    "slug": "zanies-comedy-club",
@@ -3737,7 +4197,9 @@
     "https://chicago.zanies.com/wp-content/uploads/2025/06/Summer-Laugh-Pass-WEB-BANNER.jpg",
     "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31645698/57c5e159-ebac-4760-bd0c-0f65e39d8c3d.png"
    ],
-   "sample_url": "https://chicago.zanies.com/"
+   "sample_url": "https://chicago.zanies.com/",
+   "data_hash": "1750000e0d3f",
+   "updated": "2026-09-27"
   }
  ]
 }
