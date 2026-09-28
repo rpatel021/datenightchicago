@@ -1,0 +1,17 @@
+{
+  "rule": "Only confirmed listing facts. likely = inferred party/category. never invent a venue.",
+  "patches": {
+    "castle": {
+      "venue": "Chicago Children's Museum",
+      "address": "700 E Grand Ave, Chicago, IL 60611",
+      "hood": "Streeterville",
+      "hours": "10:00 a.m. – 5:00 p.m.",
+      "vibe": "Museum",
+      "party": "Family",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Chicago_Children%27s_Museum_exterior_in_May_2016.jpg/1280px-Chicago_Children%27s_Museum_exterior_in_May_2016.jpg",
+      "note": "Kids exhibit at Navy Pier — not a concert.",
+      "confidence": "confirmed",
+      "source": "https://www.choosechicago.com/event/castle/2026-09-28/"
+    }
+  }
+}

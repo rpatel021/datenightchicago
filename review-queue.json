@@ -1,0 +1,18 @@
+{
+  "generated": "2026-09-28",
+  "flagged_rows": 353,
+  "flagged_titles": 151,
+  "rule": "Flag missing fields AND records whose category/party contradict the title or source.",
+  "priority": [
+    {"name": "Dinos!", "severity": 10, "count": 12, "category": "live_music", "url": "https://www.choosechicago.com/event/dinos/2026-09-28/"},
+    {"name": "Fall Fest at Lincoln Park Zoo", "severity": 10, "count": 6, "category": "live_music", "url": "https://www.choosechicago.com/event/fall-fest-at-lincoln-park-zoo/2026-10-02/"},
+    {"name": "Mini Zoom Room", "severity": 10, "count": 6, "category": "live_music"},
+    {"name": "Haunted History Tours at Lincoln Park Zoo", "severity": 10, "count": 4, "category": "live_music"},
+    {"name": "BOO! at the Zoo", "severity": 10, "count": 3, "category": "live_music"},
+    {"name": "Serial Killer: The Exhibition", "severity": 10, "count": 2, "category": "live_music"},
+    {"name": "Castle", "severity": 8, "count": 9, "status": "patched", "category": "museum"},
+    {"name": "Homeschool Days at PEPPA PIG World of Play Chicago", "severity": 6, "count": 8, "category": "theater"},
+    {"name": "Chicago By Night River & Lake", "severity": 3, "count": 12},
+    {"name": "Operation Mincemeat: A New Musical", "severity": 3, "count": 11, "category": "theater"}
+  ]
+}
