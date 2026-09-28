@@ -35,5 +35,43 @@
       "destination": "https://nightoutchicago.com/:path*",
       "statusCode": 308
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/v/:slug/edit",
+      "destination": "/venue"
+    },
+    {
+      "source": "/v/:slug",
+      "destination": "/venue"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/v/:slug/edit",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
   ]
 }

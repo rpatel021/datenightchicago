@@ -1,0 +1,6 @@
+# local secrets / CLI state
+.env*
+.vercel/
+# private venue edit links (tokens) must never be committed or deployed
+venue_edit_links*.csv
+*.edit_links.csv

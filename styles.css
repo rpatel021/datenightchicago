@@ -597,3 +597,8 @@ body {
   max-width: 22rem;
 }
 .empty-lane .option-title { font-size: clamp(1.5rem, 6vw, 2.1rem); }
+
+/* Links to venue pages (/v/<slug>) — keep the card look, just make names tappable. */
+.option-title .title-link { color: inherit; text-decoration: none; }
+.option-title .title-link:hover, .option-title .title-link:focus-visible { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.12em; }
+.meta .venue-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(255,253,248,0.45); text-underline-offset: 0.18em; }

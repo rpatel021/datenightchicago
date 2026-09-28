@@ -13,6 +13,8 @@
   let plans = [];
   let restaurants = [];
   let events = [];
+  let venueSlugs = {}; // normalized venue/restaurant name -> /v/<slug> (from venues.json)
+  let venueIds = {}; // restaurant_id -> true when it has a venue page
   let hoodChoices = [];
   let category = "all";
   let hood = "all";
@@ -108,6 +110,33 @@
       .replace(/['\u2019]/g, "'")
       .replace(/[^a-z0-9]+/g, " ")
       .trim();
+  }
+
+  // Venue pages (/v/<slug>): link names only when the slug index knows them.
+  function venueKey(s) {
+    return String(s || "")
+      .normalize("NFKD").replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase().replace(/&/g, " and ").replace(/['\u2019]/g, "")
+      .replace(/[^a-z0-9]+/g, " ").trim();
+  }
+  function indexVenues(data) {
+    const map = {};
+    ((data && data.venues) || []).forEach((v) => {
+      if (!v || !v.slug) return;
+      [v.name].concat(v.aliases || []).forEach((a) => {
+        const k = venueKey(a);
+        if (k && !map[k]) map[k] = v.slug;
+      });
+    });
+    return map;
+  }
+  function venueHref(name, slug) {
+    const s = slug || venueSlugs[venueKey(name)];
+    return s ? "/v/" + encodeURIComponent(s) : "";
+  }
+  function venueLinkHtml(name, slug) {
+    const href = venueHref(name, slug);
+    return href ? `<a class="venue-link" href="${esc(href)}">${esc(name)}</a>` : esc(name);
   }
 
   function partyFitsRestaurant(r) {
@@ -475,6 +504,7 @@
     return {
       _kind: "eat",
       _id: "eat:" + (r.restaurant_id || normName(r.name)),
+      restaurant_id: r.restaurant_id || "",
       name: r.name,
       neighborhood: r.neighborhood || "",
       cuisine: r.cuisine || "",
@@ -859,13 +889,16 @@
     const cuisineLine = [item.cuisine, item.price_band].filter(Boolean).join(" · ");
     const why = item.notes || "Start hungry — good table energy.";
     const link = item.reserve_url || item.url || item.official_url || "";
+    const titleHref = venueHref(item.name, venueIds[item.restaurant_id] ? item.restaurant_id : "");
     return `
       <div class="copy">
         <p class="eyebrow">${esc(item.neighborhood || "Chicago")}</p>
         ${renderFlexCue(item)}
         ${renderChips(item)}
         ${cuisineLine ? `<p class="meta">${esc(cuisineLine)}</p>` : ""}
-        <h3 class="option-title">${esc(item.name)}</h3>
+        <h3 class="option-title">${
+          titleHref ? `<a class="title-link" href="${esc(titleHref)}">${esc(item.name)}</a>` : esc(item.name)
+        }</h3>
         <p class="note">${esc(why)}</p>
         <div class="actions">
           ${link ? `<a class="btn flame" href="${esc(link)}" target="_blank" rel="noopener">Reserve</a>` : ""}
@@ -887,7 +920,11 @@
         </div>`;
     }
     const when = item.date ? nightLabel(item.date) : "";
-    const meta = [item.start_time, item.cost, item.venue].filter(Boolean).join(" · ");
+    const meta = [item.start_time, item.cost]
+      .filter(Boolean)
+      .map(esc)
+      .concat(item.venue ? [venueLinkHtml(item.venue)] : [])
+      .join(" · ");
     const why = item.notes || "Then laugh, listen, or wander.";
     return `
       <div class="copy">
@@ -895,7 +932,7 @@
         ${renderFlexCue(item)}
         ${renderChips(item)}
         <h3 class="option-title">${esc(item.name)}</h3>
-        ${meta ? `<p class="meta">${esc(meta)}</p>` : ""}
+        ${meta ? `<p class="meta">${meta}</p>` : ""}
         <p class="note">${esc(why)}</p>
         <div class="actions">
           ${
@@ -926,7 +963,7 @@
         ${renderChips(item)}
         <h3 class="option-title">${esc(item.name)}</h3>
         ${metaBits ? `<p class="meta">${esc(metaBits)}</p>` : ""}
-        ${item.venue ? `<p class="meta">${esc(item.venue)}</p>` : ""}
+        ${item.venue ? `<p class="meta">${venueLinkHtml(item.venue)}</p>` : ""}
         <p class="note">${esc(why)}</p>
         <div class="actions">
           ${
@@ -1464,8 +1501,21 @@
     fetch("plans.json").then((r) => r.json()),
     fetch("restaurants.json").then((r) => r.json()),
     fetch("events.json").then((r) => r.json()),
+    // Optional: venue slug index for /v/<slug> links. Never blocks the planner if missing.
+    fetch("venues.json")
+      .then((r) => (r.ok ? r.json() : null))
+      .catch(() => null),
   ])
-    .then(([hoods, planData, restData, eventData]) => {
+    .then(([hoods, planData, restData, eventData, venueData]) => {
+      try {
+        venueSlugs = indexVenues(venueData);
+        ((venueData && venueData.venues) || []).forEach((v) => {
+          if (v && v.restaurant_id) venueIds[v.restaurant_id] = true;
+        });
+      } catch (e) {
+        venueSlugs = {};
+        venueIds = {};
+      }
       neighborhoods = hoods.neighborhoods || [];
       categories = hoods.categories || [];
       plans = Array.isArray(planData) ? planData : planData.plans || [];

@@ -1,0 +1,3743 @@
+{
+ "generated_at": "2026-09-28T14:17:13-05:00",
+ "note": "Stable slug index for /v/<slug>. Built by datenight-scout/build_venues.py; 'details' is approved venue-supplied data and is preserved.",
+ "count": 231,
+ "venues": [
+  {
+   "slug": "5-rabanitos",
+   "kind": "restaurant",
+   "name": "5 Rabanitos",
+   "aliases": [
+    "5 Rabanitos"
+   ],
+   "restaurant_id": "5-rabanitos",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "acadia",
+   "kind": "restaurant",
+   "name": "Acadia",
+   "aliases": [
+    "Acadia"
+   ],
+   "restaurant_id": "acadia",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "adalina",
+   "kind": "restaurant",
+   "name": "Adalina",
+   "aliases": [
+    "Adalina"
+   ],
+   "restaurant_id": "adalina",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "akahoshi-ramen",
+   "kind": "restaurant",
+   "name": "Akahoshi Ramen",
+   "aliases": [
+    "Akahoshi Ramen"
+   ],
+   "restaurant_id": "akahoshi-ramen",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "alinea",
+   "kind": "restaurant",
+   "name": "Alinea",
+   "aliases": [
+    "Alinea"
+   ],
+   "restaurant_id": "alinea",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "all-well",
+   "kind": "restaurant",
+   "name": "All Well",
+   "aliases": [
+    "All Well"
+   ],
+   "restaurant_id": "all-well",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "anelya",
+   "kind": "restaurant",
+   "name": "Anelya",
+   "aliases": [
+    "Anelya"
+   ],
+   "restaurant_id": "anelya",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "anteprima",
+   "kind": "restaurant",
+   "name": "Anteprima",
+   "aliases": [
+    "Anteprima"
+   ],
+   "restaurant_id": "anteprima",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "asador-bastian",
+   "kind": "restaurant",
+   "name": "Asador Bastian",
+   "aliases": [
+    "Asador Bastian"
+   ],
+   "restaurant_id": "asador-bastian",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "ascione-bistro",
+   "kind": "restaurant",
+   "name": "Ascione Bistro",
+   "aliases": [
+    "Ascione Bistro"
+   ],
+   "restaurant_id": "ascione-bistro",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "au-cheval",
+   "kind": "restaurant",
+   "name": "Au Cheval",
+   "aliases": [
+    "Au Cheval"
+   ],
+   "restaurant_id": "au-cheval",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "avec",
+   "kind": "restaurant",
+   "name": "Avec",
+   "aliases": [
+    "Avec"
+   ],
+   "restaurant_id": "avec",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "bar-roma",
+   "kind": "restaurant",
+   "name": "Bar Roma",
+   "aliases": [
+    "Bar Roma"
+   ],
+   "restaurant_id": "bar-roma",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "bavettes-bar-and-boeuf",
+   "kind": "restaurant",
+   "name": "Bavette's Bar & Boeuf",
+   "aliases": [
+    "Bavette's Bar & Boeuf"
+   ],
+   "restaurant_id": "bavettes-bar-and-boeuf",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "bayan-ko",
+   "kind": "restaurant",
+   "name": "Bayan Ko",
+   "aliases": [
+    "Bayan Ko"
+   ],
+   "restaurant_id": "bayan-ko",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "beatrix",
+   "kind": "restaurant",
+   "name": "Beatrix",
+   "aliases": [
+    "Beatrix"
+   ],
+   "restaurant_id": "beatrix",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "beaumonts",
+   "kind": "restaurant",
+   "name": "Beaumont's",
+   "aliases": [
+    "Beaumont's"
+   ],
+   "restaurant_id": "beaumonts",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "bienmesabe",
+   "kind": "restaurant",
+   "name": "BienMeSabe",
+   "aliases": [
+    "BienMeSabe"
+   ],
+   "restaurant_id": "bienmesabe",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "big-jones",
+   "kind": "restaurant",
+   "name": "Big Jones",
+   "aliases": [
+    "Big Jones"
+   ],
+   "restaurant_id": "big-jones",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "big-star",
+   "kind": "restaurant",
+   "name": "Big Star",
+   "aliases": [
+    "Big Star"
+   ],
+   "restaurant_id": "big-star",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "bistro-campagne",
+   "kind": "restaurant",
+   "name": "Bistro Campagne",
+   "aliases": [
+    "Bistro Campagne"
+   ],
+   "restaurant_id": "bistro-campagne",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "boka",
+   "kind": "restaurant",
+   "name": "Boka",
+   "aliases": [
+    "Boka"
+   ],
+   "restaurant_id": "boka",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "bungalow-by-middle-brow",
+   "kind": "restaurant",
+   "name": "Bungalow by Middle Brow",
+   "aliases": [
+    "Bungalow by Middle Brow"
+   ],
+   "restaurant_id": "bungalow-by-middle-brow",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "cafe-ba-ba-reeba",
+   "kind": "restaurant",
+   "name": "Cafe Ba-Ba-Reeba",
+   "aliases": [
+    "Cafe Ba-Ba-Reeba"
+   ],
+   "restaurant_id": "cafe-ba-ba-reeba",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "cafe-yaya",
+   "kind": "restaurant",
+   "name": "Cafe Yaya",
+   "aliases": [
+    "Cafe Yaya"
+   ],
+   "restaurant_id": "cafe-yaya",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "carino",
+   "kind": "restaurant",
+   "name": "Cariño",
+   "aliases": [
+    "Cariño"
+   ],
+   "restaurant_id": "carino",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "cellar-door-provisions",
+   "kind": "restaurant",
+   "name": "Cellar Door Provisions",
+   "aliases": [
+    "Cellar Door Provisions"
+   ],
+   "restaurant_id": "cellar-door-provisions",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "cerdito-muerto",
+   "kind": "restaurant",
+   "name": "Cerdito Muerto",
+   "aliases": [
+    "Cerdito Muerto"
+   ],
+   "restaurant_id": "cerdito-muerto",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "chez-joel",
+   "kind": "restaurant",
+   "name": "Chez Joel",
+   "aliases": [
+    "Chez Joel"
+   ],
+   "restaurant_id": "chez-joel",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "chicago-firehouse-restaurant",
+   "kind": "restaurant",
+   "name": "Chicago Firehouse Restaurant",
+   "aliases": [
+    "Chicago Firehouse Restaurant"
+   ],
+   "restaurant_id": "chicago-firehouse-restaurant",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "cho-sun-ok",
+   "kind": "restaurant",
+   "name": "Cho Sun Ok",
+   "aliases": [
+    "Cho Sun Ok"
+   ],
+   "restaurant_id": "cho-sun-ok",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "chubby-boys",
+   "kind": "restaurant",
+   "name": "Chubby Boys",
+   "aliases": [
+    "Chubby Boys"
+   ],
+   "restaurant_id": "chubby-boys",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "ciccio-mio",
+   "kind": "restaurant",
+   "name": "Ciccio Mio",
+   "aliases": [
+    "Ciccio Mio"
+   ],
+   "restaurant_id": "ciccio-mio",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "cindys-rooftop",
+   "kind": "restaurant",
+   "name": "Cindy's Rooftop",
+   "aliases": [
+    "Cindy's Rooftop"
+   ],
+   "restaurant_id": "cindys-rooftop",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "community-tavern",
+   "kind": "restaurant",
+   "name": "Community Tavern",
+   "aliases": [
+    "Community Tavern"
+   ],
+   "restaurant_id": "community-tavern",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "daisies",
+   "kind": "restaurant",
+   "name": "Daisies",
+   "aliases": [
+    "Daisies"
+   ],
+   "restaurant_id": "daisies",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "daisies-west-loop",
+   "kind": "restaurant",
+   "name": "Daisies West Loop",
+   "aliases": [
+    "Daisies West Loop"
+   ],
+   "restaurant_id": "daisies-west-loop",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "deliz-italian-steakhouse",
+   "kind": "restaurant",
+   "name": "Dēliz Italian Steakhouse",
+   "aliases": [
+    "Dēliz Italian Steakhouse"
+   ],
+   "restaurant_id": "deliz-italian-steakhouse",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "demera",
+   "kind": "restaurant",
+   "name": "Demera",
+   "aliases": [
+    "Demera"
+   ],
+   "restaurant_id": "demera",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "doves-luncheonette",
+   "kind": "restaurant",
+   "name": "Dove's Luncheonette",
+   "aliases": [
+    "Dove's Luncheonette"
+   ],
+   "restaurant_id": "doves-luncheonette",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "duck-sel",
+   "kind": "restaurant",
+   "name": "Duck Sel",
+   "aliases": [
+    "Duck Sel"
+   ],
+   "restaurant_id": "duck-sel",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "duseks-board-and-beer",
+   "kind": "restaurant",
+   "name": "Dusek's Board & Beer",
+   "aliases": [
+    "Dusek's Board & Beer"
+   ],
+   "restaurant_id": "duseks-board-and-beer",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "esme",
+   "kind": "restaurant",
+   "name": "Esmé",
+   "aliases": [
+    "Esmé"
+   ],
+   "restaurant_id": "esme",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "ever",
+   "kind": "restaurant",
+   "name": "Ever",
+   "aliases": [
+    "Ever"
+   ],
+   "restaurant_id": "ever",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "fiya",
+   "kind": "restaurant",
+   "name": "Fiya",
+   "aliases": [
+    "Fiya"
+   ],
+   "restaurant_id": "fiya",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "frontera-grill",
+   "kind": "restaurant",
+   "name": "Frontera Grill",
+   "aliases": [
+    "Frontera Grill"
+   ],
+   "restaurant_id": "frontera-grill",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "galit",
+   "kind": "restaurant",
+   "name": "Galit",
+   "aliases": [
+    "Galit"
+   ],
+   "restaurant_id": "galit",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "gejas-cafe",
+   "kind": "restaurant",
+   "name": "Geja's Cafe",
+   "aliases": [
+    "Geja's Cafe"
+   ],
+   "restaurant_id": "gejas-cafe",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "gibsons-bar-and-steakhouse",
+   "kind": "restaurant",
+   "name": "Gibsons Bar & Steakhouse",
+   "aliases": [
+    "Gibsons Bar & Steakhouse"
+   ],
+   "restaurant_id": "gibsons-bar-and-steakhouse",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "gioco",
+   "kind": "restaurant",
+   "name": "Gioco",
+   "aliases": [
+    "Gioco"
+   ],
+   "restaurant_id": "gioco",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "girl-and-the-goat",
+   "kind": "restaurant",
+   "name": "Girl & the Goat",
+   "aliases": [
+    "Girl & the Goat"
+   ],
+   "restaurant_id": "girl-and-the-goat",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "gt-fish-and-oyster",
+   "kind": "restaurant",
+   "name": "GT Fish & Oyster",
+   "aliases": [
+    "GT Fish & Oyster"
+   ],
+   "restaurant_id": "gt-fish-and-oyster",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "haisous-vietnamese-kitchen",
+   "kind": "restaurant",
+   "name": "HaiSous Vietnamese Kitchen",
+   "aliases": [
+    "HaiSous Vietnamese Kitchen"
+   ],
+   "restaurant_id": "haisous-vietnamese-kitchen",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "hermosa-restaurant",
+   "kind": "restaurant",
+   "name": "Hermosa Restaurant",
+   "aliases": [
+    "Hermosa Restaurant"
+   ],
+   "restaurant_id": "hermosa-restaurant",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "hopleaf",
+   "kind": "restaurant",
+   "name": "Hopleaf",
+   "aliases": [
+    "Hopleaf"
+   ],
+   "restaurant_id": "hopleaf",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "indienne",
+   "kind": "restaurant",
+   "name": "Indienne",
+   "aliases": [
+    "Indienne"
+   ],
+   "restaurant_id": "indienne",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "jeong",
+   "kind": "restaurant",
+   "name": "Jeong",
+   "aliases": [
+    "Jeong"
+   ],
+   "restaurant_id": "jeong",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "joes-seafood-prime-steak-and-stone-crab",
+   "kind": "restaurant",
+   "name": "Joe's Seafood, Prime Steak & Stone Crab",
+   "aliases": [
+    "Joe's Seafood, Prime Steak & Stone Crab"
+   ],
+   "restaurant_id": "joes-seafood-prime-steak-and-stone-crab",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "kasama",
+   "kind": "restaurant",
+   "name": "Kasama",
+   "aliases": [
+    "Kasama"
+   ],
+   "restaurant_id": "kasama",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "khmai-cambodian-fine-dining",
+   "kind": "restaurant",
+   "name": "Khmai Cambodian Fine Dining",
+   "aliases": [
+    "Khmai Cambodian Fine Dining"
+   ],
+   "restaurant_id": "khmai-cambodian-fine-dining",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "kumiko",
+   "kind": "restaurant",
+   "name": "Kumiko",
+   "aliases": [
+    "Kumiko"
+   ],
+   "restaurant_id": "kumiko",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "kyoten",
+   "kind": "restaurant",
+   "name": "Kyōten",
+   "aliases": [
+    "Kyōten"
+   ],
+   "restaurant_id": "kyoten",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "le-sud",
+   "kind": "restaurant",
+   "name": "Le Sud",
+   "aliases": [
+    "Le Sud"
+   ],
+   "restaurant_id": "le-sud",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1
+  },
+  {
+   "slug": "little-bad-wolf",
+   "kind": "restaurant",
+   "name": "Little Bad Wolf",
+   "aliases": [
+    "Little Bad Wolf"
+   ],
+   "restaurant_id": "little-bad-wolf",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "longman-and-eagle",
+   "kind": "restaurant",
+   "name": "Longman & Eagle",
+   "aliases": [
+    "Longman & Eagle"
+   ],
+   "restaurant_id": "longman-and-eagle",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "luellas-southern-kitchen",
+   "kind": "restaurant",
+   "name": "Luella's Southern Kitchen",
+   "aliases": [
+    "Luella's Southern Kitchen"
+   ],
+   "restaurant_id": "luellas-southern-kitchen",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "lula-cafe",
+   "kind": "restaurant",
+   "name": "Lula Cafe",
+   "aliases": [
+    "Lula Cafe"
+   ],
+   "restaurant_id": "lula-cafe",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "mama-delia",
+   "kind": "restaurant",
+   "name": "Mama Delia",
+   "aliases": [
+    "Mama Delia"
+   ],
+   "restaurant_id": "mama-delia",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "maple-ash",
+   "kind": "restaurant",
+   "name": "Maple & Ash",
+   "aliases": [
+    "Maple & Ash"
+   ],
+   "restaurant_id": "maple-ash",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "mariscos-san-pedro",
+   "kind": "restaurant",
+   "name": "Mariscos San Pedro",
+   "aliases": [
+    "Mariscos San Pedro"
+   ],
+   "restaurant_id": "mariscos-san-pedro",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "maxwells-trading",
+   "kind": "restaurant",
+   "name": "Maxwells Trading",
+   "aliases": [
+    "Maxwells Trading"
+   ],
+   "restaurant_id": "maxwells-trading",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "mi-tocaya-antojeria",
+   "kind": "restaurant",
+   "name": "Mi Tocaya Antojeria",
+   "aliases": [
+    "Mi Tocaya Antojeria"
+   ],
+   "restaurant_id": "mi-tocaya-antojeria",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "mia-francesca",
+   "kind": "restaurant",
+   "name": "Mia Francesca",
+   "aliases": [
+    "Mia Francesca"
+   ],
+   "restaurant_id": "mia-francesca",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "milli-by-metric",
+   "kind": "restaurant",
+   "name": "Milli by Metric",
+   "aliases": [
+    "Milli by Metric"
+   ],
+   "restaurant_id": "milli-by-metric",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "millys-pizza",
+   "kind": "restaurant",
+   "name": "Milly's Pizza In The Pan",
+   "aliases": [
+    "Milly's Pizza In The Pan"
+   ],
+   "restaurant_id": "millys-pizza",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "mirra",
+   "kind": "restaurant",
+   "name": "Mirra",
+   "aliases": [
+    "Mirra"
+   ],
+   "restaurant_id": "mirra",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "mister-tiger",
+   "kind": "restaurant",
+   "name": "Mister Tiger",
+   "aliases": [
+    "Mister Tiger"
+   ],
+   "restaurant_id": "mister-tiger",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "mon-ami-gabi",
+   "kind": "restaurant",
+   "name": "Mon Ami Gabi",
+   "aliases": [
+    "Mon Ami Gabi"
+   ],
+   "restaurant_id": "mon-ami-gabi",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "monteverde",
+   "kind": "restaurant",
+   "name": "Monteverde",
+   "aliases": [
+    "Monteverde"
+   ],
+   "restaurant_id": "monteverde",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "nadu",
+   "kind": "restaurant",
+   "name": "Nadu",
+   "aliases": [
+    "Nadu"
+   ],
+   "restaurant_id": "nadu",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "nine-bar",
+   "kind": "restaurant",
+   "name": "Nine Bar",
+   "aliases": [
+    "Nine Bar"
+   ],
+   "restaurant_id": "nine-bar",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "north-pond",
+   "kind": "restaurant",
+   "name": "North Pond",
+   "aliases": [
+    "North Pond"
+   ],
+   "restaurant_id": "north-pond",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "obelix",
+   "kind": "restaurant",
+   "name": "Obélix",
+   "aliases": [
+    "Obélix"
+   ],
+   "restaurant_id": "obelix",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "oda",
+   "kind": "restaurant",
+   "name": "Oda",
+   "aliases": [
+    "Oda"
+   ],
+   "restaurant_id": "oda",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "olivers-south-loop",
+   "kind": "restaurant",
+   "name": "Oliver's",
+   "aliases": [
+    "Oliver's"
+   ],
+   "restaurant_id": "olivers-south-loop",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "oriole",
+   "kind": "restaurant",
+   "name": "Oriole",
+   "aliases": [
+    "Oriole"
+   ],
+   "restaurant_id": "oriole",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "orsos",
+   "kind": "restaurant",
+   "name": "Orso's",
+   "aliases": [
+    "Orso's"
+   ],
+   "restaurant_id": "orsos",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "parachute-hifi",
+   "kind": "restaurant",
+   "name": "Parachute HiFi",
+   "aliases": [
+    "Parachute HiFi"
+   ],
+   "restaurant_id": "parachute-hifi",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "pequods-pizza",
+   "kind": "restaurant",
+   "name": "Pequod's Pizza",
+   "aliases": [
+    "Pequod's Pizza"
+   ],
+   "restaurant_id": "pequods-pizza",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "petterinos",
+   "kind": "restaurant",
+   "name": "Petterino's",
+   "aliases": [
+    "Petterino's"
+   ],
+   "restaurant_id": "petterinos",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "piccolo-sogno",
+   "kind": "restaurant",
+   "name": "Piccolo Sogno",
+   "aliases": [
+    "Piccolo Sogno"
+   ],
+   "restaurant_id": "piccolo-sogno",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "pizzamici",
+   "kind": "restaurant",
+   "name": "Pizz'Amici",
+   "aliases": [
+    "Pizz'Amici"
+   ],
+   "restaurant_id": "pizzamici",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "pleasant-house-pub",
+   "kind": "restaurant",
+   "name": "Pleasant House Pub",
+   "aliases": [
+    "Pleasant House Pub"
+   ],
+   "restaurant_id": "pleasant-house-pub",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "port-union",
+   "kind": "restaurant",
+   "name": "Port Union",
+   "aliases": [
+    "Port Union"
+   ],
+   "restaurant_id": "port-union",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "qxy-dumplings-wicker-park",
+   "kind": "restaurant",
+   "name": "QXY Dumplings (Wicker Park)",
+   "aliases": [
+    "QXY Dumplings (Wicker Park)"
+   ],
+   "restaurant_id": "qxy-dumplings-wicker-park",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "r-j-grunts",
+   "kind": "restaurant",
+   "name": "R.J. Grunts",
+   "aliases": [
+    "R.J. Grunts"
+   ],
+   "restaurant_id": "r-j-grunts",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "riccardo-trattoria",
+   "kind": "restaurant",
+   "name": "Riccardo Trattoria",
+   "aliases": [
+    "Riccardo Trattoria"
+   ],
+   "restaurant_id": "riccardo-trattoria",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "rooh",
+   "kind": "restaurant",
+   "name": "ROOH",
+   "aliases": [
+    "ROOH"
+   ],
+   "restaurant_id": "rooh",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "rose-mary",
+   "kind": "restaurant",
+   "name": "Rose Mary",
+   "aliases": [
+    "Rose Mary"
+   ],
+   "restaurant_id": "rose-mary",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "rpm-italian",
+   "kind": "restaurant",
+   "name": "RPM Italian",
+   "aliases": [
+    "RPM Italian"
+   ],
+   "restaurant_id": "rpm-italian",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "santa-masa-tamaleria",
+   "kind": "restaurant",
+   "name": "Santa Masa Tamaleria",
+   "aliases": [
+    "Santa Masa Tamaleria"
+   ],
+   "restaurant_id": "santa-masa-tamaleria",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "sky-pilsen",
+   "kind": "restaurant",
+   "name": "S.K.Y.",
+   "aliases": [
+    "S.K.Y."
+   ],
+   "restaurant_id": "sky-pilsen",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "smyth",
+   "kind": "restaurant",
+   "name": "Smyth",
+   "aliases": [
+    "Smyth"
+   ],
+   "restaurant_id": "smyth",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "spacca-napoli",
+   "kind": "restaurant",
+   "name": "Spacca Napoli",
+   "aliases": [
+    "Spacca Napoli"
+   ],
+   "restaurant_id": "spacca-napoli",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "spinning-j",
+   "kind": "restaurant",
+   "name": "Spinning J Bakery and Soda Fountain",
+   "aliases": [
+    "Spinning J Bakery and Soda Fountain"
+   ],
+   "restaurant_id": "spinning-j",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "superkhana-international",
+   "kind": "restaurant",
+   "name": "Superkhana International",
+   "aliases": [
+    "Superkhana International"
+   ],
+   "restaurant_id": "superkhana-international",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "taan",
+   "kind": "restaurant",
+   "name": "Taan",
+   "aliases": [
+    "Taan"
+   ],
+   "restaurant_id": "taan",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "tala-house",
+   "kind": "restaurant",
+   "name": "Tala House",
+   "aliases": [
+    "Tala House"
+   ],
+   "restaurant_id": "tala-house",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "taqueria-chingon",
+   "kind": "restaurant",
+   "name": "Taqueria Chingón",
+   "aliases": [
+    "Taqueria Chingón"
+   ],
+   "restaurant_id": "taqueria-chingon",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "the-dearborn",
+   "kind": "restaurant",
+   "name": "The Dearborn",
+   "aliases": [
+    "The Dearborn"
+   ],
+   "restaurant_id": "the-dearborn",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "the-duck-inn",
+   "kind": "restaurant",
+   "name": "The Duck Inn",
+   "aliases": [
+    "The Duck Inn"
+   ],
+   "restaurant_id": "the-duck-inn",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "the-gage",
+   "kind": "restaurant",
+   "name": "The Gage",
+   "aliases": [
+    "The Gage"
+   ],
+   "restaurant_id": "the-gage",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "the-publican",
+   "kind": "restaurant",
+   "name": "The Publican",
+   "aliases": [
+    "The Publican"
+   ],
+   "restaurant_id": "the-publican",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "the-sit-down-cafe-and-sushi-bar",
+   "kind": "restaurant",
+   "name": "The Sit Down Cafe & Sushi Bar",
+   "aliases": [
+    "The Sit Down Cafe & Sushi Bar"
+   ],
+   "restaurant_id": "the-sit-down-cafe-and-sushi-bar",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "topo-gigio",
+   "kind": "restaurant",
+   "name": "Topo Gigio",
+   "aliases": [
+    "Topo Gigio"
+   ],
+   "restaurant_id": "topo-gigio",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "tre-dita",
+   "kind": "restaurant",
+   "name": "Tre Dita",
+   "aliases": [
+    "Tre Dita"
+   ],
+   "restaurant_id": "tre-dita",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "trino",
+   "kind": "restaurant",
+   "name": "Trino",
+   "aliases": [
+    "Trino"
+   ],
+   "restaurant_id": "trino",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "turquoise",
+   "kind": "restaurant",
+   "name": "Turquoise",
+   "aliases": [
+    "Turquoise"
+   ],
+   "restaurant_id": "turquoise",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "twin-anchors-restaurant-and-tavern",
+   "kind": "restaurant",
+   "name": "Twin Anchors Restaurant & Tavern",
+   "aliases": [
+    "Twin Anchors Restaurant & Tavern"
+   ],
+   "restaurant_id": "twin-anchors-restaurant-and-tavern",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "uvae",
+   "kind": "restaurant",
+   "name": "Uvae",
+   "aliases": [
+    "Uvae"
+   ],
+   "restaurant_id": "uvae",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "valhalla-chicago",
+   "kind": "restaurant",
+   "name": "Valhalla",
+   "aliases": [
+    "Valhalla"
+   ],
+   "restaurant_id": "valhalla-chicago",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "valois-restaurant",
+   "kind": "restaurant",
+   "name": "Valois Restaurant",
+   "aliases": [
+    "Valois Restaurant"
+   ],
+   "restaurant_id": "valois-restaurant",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "vincent",
+   "kind": "restaurant",
+   "name": "Vincent",
+   "aliases": [
+    "Vincent"
+   ],
+   "restaurant_id": "vincent",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "virtue",
+   "kind": "restaurant",
+   "name": "Virtue",
+   "aliases": [
+    "Virtue"
+   ],
+   "restaurant_id": "virtue",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "volare",
+   "kind": "restaurant",
+   "name": "Volare",
+   "aliases": [
+    "Volare"
+   ],
+   "restaurant_id": "volare",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "xocome-antojeria",
+   "kind": "restaurant",
+   "name": "Xocome Antojería",
+   "aliases": [
+    "Xocome Antojería"
+   ],
+   "restaurant_id": "xocome-antojeria",
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 0
+  },
+  {
+   "slug": "360-chicago",
+   "kind": "venue",
+   "name": "360 CHICAGO",
+   "aliases": [
+    "360 CHICAGO"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "Streeterville",
+   "images": [
+    "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-1800x1200.jpg",
+    "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-900x600.jpg",
+    "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-768x512.jpg",
+    "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-1536x1024.jpg"
+   ],
+   "sample_url": "https://www.choosechicago.com/events/"
+  },
+  {
+   "slug": "alhambra-palace-patio",
+   "kind": "venue",
+   "name": "Alhambra Palace Patio",
+   "aliases": [
+    "Alhambra Palace Patio"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "Near West",
+   "images": [],
+   "sample_url": "https://dice.fm/event/8e99yr-hello-sundays-w-dennis-quin-27th-sep-alhambra-palace-patio-chicago-tickets"
+  },
+  {
+   "slug": "annoyance-theatre",
+   "kind": "venue",
+   "name": "Annoyance Theatre",
+   "aliases": [
+    "Annoyance Theatre"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 5,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/22792679/e0b1409f-4e46-4640-88e5-4540c7b17e79.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32028592/e2282052-bae3-40c9-b2d2-3bdf90a6fd03.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32028876/e856d578-bd36-40db-80ad-ea5ba98b9e19.png"
+   ],
+   "sample_url": "https://do312.com/events/weekly/mon/training-center-annoyance-student-jam-tickets"
+  },
+  {
+   "slug": "art-institute-of-chicago",
+   "kind": "venue",
+   "name": "Art Institute of Chicago",
+   "aliases": [
+    "Art Institute of Chicago",
+    "Art Institute of Chicago Fullerton Hall"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "Loop",
+   "images": [],
+   "sample_url": "https://www.artic.edu/events/6542/conversation-lee-miller-fearless"
+  },
+  {
+   "slug": "auditorium",
+   "kind": "venue",
+   "name": "The Auditorium",
+   "aliases": [
+    "The Auditorium"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 5,
+   "neighborhood": "Loop",
+   "images": [
+    "https://cloudinary-assets.dostuffmedia.com/res/dostuff-media/image/upload/featuredlink-photo-62940/1784866117.jpg",
+    "https://dostuff-assets.s3.amazonaws.com/property_asset/69740/tiktok.png",
+    "https://dostuff-assets.s3.amazonaws.com/property_asset/77296/do312-twitter.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/479714/cc1e8cb1-60e0-4804-a775-9949271a2d6d.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31894934/454871e8-5a3b-4d2e-8bad-196882105da6.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31605855/bedea029-301e-4f5b-b0be-685461880274.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/26"
+  },
+  {
+   "slug": "avondale-music-hall",
+   "kind": "venue",
+   "name": "Avondale Music Hall",
+   "aliases": [
+    "Avondale Music Hall"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34138016/bbda5a1b-4d36-4281-8e2d-acd97cd1845b.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32056706/16c21484-621b-48b1-beb2-60bab886797f.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/28/elder-tickets-nlgev5o"
+  },
+  {
+   "slug": "bassment",
+   "kind": "venue",
+   "name": "Bassment",
+   "aliases": [
+    "Bassment"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "West Loop",
+   "images": [],
+   "sample_url": "https://dice.fm/event/pywrop-house-calls-w-jay-de-lys-26th-sep-bassment-chicago-tickets"
+  },
+  {
+   "slug": "beat-kitchen",
+   "kind": "venue",
+   "name": "Beat Kitchen",
+   "aliases": [
+    "Beat Kitchen"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 9,
+   "neighborhood": "Roscoe Village",
+   "images": [
+    "https://beatkitchen.com/wp-content/uploads/2026/02/beat-kitchen-limited-edition-posters-600x600.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32051365/5d8f13cd-5651-4507-ad05-db64b45fbcc9.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32776299/bfe3b833-6819-4e35-88b8-f19d180d39c0.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33521769/8f610453-ca59-412d-9a55-9ee14c2c3b54.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33093061/5222eaab-f941-4b08-9f34-28977a0ec5df.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32674871/2555626f-48a9-4858-8e86-e1f6e8607dce.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/22"
+  },
+  {
+   "slug": "blind-wolf-speakeasy-den-hotel",
+   "kind": "venue",
+   "name": "Blind Wolf Speakeasy / DEN Hotel",
+   "aliases": [
+    "Blind Wolf Speakeasy / DEN Hotel"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "Lakeview",
+   "images": [],
+   "sample_url": "https://www.denhotelchicago.com/blindwolf"
+  },
+  {
+   "slug": "bookclub",
+   "kind": "venue",
+   "name": "BOOKCLUB",
+   "aliases": [
+    "BOOKCLUB"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 5,
+   "neighborhood": "Wicker Park",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33285579/89e02d84-7138-4fb8-90f1-9a908b78e823.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34064512/65795ba9-c87e-4447-8b53-9612b7abc696.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34083840/f863db58-c602-4a43-a294-a369725b15ce.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34445830/61277596-57e2-4731-aff6-e331904715f5.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34558924/475c97fd-04a8-4903-95d9-78b34774415d.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/28/hymphomania-the-live-experience-starring-zee-machine-tickets"
+  },
+  {
+   "slug": "bottom-lounge",
+   "kind": "venue",
+   "name": "Bottom Lounge",
+   "aliases": [
+    "Bottom Lounge"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33722106/6a17f4cf-4bfe-4078-bd46-a0da0ca9e433.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/4/ajj-greet-death-tickets"
+  },
+  {
+   "slug": "broken-shaker-at-freehand-chicago",
+   "kind": "venue",
+   "name": "Broken Shaker at Freehand Chicago",
+   "aliases": [
+    "Broken Shaker at Freehand Chicago"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 14,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33149790/528ed345-2a40-47a7-ad4f-6710ede7bc74.jpg"
+   ],
+   "sample_url": "https://do312.com/events/weekly/mon/every-monday-thursday-happy-hour-tickets"
+  },
+  {
+   "slug": "buddy-guys-legends",
+   "kind": "venue",
+   "name": "Buddy Guy's Legends",
+   "aliases": [
+    "Buddy Guy's Legends"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 6,
+   "neighborhood": "South Loop",
+   "images": [
+    "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-1024x316.jpg",
+    "https://buddyguy.com/wp-content/uploads/2021/07/Skyline-No-Blue-scaled.jpg",
+    "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-300x93.jpg",
+    "https://buddyguy.com/wp-content/uploads/2021/08/Buddy-Guys-Legends_slider-768x237.jpg"
+   ],
+   "sample_url": "https://buddyguy.com/events/"
+  },
+  {
+   "slug": "butch-mcguires",
+   "kind": "venue",
+   "name": "Butch McGuire's",
+   "aliases": [
+    "Butch McGuire's"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32112140/7c337bad-6c2f-44f2-a30a-4b05f41db9b5.jpg"
+   ],
+   "sample_url": "https://do312.com/events/weekly/mon/jokes-on-division-at-butch-mcguire-s-tickets"
+  },
+  {
+   "slug": "byline-bank-aragon-ballroom",
+   "kind": "venue",
+   "name": "Byline Bank Aragon Ballroom",
+   "aliases": [
+    "Byline Bank Aragon Ballroom"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 8,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33879238/98520d56-200a-4982-9252-34a664532795.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34602468/d2b59617-3075-4709-9883-9aebf2d48ccc.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32826512/997986df-0c0b-4e14-bf03-1f9c045ee3b0.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32959965/619d5204-fb0b-46f4-bdc7-0140a3821d52.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32190134/32d49021-19df-4fee-acf9-feda8a106423.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31754473/de8bdbee-2a5f-4fbb-abbe-ca9df5c28dbe.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/30/steve-lacy-oh-yeah-tour-tickets"
+  },
+  {
+   "slug": "california-clipper",
+   "kind": "venue",
+   "name": "The California Clipper",
+   "aliases": [
+    "The California Clipper"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34465961/0f3c9e59-d894-4e25-be3f-f27cc557a66a.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/5/injustice-watch-check-your-judges-tickets"
+  },
+  {
+   "slug": "cermak-hall",
+   "kind": "venue",
+   "name": "Cermak Hall",
+   "aliases": [
+    "Cermak Hall"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32781535/acb53ee5-a3ee-4e6d-b7c7-9bd00555b4ed.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32171942/bd70be8c-4c46-4275-a670-5374d7a2b8ce.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/2/indo-warehouse-tickets"
+  },
+  {
+   "slug": "chicago-cultural-center",
+   "kind": "venue",
+   "name": "Chicago Cultural Center",
+   "aliases": [
+    "Chicago Cultural Center"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 7,
+   "neighborhood": "Loop",
+   "images": [
+    "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound.jpg",
+    "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound-900x400.jpg",
+    "https://cdn.choosechicago.com/uploads/2019/07/bean-night.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34299367/eb981ac2-12db-4a4f-8a4f-a60505891ec3.jpg"
+   ],
+   "sample_url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/"
+  },
+  {
+   "slug": "chicago-improv-comedy-club",
+   "kind": "venue",
+   "name": "Chicago Improv Comedy Club",
+   "aliases": [
+    "Chicago Improv Comedy Club"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31796202/479eac79-9923-4080-bbc1-747bb3a673f6.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/11/godfrey-tickets"
+  },
+  {
+   "slug": "chicago-magic-lounge",
+   "kind": "venue",
+   "name": "Chicago Magic Lounge",
+   "aliases": [
+    "Chicago Magic Lounge"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 14,
+   "neighborhood": "Andersonville",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33021981/1bcde3d8-85ae-4f77-bcb0-8438c64a3ecf.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33022243/11416e68-7208-47fd-bf57-4f105f8208fe.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33526601/d6c1b718-f45b-4dcf-9acc-cbd61de1df0a.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34555661/c15b6c1e-b38d-453c-b57b-1b37d3a5e89a.jpg"
+   ],
+   "sample_url": "https://www.chicagomagiclounge.com/signature-show"
+  },
+  {
+   "slug": "chicago-symphony-orchestra",
+   "kind": "venue",
+   "name": "Chicago Symphony Orchestra",
+   "aliases": [
+    "Chicago Symphony Orchestra"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "Loop",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31386331/077019eb-2972-4276-bd56-da87f27b21fb.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31386336/70257897-4a46-462e-955d-a25a5e2eb2bc.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/4/ludovico-einaudi-solo-piano-tickets"
+  },
+  {
+   "slug": "chicago-theatre",
+   "kind": "venue",
+   "name": "The Chicago Theatre",
+   "aliases": [
+    "The Chicago Theatre"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 14,
+   "neighborhood": "Loop",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32509032/5780aa55-0a5f-4ca1-8c5c-8af34011c8f1.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32632241/f4930c58-a8e3-461d-a67d-c51845d23cf0.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34399496/f56afe89-79ef-4419-9f55-d1458d4735e7.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33302796/c9421a55-1720-4001-8f5f-2eb148797a11.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32456172/d7b0e27f-b916-4fa6-900d-34278d10320f.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32532926/7a56cbb0-7546-468a-89a8-efe6e201e8a0.jpg"
+   ],
+   "sample_url": "https://www.livenation.com/event/vvG1jZ_5Um6fxw/sara-bareilles-the-good-grief-tour"
+  },
+  {
+   "slug": "chop-shop",
+   "kind": "venue",
+   "name": "Chop Shop",
+   "aliases": [
+    "Chop Shop"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 6,
+   "neighborhood": "West Town",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33663955/adefd7cc-b59a-4148-8147-62857bf076c8.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33572198/9b8b2305-af93-476c-9ba8-d51adc2f5e12.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33240057/805abed3-11df-40b6-9deb-c75af1dd53b6.jpg",
+    "https://dice-media.imgix.net/attachments/2026-06-04/ea992963-d76f-4e81-a8ae-acb76d888450.jpg?rect=0%2C308%2C3783%2C3783",
+    "https://dice-media.imgix.net/attachments/2026-06-04/ea992963-d76f-4e81-a8ae-acb76d888450.jpg?rect=0%2C1703%2C3783%2C2270",
+    "https://dice-media.imgix.net/attachments/2026-06-04/ea992963-d76f-4e81-a8ae-acb76d888450.jpg?rect=331%2C0%2C3121%2C5675"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/24/karl-denson-s-tiny-universe-tickets"
+  },
+  {
+   "slug": "chopin-theatre",
+   "kind": "venue",
+   "name": "Chopin Theatre",
+   "aliases": [
+    "Chopin Theatre"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "Wicker Park",
+   "images": [
+    "https://cdn.choosechicago.com/uploads/2026/09/Screenshot-2026-09-17-195131.png",
+    "https://cdn.choosechicago.com/uploads/2026/09/Screenshot-2026-09-17-195131-900x281.png",
+    "https://cdn.choosechicago.com/uploads/2026/09/Screenshot-2026-09-17-195131-768x240.png",
+    "https://cdn.choosechicago.com/uploads/2026/09/Screenshot-2026-09-17-195131-1536x479.png"
+   ],
+   "sample_url": "https://www.choosechicago.com/event/unveiling-at-the-chopin-theatre/"
+  },
+  {
+   "slug": "cobra-lounge",
+   "kind": "venue",
+   "name": "Cobra Lounge",
+   "aliases": [
+    "Cobra Lounge"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 7,
+   "neighborhood": "West Town",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33947067/1994186b-b128-4ccc-b53b-8b6c8d46e04a.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32846726/c1290e7d-ef60-44f1-bd3c-c05d5adc5fee.jpg",
+    "https://dice-media.imgix.net/attachments/2026-06-09/f550f8d4-2840-44ea-915a-e56ddb153c42.jpg?rect=0%2C0%2C1500%2C1500",
+    "https://dice-media.imgix.net/attachments/2026-06-09/f550f8d4-2840-44ea-915a-e56ddb153c42.jpg?rect=0%2C300%2C1500%2C900",
+    "https://dice-media.imgix.net/attachments/2026-06-09/f550f8d4-2840-44ea-915a-e56ddb153c42.jpg?rect=338%2C0%2C825%2C1500",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32710799/63a35fcd-a3c8-4288-8276-8f8e49a1ab76.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/27/liam-st-john-year-of-the-horse-tickets"
+  },
+  {
+   "slug": "comedy-bar",
+   "kind": "venue",
+   "name": "The Comedy Bar",
+   "aliases": [
+    "The Comedy Bar",
+    "The Comedy Bar Main Stage"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "Streeterville",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33785285/da9f92eb-dd4a-446a-98bd-36d73e4b9b63.png"
+   ],
+   "sample_url": "https://www.eventbrite.com/e/tuesday-september-22-whats-funny-comedy-festival-tickets-1996757867533"
+  },
+  {
+   "slug": "concord-music-hall",
+   "kind": "venue",
+   "name": "Concord Music Hall",
+   "aliases": [
+    "Concord Music Hall"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 3,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32845254/3886287b-98c4-4417-b029-1538939d7f91.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32539217/7caf75a6-bfb3-4d9e-8083-e3ef87a711cf.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33435940/9ea56a19-2d70-4c84-b37f-71c05b4466d7.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/3/seth-david-tickets"
+  },
+  {
+   "slug": "constellation",
+   "kind": "venue",
+   "name": "Constellation",
+   "aliases": [
+    "Constellation"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 3,
+   "neighborhood": "Avondale",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33055042/37bde7b4-e950-4264-a8d4-1b7fa916860a.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32673337/d9ae9f8a-2c95-4d86-a1a2-5c8b332db983.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32673336/3a85b771-e095-4e8e-85d0-078be70435ca.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/24/glenn-jones-w-liam-grant-katie-ernst-tickets"
+  },
+  {
+   "slug": "credit-union-1-amphitheatre",
+   "kind": "venue",
+   "name": "Credit Union 1 Amphitheatre",
+   "aliases": [
+    "Credit Union 1 Amphitheatre"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33845028/750f3dd7-9ca7-42e2-a50c-db6c138497aa.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33890331/ce085019-cd99-4c63-9583-67fd519ecf65.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/3/fuerza-regida-this-is-our-dream-tour-2026-tickets"
+  },
+  {
+   "slug": "cubby-bear",
+   "kind": "venue",
+   "name": "Cubby Bear",
+   "aliases": [
+    "Cubby Bear"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34567020/99acc7e2-2743-4c78-8251-b08f4574294a.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/7/cameron-davies-w-tyler-stock-tickets"
+  },
+  {
+   "slug": "den-theatre",
+   "kind": "venue",
+   "name": "The Den Theatre",
+   "aliases": [
+    "The Den Theatre"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "Wicker Park",
+   "images": [],
+   "sample_url": "https://thedentheatre.com/performances/2026/9/23/dana-goldberg-outrageous-the-den-theatre-comedy-club-chicago"
+  },
+  {
+   "slug": "emporium-arcade-bar-logan-square",
+   "kind": "venue",
+   "name": "Emporium Arcade Bar - Logan Square",
+   "aliases": [
+    "Emporium Arcade Bar - Logan Square"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32911110/a92dc7ff-74dc-4411-97fc-f2cd8eb01764.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/30/bracket-at-the-emporium-tickets"
+  },
+  {
+   "slug": "emporium-arcade-bar-wicker-park",
+   "kind": "venue",
+   "name": "Emporium Arcade Bar - Wicker Park",
+   "aliases": [
+    "Emporium Arcade Bar - Wicker Park"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34300360/56eb2737-61f2-47d5-a0bd-55566f6652fe.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/5/bring-your-own-game-night-tickets"
+  },
+  {
+   "slug": "empty-bottle",
+   "kind": "venue",
+   "name": "Empty Bottle",
+   "aliases": [
+    "Empty Bottle"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 19,
+   "neighborhood": "Ukrainian Village",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32349808/a84cb04e-39a0-40c4-b855-2a4a705aa881.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/29334692/cd21ceaf-c91b-40ca-bb3c-38c05856b6ca.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32934125/8bf22722-31c2-4d61-be2e-c5943826991a.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34261567/5a01fd6f-ec78-44a3-a720-0966e35e5511.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34302962/529bccf8-5316-42d6-afbc-c7d255cce77f.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31958702/48083d25-a041-486e-b23d-53d166937ec5.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/24/way-dynamic-star-moles-tickets"
+  },
+  {
+   "slug": "epiphany-center-for-the-arts",
+   "kind": "venue",
+   "name": "Epiphany Center for the Arts",
+   "aliases": [
+    "Epiphany Center for the Arts",
+    "Epiphany Center For The Arts",
+    "Epiphany Center for the Arts - Epiphany Hall",
+    "Epiphany Center for the Arts - Catacombs"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 9,
+   "neighborhood": "West Loop",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34170636/05a3b883-4bbb-4a1e-94ee-8909e70af58c.jpg",
+    "https://dice-media.imgix.net/attachments/2026-08-30/56d73b7d-83da-43f2-9fc3-2cb4301cd486.jpg?rect=420%2C0%2C1080%2C1080",
+    "https://dice-media.imgix.net/attachments/2026-08-30/56d73b7d-83da-43f2-9fc3-2cb4301cd486.jpg?rect=60%2C0%2C1800%2C1080",
+    "https://dice-media.imgix.net/attachments/2026-08-30/56d73b7d-83da-43f2-9fc3-2cb4301cd486.jpg?rect=663%2C0%2C594%2C1080",
+    "https://dice-media.imgix.net/attachments/2025-07-31/abd64f79-4219-4463-a158-6ac56c46131c.jpg?rect=403%2C0%2C768%2C768",
+    "https://dice-media.imgix.net/attachments/2025-07-31/abd64f79-4219-4463-a158-6ac56c46131c.jpg?rect=147%2C0%2C1280%2C768"
+   ],
+   "sample_url": "https://dice.fm/event/xe3emk-free-blues-friday-featuring-bear-williams-trio-25th-sep-epiphany-center-for-the-arts-epiphany-hall-chicago-tickets"
+  },
+  {
+   "slug": "estelles-cafe-and-pub",
+   "kind": "venue",
+   "name": "Estelle's Cafe & Pub",
+   "aliases": [
+    "Estelle's Cafe & Pub"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31878592/14b35319-b964-4ff3-97ea-af87e0160928.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31875847/dcf0d27c-1283-489a-9d45-5a71cfe4cefc.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/29/dj-papa-g-tickets"
+  },
+  {
+   "slug": "field-museum",
+   "kind": "venue",
+   "name": "Field Museum",
+   "aliases": [
+    "Field Museum"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "Museum Campus",
+   "images": [
+    "https://www.datocms-assets.com/44232/1782495760-pfm-opening-edited.webp",
+    "https://www.datocms-assets.com/44232/1782495760-pfm-opening-edited.webp?dpr=0.25&fm=webp",
+    "https://www.datocms-assets.com/44232/1782495760-pfm-opening-edited.webp?dpr=0.5&fm=webp",
+    "https://www.datocms-assets.com/44232/1782495760-pfm-opening-edited.webp?dpr=0.75&fm=webp"
+   ],
+   "sample_url": "https://www.choosechicago.com/event/dinos/2026-09-24/"
+  },
+  {
+   "slug": "furama",
+   "kind": "venue",
+   "name": "Furama",
+   "aliases": [
+    "Furama"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34380718/bd7fa642-9ec6-4c61-b93a-f6d55f57ca28.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/10/dim-sum-drag-blade-sia-an-ode-to-black-vampires-tickets"
+  },
+  {
+   "slug": "garcias-chicago",
+   "kind": "venue",
+   "name": "Garcia's Chicago",
+   "aliases": [
+    "Garcia's Chicago"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 17,
+   "neighborhood": "Wrigleyville",
+   "images": [
+    "https://cloudinary-assets.dostuffmedia.com/res/dostuff-media/image/upload/featuredlink-photo-62940/1784866117.jpg",
+    "https://dostuff-assets.s3.amazonaws.com/property_asset/69740/tiktok.png",
+    "https://dostuff-assets.s3.amazonaws.com/property_asset/77296/do312-twitter.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/479714/cc1e8cb1-60e0-4804-a775-9949271a2d6d.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32934213/ba7a83cd-f1fc-4df2-b781-c9b40b5a78df.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32047000/94b14627-cd34-45b7-a29d-19ac24c9f31a.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/23"
+  },
+  {
+   "slug": "gman-tavern",
+   "kind": "venue",
+   "name": "Gman Tavern",
+   "aliases": [
+    "Gman Tavern"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34191969/ddec24de-3fcf-40c5-b9f5-5a7675e5c258.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/11/hair-pop-chicago-s-indie-hair-show-tickets"
+  },
+  {
+   "slug": "goodman-theatre",
+   "kind": "venue",
+   "name": "Goodman Theatre",
+   "aliases": [
+    "Goodman Theatre",
+    "Goodman Theatre Albert",
+    "Goodman Theatre Owen"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 7,
+   "neighborhood": "Loop",
+   "images": [
+    "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Marquee_Image_Hero.webp",
+    "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85.webp",
+    "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85-768x512.webp",
+    "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2526_Patron_Faces_Hero_Nicole_Niehoff-85-992x661.webp",
+    "https://www.goodmantheatre.org/wp-content/plugins/wp-rocket/assets/img/youtube.png",
+    "https://www.goodmantheatre.org/wp-content/uploads/2026/03/2627_Attic_Hero-1500x1000-1-500x334.webp"
+   ],
+   "sample_url": "https://www.goodmantheatre.org/show/the-attic/"
+  },
+  {
+   "slug": "green-mill-jazz-club",
+   "kind": "venue",
+   "name": "Green Mill Jazz Club",
+   "aliases": [
+    "Green Mill Jazz Club",
+    "Green Mill",
+    "The Green Mill"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 28,
+   "neighborhood": "Uptown",
+   "images": [
+    "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img2.jpg",
+    "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img3.jpg",
+    "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/img4.jpg",
+    "https://greenmilljazz.com/wp-content/Cimy_Header_Images/0/2MarcSmithGMl.jpeg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31879046/fcdf3364-967a-4242-ad83-7ba3a7cb499e.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31871132/cffa917d-34c6-4b87-8110-999c0aee5d03.jpg"
+   ],
+   "sample_url": "https://greenmilljazz.com/calendar/"
+  },
+  {
+   "slug": "harris-theater-for-music-and-dance",
+   "kind": "venue",
+   "name": "Harris Theater for Music and Dance",
+   "aliases": [
+    "Harris Theater for Music and Dance",
+    "Harris Theater / Millennium Park area"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "Loop",
+   "images": [
+    "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/cb4423af-c61f-47c1-8fae-2cbffb75e99a/2025-09-14_Chicago-Gourmet_Gourmet-Tailgate_Event_1653.jpg",
+    "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/cb4423af-c61f-47c1-8fae-2cbffb75e99a/2025-09-14_Chicago-Gourmet_Gourmet-Tailgate_Event_1653.jpg?format=500w",
+    "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/cb4423af-c61f-47c1-8fae-2cbffb75e99a/2025-09-14_Chicago-Gourmet_Gourmet-Tailgate_Event_1653.jpg?format=750w",
+    "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/cb4423af-c61f-47c1-8fae-2cbffb75e99a/2025-09-14_Chicago-Gourmet_Gourmet-Tailgate_Event_1653.jpg?format=1000w",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34218015/4651dcb7-f9db-4ba1-8eec-296185d2d3a3.jpg"
+   ],
+   "sample_url": "https://www.chicagogourmet.org/page/events"
+  },
+  {
+   "slug": "hey-nonny",
+   "kind": "venue",
+   "name": "Hey Nonny",
+   "aliases": [
+    "Hey Nonny"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34487223/c223f8c8-2afd-47f3-936d-461acfc22070.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/6/cocktails-with-jim-tinaglia-tickets"
+  },
+  {
+   "slug": "hideaway",
+   "kind": "venue",
+   "name": "Hideaway",
+   "aliases": [
+    "Hideaway"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33813020/41ac9d84-6436-4720-8d02-1b9255fc1917.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/10/baauer-tickets"
+  },
+  {
+   "slug": "hideout",
+   "kind": "venue",
+   "name": "The Hideout",
+   "aliases": [
+    "The Hideout",
+    "Hideout"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 14,
+   "neighborhood": "Bucktown / Goose Island",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33455999/8f065fe8-c60f-4804-bdf6-dd38b0a3732a.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34634776/2f7e6400-558f-4ae1-a05f-1a0a8b5dbea1.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34567193/02e93dc0-834c-4cae-9962-67493a613a62.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34483733/e67cfe7c-8a47-4eaf-9914-ec0ec71076e8.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34483834/80dbad95-36e4-4fce-9afe-becd9ea3ed34.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34446676/e448e3ff-6a71-4d44-8b22-47909c6733a0.jpg"
+   ],
+   "sample_url": "https://www.hideoutchicago.com/shows"
+  },
+  {
+   "slug": "hollywood-casino-joliet",
+   "kind": "venue",
+   "name": "Hollywood Casino Joliet",
+   "aliases": [
+    "Hollywood Casino Joliet"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32184440/aa87e947-d21b-4237-b69b-491f9edac0eb.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/9/war-tickets"
+  },
+  {
+   "slug": "house-of-blues",
+   "kind": "venue",
+   "name": "House of Blues",
+   "aliases": [
+    "House of Blues"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 8,
+   "neighborhood": "River North",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34630784/b8b36f50-aa02-4112-bea6-481ab46629bf.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32171953/03417b32-c895-46f3-9c1e-47c5028b768e.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33283485/4c1356b1-23a4-43d6-aeca-c9cf16c6c087.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/30408933/25f1cb52-1147-4359-846e-f4a59c9c7600.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32767631/595795b3-c3d0-4fc7-8d20-adcad44e3cd5.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32627482/02906022-4dc2-4a32-bf2f-63e65c38bab6.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/28/chicago-made-music-showcase-semi-finals-tickets"
+  },
+  {
+   "slug": "humboldt-park",
+   "kind": "venue",
+   "name": "Humboldt Park",
+   "aliases": [
+    "Humboldt Park"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31253029/52825ea3-0317-4b18-8b03-fa5436219114.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/3/diplos-run-club-tickets"
+  },
+  {
+   "slug": "hyde-park-jazz-festival",
+   "kind": "venue",
+   "name": "Hyde Park Jazz Festival",
+   "aliases": [
+    "Hyde Park Jazz Festival"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 5,
+   "neighborhood": "Hyde Park",
+   "images": [
+    "https://static1.squarespace.com/static/5518e7b9e4b0c99d03da9599/t/66b397f3121f5f3b764c583b/1723045875317/Screenshot+2024-06-14+at+11.26.43+AM.png?format=1500w"
+   ],
+   "sample_url": "https://hydeparkjazzfestival.org/wagner-stage"
+  },
+  {
+   "slug": "hydrate-nightclub",
+   "kind": "venue",
+   "name": "Hydrate Nightclub",
+   "aliases": [
+    "Hydrate Nightclub"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33543282/e0b0f667-ab10-4c7d-9193-3b0305269778.jpg"
+   ],
+   "sample_url": "https://do312.com/events/weekly/mon/mondays-are-ruff-tickets"
+  },
+  {
+   "slug": "io-theater",
+   "kind": "venue",
+   "name": "iO Theater",
+   "aliases": [
+    "iO Theater"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 8,
+   "neighborhood": "Near North",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/29462050/f7901808-9c5c-404a-a216-7274271477d1.png",
+    "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%203%202'%3E%3C/svg%3E",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/29462072/d5d631b6-80a6-4fe1-b44b-9624f06112e0.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/29462074/4f1023fc-55dc-4356-80ef-7252511d87cb.png"
+   ],
+   "sample_url": "https://www.choosechicago.com/event/the-fizz-show-2/2026-09-23/"
+  },
+  {
+   "slug": "ivy-hall-dispensary-logan-square",
+   "kind": "venue",
+   "name": "Ivy Hall Dispensary - Logan Square",
+   "aliases": [
+    "Ivy Hall Dispensary - Logan Square"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34458826/76928652-6a40-4bbc-8f87-35145ebdb22e.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/1/ivy-hall-game-day-pack-giveaway-tickets"
+  },
+  {
+   "slug": "joes-live",
+   "kind": "venue",
+   "name": "Joe's Live",
+   "aliases": [
+    "Joe's Live"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32064314/dc349698-440c-4f8a-9990-1b4094d6188e.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/1/ashley-cooke-the-baby-blues-tour-tickets"
+  },
+  {
+   "slug": "landmark-century-centre-cinema",
+   "kind": "venue",
+   "name": "Landmark Century Centre Cinema",
+   "aliases": [
+    "Landmark Century Centre Cinema"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "Lakeview",
+   "images": [],
+   "sample_url": "https://www.choosechicago.com/event/series/reeling-the-chicago-lgbtq-international-film-festival/"
+  },
+  {
+   "slug": "laugh-factory-chicago",
+   "kind": "venue",
+   "name": "Laugh Factory Chicago",
+   "aliases": [
+    "Laugh Factory Chicago"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "Lakeview",
+   "images": [],
+   "sample_url": "https://laughfactorychicago.standuptix.com/calendar/2026-09"
+  },
+  {
+   "slug": "liars-club",
+   "kind": "venue",
+   "name": "Liar's Club",
+   "aliases": [
+    "Liar's Club"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33733247/589151b0-7b77-4123-9ac4-5cc482202512.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/8/schaffer-the-darklord-coolzey-bad-motorfingers-burned-or-buried-tickets"
+  },
+  {
+   "slug": "lincoln-hall",
+   "kind": "venue",
+   "name": "Lincoln Hall",
+   "aliases": [
+    "Lincoln Hall"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 10,
+   "neighborhood": "Lincoln Park",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32117893/3b1b502f-37fa-46c6-9f03-38e9230d0613.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32666516/69e1dc9e-09b6-4e2c-949b-8ee594a32029.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31661278/267bb54b-c646-45a4-b424-d589e605e27d.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32117903/2f2b09d3-3c29-404e-92a3-31a78b0fec0d.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/30766040/36714e0c-1ea6-4873-9da2-fc963a228e5b.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31661285/a5190659-94b0-4c5a-9b59-cb87320ecccb.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/24/aj-lee-blue-summit-big-richard-tickets"
+  },
+  {
+   "slug": "lincoln-lodge",
+   "kind": "venue",
+   "name": "The Lincoln Lodge",
+   "aliases": [
+    "The Lincoln Lodge"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "Logan Square",
+   "images": [],
+   "sample_url": "https://www.choosechicago.com/event/comic-court-chicagos-1-comedy-court-show/2026-09-22/"
+  },
+  {
+   "slug": "lincoln-park-zoo",
+   "kind": "venue",
+   "name": "Lincoln Park Zoo",
+   "aliases": [
+    "Lincoln Park Zoo"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33715039/7086aa1d-52b5-43d4-b0e7-1a5434fd98dd.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/25/fall-fest-tickets"
+  },
+  {
+   "slug": "logan-theatre",
+   "kind": "venue",
+   "name": "The Logan Theatre",
+   "aliases": [
+    "The Logan Theatre",
+    "Logan Theatre"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 3,
+   "neighborhood": "Logan Square",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/617860/d043fc42-ca1c-4920-b6fc-15f5c41efd7a.jpg"
+   ],
+   "sample_url": "https://do312.com/events/weekly/tue/logan-square-theatres-movie-themed-trivia"
+  },
+  {
+   "slug": "lookingglass-theatre",
+   "kind": "venue",
+   "name": "Lookingglass Theatre",
+   "aliases": [
+    "Lookingglass Theatre"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 4,
+   "neighborhood": "Streeterville",
+   "images": [
+    "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A0628-2-scaled.jpeg",
+    "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1490-2-scaled.jpeg",
+    "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1589-2-scaled.jpeg",
+    "https://lookingglassweb-prod.nyc3.cdn.digitaloceanspaces.com/2026/02/34A1829-2-scaled.jpeg"
+   ],
+   "sample_url": "https://lookingglasstheatre.org/plays/kowalski/"
+  },
+  {
+   "slug": "mandel-hall",
+   "kind": "venue",
+   "name": "Mandel Hall",
+   "aliases": [
+    "Mandel Hall"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33861318/3b2afec8-998e-4116-b33f-8616d3b70117.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/11/cso-chamber-music-at-the-university-of-chicago-tickets"
+  },
+  {
+   "slug": "martyrs",
+   "kind": "venue",
+   "name": "Martyrs'",
+   "aliases": [
+    "Martyrs'"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 3,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32446904/1e8f196a-817a-4b9d-890d-d7aedf12a3d2.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/29433128/d19a4583-230d-42a1-8ee7-dc5646a1f9f0.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/29430869/0b272bb2-4405-40aa-b31e-c77815dbbdeb.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/3/el-ten-eleven-tickets"
+  },
+  {
+   "slug": "metro",
+   "kind": "venue",
+   "name": "Metro",
+   "aliases": [
+    "Metro"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 11,
+   "neighborhood": "Wrigleyville",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31361798/1c268918-4300-4635-9902-85e68d116cd1.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31567154/49d7deb3-5e41-4a08-baef-1531d2a60ec7.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/30023723/8a60a7bf-227c-43c8-bc96-aaefe6b18f72.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32027100/03e5fbb3-b05e-4d89-8bb5-8e2232be06dc.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32627909/f352354c-b53a-4291-a303-47e6aa3bf1ee.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32627914/4ee56fb0-eb82-4509-a537-855cca5e58e7.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/24/culture-wars-tickets"
+  },
+  {
+   "slug": "mfk-restaurant",
+   "kind": "venue",
+   "name": "mfk. Restaurant",
+   "aliases": [
+    "mfk. Restaurant"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31333747/854a3a8b-e631-4c9b-ab8e-4fe76e61b454.jpg"
+   ],
+   "sample_url": "https://do312.com/events/weekly/sat/pintxos-porrons-tickets"
+  },
+  {
+   "slug": "museum-of-contemporary-art",
+   "kind": "venue",
+   "name": "Museum of Contemporary Art",
+   "aliases": [
+    "Museum of Contemporary Art",
+    "MCA Chicago"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 9,
+   "neighborhood": "Streeterville",
+   "images": [
+    "https://mcachicago.org/wp-content/uploads/2026/06/homepage-video-frame.webp",
+    "https://mcachicago.org/wp-content/uploads/2024/08/mca.webp",
+    "https://mcachicago.org/wp-content/uploads/2024/08/mca-900x799.webp",
+    "https://mcachicago.org/wp-content/uploads/2024/08/mca-400x400.webp"
+   ],
+   "sample_url": "https://mcachicago.org/whats-on/events/melanie-mclain-peripersonal-2026-09-22/"
+  },
+  {
+   "slug": "national-museum-of-mexican-art-pilsen",
+   "kind": "venue",
+   "name": "National Museum of Mexican Art / Pilsen",
+   "aliases": [
+    "National Museum of Mexican Art / Pilsen"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "Pilsen",
+   "images": [
+    "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-1800x1200.jpg",
+    "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-900x600.jpg",
+    "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-768x512.jpg",
+    "https://cdn.choosechicago.com/uploads/2022/03/2021_0916_Concert_Serieres_Millennium_Park-29-3-1536x1024.jpg"
+   ],
+   "sample_url": "https://www.choosechicago.com/events/"
+  },
+  {
+   "slug": "north-shore-center-for-the-performing-arts",
+   "kind": "venue",
+   "name": "North Shore Center for the Performing Arts",
+   "aliases": [
+    "North Shore Center for the Performing Arts"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34360332/dc0efd59-a20b-4d06-836b-e7da0f5c3721.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/7/ghostbusters-in-concert-tickets-north-shore"
+  },
+  {
+   "slug": "northwestern-medicine-field-at-martin-stadium",
+   "kind": "venue",
+   "name": "Northwestern Medicine Field at Martin Stadium",
+   "aliases": [
+    "Northwestern Medicine Field at Martin Stadium"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/30739799/b2718b1b-6bc0-4080-ae66-ed241de776e8.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/4/chicago-stars-fc-vs-denver-summit-fc-tickets"
+  },
+  {
+   "slug": "old-town-school-of-folk-music",
+   "kind": "venue",
+   "name": "Old Town School of Folk Music",
+   "aliases": [
+    "Old Town School of Folk Music"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 11,
+   "neighborhood": "Lincoln Square",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31613148/ef7e83c7-71ac-49c2-bb42-a267a274e16f.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31931896/5d343126-17c9-4a4e-9a68-df0c344d5926.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34297592/63ed884d-dfe8-4aa7-9948-fe84744fa9cd.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34101886/a6c0b4ad-7a30-448d-9a8c-ff10dcdcee1f.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32114384/0c40ed23-0b57-4c3c-bc57-5c753968148a.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32770153/3f72e0c7-2b73-4048-ab66-79b0a85b35b0.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/24/beth-orton-tickets"
+  },
+  {
+   "slug": "original-mothers",
+   "kind": "venue",
+   "name": "The Original Mother's",
+   "aliases": [
+    "The Original Mother's"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31382769/aef17089-fa17-419a-96b6-8bffdb14d0d1.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32983262/038ac1d1-e60a-4c90-853b-ed771c65c34e.jpg"
+   ],
+   "sample_url": "https://do312.com/events/weekly/wed/live-dj-schedule-tickets"
+  },
+  {
+   "slug": "outset",
+   "kind": "venue",
+   "name": "Outset",
+   "aliases": [
+    "Outset"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34349644/8e1a4c28-fa8a-4bf6-89fd-b77870fcb33a.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32199940/059c1cb3-47f3-4410-bee6-a5f639ff2fea.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/1/simple-things-tickets"
+  },
+  {
+   "slug": "palmhouse",
+   "kind": "venue",
+   "name": "PALMHOUSE",
+   "aliases": [
+    "PALMHOUSE"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33190206/f2542b3d-1d2b-4237-91e3-b7b4eb266ddd.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/10/mocktoberfest-2026-tickets"
+  },
+  {
+   "slug": "park-west",
+   "kind": "venue",
+   "name": "Park West",
+   "aliases": [
+    "Park West"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 4,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33330719/f12f4531-de9f-4259-9b51-05a510a1f825.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32654070/0f0c4ea0-b81a-4f16-a9f9-aa25f235293e.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33330722/2673420d-2a8f-4569-988d-8c84c1dfae9f.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32083600/ecbbb6d9-05fe-4eeb-9687-7f104f730e28.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/29/domi-jd-beck-tickets"
+  },
+  {
+   "slug": "piazza",
+   "kind": "venue",
+   "name": "The PIAZZA",
+   "aliases": [
+    "The PIAZZA"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34155032/71df7a8e-771b-44ee-8847-3be803353bdf.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/2/tributes-led-zeppelin-and-the-doors-tickets"
+  },
+  {
+   "slug": "pritzker-pavilion-stage",
+   "kind": "venue",
+   "name": "Pritzker Pavilion Stage",
+   "aliases": [
+    "Pritzker Pavilion Stage"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "Loop",
+   "images": [
+    "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/2de08402-ed9c-4b14-b3ff-cf0feffd4fdf/Header+Text+-+Web+Pages+%2811%29.png",
+    "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/2de08402-ed9c-4b14-b3ff-cf0feffd4fdf/Header+Text+-+Web+Pages+%2811%29.png?format=500w",
+    "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/2de08402-ed9c-4b14-b3ff-cf0feffd4fdf/Header+Text+-+Web+Pages+%2811%29.png?format=750w",
+    "https://images.squarespace-cdn.com/content/v1/69bbe3ca25856a6497bde19b/2de08402-ed9c-4b14-b3ff-cf0feffd4fdf/Header+Text+-+Web+Pages+%2811%29.png?format=1000w"
+   ],
+   "sample_url": "https://www.chicagogourmet.org/page/globalstagedinner"
+  },
+  {
+   "slug": "prysm",
+   "kind": "venue",
+   "name": "PRYSM",
+   "aliases": [
+    "PRYSM"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32885109/bb901810-8f6c-4dfa-bea0-c67cda74ce06.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/10/dusky-tickets"
+  },
+  {
+   "slug": "radius",
+   "kind": "venue",
+   "name": "Radius",
+   "aliases": [
+    "Radius"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 4,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33828798/63e6b621-9a58-4c2e-b21d-8b5ade5ae3a0.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33351071/28467ced-0a48-4a24-98d6-ce15a12528fa.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32816488/7e78583d-5587-4cdf-9595-12d8a26f15c9.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33217980/91fee411-2bc3-4659-b13b-94fad83596ef.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/2/ben-bohmer-tickets"
+  },
+  {
+   "slug": "ramova-theatre",
+   "kind": "venue",
+   "name": "Ramova Theatre",
+   "aliases": [
+    "Ramova Theatre"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 3,
+   "neighborhood": "Bridgeport",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33185082/863a6c55-fda8-49cd-a5aa-57a854cd4d0a.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33874700/9de940f7-2349-4a80-8538-c46fb64ec684.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32220159/d4054aff-ae56-4581-9723-1cf3aee012a8.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/25/s-carey-tickets"
+  },
+  {
+   "slug": "reggies",
+   "kind": "venue",
+   "name": "Reggies",
+   "aliases": [
+    "Reggies",
+    "Reggies - Music Joint"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 6,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33705390/80299b62-a85f-4d0b-a89f-2cb54e0f579e.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33995650/7a3ebfdd-dd8f-43a2-8e94-43810d6728d0.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32508935/d90b0574-e39e-4670-afda-4ce5a1c126d5.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32256482/24bc7561-7e74-4e90-b935-e2fcf22734a6.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/29249222/980a61ce-0923-4943-9cd4-ce9a8264745a.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33861627/f28026b8-18c4-4c6b-97d7-de88415a4db7.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/30/drag-talk-tickets"
+  },
+  {
+   "slug": "reid-murdoch-building",
+   "kind": "venue",
+   "name": "Reid Murdoch Building",
+   "aliases": [
+    "Reid Murdoch Building"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "River North",
+   "images": [
+    "https://cdn.choosechicago.com/uploads/2026/04/2526_TOTM_1500x1000.jpg",
+    "https://cdn.choosechicago.com/uploads/2026/04/2526_TOTM_1500x1000-900x600.jpg",
+    "https://cdn.choosechicago.com/uploads/2026/04/2526_TOTM_1500x1000-768x512.jpg",
+    "https://cdn.choosechicago.com/uploads/2026/04/2526_TOTM_1500x1000-600x400.jpg"
+   ],
+   "sample_url": "https://www.choosechicago.com/event/theater-of-the-mind/2026-09-22/"
+  },
+  {
+   "slug": "replay-lincoln-park",
+   "kind": "venue",
+   "name": "Replay Lincoln Park",
+   "aliases": [
+    "Replay Lincoln Park"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 5,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32304497/9e9f833a-2631-4039-b7f1-f8cfd4f9b290.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33540992/1896eadb-b1b5-4321-a4d8-16fe3bdd54ae.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33054877/261c8974-f4a3-4f5c-a602-2bbd3c0441cc.jpg"
+   ],
+   "sample_url": "https://do312.com/events/weekly/mon/the-replay-runback-super-smash-brothers-ultimate-tournament-tickets"
+  },
+  {
+   "slug": "rivers-casino-des-plaines",
+   "kind": "venue",
+   "name": "Rivers Casino - Des Plaines",
+   "aliases": [
+    "Rivers Casino - Des Plaines"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32410908/dee035e9-fa0d-44c6-9957-1aca8a91b460.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/9/tower-of-power-tickets"
+  },
+  {
+   "slug": "riviera-theatre",
+   "kind": "venue",
+   "name": "The Riviera Theatre",
+   "aliases": [
+    "The Riviera Theatre"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 7,
+   "neighborhood": "Uptown",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32826524/20bbeff1-d6ad-4beb-a4b3-2b053a5e583e.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33707461/572e4ef6-3e7d-4ab6-aa1e-537289f2dd88.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32894024/86d3a27f-56e8-43c5-87dc-37df613a449e.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32767639/47eca835-af3c-4a84-bd3f-434c86fc078e.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32478130/34fb29ff-7af7-4442-8693-35d24529da68.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33570987/ffba5ede-df72-47ca-8963-f40fa0607854.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/26/the-garden-with-ghost-mountian-tickets"
+  },
+  {
+   "slug": "rosas-lounge",
+   "kind": "venue",
+   "name": "Rosa's Lounge",
+   "aliases": [
+    "Rosa's Lounge"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 5,
+   "neighborhood": "Logan Square / Hermosa",
+   "images": [],
+   "sample_url": "https://www.rosaslounge.com/calendar"
+  },
+  {
+   "slug": "salt-shed",
+   "kind": "venue",
+   "name": "The Salt Shed",
+   "aliases": [
+    "The Salt Shed"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 10,
+   "neighborhood": "West Town",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31971122/fcc223b7-0f6e-4ced-97da-54b56c57fe66.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32401168/a439d93f-6627-48a3-aef9-73b30bd45f90.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32537791/64ec0c8d-e8ed-46c9-9403-37c74abf2216.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32708304/94795532-4eab-4374-9bb5-b0886af1ea53.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32046857/d7984677-a90b-42c5-8af4-373c7cb526fe.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32611226/1bf2e9cd-bc7d-4cbd-93d3-8242f10343c3.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/29/mon-rovia-bloodline-tour-tickets"
+  },
+  {
+   "slug": "schubas",
+   "kind": "venue",
+   "name": "Schubas",
+   "aliases": [
+    "Schubas"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 7,
+   "neighborhood": "Lakeview",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33536940/97821b68-1f72-49eb-9a59-2d35ec3703bf.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34293664/26dc2357-0501-496d-b27a-f395fdcdbf31.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32404630/3e46080c-03e4-4f86-a8a7-ba3f61964937.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34293674/ad91f88f-333e-4c28-8e29-1401e462774b.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33897932/dbbe40b5-35d7-4ac0-b911-c25ff5bc0319.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33979691/c6ebe9dd-7e48-4c67-840b-c2c217e2d93c.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/28/nick-wagen-tickets"
+  },
+  {
+   "slug": "second-city",
+   "kind": "venue",
+   "name": "The Second City",
+   "aliases": [
+    "The Second City",
+    "The Second City Mainstage"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 10,
+   "neighborhood": "Old Town",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34558450/8148ac76-4f6a-40bd-9071-789bef3279db.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34604834/d4fe4b6e-37b5-44d5-95c0-685319f751d5.jpg"
+   ],
+   "sample_url": "https://www.choosechicago.com/event/pandemonium-please-hold/2026-09-23/"
+  },
+  {
+   "slug": "sleeping-village",
+   "kind": "venue",
+   "name": "Sleeping Village",
+   "aliases": [
+    "Sleeping Village"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 3,
+   "neighborhood": "Avondale",
+   "images": [
+    "https://dice-media.imgix.net/attachments/2026-09-17/15497f9d-1124-4237-a02c-6361fe48c42a.jpg?rect=0%2C0%2C1076%2C1076",
+    "https://dice-media.imgix.net/attachments/2026-09-17/15497f9d-1124-4237-a02c-6361fe48c42a.jpg?rect=0%2C351%2C1076%2C646",
+    "https://dice-media.imgix.net/attachments/2026-09-17/15497f9d-1124-4237-a02c-6361fe48c42a.jpg?rect=168%2C0%2C741%2C1348",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34221777/363b9089-b2d5-4b42-8ade-fdd3d5231464.jpg"
+   ],
+   "sample_url": "https://dice.fm/event/mxnd3k-deceits-w-computer-kill-fantasma-negra-27th-sep-sleeping-village-chicago-tickets"
+  },
+  {
+   "slug": "smartbar",
+   "kind": "venue",
+   "name": "Smartbar",
+   "aliases": [
+    "Smartbar"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 7,
+   "neighborhood": "Wrigleyville",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33886314/b1afec48-faa1-44da-afa8-0ae51d7aadfe.jpg",
+    "https://smartbarchicago.com/wp-content/uploads/2024/03/20230225_SMARTBAR-2023-INTERIORS_SS0483W.jpg",
+    "https://smartbarchicago.com/wp-content/uploads/2024/03/20230225_SMARTBAR-2023-INTERIORS_SS0483WEB-1024x683.jpg",
+    "https://smartbarchicago.com/wp-content/uploads/2024/03/20230225_SMARTBAR-2023-INTERIORS_SS0483WEB.jpg",
+    "https://smartbarchicago.com/wp-content/uploads/2026/08/Flowers_Portrait.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34224321/33793b78-afd8-4ea2-bb96-4b459455e610.jpg"
+   ],
+   "sample_url": "https://smartbarchicago.com/event/flowers-of-romance-15/"
+  },
+  {
+   "slug": "smoke-and-mirrors",
+   "kind": "venue",
+   "name": "Smoke & Mirrors",
+   "aliases": [
+    "Smoke & Mirrors"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "Logan Square",
+   "images": [],
+   "sample_url": "https://dice.fm/event/k62xm8-marrn-25th-sep-smoke-mirrors-chicago-tickets"
+  },
+  {
+   "slug": "sound-bar",
+   "kind": "venue",
+   "name": "Sound-Bar",
+   "aliases": [
+    "Sound-Bar"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33510961/dd9599e9-54fe-4bc7-af69-f2e76ae76fa8.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/9/elephante-tickets"
+  },
+  {
+   "slug": "space",
+   "kind": "venue",
+   "name": "SPACE",
+   "aliases": [
+    "SPACE"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 5,
+   "neighborhood": "Evanston",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33192785/2e9809f2-1f1a-445c-9146-67698ecca98a.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32811901/5e32153d-afd5-4fb9-8592-ee6d58c6686d.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33647330/af32db0c-87be-4dda-a894-f1fdee19f550.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34196903/e20300f5-6efa-4d88-ab74-dc889c33b800.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32811906/8ae990fd-3971-4040-9990-59b96cabf2b7.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/28/blue-monday-fernando-jones-tickets"
+  },
+  {
+   "slug": "spybar",
+   "kind": "venue",
+   "name": "SPYBAR",
+   "aliases": [
+    "SPYBAR"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 4,
+   "neighborhood": "River North",
+   "images": [
+    "https://dice-media.imgix.net/attachments/2026-09-15/4cb411f7-ca93-4d3f-9482-a3d419a8e273.jpg?rect=0%2C0%2C1080%2C1080",
+    "https://dice-media.imgix.net/attachments/2026-09-15/4cb411f7-ca93-4d3f-9482-a3d419a8e273.jpg?rect=0%2C216%2C1080%2C648",
+    "https://dice-media.imgix.net/attachments/2026-09-15/4cb411f7-ca93-4d3f-9482-a3d419a8e273.jpg?rect=243%2C0%2C594%2C1080",
+    "https://dice-media.imgix.net/attachments/2026-06-02/78b528f9-107b-49f0-9374-ac46e49bb44d.jpg?rect=0%2C0%2C1080%2C1080",
+    "https://dice-media.imgix.net/attachments/2026-06-02/78b528f9-107b-49f0-9374-ac46e49bb44d.jpg?rect=0%2C216%2C1080%2C648",
+    "https://dice-media.imgix.net/attachments/2026-06-02/78b528f9-107b-49f0-9374-ac46e49bb44d.jpg?rect=243%2C0%2C594%2C1080"
+   ],
+   "sample_url": "https://dice.fm/event/bbg82v-thursday-social-open-decks-night-market-24th-sep-spybar-chicago-tickets"
+  },
+  {
+   "slug": "stars-and-garters",
+   "kind": "venue",
+   "name": "Stars & Garters",
+   "aliases": [
+    "Stars & Garters"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "Avondale",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34118144/560cc6b8-e51c-4c4f-b6e2-ab0ab8f4c47a.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/1/inevitable-a-new-magic-and-mentalism-show"
+  },
+  {
+   "slug": "steppenwolf-theatre",
+   "kind": "venue",
+   "name": "Steppenwolf Theatre",
+   "aliases": [
+    "Steppenwolf Theatre",
+    "Steppenwolf Theatre Downstairs"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 22,
+   "neighborhood": "Lincoln Park",
+   "images": [
+    "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1440&h=810&auto=compress%2Cformat&fit=min&dm=1785862675&s=68d1867b6a2384150ea7aa893b45637a",
+    "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=1220&h=686&auto=compress%2Cformat&fit=min&dm=1785862675&s=6656d42ceaa44667cbcfbe7ea69c0012",
+    "https://steppenwolf-theatre.transforms.svdcdn.com/production/assets/Homepage-Hero-Images/Homepage-Describe-The-Night-2.jpg?w=980&h=552&auto=compress%2Cformat&fit=min&dm=1785862675&s=5e6c032eec5ea42c83db2993ae09a549",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34466989/94d146f0-1559-4fa0-bd1c-ef934439ef3c.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34375914/e96d56af-6e2f-4709-b7f4-cbd250c87f3b.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/17/topdog-underdog-tickets-info"
+  },
+  {
+   "slug": "studebaker-theater",
+   "kind": "venue",
+   "name": "Studebaker Theater",
+   "aliases": [
+    "Studebaker Theater"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 4,
+   "neighborhood": "Loop",
+   "images": [
+    "https://www.fineartsbuilding.com/app/uploads/Auditorium_from_Mezzanine_House_Right_Box-1.jpeg",
+    "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3.png",
+    "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-32x32.png",
+    "https://www.fineartsbuilding.com/app/uploads/cropped-Untitled-3-192x192.png"
+   ],
+   "sample_url": "https://www.choosechicago.com/event/lucy-darling-chicago-il-simply-darling-tour/2026-09-23/"
+  },
+  {
+   "slug": "subterranean",
+   "kind": "venue",
+   "name": "Subterranean",
+   "aliases": [
+    "Subterranean"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 21,
+   "neighborhood": "Wicker Park",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33498980/f571ab8a-6a9d-4e28-9876-11983af7e64a.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34167431/b4a7f8d4-0b48-40b8-a677-382d65ee3ad7.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31225797/3560529a-c7f8-4a01-9d42-f3422304a5ea.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32953193/cac65065-2338-4a0c-925f-680a4bd41dd3.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31332429/3afc8d3e-8407-4903-9524-a6eb9f07ca63.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32117804/e3d2361a-616c-4aa6-9e9f-899774f69c1a.png"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/24/sub-urban-the-bell-tolls-tour-tickets-klmop8l"
+  },
+  {
+   "slug": "tao-chicago",
+   "kind": "venue",
+   "name": "TAO Chicago",
+   "aliases": [
+    "TAO Chicago"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34522078/70698754-3750-41e6-93c3-016683a7fc3d.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/10/10/steve-aoki-tickets"
+  },
+  {
+   "slug": "tetto-rooftop",
+   "kind": "venue",
+   "name": "Tetto Rooftop",
+   "aliases": [
+    "Tetto Rooftop"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 1,
+   "neighborhood": "West Loop",
+   "images": [],
+   "sample_url": "https://dice.fm/event/q2q38p--double-touch-at-tetto-rooftop-25th-sep-tetto-rooftop-chicago-tickets"
+  },
+  {
+   "slug": "thalia-hall",
+   "kind": "venue",
+   "name": "Thalia Hall",
+   "aliases": [
+    "Thalia Hall"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 12,
+   "neighborhood": "Pilsen",
+   "images": [
+    "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/1584543927895-2OG0BE6LOF74FM48JC3P/TGPilsen-2.JPG",
+    "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/1584543935075-7TL2AYXY8JLZYWAONHJ0/TGPilsen-3.JPG",
+    "https://static1.squarespace.com/static/5b088cce620b85511ff9c68d/t/5e13b9e17ec0a61af3041a50/1578351076278/TH_box_black-Cream.jpg?format=1500w",
+    "https://images.squarespace-cdn.com/content/v1/5b088cce620b85511ff9c68d/822ee80f-0d48-464a-99cd-72ccb21d86f7/MSP_Banner-Website.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31633667/8c5885b2-1e45-457e-9b70-04e433b395b1.png",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/30149322/066a2b1b-9167-49ec-a7a3-6afa87c87fc2.png"
+   ],
+   "sample_url": "https://thaliahallchicago.com/"
+  },
+  {
+   "slug": "vic-theatre",
+   "kind": "venue",
+   "name": "The Vic Theatre",
+   "aliases": [
+    "The Vic Theatre"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 6,
+   "neighborhood": "Lakeview",
+   "images": [
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31428925/008d5139-a33d-4aae-a146-a87b65c97d19.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/34176733/078571a9-e50e-4872-a069-64e78551f94e.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31766487/bf7a6e31-a0c1-40bd-aa15-7840cb5778be.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32448416/6a069c65-b72a-4c95-b19c-a6e4f35a2e86.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33576872/3d5c3255-cbee-4b7d-92cc-560c58e41310.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/32421637/942ed6c3-183f-4799-baed-38b541bdf168.jpg"
+   ],
+   "sample_url": "https://do312.com/events/2026/9/29/lambrini-girls-tickets"
+  },
+  {
+   "slug": "victory-gardens-biograph",
+   "kind": "venue",
+   "name": "Victory Gardens Biograph",
+   "aliases": [
+    "Victory Gardens Biograph"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 2,
+   "neighborhood": "Lincoln Park",
+   "images": [
+    "https://victorygardens.org/wp-content/uploads/2023/03/big-bg-film.png",
+    "https://victorygardens.org/wp-content/uploads/2023/02/background-documentary-home1.jpg",
+    "https://victorygardens.org/wp-content/uploads/2023/03/bg-ticket-decoration.png",
+    "https://victorygardens.org/wp-content/uploads/2023/02/background-people-feedback-home-1.png"
+   ],
+   "sample_url": "https://victorygardens.org/"
+  },
+  {
+   "slug": "zanies-comedy-club",
+   "kind": "venue",
+   "name": "Zanies Comedy Club",
+   "aliases": [
+    "Zanies Comedy Club",
+    "Zanies Comedy Club Chicago"
+   ],
+   "restaurant_id": null,
+   "active": true,
+   "details": {},
+   "first_indexed": "2026-09-28",
+   "event_count": 8,
+   "neighborhood": "Old Town",
+   "images": [
+    "https://chicago.zanies.com/wp-content/uploads/2025/06/Summer-Laugh-Pass-WEB-BANNER.jpg",
+    "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/31645698/57c5e159-ebac-4760-bd0c-0f65e39d8c3d.png"
+   ],
+   "sample_url": "https://chicago.zanies.com/"
+  }
+ ]
+}

@@ -1691,7 +1691,7 @@
   },
   {
     "end_time": "",
-    "neighborhood": "Wicker Park",
+    "neighborhood": "Bucktown / Goose Island",
     "cost": "$20",
     "official_url": "https://www.hideoutchicago.com/shows/the-sleeves-24-sep",
     "date_friendly": "yes — intimate Wicker Park indie date",
@@ -2367,7 +2367,7 @@
   },
   {
     "end_time": "",
-    "neighborhood": "Wicker Park",
+    "neighborhood": "Bucktown / Goose Island",
     "cost": "Ticketed",
     "official_url": "https://www.hideoutchicago.com/shows/two-runner-25-sep",
     "date_friendly": "yes — intimate Wicker Park indie date",
@@ -3079,7 +3079,7 @@
   },
   {
     "end_time": "",
-    "neighborhood": "Wicker Park",
+    "neighborhood": "Bucktown / Goose Island",
     "cost": "$26",
     "official_url": "https://www.hideoutchicago.com/shows/sera-cahoone-26-sep",
     "date_friendly": "yes — intimate live music date",
@@ -3397,7 +3397,7 @@
   },
   {
     "end_time": "",
-    "neighborhood": "Wicker Park",
+    "neighborhood": "Bucktown / Goose Island",
     "cost": "Ticketed",
     "official_url": "https://www.hideoutchicago.com/shows",
     "date_friendly": "yes — intimate Wicker Park indie date",
@@ -4509,7 +4509,7 @@
     "start_time": "12:00PM",
     "end_time": "",
     "venue": "The Hideout",
-    "neighborhood": "West Town",
+    "neighborhood": "Bucktown / Goose Island",
     "cost": "TBA",
     "official_url": "https://do312.com/events/2026/9/28/closed-tickets",
     "category": "live_music",
@@ -5470,7 +5470,7 @@
   },
   {
     "end_time": "",
-    "neighborhood": "Wicker Park",
+    "neighborhood": "Bucktown / Goose Island",
     "cost": "Ticketed",
     "official_url": "https://do312.com/events/2026/9/29/torn-light-presents-simon-joyner-david-nance-victor-villarreal-tickets",
     "date_friendly": "maybe — live show; confirm vibe",
@@ -5734,7 +5734,7 @@
   },
   {
     "end_time": "",
-    "neighborhood": "Wicker Park",
+    "neighborhood": "Bucktown / Goose Island",
     "cost": "Ticketed",
     "official_url": "https://www.hideoutchicago.com/shows",
     "date_friendly": "yes — intimate Wicker Park indie date",
@@ -6862,7 +6862,7 @@
   },
   {
     "end_time": "",
-    "neighborhood": "Wicker Park",
+    "neighborhood": "Bucktown / Goose Island",
     "cost": "Ticketed",
     "official_url": "https://www.hideoutchicago.com/shows",
     "date_friendly": "yes — intimate Wicker Park indie date",
@@ -8978,7 +8978,7 @@
   },
   {
     "end_time": "",
-    "neighborhood": "Wicker Park",
+    "neighborhood": "Bucktown / Goose Island",
     "cost": "Ticketed",
     "official_url": "https://do312.com/events/2026/10/2/the-suckos-bobby-conn-horizons-of-darkness-dj-granny-pants-tickets",
     "date_friendly": "maybe — live show; confirm vibe",
@@ -10786,7 +10786,7 @@
   },
   {
     "end_time": "",
-    "neighborhood": "Wicker Park",
+    "neighborhood": "Bucktown / Goose Island",
     "cost": "Ticketed",
     "official_url": "https://do312.com/events/2026/10/4/half-gringa-matt-gold-tickets",
     "date_friendly": "yes — intimate live music date",
@@ -11482,7 +11482,7 @@
   },
   {
     "end_time": "",
-    "neighborhood": "Wicker Park",
+    "neighborhood": "Bucktown / Goose Island",
     "cost": "Ticketed",
     "official_url": "https://do312.com/events/2026/10/5/freak-show-hosted-by-sierra-kenyon-tickets",
     "date_friendly": "maybe — live show; confirm vibe",
@@ -12130,7 +12130,7 @@
   },
   {
     "end_time": "",
-    "neighborhood": "Wicker Park",
+    "neighborhood": "Bucktown / Goose Island",
     "cost": "Ticketed",
     "official_url": "https://do312.com/events/2026/10/6/chayse-porter-his-palace-doors-captain-kudzu-tickets",
     "date_friendly": "maybe — live show; confirm vibe",
@@ -12154,7 +12154,7 @@
   },
   {
     "end_time": "",
-    "neighborhood": "Wicker Park",
+    "neighborhood": "Bucktown / Goose Island",
     "cost": "Ticketed",
     "official_url": "https://do312.com/events/2026/10/6/chayse-porter-his-palace-doors-captain-kudzu-bath-drawers-tickets",
     "date_friendly": "maybe — live show; confirm vibe",
@@ -12178,7 +12178,7 @@
   },
   {
     "end_time": "",
-    "neighborhood": "Wicker Park",
+    "neighborhood": "Bucktown / Goose Island",
     "cost": "Ticketed",
     "official_url": "https://do312.com/events/2026/10/6/chayse-porter-his-palace-doors-captain-kudzu-free-times-sunglow-tickets",
     "date_friendly": "maybe — live show; confirm vibe",
@@ -16930,6 +16930,31 @@
     "image": "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33995490/13e37679-adb7-4396-8277-2ceae265b5b5.jpg",
     "images": [
       "https://assets0.dostuffmedia.com/uploads/aws_asset/aws_asset/33995490/13e37679-adb7-4396-8277-2ceae265b5b5.jpg"
+    ]
+  },
+  {
+    "end_time": "",
+    "neighborhood": "Roscoe Village",
+    "cost": "TBA",
+    "official_url": "https://www.lesudchicago.com/",
+    "date_friendly": "yes — French bistro cassoulet dinner",
+    "party_fit": "couple,friends",
+    "status": "scheduled",
+    "notes": "Toulouse-style cassoulet night at Le Sud. Time TBA — check lesudchicago.com or reserve via Resy.",
+    "scraped_at": "2026-09-28T14:20:00-05:00",
+    "verify": "needs_check",
+    "event_id": "2026-10-27_toulouse-cassoulet-night-le-sud",
+    "name": "Toulouse Cassoulet Night",
+    "date": "2026-10-27",
+    "start_time": "TBA",
+    "venue": "Le Sud",
+    "category": "food_drink",
+    "source_id": "venue_direct",
+    "source_name": "Le Sud",
+    "image": "https://images.squarespace-cdn.com/content/v1/5e5571dfdd6bc70e5898f1f9/33a06463-b823-431c-9ba4-034e912a925a/4_1_Le_Sud_NPodraza_155.jpg",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/5e5571dfdd6bc70e5898f1f9/33a06463-b823-431c-9ba4-034e912a925a/4_1_Le_Sud_NPodraza_155.jpg",
+      "https://images.squarespace-cdn.com/content/v1/5e5571dfdd6bc70e5898f1f9/fa724b64-c929-4d6d-a1f7-699161f11e3d/Brunch+plate+with+roasted+potatoes+and+omelette.png"
     ]
   }
 ]
