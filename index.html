@@ -4,23 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Night Out Chicago — Snap a night</title>
-  <meta name="description" content="Chicago nights in three swipes: what to eat, what to do, and a backup — filter by vibe, neighborhood, time, who you’re with, and the night." />
+  <meta name="description" content="Chicago nights in three swipes: what to eat, what to do, and a backup." />
   <meta name="theme-color" content="#FF5A36" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rpatel021/datenightchicago@e9384b2f44560db1a452b709696b3236c867f7cc/styles.css" />
   <link rel="stylesheet" href="selector-sync.css" />
 </head>
 <body>
   <header class="chrome">
-    <div class="brand">
-      <span class="wordmark">Night Out</span>
-      <span class="chip">Chicago</span>
-    </div>
+    <div class="brand"><span class="wordmark">Night Out</span><span class="chip">Chicago</span></div>
     <p class="proof" id="proof">Loading nights…</p>
   </header>
   <nav class="toggles" aria-label="Filters">
     <div class="toggle-block">
       <span class="sr-only" id="cat-row-label">Vibe</span>
       <div class="pill-row scroll two-row" id="cat-row" role="tablist" aria-labelledby="cat-row-label"></div>
+    </div>
+    <div class="toggle-block" id="cuisine-block">
+      <span class="sr-only" id="cuisine-row-label">Cuisine</span>
+      <div class="pill-row scroll two-row" id="cuisine-row" role="tablist" aria-labelledby="cuisine-row-label"></div>
     </div>
     <div class="toggle-block">
       <span class="sr-only" id="hood-label">Neighborhood</span>
@@ -36,7 +37,7 @@
         <button type="button" role="tab" class="who-btn" data-party="couple" data-key="couple" aria-selected="true" tabindex="0">Couple</button>
         <button type="button" role="tab" class="who-btn" data-party="family" data-key="family" aria-selected="false" tabindex="-1">Group</button>
       </div>
-      <button type="button" id="flex-toggle" class="flex-switch" role="switch" aria-checked="false" aria-labelledby="flex-label" title="When on, swipe options may include near matches after exact fits">
+      <button type="button" id="flex-toggle" class="flex-switch" role="switch" aria-checked="false" aria-labelledby="flex-label">
         <span class="flex-name" id="flex-label">Flexible</span>
         <span class="flex-track" aria-hidden="true"><span class="flex-thumb"></span></span>
         <span class="flex-state sr-only">Off</span>
@@ -50,6 +51,7 @@
   <main id="deck" class="deck" aria-label="Night Out lanes" tabindex="0"></main>
   <script src="https://cdn.jsdelivr.net/gh/rpatel021/datenightchicago@e9384b2f44560db1a452b709696b3236c867f7cc/app.js"></script>
   <script src="filter-chrome.js"></script>
+  <script src="cuisine-filter.js"></script>
   <script src="card-enrich.js"></script>
   <script src="selector-sync.js"></script>
 </body>
