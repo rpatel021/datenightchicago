@@ -1,4 +1,4 @@
-/* Follow the focused card on Eat, Then, and Backup. */
+/* Follow the focused card. Never steal the tapped filter. */
 (function () {
   const ROWS = {
     vibe: document.getElementById("cat-row"),
@@ -10,41 +10,19 @@
   const deck = document.getElementById("deck");
   if (!deck) return;
   const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const HOOD_ALIAS = {
-    "roscoe village": "lakeview", wrigleyville: "lakeview",
-    "logan square": "logan square", logan: "logan square", "humboldt park": "logan square",
-    "river north": "near north", streeterville: "near north", "navy pier": "near north",
-    "old town": "old town", "south loop": "south loop", "museum campus": "loop",
-    andersonville: "uptown", "lincoln park": "lincoln park"
-  };
-  const VIBE_HINTS = [
-    ["comedy","comedy"],["improv","comedy"],["jazz","jazz_blues"],["blues","jazz_blues"],
-    ["theater","theater"],["theatre","theater"],["play","theater"],["musical","theater"],
-    ["museum","museum"],["exhibit","museum"],["gallery","museum"],
-    ["magic","magic"],["festival","festival"],["fest","festival"]
-  ];
+  const HOOD_ALIAS = { "roscoe village":"lakeview", wrigleyville:"lakeview", "logan square":"logan square", logan:"logan square", "river north":"near north", streeterville:"near north", "navy pier":"near north", andersonville:"uptown", "lincoln park":"lincoln park" };
+  const VIBE_HINTS = [["comedy","comedy"],["improv","comedy"],["jazz","jazz_blues"],["blues","jazz_blues"],["theater","theater"],["theatre","theater"],["musical","theater"],["museum","museum"],["exhibit","museum"],["magic","magic"],["festival","festival"]];
   let lastLaneEl = null;
   function rawLabel(s) { return String(s || "").replace(/\s+/g, " ").trim(); }
-  function norm(s) {
-    return rawLabel(s).toLowerCase().replace(/&/g, "and").replace(/tonight/g, "").replace(/[^a-z0-9]+/g, " ").trim();
-  }
-  function rememberLane(el) {
-    const lane = el && el.closest && el.closest(".lane");
-    if (lane) lastLaneEl = lane;
-  }
+  function norm(s) { return rawLabel(s).toLowerCase().replace(/&/g, "and").replace(/tonight/g, "").replace(/[^a-z0-9]+/g, " ").trim(); }
+  function rememberLane(el) { const lane = el && el.closest && el.closest(".lane"); if (lane) lastLaneEl = lane; }
   function visibleLane() {
     const lanes = [...deck.querySelectorAll(".lane")];
     if (!lanes.length) return lastLaneEl;
     const mid = deck.getBoundingClientRect().top + deck.clientHeight * 0.42;
-    let best = lastLaneEl && lanes.includes(lastLaneEl) ? lastLaneEl : lanes[0];
-    let bestDist = Infinity;
-    lanes.forEach((lane) => {
-      const box = lane.getBoundingClientRect();
-      const d = Math.abs(box.top + box.height / 2 - mid);
-      if (d < bestDist) { best = lane; bestDist = d; }
-    });
-    lastLaneEl = best;
-    return best;
+    let best = lastLaneEl && lanes.includes(lastLaneEl) ? lastLaneEl : lanes[0], bestDist = Infinity;
+    lanes.forEach((lane) => { const box = lane.getBoundingClientRect(); const d = Math.abs(box.top + box.height / 2 - mid); if (d < bestDist) { best = lane; bestDist = d; } });
+    lastLaneEl = best; return best;
   }
   function labelsFromCard(card) {
     const found = { vibe: [], hood: [], time: [], party: [], night: [] };
@@ -65,17 +43,14 @@
     });
     found.hood = found.hood.map((h) => HOOD_ALIAS[norm(h)] || h);
     const extra = [];
-    found.vibe.forEach((v) => {
-      const n = norm(v);
-      VIBE_HINTS.forEach(([needle, id]) => { if (n.includes(needle)) extra.push(id); });
-    });
+    found.vibe.forEach((v) => { const n = norm(v); VIBE_HINTS.forEach(([needle, id]) => { if (n.includes(needle)) extra.push(id); }); });
     found.vibe = found.vibe.concat(extra);
     return found;
   }
   function isAllChip(btn) {
     const t = norm(btn.textContent);
     const k = String(btn.getAttribute("data-key") || "").toLowerCase();
-    return t === "all" || t === "any" || t === "all vibes" || t === "all areas" || t === "any time" || t === "any night" || k === "all" || k === "";
+    return t === "all" || t === "any" || t === "all vibes" || t === "all areas" || t === "any time" || t === "any night" || t === "all cuisines" || k === "all" || k === "";
   }
   function buttonKey(btn) {
     return norm(btn.getAttribute("data-key") || btn.getAttribute("data-hood") || btn.getAttribute("data-cat") || btn.getAttribute("data-time") || btn.getAttribute("data-party") || btn.getAttribute("data-night") || btn.textContent);
@@ -89,19 +64,13 @@
   function ensureGlider(row) {
     if (!row) return null;
     let g = row.querySelector(":scope > .pill-glider");
-    if (!g) {
-      g = document.createElement("span");
-      g.className = "pill-glider";
-      g.setAttribute("aria-hidden", "true");
-      row.insertBefore(g, row.firstChild);
-    }
+    if (!g) { g = document.createElement("span"); g.className = "pill-glider"; g.setAttribute("aria-hidden","true"); row.insertBefore(g, row.firstChild); }
     return g;
   }
   function moveGlider(row, btn) {
     const g = ensureGlider(row);
     if (!g || !btn) return;
-    g.style.width = btn.offsetWidth + "px";
-    g.style.height = btn.offsetHeight + "px";
+    g.style.width = btn.offsetWidth + "px"; g.style.height = btn.offsetHeight + "px";
     g.style.transform = "translate(" + btn.offsetLeft + "px, " + btn.offsetTop + "px)";
     g.classList.add("is-on");
   }
@@ -114,28 +83,21 @@
     }
     requestAnimationFrame(function () { moveGlider(row, btn); });
   }
-  function pop(btn) {
-    btn.classList.remove("is-pop");
-    void btn.offsetWidth;
-    btn.classList.add("is-pop");
-  }
+  function pop(btn) { btn.classList.remove("is-pop"); void btn.offsetWidth; btn.classList.add("is-pop"); }
   function paintRow(row, labels) {
     if (!row) return;
     const btns = [...row.querySelectorAll("button")];
     if (!btns.length) return;
     const hits = labels.length ? btns.filter((b) => matches(b, labels)) : [];
-    const fallback = btns.find(isAllChip) || null;
-    const primary = hits[0] || fallback;
     btns.forEach((btn) => {
-      const on = hits.includes(btn);
-      const sel = btn === primary;
-      const wasSel = btn.getAttribute("aria-selected") === "true";
+      const on = hits.includes(btn) && !isAllChip(btn);
+      const was = btn.classList.contains("is-on-card");
       btn.classList.toggle("is-on-card", on);
-      btn.setAttribute("aria-selected", sel ? "true" : "false");
-      btn.tabIndex = sel ? 0 : -1;
-      if (sel && !wasSel) pop(btn);
+      if (on && !was) pop(btn);
     });
-    if (primary) center(row, primary);
+    const echo = hits.find((b) => !isAllChip(b));
+    const selected = btns.find((b) => b.getAttribute("aria-selected") === "true");
+    center(row, selected || echo || btns[0]);
   }
   let lastSig = "";
   function sync() {
