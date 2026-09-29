@@ -1,22 +1,37 @@
-#cat-row button[aria-selected="true"] { background: var(--flame); color: #fff; }
-#hood-row button[aria-selected="true"] { background: var(--sky); color: var(--ink); }
-#time-row button[aria-selected="true"] { background: #E8B4F8; color: var(--ink); }
-#party-row button[aria-selected="true"] { background: var(--mint); color: var(--ink); }
-#night-row button[aria-selected="true"] { background: var(--sun); color: var(--ink); }
-#cuisine-row button[aria-selected="true"] { background: #F3D2A4; color: var(--ink); }
-#cat-row button.is-looking:not([aria-selected="true"]) { background: rgba(255,90,54,.28); color: #fff; }
-#hood-row button.is-looking:not([aria-selected="true"]) { background: rgba(143,194,232,.38); color: var(--ink); }
-#time-row button.is-looking:not([aria-selected="true"]) { background: rgba(232,180,248,.4); color: var(--ink); }
-#party-row button.is-looking:not([aria-selected="true"]) { background: rgba(168,216,185,.4); color: var(--ink); }
-#night-row button.is-looking:not([aria-selected="true"]) { background: rgba(247,198,71,.4); color: var(--ink); }
-#cuisine-row button.is-looking:not([aria-selected="true"]) { background: rgba(243,210,164,.45); color: var(--ink); }
+#cat-row button[aria-selected="true"], #cat-row button.is-looking { background: var(--flame); color: #fff; }
+#hood-row button[aria-selected="true"], #hood-row button.is-looking { background: var(--sky); color: var(--ink); }
+#time-row button[aria-selected="true"], #time-row button.is-looking { background: #E8B4F8; color: var(--ink); }
+#party-row button[aria-selected="true"], #party-row button.is-looking { background: var(--mint); color: var(--ink); }
+#night-row button[aria-selected="true"], #night-row button.is-looking { background: var(--sun); color: var(--ink); }
+#cuisine-row button[aria-selected="true"], #cuisine-row button.is-looking { background: #F3D2A4; color: var(--ink); }
+#cat-row button.is-looking:not([aria-selected="true"]) { background: rgba(255,90,54,.72); }
+#hood-row button.is-looking:not([aria-selected="true"]) { background: rgba(143,194,232,.78); }
+#time-row button.is-looking:not([aria-selected="true"]) { background: rgba(232,180,248,.78); }
+#party-row button.is-looking:not([aria-selected="true"]) { background: rgba(168,216,185,.78); }
+#night-row button.is-looking:not([aria-selected="true"]) { background: rgba(247,198,71,.78); }
+#cuisine-row button.is-looking:not([aria-selected="true"]) { background: rgba(243,210,164,.82); }
+.pill-row.is-all-plan button:not([aria-selected="true"]):not(.is-looking) {
+  opacity: 0.38;
+  filter: saturate(0.55);
+}
+.pill-row button {
+  position: relative; z-index: 1;
+  font-size: .72rem; padding: .32rem .62rem; min-height: 1.7rem;
+  transition: background .28s ease, color .28s ease, opacity .28s ease, filter .28s ease, transform .28s ease;
+}
 .pill-row { position: relative; }
-.pill-row button { position: relative; z-index: 1; font-size: .72rem; padding: .32rem .62rem; min-height: 1.7rem; transition: background .22s ease, color .22s ease; }
-.pill-glider { position: absolute; left: 0; top: 0; border-radius: 999px; border: 1.5px solid rgba(255,253,248,.7); pointer-events: none; opacity: 0; z-index: 0; transition: transform 320ms cubic-bezier(.22,1,.36,1), width 320ms cubic-bezier(.22,1,.36,1), opacity 180ms ease; }
+.pill-glider {
+  position: absolute; left: 0; top: 0; border-radius: 999px;
+  border: 1.5px solid rgba(255,253,248,.7);
+  pointer-events: none; opacity: 0; z-index: 0;
+  transition: transform 320ms cubic-bezier(.22,1,.36,1), width 320ms cubic-bezier(.22,1,.36,1), opacity 180ms ease;
+}
 .pill-glider.is-on { opacity: 1; }
 .pill-row.two-row { display: flex; flex-wrap: wrap; overflow: hidden; max-height: 5.4rem; gap: .38rem; }
 .who-btn { display: inline-flex; align-items: center; gap: .35rem; padding: .28rem .55rem !important; }
 .opt-card.is-cuisine-hide { display: none; }
 .pill.hood { background: var(--sky); color: var(--ink); }
 .pill.time { background: #E8B4F8; color: var(--ink); }
-@media (prefers-reduced-motion: reduce) { .pill-row button, .pill-glider { transition: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .pill-row button, .pill-glider { transition: none; }
+}
