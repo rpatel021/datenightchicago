@@ -18,10 +18,10 @@
     andersonville: "uptown", "lincoln park": "lincoln park"
   };
   const VIBE_HINTS = [
-    ["comedy", "comedy"], ["improv", "comedy"], ["jazz", "jazz_blues"], ["blues", "jazz_blues"],
-    ["theater", "theater"], ["theatre", "theater"], ["play", "theater"], ["musical", "theater"],
-    ["museum", "museum"], ["exhibit", "museum"], ["gallery", "museum"],
-    ["magic", "magic"], ["festival", "festival"], ["fest", "festival"]
+    ["comedy","comedy"],["improv","comedy"],["jazz","jazz_blues"],["blues","jazz_blues"],
+    ["theater","theater"],["theatre","theater"],["play","theater"],["musical","theater"],
+    ["museum","museum"],["exhibit","museum"],["gallery","museum"],
+    ["magic","magic"],["festival","festival"],["fest","festival"]
   ];
   let lastLaneEl = null;
   function rawLabel(s) { return String(s || "").replace(/\s+/g, " ").trim(); }
@@ -35,8 +35,7 @@
   function visibleLane() {
     const lanes = [...deck.querySelectorAll(".lane")];
     if (!lanes.length) return lastLaneEl;
-    const deckBox = deck.getBoundingClientRect();
-    const mid = deckBox.top + deck.clientHeight * 0.42;
+    const mid = deck.getBoundingClientRect().top + deck.clientHeight * 0.42;
     let best = lastLaneEl && lanes.includes(lastLaneEl) ? lastLaneEl : lanes[0];
     let bestDist = Infinity;
     lanes.forEach((lane) => {
@@ -51,7 +50,7 @@
     const found = { vibe: [], hood: [], time: [], party: [], night: [] };
     if (!card) return found;
     card.querySelectorAll(".pill").forEach((p) => {
-      const kind = ["vibe", "hood", "time", "party", "night"].find((k) => p.classList.contains(k));
+      const kind = ["vibe","hood","time","party","night"].find((k) => p.classList.contains(k));
       if (!kind) return;
       const label = rawLabel(p.textContent);
       if (label) found[kind].push(label);
@@ -161,6 +160,7 @@
   }, true);
   deck.addEventListener("click", function (e) { rememberLane(e.target); requestSync(); });
   document.addEventListener("touchend", function (e) { rememberLane(e.target); requestSync(); }, { passive: true });
+  deck.addEventListener("nightout:focus", function () { lastSig = ""; requestSync(); });
   new MutationObserver(requestSync).observe(deck, { childList: true, subtree: true, attributes: true, attributeFilter: ["class"] });
   setTimeout(sync, 300);
   setTimeout(sync, 1200);
