@@ -29,9 +29,16 @@
 .pill-glider.is-on { opacity: 1; }
 .pill-row.two-row { display: flex; flex-wrap: wrap; overflow: hidden; max-height: 5.4rem; gap: .38rem; }
 .who-btn { display: inline-flex; align-items: center; gap: .35rem; padding: .28rem .55rem !important; }
-.opt-card.is-cuisine-hide { display: none; }
+.opt-card.is-cuisine-hide {
+  display: none !important;
+}
+.option-track {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
 .pill.hood { background: var(--sky); color: var(--ink); }
 .pill.time { background: #E8B4F8; color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
-  .pill-row button, .pill-glider { transition: none; }
+  .pill-row button, .pill-glider, .option-track { transition: none; scroll-behavior: auto; }
 }
