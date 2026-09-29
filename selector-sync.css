@@ -24,6 +24,10 @@
 .pill.hood { background: var(--sky); color: var(--ink); }
 .pill.time { background: #E8B4F8; color: var(--ink); }
 .pill.night { background: var(--sun); color: var(--ink); }
+.opt-card.is-active { z-index: 2; }
+.option-title { text-wrap: balance; }
+.bg-fallback { animation: fade-in 280ms ease; }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) {
   .pill-row button.is-pop { animation: none; }
   .pill-glider { transition: none; }

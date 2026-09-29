@@ -1,4 +1,4 @@
-/* Fill blanks only when the source listing is clear. */
+/* Apply confirmed patches. Never invent a venue. */
 (function () {
   const PATCHES = {
     castle: {
@@ -53,27 +53,22 @@
       }
       if (patch.party) {
         const party = pills.querySelector(".pill.party");
-        if (party && /couple/i.test(party.textContent) && patch.party === "Family") {
+        if (party && /couple/i.test(party.textContent) && /family/i.test(patch.party)) {
           party.textContent = patch.party;
           mark(party, "likely");
         }
       }
     }
     let meta = copy.querySelector(".meta");
-    if (!meta) {
-      meta = document.createElement("p");
-      meta.className = "meta";
-      copy.appendChild(meta);
+    if (!meta) { meta = document.createElement("p"); meta.className = "meta"; copy.appendChild(meta); }
+    const bits = [patch.hours, patch.venue].filter(Boolean);
+    if (bits.length) meta.textContent = bits.join(" \u00b7 ");
+    if (patch.address) {
+      let addr = copy.querySelector(".addr-line");
+      if (!addr) { addr = document.createElement("p"); addr.className = "addr-line"; meta.insertAdjacentElement("afterend", addr); }
+      addr.textContent = patch.address;
+      mark(addr, patch.confidence === "confirmed" ? "confirmed" : "likely");
     }
-    meta.textContent = [patch.hours, patch.venue].filter(Boolean).join(" · ");
-    let addr = copy.querySelector(".addr-line");
-    if (!addr) {
-      addr = document.createElement("p");
-      addr.className = "addr-line";
-      meta.insertAdjacentElement("afterend", addr);
-    }
-    addr.textContent = patch.address || "";
-    if (patch.confidence === "confirmed") mark(addr, "confirmed");
     const note = copy.querySelector(".note") || copy.querySelector(".lede");
     if (note && patch.note && !/exhibit|children/i.test(note.textContent)) {
       note.textContent = patch.note + (note.textContent ? "  " + note.textContent : "");
@@ -91,7 +86,7 @@
     const stack = card.querySelector(".bg-stack");
     if (!stack) return;
     const slides = [...stack.querySelectorAll(".bg-slide")];
-    const allBad = !slides.length || slides.every((s) => isPlaceholderSrc(s.style.backgroundImage + s.getAttribute("style")));
+    const allBad = !slides.length || slides.every((s) => isPlaceholderSrc(s.style.backgroundImage + (s.getAttribute("style") || "")));
     if (!allBad || stack.querySelector(".bg-fallback")) return;
     stack.innerHTML = "";
     const fb = document.createElement("div");
@@ -111,10 +106,20 @@
     else dropPlaceholder(card);
     card.dataset.enriched = "1";
   }
-  const deck = document.getElementById("deck");
-  if (!deck) return;
-  const scan = () => document.querySelectorAll(".opt-card").forEach(enrich);
-  new MutationObserver(scan).observe(deck, { childList: true, subtree: true });
-  setTimeout(scan, 200);
-  setTimeout(scan, 800);
+  function scan() {
+    document.querySelectorAll(".opt-card").forEach(enrich);
+    const deck = document.getElementById("deck");
+    if (deck) deck.dispatchEvent(new CustomEvent("nightout:focus", { detail: { source: "enrich" } }));
+  }
+  fetch("event-patches.json")
+    .then((r) => (r.ok ? r.json() : null))
+    .then((data) => { if (data && data.patches) Object.assign(PATCHES, data.patches); })
+    .catch(function () {})
+    .then(function () {
+      const deck = document.getElementById("deck");
+      if (!deck) return;
+      new MutationObserver(scan).observe(deck, { childList: true, subtree: true });
+      setTimeout(scan, 200);
+      setTimeout(scan, 900);
+    });
 })();
