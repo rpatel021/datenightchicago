@@ -88,10 +88,12 @@
     if (!row) return;
     const btns = [...row.querySelectorAll("button")];
     if (!btns.length) return;
+    const selected = btns.find((b) => b.getAttribute("aria-selected") === "true");
+    const allOn = !selected || isAllChip(selected);
+    row.classList.toggle("is-all-plan", allOn);
     const hits = labels.length ? btns.filter((b) => matches(b, labels)) : [];
     btns.forEach((btn) => btn.classList.toggle("is-looking", hits.includes(btn)));
-    const selected = btns.find((b) => b.getAttribute("aria-selected") === "true");
-    center(row, selected || hits[0]);
+    center(row, allOn ? (hits[0] || selected) : selected);
   }
   let lastSig = "";
   function sync() {
