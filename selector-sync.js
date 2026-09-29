@@ -1,4 +1,4 @@
-/* Follow the focused card across Eat / Then / Backup. */
+/* Follow the focused card on Eat, Then, and Backup. */
 (function () {
   const ROWS = {
     vibe: document.getElementById("cat-row"),
@@ -17,19 +17,34 @@
     "old town": "old town", "south loop": "south loop", "museum campus": "loop",
     andersonville: "uptown", "lincoln park": "lincoln park"
   };
+  const VIBE_HINTS = [
+    ["comedy", "comedy"], ["improv", "comedy"], ["jazz", "jazz_blues"], ["blues", "jazz_blues"],
+    ["theater", "theater"], ["theatre", "theater"], ["play", "theater"], ["musical", "theater"],
+    ["museum", "museum"], ["exhibit", "museum"], ["gallery", "museum"],
+    ["magic", "magic"], ["festival", "festival"], ["fest", "festival"]
+  ];
+  let lastLaneEl = null;
   function rawLabel(s) { return String(s || "").replace(/\s+/g, " ").trim(); }
   function norm(s) {
     return rawLabel(s).toLowerCase().replace(/&/g, "and").replace(/tonight/g, "").replace(/[^a-z0-9]+/g, " ").trim();
   }
+  function rememberLane(el) {
+    const lane = el && el.closest && el.closest(".lane");
+    if (lane) lastLaneEl = lane;
+  }
   function visibleLane() {
     const lanes = [...deck.querySelectorAll(".lane")];
-    if (!lanes.length) return null;
-    const mid = deck.scrollTop + deck.clientHeight * 0.45;
-    let best = lanes[0], bestDist = Infinity;
+    if (!lanes.length) return lastLaneEl;
+    const deckBox = deck.getBoundingClientRect();
+    const mid = deckBox.top + deck.clientHeight * 0.42;
+    let best = lastLaneEl && lanes.includes(lastLaneEl) ? lastLaneEl : lanes[0];
+    let bestDist = Infinity;
     lanes.forEach((lane) => {
-      const d = Math.abs(lane.offsetTop + lane.offsetHeight / 2 - mid);
+      const box = lane.getBoundingClientRect();
+      const d = Math.abs(box.top + box.height / 2 - mid);
       if (d < bestDist) { best = lane; bestDist = d; }
     });
+    lastLaneEl = best;
     return best;
   }
   function labelsFromCard(card) {
@@ -42,14 +57,20 @@
       if (label) found[kind].push(label);
     });
     const brow = rawLabel((card.querySelector(".eyebrow") || {}).textContent);
-    brow.split(/[·•|]/).forEach((part) => {
+    brow.split(/[·•|,]/).forEach((part) => {
       const bit = rawLabel(part);
       if (!bit) return;
       if (/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\b/i.test(bit) || /\b(tue|wed|thu|fri|sat|sun|mon|tonight)\b/i.test(bit)) {
         if (!found.night.length) found.night.push(bit);
-      } else if (!found.hood.length && !/tba|confirm/i.test(bit)) found.hood.push(bit);
+      } else if (!found.hood.length && !/tba|confirm|plan b/i.test(bit)) found.hood.push(bit);
     });
     found.hood = found.hood.map((h) => HOOD_ALIAS[norm(h)] || h);
+    const extra = [];
+    found.vibe.forEach((v) => {
+      const n = norm(v);
+      VIBE_HINTS.forEach(([needle, id]) => { if (n.includes(needle)) extra.push(id); });
+    });
+    found.vibe = found.vibe.concat(extra);
     return found;
   }
   function isAllChip(btn) {
@@ -132,14 +153,14 @@
     paintRow(ROWS.night, labels.night);
   }
   let timer = null;
-  function requestSync() { clearTimeout(timer); timer = setTimeout(sync, 60); }
+  function requestSync() { clearTimeout(timer); timer = setTimeout(sync, 50); }
   deck.addEventListener("scroll", requestSync, { passive: true });
   document.addEventListener("scroll", function (e) {
     const t = e.target;
-    if (t && t.classList && t.classList.contains("option-track")) requestSync();
+    if (t && t.classList && t.classList.contains("option-track")) { rememberLane(t); requestSync(); }
   }, true);
-  deck.addEventListener("click", requestSync);
-  document.addEventListener("touchend", function () { requestSync(); }, { passive: true });
+  deck.addEventListener("click", function (e) { rememberLane(e.target); requestSync(); });
+  document.addEventListener("touchend", function (e) { rememberLane(e.target); requestSync(); }, { passive: true });
   new MutationObserver(requestSync).observe(deck, { childList: true, subtree: true, attributes: true, attributeFilter: ["class"] });
   setTimeout(sync, 300);
   setTimeout(sync, 1200);
