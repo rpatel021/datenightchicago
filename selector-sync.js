@@ -1,21 +1,22 @@
-/* Follow the focused card. Never steal the tapped filter. */
 (function () {
-  const ROWS = {
-    vibe: document.getElementById("cat-row"),
-    hood: document.getElementById("hood-row"),
-    time: document.getElementById("time-row"),
-    party: document.getElementById("party-row"),
-    night: document.getElementById("night-row"),
-  };
   const deck = document.getElementById("deck");
   if (!deck) return;
   const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const HOOD_ALIAS = { "roscoe village":"lakeview", wrigleyville:"lakeview", "logan square":"logan square", logan:"logan square", "river north":"near north", streeterville:"near north", "navy pier":"near north", andersonville:"uptown", "lincoln park":"lincoln park" };
-  const VIBE_HINTS = [["comedy","comedy"],["improv","comedy"],["jazz","jazz_blues"],["blues","jazz_blues"],["theater","theater"],["theatre","theater"],["musical","theater"],["museum","museum"],["exhibit","museum"],["magic","magic"],["festival","festival"]];
+  const ROWS = {
+    vibe: document.getElementById("cat-row"),
+    cuisine: document.getElementById("cuisine-row"),
+    hood: document.getElementById("hood-row"),
+    time: document.getElementById("time-row"),
+    party: document.getElementById("party-row"),
+    night: document.getElementById("night-row")
+  };
+  const HOOD_ALIAS = { "roscoe village":"lakeview", wrigleyville:"lakeview", "river north":"near north", streeterville:"near north", "navy pier":"near north", andersonville:"uptown", "lincoln park":"lincoln park" };
+  const VIBE_HINTS = [["comedy","comedy"],["improv","comedy"],["jazz","jazz_blues"],["theater","theater"],["theatre","theater"],["musical","theater"],["museum","museum"],["magic","magic"]];
+  const CUISINE_HINTS = [["italian","italian"],["pasta","italian"],["pizza","pizza"],["mexican","mexican"],["french","french"],["steak","steakhouse"],["indian","indian"],["sushi","asian"],["ramen","asian"],["korean","asian"],["greek","mediterranean"],["mediterranean","mediterranean"],["seafood","seafood"],["american","american"]];
   let lastLaneEl = null;
-  function rawLabel(s) { return String(s || "").replace(/\s+/g, " ").trim(); }
-  function norm(s) { return rawLabel(s).toLowerCase().replace(/&/g, "and").replace(/tonight/g, "").replace(/[^a-z0-9]+/g, " ").trim(); }
-  function rememberLane(el) { const lane = el && el.closest && el.closest(".lane"); if (lane) lastLaneEl = lane; }
+  function raw(s) { return String(s || "").replace(/\s+/g, " ").trim(); }
+  function norm(s) { return raw(s).toLowerCase().replace(/&/g, "and").replace(/tonight/g, "").replace(/[^a-z0-9]+/g, " ").trim(); }
+  function remember(el) { const lane = el && el.closest && el.closest(".lane"); if (lane) lastLaneEl = lane; }
   function visibleLane() {
     const lanes = [...deck.querySelectorAll(".lane")];
     if (!lanes.length) return lastLaneEl;
@@ -25,35 +26,35 @@
     lastLaneEl = best; return best;
   }
   function labelsFromCard(card) {
-    const found = { vibe: [], hood: [], time: [], party: [], night: [] };
+    const found = { vibe: [], cuisine: [], hood: [], time: [], party: [], night: [] };
     if (!card) return found;
     card.querySelectorAll(".pill").forEach((p) => {
-      const kind = ["vibe","hood","time","party","night"].find((k) => p.classList.contains(k));
-      if (!kind) return;
-      const label = rawLabel(p.textContent);
-      if (label) found[kind].push(label);
+      const kind = Object.keys(found).find((k) => p.classList.contains(k));
+      const label = raw(p.textContent);
+      if (kind && label) found[kind].push(label);
     });
-    const brow = rawLabel((card.querySelector(".eyebrow") || {}).textContent);
+    const brow = raw((card.querySelector(".eyebrow") || {}).textContent);
     brow.split(/[·•|,]/).forEach((part) => {
-      const bit = rawLabel(part);
+      const bit = raw(part);
       if (!bit) return;
       if (/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\b/i.test(bit) || /\b(tue|wed|thu|fri|sat|sun|mon|tonight)\b/i.test(bit)) {
         if (!found.night.length) found.night.push(bit);
       } else if (!found.hood.length && !/tba|confirm|plan b/i.test(bit)) found.hood.push(bit);
     });
     found.hood = found.hood.map((h) => HOOD_ALIAS[norm(h)] || h);
-    const extra = [];
-    found.vibe.forEach((v) => { const n = norm(v); VIBE_HINTS.forEach(([needle, id]) => { if (n.includes(needle)) extra.push(id); }); });
-    found.vibe = found.vibe.concat(extra);
+    const blob = norm((card.querySelector(".copy") || card).textContent);
+    VIBE_HINTS.forEach(([needle, id]) => { if (blob.includes(needle)) found.vibe.push(id); });
+    CUISINE_HINTS.forEach(([needle, id]) => { if (blob.includes(needle)) found.cuisine.push(id); });
+    found.party = found.party.map((x) => { const n = norm(x); return n === "friends" || n === "group" ? "family" : x; });
     return found;
   }
   function isAllChip(btn) {
     const t = norm(btn.textContent);
     const k = String(btn.getAttribute("data-key") || "").toLowerCase();
-    return t === "all" || t === "any" || t === "all vibes" || t === "all areas" || t === "any time" || t === "any night" || t === "all cuisines" || k === "all" || k === "";
+    return t === "all" || t === "any" || t.indexOf("all ") === 0 || t.indexOf("any ") === 0 || k === "all" || k === "";
   }
   function buttonKey(btn) {
-    return norm(btn.getAttribute("data-key") || btn.getAttribute("data-hood") || btn.getAttribute("data-cat") || btn.getAttribute("data-time") || btn.getAttribute("data-party") || btn.getAttribute("data-night") || btn.textContent);
+    return norm(btn.getAttribute("data-key") || btn.getAttribute("data-hood") || btn.getAttribute("data-cat") || btn.getAttribute("data-time") || btn.getAttribute("data-party") || btn.getAttribute("data-night") || btn.getAttribute("data-cuisine") || btn.textContent);
   }
   function matches(btn, labels) {
     if (isAllChip(btn)) return false;
@@ -64,14 +65,14 @@
   function ensureGlider(row) {
     if (!row) return null;
     let g = row.querySelector(":scope > .pill-glider");
-    if (!g) { g = document.createElement("span"); g.className = "pill-glider"; g.setAttribute("aria-hidden","true"); row.insertBefore(g, row.firstChild); }
+    if (!g) { g = document.createElement("span"); g.className = "pill-glider"; g.setAttribute("aria-hidden", "true"); row.insertBefore(g, row.firstChild); }
     return g;
   }
   function moveGlider(row, btn) {
     const g = ensureGlider(row);
     if (!g || !btn) return;
     g.style.width = btn.offsetWidth + "px"; g.style.height = btn.offsetHeight + "px";
-    g.style.transform = "translate(" + btn.offsetLeft + "px, " + btn.offsetTop + "px)";
+    g.style.transform = "translate(" + btn.offsetLeft + "px," + btn.offsetTop + "px)";
     g.classList.add("is-on");
   }
   function center(row, btn) {
@@ -83,21 +84,14 @@
     }
     requestAnimationFrame(function () { moveGlider(row, btn); });
   }
-  function pop(btn) { btn.classList.remove("is-pop"); void btn.offsetWidth; btn.classList.add("is-pop"); }
   function paintRow(row, labels) {
     if (!row) return;
     const btns = [...row.querySelectorAll("button")];
     if (!btns.length) return;
     const hits = labels.length ? btns.filter((b) => matches(b, labels)) : [];
-    btns.forEach((btn) => {
-      const on = hits.includes(btn) && !isAllChip(btn);
-      const was = btn.classList.contains("is-on-card");
-      btn.classList.toggle("is-on-card", on);
-      if (on && !was) pop(btn);
-    });
-    const echo = hits.find((b) => !isAllChip(b));
+    btns.forEach((btn) => btn.classList.toggle("is-looking", hits.includes(btn)));
     const selected = btns.find((b) => b.getAttribute("aria-selected") === "true");
-    center(row, selected || echo || btns[0]);
+    center(row, selected || hits[0]);
   }
   let lastSig = "";
   function sync() {
@@ -107,23 +101,19 @@
     const sig = (lane && lane.getAttribute("data-lane")) + JSON.stringify(labels);
     if (sig === lastSig) return;
     lastSig = sig;
-    paintRow(ROWS.vibe, labels.vibe);
-    paintRow(ROWS.hood, labels.hood);
-    paintRow(ROWS.time, labels.time);
-    paintRow(ROWS.party, labels.party);
-    paintRow(ROWS.night, labels.night);
+    Object.keys(ROWS).forEach((kind) => paintRow(ROWS[kind], labels[kind] || []));
   }
   let timer = null;
-  function requestSync() { clearTimeout(timer); timer = setTimeout(sync, 50); }
+  function requestSync() { clearTimeout(timer); timer = setTimeout(sync, 40); }
   deck.addEventListener("scroll", requestSync, { passive: true });
   document.addEventListener("scroll", function (e) {
     const t = e.target;
-    if (t && t.classList && t.classList.contains("option-track")) { rememberLane(t); requestSync(); }
+    if (t && t.classList && t.classList.contains("option-track")) { remember(t); requestSync(); }
   }, true);
-  deck.addEventListener("click", function (e) { rememberLane(e.target); requestSync(); });
-  document.addEventListener("touchend", function (e) { rememberLane(e.target); requestSync(); }, { passive: true });
+  document.addEventListener("click", function (e) { remember(e.target); lastSig = ""; requestSync(); });
+  document.addEventListener("touchend", function (e) { remember(e.target); lastSig = ""; requestSync(); }, { passive: true });
   deck.addEventListener("nightout:focus", function () { lastSig = ""; requestSync(); });
-  new MutationObserver(requestSync).observe(deck, { childList: true, subtree: true, attributes: true, attributeFilter: ["class"] });
-  setTimeout(sync, 300);
-  setTimeout(sync, 1200);
+  new MutationObserver(requestSync).observe(deck, { childList: true, subtree: true, attributes: true, attributeFilter: ["class", "aria-selected"] });
+  setTimeout(sync, 250);
+  setTimeout(sync, 900);
 })();
